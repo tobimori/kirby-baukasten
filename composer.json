@@ -1,0 +1,32 @@
+{
+  "name": "coralic/kirby-plainkit",
+  "description": "An opinionated, supercharged version of the Kirby CMS Plainkit",
+  "type": "project",
+  "keywords": [
+    "kirby",
+    "cms",
+    "starterkit",
+    "coralic"
+  ],
+  "homepage": "https://coralic.de",
+  "authors": [
+    {
+      "name": "Tobias Möritz",
+      "email": "tobias@moeritz.cc",
+      "homepage": "https://moeritz.io"
+    }
+  ],
+  "require": {
+    "php": ">=7.4.0",
+    "getkirby/cms": "^3.5"
+  },
+  "scripts": {
+    "start": [
+      "Composer\\Config::disableProcessTimeout",
+      "@php -S localhost:8000 kirby/router.php"
+    ]
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}

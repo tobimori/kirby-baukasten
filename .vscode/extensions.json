@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "wix.vscode-import-cost",
+    "eamodio.gitlens",
+    "kisstkondoros.vscode-gutter-preview",
+    "github.vscode-pull-request-github",
+    "bmewburn.vscode-intelephense-client",
+    "editorconfig.editorconfig",
+    "stylelint.vscode-stylelint"
+  ]
+}

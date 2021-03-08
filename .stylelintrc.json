@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "string-quotes": "double",
+    "function-url-quotes": "always",
+    "max-nesting-depth": null,
+    "selector-max-compound-selectors": null,
+    "declaration-property-value-disallowed-list": null,
+    "selector-no-qualifying-type": null,
+    "selector-max-id": 2
+  }
+}

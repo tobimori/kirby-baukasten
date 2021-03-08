@@ -1,0 +1,3 @@
+{
+  "extends": "@coralic/eslint-config-base"
+}
