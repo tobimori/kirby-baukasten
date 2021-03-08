@@ -154,3 +154,10 @@ When working with a staging environment, we download the current content from
 site before starting and upload it after we're done using `rsync`. Although
 often we let our clients validate the staging environment before we sync the
 `content` folder of `staging` to `production`.
+
+## Credits
+
+This boilerplate setup heavily took inspiration from:
+
+- [brocessing/kirby-webpack](https://github.com/brocessing/kirby-webpack) &
+- [getkirby/plainkit](https://github.com/getkirby/plainkit)
