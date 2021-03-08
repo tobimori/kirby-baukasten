@@ -17,6 +17,7 @@ and plugins.
   - [Usage of Composer](#usage-of-composer)
   - [Development Environment](#development-environment)
   - [Managing the `content` folder and Git](#managing-the-content-folder-and-git)
+- [Credits](#credits)
 
 ## Features
 
