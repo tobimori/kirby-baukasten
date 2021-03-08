@@ -38,7 +38,11 @@ and plugins.
 
 ## Usage
 
-// todo
+Install Composer and Node dependencies with `composer install` and `yarn`.
+
+```sh
+composer install && yarn
+```
 
 ## Best Practices
 
