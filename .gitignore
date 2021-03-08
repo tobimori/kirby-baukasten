@@ -1,12 +1,10 @@
 # System files
 # ------------
-
 Icon
 .DS_Store
 
 # Temporary files
 # ---------------
-
 /media/*
 !/media/.gitkeep
 
@@ -36,20 +34,21 @@ Icon
 
 # Cache Files
 # ---------------
-
 /site/cache/*
 !/site/cache/.gitkeep
-.php_cs.cache
+
+# Dev files
+# ---------------
+/dist/dev
+!/dist/prod
 
 # Accounts
 # ---------------
-
 /site/accounts/*
 !/site/accounts/.gitkeep
 
 # Sessions
 # ---------------
-
 /site/sessions/*
 !/site/sessions/.gitkeep
 

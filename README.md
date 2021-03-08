@@ -26,7 +26,14 @@ and plugins.
 - SCSS linting and formatting with [stylelint](https://stylelint.io/)
 - JavaScript linting with [ESLint](https://eslint.org/)
 - [Browsersync](https://www.browsersync.io/) dev server with **livereload** for changes in content, stylesheets, Kirby templates & JavaScript code
+- File watching and automatic recompilation on change
 - Optional **built-in PHP Server** wrapped in the dev server - with option to rely on third-party servers like [Laravel Valet](https://laravel.com/docs/8.x/valet)
+- Extremely fast JavaScript bundling with [esbuild](https://esbuild.github.io/)
+- SCSS compilation with [Dart Sass](https://sass-lang.com/dart-sass) and additional processing done by [PostCSS](https://postcss.org/)
+
+**todo:**
+
+- GitHub Actions Workflows for Linting, Formatting, etc.
 
 ## Requirements
 

@@ -17,11 +17,12 @@
 <html>
 
 <head>
-  <?php snippet('dist-files') ?>
 </head>
 
 <body>
   <h1><?= $page->title() ?></h1>
+  <canvas id="canvas" height="800" width="900"></canvas>
+  <?= js('dist/dev/js/index.js') ?>
 </body>
 
 </html>
