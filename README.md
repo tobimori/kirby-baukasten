@@ -4,6 +4,20 @@ An opinionated, supercharged version of the Kirby Plainkit used internally at
 [coralic](https://coralic.de) for our clients' sites, with preconfigured tooling
 and plugins.
 
+- [Features](#features)
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [Best Practices](#best-practices)
+  - [PHP code typing](#php-code-typing)
+    - [Controllers](#controllers)
+    - [Templates](#templates)
+    - [Page Models](#page-models)
+    - [Auto completion in VS Code](#auto-completion-in-vs-code)
+    - [Special Thanks](#special-thanks)
+  - [Usage of Composer](#usage-of-composer)
+  - [Development Environment](#development-environment)
+  - [Managing the `content` folder and Git](#managing-the-content-folder-and-git)
+
 ## Features
 
 - Code formatting with [Prettier](https://prettier.io/), helpful for JavaScript files
