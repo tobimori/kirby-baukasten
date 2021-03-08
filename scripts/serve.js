@@ -9,74 +9,28 @@ const glob = require('glob')
 const browserSync = require('browser-sync')
 const phpServer = require('php-server-manager')
 
-// build tools
-const esbuild = require('esbuild')
-
-const sass = require('sass')
-const Fiber = require('fibers')
-
-const postcss = require('postcss')
-const autoprefixer = require('autoprefixer')
-const cssnano = require('cssnano')
-
 // aliases
 const { log } = console
 
 // config
-const config = require('../coralic-kirby.config')
+const { buildEnv, entryPoints, devServer } = require('../coralic-kirby.config')
 
-let host, port, phpInstance, bsInstance
-
+// helpers
+const { buildJs, buildScss } = require('./helpers/buildHelpers')
 const isMacOS = os.platform() === 'darwin'
 
-const buildJs = async (files) =>
-  await esbuild
-    .build({
-      entryPoints: files,
-      outdir: 'dist/dev/js/',
-      bundle: true,
-      minify: true,
-      sourcemap: true,
-      target: ['es2020'],
-    })
-    .catch(() => process.exit(1))
-
-const buildScss = async (files) =>
-  await files.map(
-    async (file) =>
-      await sass.render(
-        {
-          file: file,
-          fiber: Fiber,
-        },
-        function (err, result) {
-          if (!err)
-            postcss([autoprefixer, cssnano])
-              .process(result.css, {
-                from: file,
-                to: 'dist/dev/css/style.css',
-              })
-              .then((postCssResult) => {
-                fs.writeFile(
-                  'dist/dev/css/style.css',
-                  postCssResult.css,
-                  (err) => err && console.error(err)
-                )
-              })
-          else console.error(err)
-        }
-      )
-  )
+let host, port, phpInstance, bsInstance
+process.env.ENV = process.env.NODE_ENV
 
 function startPhp() {
-  if (!config.devServer.proxy) {
+  if (!devServer.proxy) {
     log('Starting PHP Server...')
 
-    host = config.devServer.phpHost
-    port = config.devServer.port
+    host = devServer.phpHost
+    port = devServer.port
 
     phpInstance = new phpServer({
-      php: config.devServer.phpBinary || 'php',
+      php: devServer.phpBinary || 'php',
       port: port || '9000',
       host: host || 'localhost',
       script: path.join(path.resolve(__dirname, '..'), 'kirby', 'router.php'),
@@ -90,8 +44,8 @@ function startPhp() {
   } else {
     log('Using local development environment...')
 
-    host = config.devServer.proxy.split(':')[0]
-    port = config.devServer.proxy.split(':')[1] || 80
+    host = devServer.proxy.split(':')[0]
+    port = devServer.proxy.split(':')[1] || 80
 
     startBs()
   }
@@ -118,9 +72,9 @@ function startBs() {
         },
       ],
     },
-    port: config.devServer.bsPort,
+    port: devServer.bsPort,
     ui: {
-      port: config.devServer.bsUi,
+      port: devServer.bsUi,
     },
     logPrefix: '',
     open: false,
@@ -134,7 +88,7 @@ function startBs() {
   fs.mkdirSync('dist/dev/js/')
   fs.mkdirSync('dist/dev/css/')
 
-  config.entryPoints.js.map((entry) => {
+  entryPoints.js.map((entry) => {
     bsInstance.watch(entry, (e, file) => {
       // create watcher for each entry point set in config
       if (e === 'change') {
@@ -152,7 +106,7 @@ function startBs() {
     })
   })
 
-  config.entryPoints.scss.map((entry) => {
+  entryPoints.scss.map((entry) => {
     bsInstance.watch(entry, (e, file) => {
       // create watcher for each entry point set in config
       if (e === 'change') {

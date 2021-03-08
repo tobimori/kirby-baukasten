@@ -17,12 +17,13 @@
 <html>
 
 <head>
+  <?= loadCSS('style.css') ?>
 </head>
 
 <body>
   <h1><?= $page->title() ?></h1>
   <canvas id="canvas" height="800" width="900"></canvas>
-  <?= js('dist/dev/js/index.js') ?>
+  <?= loadJS('index.js') ?>
 </body>
 
 </html>

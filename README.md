@@ -29,7 +29,7 @@ and plugins.
 - File watching and automatic recompilation on change
 - Optional **built-in PHP Server** wrapped in the dev server - with option to rely on third-party servers like [Laravel Valet](https://laravel.com/docs/8.x/valet)
 - Extremely fast JavaScript bundling with [esbuild](https://esbuild.github.io/)
-- SCSS compilation with [Dart Sass](https://sass-lang.com/dart-sass) and additional processing done by [PostCSS](https://postcss.org/)
+- SCSS compilation with [Dart Sass](https://sass-lang.com/dart-sass) and additional, configurable processing done by [PostCSS](https://postcss.org/)
 
 **todo:**
 

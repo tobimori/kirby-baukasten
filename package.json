@@ -4,7 +4,8 @@
   "description": "An opinionated, supercharged version of the Kirby CMS Plainkit",
   "license": "MIT",
   "scripts": {
-    "dev": "node tools/serve.js"
+    "dev": "NODE_ENV=DEVELOPMENT node scripts/serve.js",
+    "build": "NODE_ENV=PRODUCTION node scripts/build.js"
   },
   "devDependencies": {
     "@coralic/eslint-config-base": "^1.0.0",
