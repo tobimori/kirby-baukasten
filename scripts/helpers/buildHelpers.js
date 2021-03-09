@@ -12,8 +12,9 @@ const postcss = require('postcss')
 // config
 const { buildEnv } = require('../../coralic-kirby.config')
 
-// env helper
-const env = process.env.NODE_ENV === 'DEVELOPMENT' ? 'dev' : 'prod'
+// helpers
+const { getDistPath } = require('./pathHelpers')
+const { env } = require('./generalHelpers')
 
 const buildJs = async (files) => {
   await esbuild
@@ -36,15 +37,17 @@ const buildScss = async (files) => {
         fiber: Fiber,
       },
       (err, result) => {
+        const distPath = getDistPath(file)
+
         if (!err) {
           postcss(buildEnv[env].scss.postCssPlugins)
             .process(result.css, {
               from: file,
-              to: 'dist/dev/css/style.css',
+              to: distPath,
             })
             .then((postCssResult) => {
               fs.writeFile(
-                'dist/dev/css/style.css',
+                distPath,
                 postCssResult.css,
                 (err) => err && console.error(err)
               )

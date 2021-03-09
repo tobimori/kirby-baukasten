@@ -11,7 +11,6 @@
     "@coralic/eslint-config-base": "^1.0.0",
     "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
-    "concurrently": "^6.0.0",
     "cssnano": "^4.1.10",
     "esbuild": "^0.8.57",
     "eslint": "^7.21.0",

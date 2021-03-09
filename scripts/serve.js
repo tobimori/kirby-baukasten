@@ -1,7 +1,6 @@
 // system libs
 const fs = require('fs')
 const path = require('path')
-const os = require('os')
 const process = require('process')
 const glob = require('glob')
 
@@ -17,7 +16,7 @@ const { buildEnv, entryPoints, devServer } = require('../coralic-kirby.config')
 
 // helpers
 const { buildJs, buildScss } = require('./helpers/buildHelpers')
-const isMacOS = os.platform() === 'darwin'
+const { env, isMacOS } = require('./helpers/generalHelpers')
 
 let host, port, phpInstance, bsInstance
 process.env.ENV = process.env.NODE_ENV
