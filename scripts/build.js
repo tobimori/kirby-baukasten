@@ -11,7 +11,7 @@ entryPoints.js.map((entry) => {
 
 entryPoints.scss.map((entry) => {
   glob(entry, (err, files) => {
-    if (!err) buildScss(files)
+    if (!err) buildScss(['src/scss/index.scss'])
     else console.error(err)
   })
 })
