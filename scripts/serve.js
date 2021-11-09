@@ -3,16 +3,21 @@ const fs = require('fs')
 const path = require('path')
 const process = require('process')
 const glob = require('glob')
+const spawn = require('child_process').spawn
 
 // server tools
 const browserSync = require('browser-sync')
-const phpServer = require('php-server-manager')
 
 // aliases
 const { log } = console
 
 // config
-const { buildEnv, entryPoints, devServer } = require('../coralic-kirby.config')
+const {
+  buildEnv,
+  entryPoints,
+  devServer,
+  watchPoints,
+} = require('../coralic-kirby.config')
 
 // helpers
 const { buildJs, buildScss } = require('./helpers/buildHelpers')
@@ -28,18 +33,24 @@ function startPhp() {
     host = devServer.phpHost
     port = devServer.port
 
-    phpInstance = new phpServer({
-      php: devServer.phpBinary || 'php',
-      port: port || '9000',
-      host: host || 'localhost',
-      script: path.join(path.resolve(__dirname, '..'), 'kirby', 'router.php'),
-      directory: '.',
+    const params = [
+      '-S',
+      `${host || 'localhost'}:${port || '9000'}`,
+      '-t',
+      '.',
+      path.join(path.resolve(__dirname, '..'), 'kirby', 'router.php'),
+    ]
+
+    const phpProcess = spawn(devServer.phpBinary || 'php', params, {
+      stdio: 'inherit',
+      env: process.env,
     })
 
-    phpInstance.run(() => {
-      log('Success! Starting browser-sync Server...') // todo: failure detection
-      startBs()
-    })
+    phpProcess.on('close', () => console.log('PHP Server closed'))
+    phpProcess.on('error', (error) => console.error('PHP Server error', error))
+
+    log('Success! Starting browser-sync Server...') // todo: failure detection
+    startBs()
   } else {
     log('Using local development environment...')
 
@@ -87,12 +98,17 @@ function startBs() {
   fs.mkdirSync('dist/dev/js/')
   fs.mkdirSync('dist/dev/css/')
 
-  entryPoints.js.map((entry) => {
+  watchPoints.js.map((entry) => {
     bsInstance.watch(entry, (e, file) => {
       // create watcher for each entry point set in config
       if (e === 'change') {
         log(`Detected change to file ${file}, building to 'dist/dev/js/'...`)
-        buildJs([file])
+        glob(entry, (err, files) => {
+          if (!err)
+            buildJs(files) &&
+              log(`Building bundles from:\n${files.join('\n')}\n`)
+          else console.error(err)
+        })
         log('Done!')
         bsInstance.reload('*.js')
       }
@@ -105,12 +121,15 @@ function startBs() {
     })
   })
 
-  entryPoints.scss.map((entry) => {
+  watchPoints.scss.map((entry) => {
     bsInstance.watch(entry, (e, file) => {
       // create watcher for each entry point set in config
       if (e === 'change') {
         log(`Detected change to file ${file}, building to 'dist/dev/css/'...`)
-        buildScss([file])
+        glob(entry, (err, files) => {
+          if (!err) buildScss(files)
+          else console.error(err)
+        })
         log('Done!')
         bsInstance.reload('*.css')
       }

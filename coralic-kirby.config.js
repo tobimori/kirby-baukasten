@@ -1,7 +1,11 @@
 module.exports = {
-  entryPoints: {
+  watchPoints: {
     js: ['src/js/*.js'],
     scss: ['src/scss/*.scss'],
+  },
+  entryPoints: {
+    js: ['src/js/*.js'],
+    scss: ['src/scss/index.scss'],
   },
 
   buildEnv: {
