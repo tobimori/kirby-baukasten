@@ -1,1 +1,39 @@
 @use "global/reset";
+
+:root {
+  --neutral-900: #000;
+  --neutral-000: #fff;
+
+  --font-sans: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  min-height: 100vh;
+  text-size-adjust: 100%;
+  display: flex;
+  flex-direction: column;
+
+  // disable scrolling, e.g. for on-site popups
+  &.no-scroll, &.no-scroll-nav {
+    overflow: hidden;
+  }
+}
+
+// fix footer sticking in the middle of the scrren
+// automatically expand content for smaller screens w/ flex
+div#content {
+  flex: 1 0 auto;
+}
+
+// hide elements visually only
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

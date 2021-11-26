@@ -26,7 +26,7 @@ const buildJs = async (files) => {
       sourcemap: buildEnv[env].js.sourcemap,
       target: buildEnv[env].js.target,
     })
-    .catch(() => process.exit(1))
+    .catch((error) => console.error(error))
 }
 
 const buildScss = async (files) => {
@@ -36,10 +36,10 @@ const buildScss = async (files) => {
         file: file,
         fiber: Fiber,
       },
-      (err, result) => {
+      (error, result) => {
         const distPath = getDistPath(file)
 
-        if (!err) {
+        if (!error) {
           postcss(buildEnv[env].scss.postCssPlugins)
             .process(result.css, {
               from: file,
@@ -49,11 +49,11 @@ const buildScss = async (files) => {
               fs.writeFile(
                 distPath,
                 postCssResult.css,
-                (err) => err && console.error(err)
+                (error) => error && console.error(error)
               )
             })
         } else {
-          console.error(err)
+          console.error(error)
         }
       }
     )

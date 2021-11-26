@@ -1,6 +1,6 @@
 {
   "name": "@coralic/kirby-plainkit",
-  "version": "1.0.0",
+  "version": "3.6.0",
   "description": "An opinionated, supercharged version of the Kirby CMS Plainkit",
   "license": "MIT",
   "scripts": {
@@ -22,7 +22,5 @@
     "stylelint": "^13.12.0",
     "stylelint-config-sass-guidelines": "^8.0.0"
   },
-  "dependencies": {
-    "canvas-confetti": "^1.3.3"
-  }
+  "dependencies": {}
 }
