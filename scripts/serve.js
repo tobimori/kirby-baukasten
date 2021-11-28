@@ -77,7 +77,8 @@ function startBs() {
       proxyReq: [
         (proxyReq, req, res) => {
           proxyReq.setHeader('X-Forwarded-For', 'coralic-kirby')
-          proxyReq.setHeader('X-Forwarded-Host', req.headers.host)
+          proxyReq.setHeader('X-Forwarded-Host', req.headers.host.split(':')[0])
+          proxyReq.setHeader('X-Forwarded-Port', devServer.bsPort)
           proxyReq.setHeader('X-Forwarded-Proto', 'http')
         },
       ],
