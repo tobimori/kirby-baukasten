@@ -1,5 +1,4 @@
 # Kirby .htaccess
-# revision 2020-06-15
 
 # rewrite rules
 <IfModule mod_rewrite.c>
@@ -41,6 +40,12 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*) index.php [L]
 
 </IfModule>
+
+# Deny access to repo files
+<FilesMatch "package.json|README.md|pnpm-lock.yaml|composer.json|coralic-kirby.config.js|composer.lock|readme.md">
+	order allow,deny
+	deny from all
+</FilesMatch>
 
 # pass the Authorization header to PHP
 SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1

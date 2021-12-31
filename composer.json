@@ -8,7 +8,7 @@
     "starterkit",
     "coralic"
   ],
-  "homepage": "https://coralic.de",
+  "homepage": "https://coralic.com",
   "authors": [
     {
       "name": "Tobias Möritz",
@@ -18,7 +18,7 @@
   ],
   "require": {
     "php": ">=7.4.0",
-    "getkirby/cms": "^3.6.0"
+    "getkirby/cms": "3.6.1.1"
   },
   "scripts": {
     "start": [
@@ -27,6 +27,9 @@
     ]
   },
   "config": {
-    "optimize-autoloader": true
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
   }
 }

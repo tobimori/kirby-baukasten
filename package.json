@@ -1,26 +1,29 @@
 {
   "name": "@coralic/kirby-plainkit",
-  "version": "3.6.0",
+  "version": "1.0.0",
   "description": "An opinionated, supercharged version of the Kirby CMS Plainkit",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "NODE_ENV=DEVELOPMENT node scripts/serve.js",
     "build": "NODE_ENV=PRODUCTION node scripts/build.js"
   },
   "devDependencies": {
-    "@coralic/eslint-config-base": "^1.0.0",
-    "autoprefixer": "^10.2.5",
-    "browser-sync": "^2.26.14",
-    "cssnano": "^4.1.10",
+    "autoprefixer": "^10.4.1",
+    "browser-sync": "^2.27.7",
+    "cssnano": "^4.1.11",
     "esbuild": "^0.8.57",
-    "eslint": "^7.21.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.0.0",
     "fibers": "^5.0.0",
-    "glob": "^7.1.6",
-    "postcss": "^8.2.7",
+    "glob": "^7.2.0",
+    "postcss": "^8.4.5",
     "prettier": "2.2.1",
-    "sass": "^1.32.8",
-    "stylelint": "^13.12.0",
-    "stylelint-config-sass-guidelines": "^8.0.0"
-  },
-  "dependencies": {}
+    "sass": "^1.45.2",
+    "stylelint": "^14.2.0",
+    "stylelint-config-sass-guidelines": "^9.0.1"
+  }
 }
