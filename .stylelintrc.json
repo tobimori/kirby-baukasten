@@ -8,6 +8,6 @@
     "declaration-property-value-disallowed-list": null,
     "selector-no-qualifying-type": null,
     "selector-max-id": 2,
-    "selector-class-pattern": "^(?:[sofbcu]-|is-|has-|-)(?:\\w*)(?:_\\w+)?"
+    "selector-class-pattern": "^(?:[sobcu]-|is-|has-|-)(?:\\w*)(?:_\\w+)?"
   }
 }

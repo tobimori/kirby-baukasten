@@ -37,10 +37,10 @@ Icon
 /site/cache/*
 !/site/cache/.gitkeep
 
-# Dev files
+# Compiled files
 # ---------------
-/dist/dev
-!/dist/prod
+/dist/*
+!/dist/.gitkeep
 
 # Accounts
 # ---------------

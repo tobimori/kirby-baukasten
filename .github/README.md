@@ -78,7 +78,6 @@ We namespace our classes for more transparency. Namespacing is enforced via [sty
 - `b-`: Block component and/or section that relates to Kirby's block system and or the page structure.
 - `c-`: A children component is a concrete, implementation-specific piece of UI. All of the changes you make to its styles should be detectable in the context you’re currently looking at. Modifying these styles should be safe and have no side effects.
 - `u-`: Utility has a very specific role (often providing only one declaration) and should not be bound onto or changed. It can be reused and is not tied to any specific piece of UI.
-- `f-`: Utility classes for font declarations that can be reused all over the project. Should also be availabe as SCSS mixin.
 - `is-`, `has-`: Is currently styled a certain way because of a state or condition. It tells us that the DOM currently has a temporary, optional, or short-lived style applied to it due to a certain state being invoked.
 
 #### Example

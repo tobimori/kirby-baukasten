@@ -1,11 +1,9 @@
 {
   "editor.formatOnSave": true,
   "intelephense.telemetry.enabled": false,
-  "prettier.packageManager": "yarn",
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "prettier.disableLanguages": ["[scss]"],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

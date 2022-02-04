@@ -12,19 +12,13 @@ const browserSync = require('browser-sync')
 const { log } = console
 
 // config
-const {
-  buildEnv,
-  entryPoints,
-  devServer,
-  watchPoints,
-} = require('../coralic-kirby.config')
+const { devServer, watchPoints } = require('../coralic-kirby.config')
 
 // helpers
 const { buildJs, buildScss } = require('./helpers/buildHelpers')
-const { env, isMacOS } = require('./helpers/generalHelpers')
+const { isMacOS } = require('./helpers/generalHelpers')
 
-let host, port, phpInstance, bsInstance
-process.env.ENV = process.env.NODE_ENV
+let host, port, bsInstance
 
 function startPhp() {
   if (!devServer.proxy) {
@@ -38,12 +32,11 @@ function startPhp() {
       `${host || 'localhost'}:${port || '9000'}`,
       '-t',
       '.',
-      path.join(path.resolve(__dirname, '..'), 'kirby', 'router.php'),
+      path.join(path.resolve(__dirname, '..'), 'kirby', 'router.php')
     ]
 
     const phpProcess = spawn(devServer.phpBinary || 'php', params, {
-      stdio: 'inherit',
-      env: process.env,
+      env: process.env
     })
 
     phpProcess.on('close', () => console.log('PHP Server closed'))
@@ -80,17 +73,17 @@ function startBs() {
           proxyReq.setHeader('X-Forwarded-Host', req.headers.host.split(':')[0])
           proxyReq.setHeader('X-Forwarded-Port', devServer.bsPort)
           proxyReq.setHeader('X-Forwarded-Proto', 'http')
-        },
-      ],
+        }
+      ]
     },
     port: devServer.bsPort,
     ui: {
-      port: devServer.bsUi,
+      port: devServer.bsUi
     },
     logPrefix: '',
     open: false,
     reloadOnRestart: true,
-    notify: false,
+    notify: false
   }
 
   // clean up

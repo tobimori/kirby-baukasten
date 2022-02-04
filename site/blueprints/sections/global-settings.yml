@@ -1,0 +1,13 @@
+icon: settings
+label:
+  de: Globale Einstellungen
+  en: Global settings
+columns:
+  - width: 1/3
+    sections:
+      settings_empty:
+        headline: ' '
+        type: info
+        text:
+          de: Keine Einstellungen vorhanden.
+          en: No settings available yet.

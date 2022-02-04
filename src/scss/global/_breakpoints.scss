@@ -1,0 +1,38 @@
+/**
+  Contains breakpoints and media query mixins.
+**/
+
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+@mixin sm {
+  @media (max-width: #{$media-sm}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$media-md}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$media-lg}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: #{$media-xl}) {
+    @content;
+  }
+}
+
+@mixin rwd($media) {
+  @media (max-width: $media+"px") {
+    @content;
+  }
+}

@@ -9,21 +9,20 @@
     "build": "NODE_ENV=PRODUCTION node scripts/build.js"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.1",
+    "autoprefixer": "^10.4.2",
     "browser-sync": "^2.27.7",
     "cssnano": "^4.1.11",
     "esbuild": "^0.8.57",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.0.0",
-    "fibers": "^5.0.0",
+    "eslint-plugin-promise": "^5.2.0",
     "glob": "^7.2.0",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.6",
     "prettier": "2.2.1",
-    "sass": "^1.45.2",
-    "stylelint": "^14.2.0",
+    "sass": "^1.49.7",
+    "stylelint": "^14.3.0",
     "stylelint-config-sass-guidelines": "^9.0.1"
   }
 }

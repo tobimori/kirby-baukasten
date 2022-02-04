@@ -6,7 +6,6 @@ const path = require('path')
 const esbuild = require('esbuild')
 
 const sass = require('sass')
-const Fiber = require('fibers')
 const postcss = require('postcss')
 
 // config
@@ -24,39 +23,32 @@ const buildJs = async (files) => {
       bundle: true,
       minify: buildEnv[env].js.minify,
       sourcemap: buildEnv[env].js.sourcemap,
-      target: buildEnv[env].js.target,
+      target: buildEnv[env].js.target
     })
     .catch((error) => console.error(error))
 }
 
 const buildScss = async (files) => {
   await files.map(async (file) => {
-    await sass.render(
-      {
-        file: file,
-        fiber: Fiber,
-      },
-      (error, result) => {
-        const distPath = getDistPath(file)
-
-        if (!error) {
-          postcss(buildEnv[env].scss.postCssPlugins)
-            .process(result.css, {
-              from: file,
-              to: distPath,
-            })
-            .then((postCssResult) => {
-              fs.writeFile(
-                distPath,
-                postCssResult.css,
-                (error) => error && console.error(error)
-              )
-            })
-        } else {
-          console.error(error)
-        }
-      }
-    )
+    try {
+      const result = sass.compile(file)
+      const distPath = getDistPath(file)
+      postcss(buildEnv[env].scss.postCssPlugins)
+        .process(result.css, {
+          from: file,
+          to: distPath
+        })
+        .then((postCssResult) => {
+          fs.writeFile(
+            distPath,
+            postCssResult.css,
+            (error) => error && console.error(error)
+          )
+        })
+    } catch (error) {
+      console.log(error)
+    }
   })
 }
+
 module.exports = { buildJs, buildScss }

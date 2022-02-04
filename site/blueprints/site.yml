@@ -1,3 +1,31 @@
-title: Site
-preset: pages
+title: Alle Seiten
 unlisted: true
+
+tabs:
+  main:
+    icon: page
+    label: Navigation
+    columns:
+      - width: 1/3
+        sections:
+          info:
+            headline: ' '
+            text:
+              de: |
+                Herzlich Willkommen im Content-Management-System der Website von {{ site.title }}.
+
+                Diese Website ist ein Projekt von [coralic®](https://coralic.com). Bei Fragen oder Problemen kannst du dich gerne an (email: office@coralic.com text: uns) wenden.
+              en: |
+                Welcome to the content management system of the website of {{ site.title }}.
+
+                This website is a project of [coralic®](https://coralic.com). For questions, don't hesitate to write (email: office@coralic.com text: us) an email.
+      - width: 2/3
+        sections:
+          pages:
+            headline: Seiten
+            type: pages
+            info: '{{ page.url }}'
+            create:
+              - default
+            image: icon
+  global: sections/global-settings

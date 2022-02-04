@@ -1,0 +1,8 @@
+title:
+  de: Administrator
+  en: Admin
+
+# Hidden element to hide notice in user management
+# Remove if you want to implement fields for your users
+fields:
+  hidden: true
