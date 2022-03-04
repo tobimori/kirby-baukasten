@@ -8,7 +8,8 @@ return [
 
   'kirby-extended' => [
     'vite' => [
-      'entry' => 'index.ts'
+      'entry' => 'index.ts',
+      'devServer' => 'http://localhost:3001'
     ]
   ]
 ];

@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "kirby": "env-cmd --use-shell \"php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public kirby/router.php\"",
-    "dev": "shx touch src/.lock && concurrently \"pnpm:kirby\" \"vite\"",
+    "dev": "shx touch src/.lock && concurrently -n \"php,vite\" \"pnpm:kirby\" \"vite\"",
     "build": "shx rm -f src/.lock && vite build"
   },
   "devDependencies": {

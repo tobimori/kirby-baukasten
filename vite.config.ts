@@ -23,7 +23,7 @@ const postCssViteDevCss = (): PostCssPlugin => ({
 
 export default defineConfig(({ mode }) => ({
   root: 'src',
-  base: mode === 'development' ? '/dist/' : '/dist/',
+  base: mode === 'development' ? '/' : '/dist/',
 
   build: {
     outDir: resolve(__dirname, 'public/dist'),
@@ -44,7 +44,7 @@ export default defineConfig(({ mode }) => ({
 
   server: {
     cors: true,
-    port: 3000,
+    port: 3001,
     strictPort: true
   }
 }))
