@@ -8,25 +8,25 @@ $md: 768px;
 $sm: 576px;
 
 @mixin sm {
-  @media (max-width: #{$media-sm}) {
+  @media (max-width: #{$sm}) {
     @content;
   }
 }
 
 @mixin md {
-  @media (max-width: #{$media-md}) {
+  @media (max-width: #{$md}) {
     @content;
   }
 }
 
 @mixin lg {
-  @media (max-width: #{$media-lg}) {
+  @media (max-width: #{$lg}) {
     @content;
   }
 }
 
 @mixin xl {
-  @media (max-width: #{$media-xl}) {
+  @media (max-width: #{$xl}) {
     @content;
   }
 }
