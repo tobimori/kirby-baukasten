@@ -21,37 +21,33 @@ Icon
 !/.vscode/extensions.json
 !/.vscode/settings.json
 
-# Kirby Content
-# ---------------
-/content/*
-!/content/.gitkeep
-
 # Vendor files
 # ---------------
 /vendor
 /kirby
 /node_modules
 
-# Cache Files
+# Build assets
 # ---------------
-/site/cache/*
-!/site/cache/.gitkeep
+/public/media
+/public/assets/dev
+/public/dist
 
-# Compiled files
+# Kirby
 # ---------------
-/dist/*
-!/dist/.gitkeep
-
-# Accounts
-# ---------------
-/site/accounts/*
-!/site/accounts/.gitkeep
-
-# Sessions
-# ---------------
-/site/sessions/*
-!/site/sessions/.gitkeep
-
-# License
-# ---------------
+/storage/accounts/*
+!/storage/accounts/.gitkeep
+/storage/sessions/*
+!/storage/sessions/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
 /site/config/.license
+/storage/content/*
+!/storage/content/.gitkeep
+/storage/cache/*
+!/storage/cache/.gitkeep
+/site/plugins/*
+
+# Env
+# ---------------
+.env
