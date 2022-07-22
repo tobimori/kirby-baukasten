@@ -1,4 +1,3 @@
-import Loadeer from 'loadeer'
 import { listen } from 'quicklink'
 
 import './styles/index.scss'
@@ -24,9 +23,6 @@ const templates = Object.fromEntries(
 )
 
 templates[document.body.dataset.template ?? '']?.().then((m) => m.default?.())
-
-const loadeer = new Loadeer()
-loadeer.observe()
 
 if (!import.meta.env.DEV) {
   listen()

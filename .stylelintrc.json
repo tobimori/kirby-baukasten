@@ -1,5 +1,5 @@
 {
-  "extends": "stylelint-config-sass-guidelines",
+  "extends": "stylelint-config-standard-scss",
   "rules": {
     "string-quotes": "double",
     "function-url-quotes": "always",
@@ -8,6 +8,7 @@
     "declaration-property-value-disallowed-list": null,
     "selector-no-qualifying-type": null,
     "selector-max-id": 2,
-    "selector-class-pattern": "^(?:[sobcu]-|is-|has-|-)(?:\\w*)(?:_\\w+)?"
+    "selector-class-pattern": "^(?:[sobcu]-|is-|has-|-)(?:\\w*)(?:_\\w+)?",
+    "no-descending-specificity": null
   }
 }

@@ -19,13 +19,14 @@
   ],
   "minimum-stability": "beta",
   "require": {
-    "php": ">=7.4.0",
+    "php": ">=8.0.0",
     "getkirby/cms": ">=3.6.2",
     "getkirby/layouts": "^1.0",
     "coralic/kirby-meta-knight": "2.0.0-beta",
     "johannschopplich/kirby-vite": "^1.0",
     "johannschopplich/kirby-blurry-placeholder": "^1.4",
-    "bnomei/kirby3-dotenv": "^2.0"
+    "bnomei/kirby3-dotenv": "^2.0",
+    "bnomei/kirby3-feed": "^1.5"
   },
   "config": {
     "optimize-autoloader": true,

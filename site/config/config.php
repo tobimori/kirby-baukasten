@@ -1,15 +1,57 @@
 <?php
 
-@include __DIR__ . DS . 'credentials.php';
+require_once __DIR__ . '/../plugins/kirby3-dotenv/global.php';
+
+loadenv([
+  'dir' => realpath(__DIR__ . '/../../'),
+  'file' => '.env',
+]);
 
 return [
-  'debug' => true,
+  'debug' => json_decode(env("KIRBY_DEBUG")),
+  'cache' => [
+    'pages' => [
+      'active' => json_decode(env('KIRBY_CACHE')),
+      'ignore' => function () {
+        return kirby()->user() ?: false;
+      }
+    ]
+  ],
   'date.handler' => 'strftime',
-
+  'languages' => true,
+  'languages.detect' => true,
   'kirby-extended' => [
     'vite' => [
       'entry' => 'index.ts',
-      'devServer' => 'http://localhost:3001'
+      'devServer' => 'http://localhost:' . env('VITE_DEV_PORT') ?? '3001',
     ]
-  ]
+  ],
+  'bnomei' => [
+    'dotenv' => [
+      'dir' => function (): string {
+        return realpath(kirby()->roots()->index() . '/../');
+      },
+    ]
+  ],
+  'thumbs' => [
+    'driver' => 'im'
+  ],
+  'routes' => [
+    [
+      'pattern' => 'sitemap.xml',
+      'method' => 'GET',
+      'action'  => function () {
+        $feed = site()->index()->listed()->limit(50000)->sitemap(['images' => false, 'videos' => false]);
+        return $feed;
+      }
+    ],
+    [
+      'pattern' => 'sitemap.xsl',
+      'method' => 'GET',
+      'action'  => function () {
+        snippet('feed/sitemapxsl');
+        die;
+      }
+    ],
+  ],
 ];

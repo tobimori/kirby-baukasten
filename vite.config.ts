@@ -3,6 +3,8 @@ import { mkdirSync, writeFileSync } from 'fs'
 import { defineConfig } from 'vite'
 import FullReload from 'vite-plugin-full-reload'
 import type { Plugin as PostCssPlugin } from 'postcss'
+import autoprefixer from 'autoprefixer'
+import 'dotenv/config'
 
 /**
  * Prevent FOUC in development mode before Vite
@@ -34,9 +36,16 @@ export default defineConfig(({ mode }) => ({
     }
   },
 
+  resolve: {
+    alias: {
+      '@styles': resolve(__dirname, 'src/styles/'),
+      '@': resolve(__dirname, 'src/')
+    }
+  },
+
   css: {
     postcss: {
-      plugins: [postCssViteDevCss()]
+      plugins: [autoprefixer(), postCssViteDevCss()]
     }
   },
 
@@ -44,7 +53,7 @@ export default defineConfig(({ mode }) => ({
 
   server: {
     cors: true,
-    port: 3001,
+    port: Number(process.env.VITE_DEV_PORT) || 3001,
     strictPort: true
   }
 }))

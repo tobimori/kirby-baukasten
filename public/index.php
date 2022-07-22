@@ -18,6 +18,7 @@ $kirby = new App([
     'cache'    => $storage . '/cache',
     'logs'     => $storage . '/logs',
     'sessions' => $storage . '/sessions',
+    'license'  => $storage . '/.license'
   ]
 ]);
 
