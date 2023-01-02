@@ -1,31 +1,48 @@
-title: Alle Seiten
-unlisted: true
+title:
+  de: Alle Seiten
+  en: All Pages
 
 tabs:
   main:
     icon: page
-    label: Navigation
+    label:
+      de: Navigation
+      en: Navigation
     columns:
-      - width: 1/3
-        sections:
-          info:
-            headline: ' '
-            text:
-              de: |
-                Herzlich Willkommen im Content-Management-System der Website von {{ site.title }}.
-
-                Diese Website ist ein Projekt von [coralic®](https://coralic.com). Bei Fragen oder Problemen kannst du dich gerne an (email: office@coralic.com text: uns) wenden.
-              en: |
-                Welcome to the content management system of the website of {{ site.title }}.
-
-                This website is a project of [coralic®](https://coralic.com). For questions, don't hesitate to write (email: office@coralic.com text: us) an email.
       - width: 2/3
         sections:
           pages:
-            headline: Seiten
+            label:
+              de: Seiten
+              en: Pages
             type: pages
             info: '{{ page.url }}'
             create:
               - default
+            templates:
+              - default
             image: icon
+      - width: 1/3
+        sections:
+          folders:
+            label:
+              de: Ordner
+              en: Folders
+            type: pages
+            create: false
+            templates:
+              - assets
+      - width: 1
+        sections:
+          info:
+            label: ' '
+            theme: none
+            text:
+              de: |
+                **Ein Projekt von** [Tobias Möritz](https://moeritz.io)
+                Fragen oder Probleme? (email: tobias@moeritz.io)
+              en: |
+                **A project by** [Tobias Möritz](https://moeritz.io)
+                Questions or problems? (email: tobias@moeritz.io)
   global: sections/global-settings
+  seo: metaknight-site

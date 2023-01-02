@@ -1,0 +1,9 @@
+type: writer
+label: Text
+marks:
+  - bold
+  - underline
+  - link
+  - email
+nodes:
+  - paragraph

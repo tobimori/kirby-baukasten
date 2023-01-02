@@ -1,0 +1,63 @@
+@use "@web/styles/global/theme";
+@use "@web/styles/global/fonts";
+
+// Custom blocks styling similar to Builder field
+// snippet by github.com/medienbaecker
+.k-blocks {
+  background: transparent;
+  box-shadow: none;
+  border-radius: none;
+}
+
+.k-block-container {
+  border-radius: var(--rounded-md);
+  box-shadow: var(--shadow);
+}
+
+.k-block-container:not(:last-of-type) {
+  border-bottom: none;
+  margin-bottom: 0.5rem;
+}
+
+.k-block-title {
+  overflow: hidden;
+  border-top-left-radius: var(--rounded-md);
+  border-top-right-radius: var(--rounded-md);
+}
+
+.k-block-fields-preview .k-block-title { cursor: pointer; }
+
+// Custom login form styling
+.k-panel:not(.k-panel-inside) {
+  background: #fff;
+}
+
+.k-login-view {
+  color: #0e1f28;
+  font-family: var(--font-sans);
+
+  > div {
+    position: relative;
+
+    &::before {
+      background: #0e1f28;
+      bottom: calc(100% + 2rem);
+      content: "";
+      display: block;
+      height: 3.125rem;
+      margin: 0 auto;
+      left: calc(50% - 5.1563rem);
+      mask-image: url("/assets/logo-panel.svg");
+      position: absolute;
+      width: 10.3125rem;
+    }
+
+    .k-field {
+      position: relative;
+
+      .k-field-header label {
+        font-weight: 500;
+      }
+    }
+  }
+}

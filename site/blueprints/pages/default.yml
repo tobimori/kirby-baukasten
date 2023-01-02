@@ -1,7 +1,18 @@
-title: Default Page
-preset: page
-fields:
-  text:
-  label: Text
-  type: textarea
-  size: large
+title:
+  de: Layout-Seite
+  en: Layout page
+image:
+  icon: grid
+  color: '#FFF'
+  back: '#0557FA'
+
+tabs:
+  content:
+    label: Inhalt
+    icon: text
+    columns:
+      - width: 3/4
+        type: fields
+        fields:
+          blocks: fields/blocks
+  seo: metaknight

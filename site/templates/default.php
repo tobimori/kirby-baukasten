@@ -5,7 +5,9 @@
  * @var Kirby\Cms\Page $page
  * @var Kirby\Cms\Site $site 
  */
-layout();
-?>
+
+snippet('layout', slots: true) ?>
 
 <h1><?= $page->title() ?></h1>
+
+<?php endsnippet() ?>

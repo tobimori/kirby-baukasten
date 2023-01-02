@@ -18,7 +18,7 @@ return [
     ]
   ],
   'date.handler' => 'strftime',
-  'languages' => true,
+  // 'languages' => true, -> no panel language view
   'languages.detect' => true,
   'kirby-extended' => [
     'vite' => [
@@ -32,9 +32,6 @@ return [
         return realpath(kirby()->roots()->index() . '/../');
       },
     ]
-  ],
-  'thumbs' => [
-    'driver' => 'im'
   ],
   'routes' => [
     [

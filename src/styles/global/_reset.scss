@@ -6,11 +6,17 @@
   and Eric Meyer's CSS Reset: http://meyerweb.com/eric/tools/css/reset/
 **/
 
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   isolation: isolate;
   line-height: 1;
+  height: 100%;
 }
 
 *,
@@ -21,7 +27,6 @@ body {
 
 * {
   background-color: transparent;
-  border: 0;
   border: 0;
   font: inherit;
   font-size: 100%;
@@ -38,11 +43,6 @@ ul {
 blockquote,
 q {
   quotes: none;
-}
-
-html,
-body {
-  height: 100%;
 }
 
 img,
@@ -77,7 +77,7 @@ table {
 }
 
 a {
-  color: currentColor;
+  color: currentcolor;
   text-decoration: none;
 }
 

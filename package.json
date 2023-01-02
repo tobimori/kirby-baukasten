@@ -1,6 +1,6 @@
 {
-  "name": "@coralic/kirby-plainkit",
-  "version": "2.1.0",
+  "name": "@coralic/kirby-baukasten",
+  "version": "3.0.0",
   "description": "An opinionated, supercharged version of the Kirby CMS Plainkit",
   "license": "MIT",
   "private": true,
@@ -10,28 +10,27 @@
     "build": "shx rm -f src/.lock && vite build"
   },
   "devDependencies": {
-    "@types/node": "^17.0.21",
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.13.0",
-    "autoprefixer": "^10.4.7",
-    "concurrently": "^7.0.0",
-    "dotenv": "^16.0.0",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
     "env-cmd": "^10.1.0",
-    "esbuild": "^0.8.57",
-    "eslint": "^8.10.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "postcss": "^8.4.6",
-    "prettier": "2.2.1",
-    "sass": "^1.49.7",
+    "eslint": "^8.31.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "postcss": "^8.4.20",
+    "prettier": "2.8.1",
+    "sass": "^1.57.1",
     "shx": "^0.3.4",
-    "stylelint": "^14.3.0",
-    "stylelint-config-standard-scss": "^5.0.0",
-    "typescript": "^4.6.2",
-    "vite": "^2.8.6",
-    "vite-plugin-full-reload": "^1.0.0"
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.3",
+    "vite-plugin-full-reload": "^1.0.5"
   },
   "dependencies": {
-    "quicklink": "^2.2.0",
+    "quicklink": "^2.3.0",
     "vanilla-lazyload": "^17.8.3"
   }
 }

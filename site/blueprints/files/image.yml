@@ -1,0 +1,34 @@
+title:
+  de: Bild
+  en: Image
+accept:
+  extension: jpg, jpeg, png, svg
+  type: image
+
+columns:
+  - width: 1/3
+    sections:
+      info:
+        type: fields
+        fields:
+          info:
+            label:
+              de: Information
+              en: Information
+            type: info
+            text:
+              de: |
+                Hier kann ein alternativer Text eingestellt werden, der blinden Besuchern und Suchmaschinen das Bild erklären soll.
+              en: |
+                Here you can set an alternative text that will be used for explaining this images' contents to blind people and search engines.
+  - width: 2/3
+    sections:
+      settings:
+        type: fields
+        fields:
+          alt:
+            label:
+              de: Alternativer Text/Bildbeschreibung
+              en: Alternative text/image description
+            type: text
+            width: 1/2

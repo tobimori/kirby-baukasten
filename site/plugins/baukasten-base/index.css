@@ -1,0 +1,65 @@
+:root {
+  --neutral-900: #000;
+  --neutral-000: #fff;
+  --font-sans: "Inter", sans-serif;
+}
+
+/**
+  Contain all font declarations.
+**/
+.k-blocks {
+  background: transparent;
+  box-shadow: none;
+  border-radius: none;
+}
+
+.k-block-container {
+  border-radius: var(--rounded-md);
+  box-shadow: var(--shadow);
+}
+
+.k-block-container:not(:last-of-type) {
+  border-bottom: none;
+  margin-bottom: 0.5rem;
+}
+
+.k-block-title {
+  overflow: hidden;
+  border-top-left-radius: var(--rounded-md);
+  border-top-right-radius: var(--rounded-md);
+}
+
+.k-block-fields-preview .k-block-title {
+  cursor: pointer;
+}
+
+.k-panel:not(.k-panel-inside) {
+  background: #fff;
+}
+
+.k-login-view {
+  color: #0e1f28;
+  font-family: var(--font-sans);
+}
+.k-login-view > div {
+  position: relative;
+}
+.k-login-view > div::before {
+  background: #0e1f28;
+  bottom: calc(100% + 2rem);
+  content: "";
+  display: block;
+  height: 3.125rem;
+  margin: 0 auto;
+  left: calc(50% - 5.1563rem);
+  -webkit-mask-image: url("/assets/logo-panel.svg");
+          mask-image: url("/assets/logo-panel.svg");
+  position: absolute;
+  width: 10.3125rem;
+}
+.k-login-view > div .k-field {
+  position: relative;
+}
+.k-login-view > div .k-field .k-field-header label {
+  font-weight: 500;
+}

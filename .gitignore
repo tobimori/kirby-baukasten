@@ -25,7 +25,7 @@ Icon
 # ---------------
 /vendor
 /kirby
-/node_modules
+node_modules
 
 # Build assets
 # ---------------
@@ -48,6 +48,7 @@ Icon
 !/storage/cache/.gitkeep
 /site/plugins/*
 !/site/plugins/project-*
+!/site/plugins/baukasten-*
 /storage/retour.json
 
 # files of Composer dependencies that are not needed for the plugin

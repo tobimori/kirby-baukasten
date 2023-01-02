@@ -1,31 +1,8 @@
-@use "global/reset";
-@use "global/theme";
-@use "global/utilities";
-@use "global/fonts";
+// Global styles & assets
 @use "global/breakpoints";
 @use "global/container";
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-sans);
-  font-weight: 400;
-  min-height: 100vh;
-  text-size-adjust: 100%;
-
-  // disable scrolling, e.g. for on-site popups
-  &.has-no-scroll,
-  &.has-no-scroll-nav {
-    overflow: hidden;
-  }
-}
-
-// fix footer sticking in the middle of the scrren
-// automatically expand content for smaller screens w/ flex
-div.s-content {
-  flex: 1 0 auto;
-}
+@use "global/fonts";
+@use "global/keyframes";
+@use "global/main";
+@use "global/theme";
+@use "global/reset";

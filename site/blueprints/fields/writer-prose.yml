@@ -1,0 +1,9 @@
+extends: fields/writer
+nodes:
+  - paragraph
+  - h2
+  - h3
+  - h4
+  - h5
+  - bulletList
+  - orderedList

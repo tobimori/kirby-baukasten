@@ -1,0 +1,32 @@
+{
+  "name": "coralic/kirby-baukasten-base",
+  "description": "",
+  "type": "kirby-plugin",
+  "keywords": [
+    "kirby"
+  ],
+  "license": "Copyright (c) 2023 - Tobias Möritz",
+  "authors": [
+    {
+      "name": "Tobias Möritz",
+      "email": "tobias@moeritz.io",
+      "homepage": "https://moeritz.io"
+    }
+  ],
+  "require": {
+    "php": ">=8.0.0",
+    "getkirby/composer-installer": "^1.2"
+  },
+  "require-dev": {
+    "getkirby/cms": "^3.9"
+  },
+  "scripts": {
+    "dist": "composer install --no-dev --optimize-autoloader"
+  },
+  "config": {
+    "optimize-autoloader": true
+  },
+  "extra": {
+    "kirby-cms-path": false
+  }
+}

@@ -1,6 +1,6 @@
 {
   "@schema": "https://getcomposer.org/schema.json",
-  "name": "coralic/kirby-plainkit",
+  "name": "coralic/kirby-baukasten",
   "description": "An opinionated, supercharged version of the Kirby CMS Plainkit",
   "type": "project",
   "keywords": [
@@ -20,13 +20,15 @@
   "minimum-stability": "beta",
   "require": {
     "php": ">=8.0.0",
-    "getkirby/cms": ">=3.6.2",
-    "getkirby/layouts": "^1.0",
+    "getkirby/cms": ">=3.9.0",
     "coralic/kirby-meta-knight": "2.0.0-beta",
     "johannschopplich/kirby-vite": "^1.0",
-    "johannschopplich/kirby-blurry-placeholder": "^1.4",
     "bnomei/kirby3-dotenv": "^2.0",
-    "bnomei/kirby3-feed": "^1.5"
+    "bnomei/kirby3-feed": "^1.5",
+    "genxbe/kirby3-ray": "^1.0",
+    "oblik/kirby-link-field": "^5.2",
+    "jg/kirby-fields-block": "^1.1",
+    "coralic/kirby-extended-writer": "^1.1"
   },
   "config": {
     "optimize-autoloader": true,

@@ -1,0 +1,13 @@
+label:
+  de: Bild
+  en: Image
+type: files
+uploads:
+  parent: site.find('assets')
+  template: image
+multiple: false
+image:
+  cover: false
+text: '{{ file.alt }} ({{ file.filename }})'
+info: '{{ file.tags.join(", ") }}'
+query: site.find('assets').images.filterBy('template', 'image')

@@ -2,6 +2,8 @@
 
 use Kirby\Cms\App;
 
+define("KIRBY_HELPER_DUMP", false);
+
 $base = dirname(__DIR__);
 
 require $base . '/kirby/bootstrap.php';

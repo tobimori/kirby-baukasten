@@ -1,0 +1,10 @@
+label:
+  de: Erweitert
+  en: Advanced
+fields:
+  blockId:
+    label:
+      de: Eindeutige ID (Anker)
+      en: Unique ID (Anchor)
+    type: text
+    width: 1/3
