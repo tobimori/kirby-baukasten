@@ -1,21 +1,25 @@
 <?php
 
-/** @var Kirby\Cms\Page $page */ ?>
+/** @var Kirby\Cms\Page $page */
+
+if (json_decode(env('REQUIRES_LOGIN')) && !kirby()->user()) {
+  go('/panel');
+} ?>
 
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Meta Knight -->
+
   <?php snippet('meta-information', ['page' => $page]) ?>
   <?php snippet('robots', ['page' => $page]) ?>
-  <!-- Icons -->
+
   <link rel="icon" href="/favicon.svg" />
   <link rel="mask-icon" href="/favicon.svg" color="#000000" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#000000">
-  <!-- Vite -->
+
   <?= vite()->js() ?>
   <?= vite()->css() ?>
 

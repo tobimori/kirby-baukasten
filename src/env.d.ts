@@ -1,3 +1,3 @@
 /// <reference types="vite/client" />
 
-declare module 'quicklink'
+declare module 'tachyonjs'

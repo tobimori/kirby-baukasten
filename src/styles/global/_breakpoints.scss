@@ -1,6 +1,7 @@
 /**
   Contains breakpoints and media query mixins.
 **/
+@use "sass:math";
 
 $xl: 80rem;
 $lg: 62rem;
@@ -32,7 +33,7 @@ $sm: 29.5rem;
 }
 
 @mixin rwd($media) {
-  @media (max-width: $media / 16 + "rem") {
+  @media (max-width: math.div($media, 16) + "rem") {
     @content;
   }
 }

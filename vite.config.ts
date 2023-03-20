@@ -5,6 +5,7 @@ import FullReload from 'vite-plugin-full-reload'
 import type { Plugin as PostCssPlugin } from 'postcss'
 import autoprefixer from 'autoprefixer'
 import 'dotenv/config'
+import { FontaineTransform } from 'fontaine'
 
 /**
  * Prevent FOUC in development mode before Vite
@@ -15,7 +16,7 @@ const postCssViteDevCss = (): PostCssPlugin => ({
 
   OnceExit(root, { result }) {
     // @ts-expect-error: property unknown
-    if (result.opts.env !== 'production') {
+    if (result.opts.env !== 'production' && result.opts.from?.endsWith('index.scss')) {
       const outDir = resolve(__dirname, 'public/dist/dev')
       mkdirSync(outDir, { recursive: true })
       writeFileSync(resolve(outDir, 'index.css'), root.toResult().css)
@@ -49,7 +50,13 @@ export default defineConfig(({ mode }) => ({
     }
   },
 
-  plugins: [FullReload(['storage/content/**/*', 'site/{layouts,snippets,templates}/**/*'])],
+  plugins: [
+    FontaineTransform.vite({
+      fallbacks: ['BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Noto Sans'],
+      resolvePath: (id: string) => `file:///${resolve(__dirname, `public/${id}`)}`
+    }),
+    FullReload(['storage/content/**/*', 'site/{layouts,snippets,templates}/**/*'])
+  ],
 
   server: {
     cors: true,

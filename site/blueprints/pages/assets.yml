@@ -1,0 +1,71 @@
+title:
+  de: Dateien
+  en: Files
+image:
+  icon: folder
+  back: '#f3f3f3'
+  color: '#0557FA'
+
+options:
+  preview: false
+  delete: false
+  changeSlug: false
+  changeStatus: false
+  duplicate: false
+  changeTitle: false
+
+status:
+  draft: false
+  unlisted: true
+  listed: false
+
+tabs:
+  list:
+    label:
+      de: Listenansicht
+      en: List view
+    icon: list-bullet
+    sections:
+      listFiles:
+        headline:
+          de: Bilder
+          en: Images
+        type: files
+        template: image
+        layout: table
+        size: tiny
+        limit: 60
+        uploads:
+          template: image
+        search: true
+        columns:
+          alt:
+            label:
+              de: Alt-Text
+              en: Alt text
+            value: '{{ file.alt }}'
+          tags:
+            label:
+              de: Schlagwörter
+              en: Tags
+            type: tags
+        sortBy: filename desc
+  grid:
+    label:
+      de: Rasteransicht
+      en: Grid view
+    icon: grid
+    sections:
+      gridFiles:
+        headline:
+          de: Bilder
+          en: Images
+        type: files
+        template: image
+        layout: cardlets
+        limit: 60
+        uploads:
+          template: image
+        info: '{{ file.tags.join(", ") }} | {{ file.filename }} '
+        text: '{{ file.alt }}'
+        sortBy: filename desc

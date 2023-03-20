@@ -20,7 +20,7 @@ columns:
               de: |
                 Hier kann ein alternativer Text eingestellt werden, der blinden Besuchern und Suchmaschinen das Bild erklären soll.
               en: |
-                Here you can set an alternative text that will be used for explaining this images' contents to blind people and search engines.
+                Here you can set an alternative text that will be used by blind people and search engines to explain the image.
   - width: 2/3
     sections:
       settings:
@@ -31,4 +31,11 @@ columns:
               de: Alternativer Text/Bildbeschreibung
               en: Alternative text/image description
             type: text
+            width: 1/2
+          tags:
+            label:
+              de: Interne Schlagworte
+              en: Internal tags
+            type: tags
+            query: file.siblings.pluck("tags", ",", true)
             width: 1/2

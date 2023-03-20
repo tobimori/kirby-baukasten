@@ -28,7 +28,8 @@
     "genxbe/kirby3-ray": "^1.0",
     "oblik/kirby-link-field": "^5.2",
     "jg/kirby-fields-block": "^1.1",
-    "coralic/kirby-extended-writer": "^1.1"
+    "coralic/kirby-extended-writer": "^1.1",
+    "tobimori/kirby-blurhash": "^1.2"
   },
   "config": {
     "optimize-autoloader": true,

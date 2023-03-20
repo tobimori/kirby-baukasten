@@ -6,8 +6,6 @@
  * @var Kirby\Cms\Site $site 
  */
 
-snippet('layout', slots: true) ?>
-
-<h1><?= $page->title() ?></h1>
-
+snippet('layout', slots: true); ?>
+<?= $page->blocks()->toBlocks() ?>
 <?php endsnippet() ?>

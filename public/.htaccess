@@ -1,85 +1,221 @@
 # Kirby .htaccess
+# revision 2022-09-15
 
-# Core rewrite rules
-
+# rewrite rules
 <IfModule mod_rewrite.c>
 
-    RewriteEngine on
+# enable awesome urls. i.e.:
+# http://yourdomain.com/about-us/team
+RewriteEngine on
 
-    # Make sure to set the RewriteBase correctly if you are running
-    # the site in a subfolder otherwise links or the entire site will break.
-    # RewriteBase /
+# make sure to set the RewriteBase correctly
+# if you are running the site in a subfolder.
+# Otherwise links or the entire site will break.
+#
+# If your homepage is http://yourdomain.com/mysite
+# Set the RewriteBase to:
+#
+# RewriteBase /mysite
 
-    # Block files and folders beginning with a dot, such as `.git`, except for
-    # the `.well-known` folder, which is used for Let's Encrypt and `security.txt`.
-    RewriteRule (^|/)\.(?!well-known\/) index.php [L]
+# In some environments it's necessary to
+# set the RewriteBase to:
+#
+# RewriteBase /
 
-    # Make site links work.
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*) index.php [L]
+# https redirect
+# RewriteCond %{HTTP:X-Forwarded-Proto} !https
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# force www without ssl
+# RewriteCond %{HTTPS} off
+# RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
+# RewriteCond %{HTTP_HOST} (.+)$ [NC]
+# RewriteRule ^(.*)$ http://www.%1/$1 [R=301,L]
+
+# force www with ssl
+# RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
+# RewriteCond %{HTTP_HOST} (.+)$ [NC]
+# RewriteRule ^(.*)$ https://www.%1/$1 [R=301,L]
+
+# force non-www without ssl
+# RewriteCond %{HTTPS} off
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# force non-www with ssl
+# RewriteCond %{HTTPS} on
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# redirect www all except subdomains
+# RewriteCond %{HTTP_HOST} !^(.*)\.(.*)\. [NC]
+# RewriteCond %{HTTPS}s ^on(s)|
+# RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# block files and folders beginning with a dot, such as .git
+# except for the .well-known folder, which is used for Let's Encrypt and security.txt
+RewriteRule (^|/)\.(?!well-known\/) index.php [L]
+
+# block all files in the content folder from being accessed directly
+RewriteRule ^content/(.*) index.php [L]
+
+# block all files in the site folder from being accessed directly
+RewriteRule ^site/(.*) index.php [L]
+
+# block direct access to Kirby and the Panel sources
+RewriteRule ^kirby/(.*) index.php [L]
+
+# make site links work
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*) index.php [L]
 
 </IfModule>
 
-# Pass the Authorization header to PHP.
+# pass the Authorization header to PHP
+SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
 
-SetEnvIf Authorization "(.\*)" HTTP_AUTHORIZATION=$1
+# Additional recommended values
+# Remove comments for those you want to use.
+#
+# AddDefaultCharset UTF-8
+#
+# php_flag short_open_tag on
 
-# Security
+# ==== GZIP =====
+<ifmodule mod_deflate.c>
+	# compress text, html, javascript, css, xml:
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE text/javascript
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/json
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/x-javascript
+	AddOutputFilterByType DEFLATE application/x-font-woff
+	AddOutputFilterByType DEFLATE application/x-font-woff2
 
-# Remove the `X-Powered-By` response header providing server-side technology information.
+	# Or, compress certain file types by extension:
+	<files *.html>
+		SetOutputFilter DEFLATE
+	</files>
+</ifmodule>
+# ==== GZIP END =====
+
+<ifmodule mod_deflate.c>
+	<ifmodule mod_setenvif.c>
+		<ifmodule mod_headers.c=>
+		SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+		RequestHeader append Accept-Encoding &quot;gzip,deflate&quot; env=HAVE_Accept-Encoding
+		</ifmodule>
+	</ifmodule>
+</ifmodule>
 
 <IfModule mod_headers.c>
-    Header unset X-Powered-By
-    Header always unset X-Powered-By
+	<FilesMatch "\.(ico|pdf|flv|mp4|ogg|webm|jpg|jpeg|png|gif|js|css|swf|eot|font.css|otf|ttc|ttf|woff|woff2|svg|zip)$">
+		Header set Cache-Control "max-age=604800, public"
+	</FilesMatch>
+
+	<FilesMatch "\.(html|htm|xml|txt)$">
+		Header set Cache-Control "max-age=86400, public, must-revalidate"
+	</FilesMatch>
 </IfModule>
 
-# Compression for better web performance
+# ######################################################################
+# # MEDIA TYPES AND CHARACTER ENCODINGS                                #
+# ######################################################################
 
-<IfModule mod_deflate.c>
+# ----------------------------------------------------------------------
+# | Media types                                                        |
+# ----------------------------------------------------------------------
 
-    # Force compression for mangled `Accept-Encoding` request headers.
-    <IfModule mod_setenvif.c>
-        <IfModule mod_headers.c>
-            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
-            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
-        </IfModule>
-    </IfModule>
+# Serve resources with the proper media types (f.k.a. MIME types).
+#
+# https://www.iana.org/assignments/media-types/media-types.xhtml
+# https://httpd.apache.org/docs/current/mod/mod_mime.html#addtype
 
-    # Compress all output labeled with one of the following media types.
-    <IfModule mod_filter.c>
-        AddOutputFilterByType DEFLATE "application/atom+xml" \
-                                      "application/javascript" \
-                                      "application/json" \
-                                      "application/ld+json" \
-                                      "application/manifest+json" \
-                                      "application/rdf+xml" \
-                                      "application/rss+xml" \
-                                      "application/schema+json" \
-                                      "application/geo+json" \
-                                      "application/wasm" \
-                                      "application/x-font-ttf" \
-                                      "application/x-javascript" \
-                                      "application/x-web-app-manifest+json" \
-                                      "application/xhtml+xml" \
-                                      "application/xml" \
-                                      "font/opentype" \
-                                      "font/otf" \
-                                      "image/bmp" \
-                                      "image/svg+xml" \
-                                      "text/cache-manifest" \
-                                      "text/calendar" \
-                                      "text/css" \
-                                      "text/html" \
-                                      "text/javascript" \
-                                      "text/plain" \
-                                      "text/markdown" \
-                                      "text/vcard" \
-                                      "text/vtt" \
-                                      "text/x-component" \
-                                      "text/x-cross-domain-policy" \
-                                      "text/xml"
+<IfModule mod_mime.c>
 
-    </IfModule>
+  # Data interchange
 
-</IfModule>
+    AddType application/atom+xml                        atom
+    AddType application/json                            json map topojson
+    AddType application/ld+json                         jsonld
+    AddType application/rss+xml                         rss
+    AddType application/vnd.geo+json                    geojson
+    AddType application/xml                             rdf xml
+
+
+  # JavaScript
+
+    # Normalize to standard type.
+    # https://tools.ietf.org/html/rfc4329#section-7.2
+
+    AddType application/javascript                      js
+
+
+  # Manifest files
+
+    # If you are providing a web application manifest file (see
+    # the specification: https://w3c.github.io/manifest/), it is
+    # recommended that you serve it with the `application/manifest+json`
+    # media type.
+    #
+    # Because the web application manifest file doesn't have its
+    # own unique file extension, you can set its media type either
+    # by matching:
+    #
+    # 1) the exact location of the file (this can be done using a
+    #    directive such as `<Location>`, but it will NOT work in
+    #    the `.htaccess` file, so you will have to do it in the main
+    #    server configuration file or inside of a `<VirtualHost>`
+    #    container)
+    #
+    #    e.g.:
+    #
+    #       <Location "/.well-known/manifest.json">
+    #           AddType application/manifest+json               json
+    #       </Location>
+    #
+    # 2) the filename (this can be problematic as you will need to
+    #    ensure that you don't have any other file with the same name
+    #    as the one you gave to your web application manifest file)
+    #
+    #    e.g.:
+    #
+    #       <Files "manifest.json">
+    #           AddType application/manifest+json               json
+    #       </Files>
+
+    AddType application/x-web-app-manifest+json         webapp
+    AddType text/cache-manifest                         appcache
+
+
+  # Media files
+
+    AddType audio/mp4                                   f4a f4b m4a
+    AddType audio/ogg                                   oga ogg opus
+    AddType image/bmp                                   bmp
+    AddType image/svg+xml                               svg svgz
+    AddType image/webp                                  webp
+    AddType video/mp4                                   f4v f4p m4v mp4
+    AddType video/ogg                                   ogv
+    AddType video/webm                                  webm
+    AddType video/x-flv                                 flv
+
+    # Serving `.ico` image files with a different media type
+    # prevents Internet Explorer from displaying then as images:
+    # https://github.com/h5bp/html5-boilerplate/commit/37b5fec090d00f38de64b591bcddcb205aadf8ee
+
+    AddType image/x-icon                                cur ico
+
+
+  # Web fonts
+
+    AddType application/font-woff                       woff
+    AddType application/font-woff2                      woff2
