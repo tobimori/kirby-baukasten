@@ -14,7 +14,7 @@ Kirby::plugin('tobimori/baukasten', [
   'icons' => [],
   'blockMethods' => [
     'attr' => function ($attr) {
-      $attr = array_merge_recursive($attr, ['class' => ['section'], 'data-block-id' => $this->id()]);
+      $attr = array_merge_recursive($attr, ['class' => ['o-block'], 'data-block-id' => $this->id()]);
 
       if ($this->blockId()->isNotEmpty()) {
         $attr['id'] = $this->blockId();

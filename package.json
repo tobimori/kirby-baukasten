@@ -4,6 +4,7 @@
   "description": "An opinionated, supercharged version of the Kirby CMS Plainkit",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "scripts": {
     "kirby": "env-cmd --use-shell \"php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public kirby/router.php\"",
     "dev": "shx touch src/.lock && concurrently -n \"php,vite\" \"pnpm:kirby\" \"vite\"",
