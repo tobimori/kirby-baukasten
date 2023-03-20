@@ -56,6 +56,10 @@ We namespace our classes for more transparency. Namespacing is enforced via [sty
 - `u-`: Utility has a very specific role (often providing only one declaration) and should not be bound onto or changed. It can be reused and is not tied to any specific piece of UI.
 - `is-`, `has-`: Is currently styled a certain way because of a state or condition. It tells us that the DOM currently has a temporary, optional, or short-lived style applied to it due to a certain state being invoked.
 
+### Optimized Webfont Fallbacks
+
+With [fontaine](https://github.com/danielroe/fontaine), the Vite build setup automatically generates a Fallback font with correct font metrics with the name of `{font} fallback`. Make sure to include it in your font-stack, as it will not be automatically added to CSS variables.
+
 ### Block system
 
 Most of our pages are build in a page-builder-like fashion utilizing the Kirby Blocks field. To support the modularity of this approach, we've implemented a few specific helpers to make this easier.
