@@ -98,7 +98,6 @@ SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
 	AddOutputFilterByType DEFLATE application/javascript
 	AddOutputFilterByType DEFLATE application/x-javascript
 	AddOutputFilterByType DEFLATE application/x-font-woff
-	AddOutputFilterByType DEFLATE application/x-font-woff2
 
 	# Or, compress certain file types by extension:
 	<files *.html>
