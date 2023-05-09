@@ -7,31 +7,36 @@
  * @var Kirby\Cms\File|Kirby\Filesystem\Asset $image
  * @var string $sizes
  * @var bool|null $lazy
- * @var bool|null $transparent
+ * @var bool|null $clientBlur
  * @var string $alt
  * */
 
+$clientBlur ??= true;
 $attr ??= [];
-$defaultWidths = [400 => 400, 800 => 800, 1000 => 1000, 1200 => 1200];
+$defaultWidths = [400, 800, 1000, 1200];
 
 if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) :
   $hasLazy = $lazy ?? true;
   $isSvg = $image->extension() == 'svg'; ?>
 
-  <picture <?= attr(['class' => isset($class) ? (is_array($class) ? implode(' ', $class) : $class) : null, 'data-caption' => $caption ?? null, ...$attr]) ?>>
+  <picture <?= attr([
+              'class' => isset($class) ? (is_array($class) ? implode(' ', $class) : $class) : null,
+              'style' => '--ratio: ' . $image->ratio() . ';',
+            ]) ?>>
     <?php if ($isSvg) : ?>
       <?= svg($image) ?>
       <?php else :
       foreach ($formats ?? ['webp', $image->extension()] as $format) :
         $srcset = [];
-        foreach ($widths ?? $defaultWidths as $key => $width) :
-          $srcset[$key . 'w'] = ['width' => $width, 'format' => $format];
+        $median = $image->resize(median($widths ?? $defaultWidths));
+        foreach ($widths ?? $defaultWidths as $width) :
+          $srcset[$width . 'w'] = ['width' => $width, 'format' => $format];
         endforeach; ?>
         <?php if ($hasLazy) : ?>
           <source <?= attr([
                     'type' => "image/{$format}",
                     'data-srcset' => $image->srcset($srcset),
-                    'data-sizes' => $sizes ?? '100vw'
+                    'data-sizes' => $sizes ?? 'auto',
                   ]) ?>>
         <?php else : ?>
           <source <?= attr([
@@ -42,11 +47,15 @@ if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) :
       <?php endif;
       endforeach; ?>
       <img <?= attr([
-              'src' => $hasLazy ? $image->bhUri() : $image->resize(median($widths ?? $defaultWidths))->url(),
+              'data-thumbhash' => $clientBlur ? $image->th() : null,
+              'src' => $clientBlur ? "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" : $image->thUri(),
+              'data-src' => $median->url(),
               'width' => $image->width(),
               'height' => $image->height(),
               'alt' => $alt ?? is_a($image, 'Kirby\Cms\File') ? $image->alt() : null,
-              'data-lazyload' => $hasLazy || null
+              'loading' => $hasLazy ? "lazy" : null,
+              'data-sizes' => $sizes ?? 'auto',
+              // 'style' => 'background-color: ' . $image->bhColor() . ';', // to be replaced and togglable
             ]) ?>>
     <?php endif ?>
   </picture>

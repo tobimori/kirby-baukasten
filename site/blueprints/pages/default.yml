@@ -15,4 +15,8 @@ tabs:
         type: fields
         fields:
           blocks: fields/blocks
-  seo: metaknight
+      - width: 1/4
+        sections:
+          headings:
+            type: heading-structure
+  seo: seo/page

@@ -45,4 +45,4 @@ tabs:
                 **A project by** [Tobias Möritz](https://moeritz.io)
                 Questions or problems? (email: tobias@moeritz.io)
   global: sections/global-settings
-  seo: metaknight-site
+  seo: seo/site

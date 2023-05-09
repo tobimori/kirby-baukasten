@@ -1,5 +1,3 @@
-import LazyLoad from 'vanilla-lazyload'
+import { lazyLoad } from 'unlazy'
 
-export const install = () => {
-  new LazyLoad({ elements_selector: '[data-lazyload]' })
-}
+export const install = lazyLoad

@@ -6,6 +6,7 @@ import type { Plugin as PostCssPlugin } from 'postcss'
 import autoprefixer from 'autoprefixer'
 import 'dotenv/config'
 import { FontaineTransform } from 'fontaine'
+import postcssLogical from 'postcss-logical'
 
 /**
  * Prevent FOUC in development mode before Vite
@@ -46,7 +47,7 @@ export default defineConfig(({ mode }) => ({
 
   css: {
     postcss: {
-      plugins: [autoprefixer(), postCssViteDevCss()]
+      plugins: [autoprefixer(), postcssLogical(), postCssViteDevCss()]
     }
   },
 

@@ -11,28 +11,29 @@
     "build": "shx rm -f src/.lock && vite build"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^5.47.1",
-    "@typescript-eslint/parser": "^5.47.1",
-    "autoprefixer": "^10.4.13",
-    "concurrently": "^7.6.0",
+    "@types/node": "^20.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.0.1",
     "dotenv": "^16.0.3",
     "env-cmd": "^10.1.0",
-    "eslint": "^8.31.0",
+    "eslint": "^8.40.0",
     "eslint-plugin-prettier": "^4.2.1",
     "fontaine": "^0.3.1",
-    "postcss": "^8.4.20",
-    "prettier": "2.8.1",
-    "sass": "^1.57.1",
+    "postcss": "^8.4.23",
+    "postcss-logical": "^6.1.0",
+    "prettier": "2.8.8",
+    "sass": "^1.62.1",
     "shx": "^0.3.4",
-    "stylelint": "^14.16.1",
-    "stylelint-config-standard-scss": "^6.1.0",
-    "typescript": "^4.9.4",
-    "vite": "^4.0.3",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard-scss": "^9.0.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5",
     "vite-plugin-full-reload": "^1.0.5"
   },
   "dependencies": {
-    "tachyonjs": "^1.1.3",
-    "vanilla-lazyload": "^17.8.3"
+    "tachyonjs": "^2.0.1",
+    "unlazy": "^0.8.9"
   }
 }

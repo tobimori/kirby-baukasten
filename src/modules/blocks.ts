@@ -1,18 +1,8 @@
 // Default blocks will be loaded lazily
-const blocks: { selector: string; file: string }[] = [
-  {
-    selector: '.block',
-    file: 'block'
-  }
-]
+const blocks: { selector: string; file: string }[] = []
 
 // Eager blocks will be included by default in the main bundle
-const eager: { selector: string; file: string }[] = [
-  {
-    selector: '.bundled',
-    file: 'bundled'
-  }
-]
+const eager: { selector: string; file: string }[] = []
 
 export const install = () => {
   const modules = Object.fromEntries(

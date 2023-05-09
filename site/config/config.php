@@ -17,13 +17,14 @@ return [
       }
     ]
   ],
-  'date.handler' => 'strftime',
+  'yaml.handler' => 'symfony',
+  'date.handler' => 'intl',
   // 'languages' => true, -> no panel language view
   'languages.detect' => true,
   'kirby-extended' => [
     'vite' => [
       'entry' => 'index.ts',
-      'devServer' => 'http://localhost:' . env('VITE_DEV_PORT') ?? '3001',
+      'devServer' => 'http://' . env('KIRBY_DEV_HOSTNAME') . ':' . env('VITE_DEV_PORT') ?? '3001',
     ]
   ],
   'bnomei' => [
