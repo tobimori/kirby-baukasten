@@ -31,7 +31,8 @@
     "thathoff/kirby-sentry": "^3.0",
     "lukaskleinschmidt/kirby-laravel-vite": "^1.0",
     "gearsdigital/enhanced-toolbar-link-dialog": "^3.2",
-    "junohamburg/kirby-visual-block-selector": "^1.1"
+    "junohamburg/kirby-visual-block-selector": "^1.1",
+    "tobimori/kirby-spielzeug": "^1.0"
   },
   "config": {
     "optimize-autoloader": true,
