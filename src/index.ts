@@ -1,4 +1,3 @@
-import './styles/index.scss'
 import 'tachyonjs'
 
 // Remove temporary stylesheet (to prevent FOUC) in development mode

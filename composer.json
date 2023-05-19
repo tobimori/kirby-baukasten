@@ -1,6 +1,6 @@
 {
   "@schema": "https://getcomposer.org/schema.json",
-  "name": "coralic/kirby-baukasten",
+  "name": "tobimori/kirby-baukasten",
   "description": "An opinionated, supercharged version of the Kirby CMS Plainkit",
   "type": "project",
   "keywords": [
@@ -9,7 +9,7 @@
     "starterkit",
     "coralic"
   ],
-  "homepage": "https://coralic.com",
+  "homepage": "https://moeritz.io",
   "authors": [
     {
       "name": "Tobias Möritz",
@@ -19,21 +19,25 @@
   ],
   "minimum-stability": "beta",
   "require": {
-    "php": ">=8.0.0",
+    "php": ">=8.2.0",
     "getkirby/cms": ">=3.9.0",
-    "coralic/kirby-meta-knight": "2.0.0-beta",
-    "johannschopplich/kirby-vite": "^1.0",
     "bnomei/kirby3-dotenv": "^2.0",
     "bnomei/kirby3-feed": "^1.5",
     "genxbe/kirby3-ray": "^1.0",
     "oblik/kirby-link-field": "^5.2",
-    "jg/kirby-fields-block": "^1.1",
-    "coralic/kirby-extended-writer": "^1.1"
+    "coralic/kirby-extended-writer": "^1.1",
+    "tobimori/kirby-seo": "^0.3.0",
+    "junohamburg/kirby-block-preview-fields": "^1.0",
+    "thathoff/kirby-sentry": "^3.0",
+    "lukaskleinschmidt/kirby-laravel-vite": "^1.0",
+    "gearsdigital/enhanced-toolbar-link-dialog": "^3.2",
+    "junohamburg/kirby-visual-block-selector": "^1.1"
   },
   "config": {
     "optimize-autoloader": true,
     "allow-plugins": {
-      "getkirby/composer-installer": true
+      "getkirby/composer-installer": true,
+      "php-http/discovery": true
     }
   }
 }

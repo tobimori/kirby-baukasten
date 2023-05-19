@@ -1,5 +1,7 @@
 <?php
 
+use LukasKleinschmidt\Vite;
+
 require_once __DIR__ . '/../plugins/kirby3-dotenv/global.php';
 
 loadenv([
@@ -8,48 +10,27 @@ loadenv([
 ]);
 
 return [
+  'routes' => require_once __DIR__ . '/routes.php',
   'debug' => json_decode(env("KIRBY_DEBUG")),
-  'cache' => [
-    'pages' => [
-      'active' => json_decode(env('KIRBY_CACHE')),
-      'ignore' => function () {
-        return kirby()->user() ?: false;
-      }
-    ]
+  'cache.pages' => [
+    'active' => json_decode(env('KIRBY_CACHE')),
+    'ignore' => fn () => kirby()->user() ?: false,
   ],
   'yaml.handler' => 'symfony',
   'date.handler' => 'intl',
-  // 'languages' => true, -> no panel language view
   'languages.detect' => true,
-  'kirby-extended' => [
-    'vite' => [
-      'entry' => 'index.ts',
-      'devServer' => 'http://' . env('KIRBY_DEV_HOSTNAME') . ':' . env('VITE_DEV_PORT') ?? '3001',
+  'bnomei.dotenv.dir' => fn () => realpath(kirby()->roots()->index() . '/../'),
+  'tobimori.seo' => [
+    'robots' => [
+      'pageSettings' => false,
+      'sitemap' => 'https://' . $_SERVER['HTTP_HOST'] . '/sitemap.xml'
     ]
   ],
-  'bnomei' => [
-    'dotenv' => [
-      'dir' => function (): string {
-        return realpath(kirby()->roots()->index() . '/../');
-      },
-    ]
+  'thathoff.sentry' => [
+    'dsn' => env('SENTRY_DSN'),
+    'environment' => json_decode(env("KIRBY_DEBUG")) ? 'development' : 'production',
   ],
-  'routes' => [
-    [
-      'pattern' => 'sitemap.xml',
-      'method' => 'GET',
-      'action'  => function () {
-        $feed = site()->index()->listed()->limit(50000)->sitemap(['images' => false, 'videos' => false]);
-        return $feed;
-      }
-    ],
-    [
-      'pattern' => 'sitemap.xsl',
-      'method' => 'GET',
-      'action'  => function () {
-        snippet('feed/sitemapxsl');
-        die;
-      }
-    ],
-  ],
+  'lukaskleinschmidt.kirby-laravel-vite' => [
+    'buildDirectory' => 'dist'
+  ]
 ];
