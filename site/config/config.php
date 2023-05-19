@@ -32,5 +32,10 @@ return [
   ],
   'lukaskleinschmidt.kirby-laravel-vite' => [
     'buildDirectory' => 'dist'
+  ],
+  'ready' => fn () => [
+    'panel' => [
+      'css' => substr(parse_url(vite()->asset('src/styles/panel.scss'), PHP_URL_PATH), 1),
+    ],
   ]
 ];

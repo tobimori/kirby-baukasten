@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     laravel({
-      input: ['src/index.ts', 'src/styles/index.scss'],
+      input: ['src/index.ts', 'src/styles/index.scss', 'src/styles/panel.scss'],
       refresh: ['storage/content/**/*', 'site/{layouts,snippets,templates}/**/*']
     })
   ],
