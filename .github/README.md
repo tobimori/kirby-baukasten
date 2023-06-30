@@ -4,6 +4,10 @@ An opinionated, supercharged version of the Kirby Plainkit used internally at
 [coralic](https://coralic.com) for our clients' sites, with preconfigured tooling
 and plugins.
 
+## Requirements
+- PHP 8.2+ with composer
+- Node.js 20+ with pnpm
+
 ## Usage
 
 ##### Install Composer & Node dependencies with `composer install` and `pnpm install`.
@@ -55,10 +59,6 @@ We namespace our classes for more transparency. Namespacing is enforced via [sty
 - `c-`: A component is a concrete, implementation-specific piece of UI. All of the changes you make to its styles should be detectable in the context you’re currently looking at. Modifying these styles should be safe and have no side effects.
 - `u-`: Utility has a very specific role (often providing only one declaration) and should not be bound onto or changed. It can be reused and is not tied to any specific piece of UI.
 - `is-`, `has-`: Is currently styled a certain way because of a state or condition. It tells us that the DOM currently has a temporary, optional, or short-lived style applied to it due to a certain state being invoked.
-
-### Optimized Webfont Fallbacks
-
-With [fontaine](https://github.com/danielroe/fontaine), the Vite build setup automatically generates a Fallback font with correct font metrics with the name of `{font} fallback`. Make sure to include it in your font-stack, as it will not be automatically added to CSS variables.
 
 ### Block system
 
@@ -122,7 +122,7 @@ To make it easier to work with the Kirby Blocks field, we've implemented a helpe
 // >
 ```
 
-This function is part of the `baukasten-base` plugin.
+This function is part of the [`tobimori/kirby-spielzeug`](https://github.com/tobimori/kirby-spielzeug) plugin, which contains a encapsulated set of helpers & tools I use for my projects and serves as the independent foundation for Baukasten.
 
 ### Code Typing
 
