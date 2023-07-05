@@ -30,5 +30,13 @@
   "dependencies": {
     "tachyonjs": "^2.0.1",
     "unlazy": "^0.8.9"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    ">= 0.4%",
+    "not dead",
+    "Firefox ESR",
+    "not op_mini all",
+    "not and_uc > 0"
+  ]
 }
