@@ -27,7 +27,10 @@
     "lukaskleinschmidt/kirby-laravel-vite": "^2.1.1",
     "junohamburg/kirby-visual-block-selector": "dev-v4-beta",
     "tobimori/kirby-spielzeug": "^2.1.0",
-    "distantnative/retour-for-kirby": "^5.0"
+    "distantnative/retour-for-kirby": "^5.0",
+    "getkirby/staticache": "^1.0",
+    "getkirby/cli": "^1.1",
+    "bnomei/kirby3-janitor": "^3.11"
   },
   "config": {
     "optimize-autoloader": true,

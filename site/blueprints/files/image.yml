@@ -5,37 +5,23 @@ accept:
   extension: jpg, jpeg, png, svg
   type: image
 
-columns:
-  - width: 1/3
-    sections:
-      info:
-        type: fields
-        fields:
-          info:
-            label:
-              de: Information
-              en: Information
-            type: info
-            text:
-              de: |
-                Hier kann ein alternativer Text eingestellt werden, der blinden Besuchern und Suchmaschinen das Bild erklären soll.
-              en: |
-                Here you can set an alternative text that will be used by blind people and search engines to explain the image.
-  - width: 2/3
-    sections:
-      settings:
-        type: fields
-        fields:
-          alt:
-            label:
-              de: Alternativer Text/Bildbeschreibung
-              en: Alternative text/image description
-            type: text
-            width: 1/2
-          tags:
-            label:
-              de: Interne Schlagworte
-              en: Internal tags
-            type: tags
-            query: file.siblings.pluck("tags", ",", true)
-            width: 1/2
+fields:
+  alt:
+    label:
+      de: Alternativer Text/Bildbeschreibung
+      en: Alternative text/image description
+    type: text
+    help:
+      de: Der alternative Text soll Nutzern mit Seheinschränkung & Suchmaschinen-Crawlern helfen, den Inhalt des Bildes zu verstehen.
+      en: The alternative text should help users with visual impairments & search engine crawlers to understand the content of the image.
+    width: 2/3
+  tags:
+    label:
+      de: Interne Schlagworte
+      en: Internal tags
+    type: tags
+    query: file.siblings.pluck("tags", ",", true)
+    width: 1/3
+    help:
+      de: Schlagworte werden für die interne Suche verwendet und können dir helfen, deine Bilder zu organisieren.
+      en: Tags are used for the internal search and can help you organize your images.

@@ -30,5 +30,6 @@ tabs:
               en: |
                 **A project by** [Tobias Möritz](https://moeritz.io)
                 Questions or problems? (email: tobias@moeritz.io)
-  global: sections/global-settings
+  global: tabs/global-settings
   seo: seo/site
+  admin: programmable/admin-tools

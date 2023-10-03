@@ -2,6 +2,10 @@ title:
   de: Administrator
   en: Admin
 
+description:
+  de: Hat Zugriff auf alle Inhalte und administrative Tools.
+  en: Has access to all content and administrative tools.
+
 # Hidden element to hide notice in user management
 # Remove if you want to implement fields for your users
 fields:

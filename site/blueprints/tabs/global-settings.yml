@@ -1,12 +1,12 @@
-icon: settings
+icon: cog
 label:
   de: Globale Einstellungen
   en: Global settings
 columns:
   - width: 1/3
     sections:
-      settings_empty:
-        headline: ' '
+      placeholder:
+        headline: ''
         type: info
         text:
           de: Keine Einstellungen vorhanden.

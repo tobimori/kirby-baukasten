@@ -1,9 +1,12 @@
 extends: fields/writer
+inline: false
 nodes:
   - paragraph
-  - h2
-  - h3
-  - h4
-  - h5
+  - heading
   - bulletList
   - orderedList
+headings:
+  - 2
+  - 3
+  - 4
+  - 5

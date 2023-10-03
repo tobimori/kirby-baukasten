@@ -14,6 +14,8 @@ return [
 	'routes' => require_once __DIR__ . '/routes.php',
 	'yaml.handler' => 'symfony',
 	'date.handler' => 'intl',
+	'languages' => true,
+	/** SEO */
 	'tobimori.seo' => [
 		'robots' => [
 			'pageSettings' => false,
@@ -28,6 +30,7 @@ return [
 			'youtube' => false
 		]
 	],
+	/** Email */
 	'email' => [
 		'transport' => [
 			'type' => 'smtp',
@@ -49,12 +52,17 @@ return [
 		]
 	],
 	/** Caching */
+	'bnomei.lapse.cache' => ['type' => 'apcugc'],
 	'cache.pages' => [
 		'active' => json_decode(env('KIRBY_CACHE')),
+		'type' => 'static',
+		'root'   =>  __DIR__ . '/../../public/__staticache/',
+		'prefix' => null
 	],
 	/** Build Env / Vite / etc. */
 	'bnomei.dotenv.dir' => fn () => realpath(kirby()->roots()->base()),
 	'lukaskleinschmidt.kirby-laravel-vite.buildDirectory' => 'dist',
+	/** Panel */
 	'ready' => fn () => [
 		'panel' => [
 			'css' => vite('src/styles/panel.css'),
@@ -64,6 +72,7 @@ return [
 				'images' => Menu::page('images', 'images', 'pages/images'),
 				'-',
 				'users',
+				'languages',
 				'retour'
 			],
 		],

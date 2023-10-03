@@ -3,11 +3,10 @@ label:
   en: Image
 type: files
 uploads:
-  parent: site.find('assets')
+  parent: site.find('page://images')
   template: image
 multiple: false
 image:
   cover: false
-text: '{{ file.alt }} ({{ file.filename }})'
-info: '{{ file.tags.join(", ") }}'
-query: site.find('assets').images.filterBy('template', 'image')
+info: '{{ file.alt }}'
+query: site.find('page://images').images.filterBy('template', 'image')

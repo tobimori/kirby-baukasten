@@ -3,8 +3,8 @@ title:
   en: Files
 image:
   icon: folder
-  back: '#f3f3f3'
-  color: '#0557FA'
+  back: 'var(--theme-bg)'
+  color: 'var(--theme-accent)'
 
 options:
   preview: false
@@ -66,6 +66,6 @@ tabs:
         limit: 60
         uploads:
           template: image
-        info: '{{ file.tags.join(", ") }} | {{ file.filename }} '
-        text: '{{ file.alt }}'
+        info: '{{ file.alt.isNotEmpty ? file.filename : "" }}'
+        text: '{{ file.alt.or(file.filename) }}'
         sortBy: filename desc
