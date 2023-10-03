@@ -1,13 +1,29 @@
+import { Application, ControllerConstructor } from '@hotwired/stimulus'
 import 'tachyonjs'
+import { lazyLoad } from 'unlazy'
 
-// Remove temporary stylesheet (to prevent FOUC) in development mode
-if (import.meta.env.DEV) {
-  for (const el of document.querySelectorAll(`[id*="vite-dev"]`)) {
-    el.remove()
+declare global {
+  interface Window {
+    Stimulus: Application
   }
 }
 
-// Auto-load modules
-for (const m of Object.values(import.meta.glob('./modules/*.ts', { eager: true }))) {
-  ;(m as any).install?.()
+// Register Stimulus & controllers
+window.Stimulus = Application.start()
+
+// Register all controllers in the controllers folder
+Object.entries(import.meta.glob('./controllers/*.ts', { eager: true }))
+  .map(
+    ([key, value]) =>
+      [key.slice(14, -3) as string, value as { default: ControllerConstructor }] as const
+  )
+  .forEach(([key, controller]) => {
+    window.Stimulus.register(key as string, controller.default)
+  })
+
+if (import.meta.env.DEV) {
+  window.Stimulus.debug = true
 }
+
+// Start lazyload
+lazyLoad()

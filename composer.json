@@ -6,33 +6,28 @@
   "keywords": [
     "kirby",
     "cms",
-    "starterkit",
-    "coralic"
+    "starterkit"
   ],
   "homepage": "https://moeritz.io",
   "authors": [
     {
       "name": "Tobias Möritz",
-      "email": "tobias@moeritz.cc",
+      "email": "tobias@moeritz.io",
       "homepage": "https://moeritz.io"
     }
   ],
   "minimum-stability": "beta",
   "require": {
     "php": ">=8.2.0",
-    "getkirby/cms": ">=3.9.0",
+    "getkirby/cms": "^4.0",
     "bnomei/kirby3-dotenv": "^2.0",
     "bnomei/kirby3-feed": "^1.5",
-    "genxbe/kirby3-ray": "^1.0",
-    "oblik/kirby-link-field": "^5.2",
-    "coralic/kirby-extended-writer": "^1.1",
-    "tobimori/kirby-seo": "^0.3.0",
-    "junohamburg/kirby-block-preview-fields": "^1.0",
-    "thathoff/kirby-sentry": "^3.0",
-    "lukaskleinschmidt/kirby-laravel-vite": "^1.0",
-    "gearsdigital/enhanced-toolbar-link-dialog": "^3.2",
-    "junohamburg/kirby-visual-block-selector": "^1.1",
-    "tobimori/kirby-spielzeug": "^1.0"
+    "genxbe/kirby3-ray": "^2.0.1",
+    "tobimori/kirby-seo": "^0.4.0",
+    "lukaskleinschmidt/kirby-laravel-vite": "^2.1.1",
+    "junohamburg/kirby-visual-block-selector": "dev-v4-beta",
+    "tobimori/kirby-spielzeug": "^2.1.0",
+    "distantnative/retour-for-kirby": "^5.0"
   },
   "config": {
     "optimize-autoloader": true,

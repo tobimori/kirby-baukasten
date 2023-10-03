@@ -10,7 +10,7 @@ Icon
 
 # Lock files
 # ---------------
-.lock
+hot
 
 # Editors
 # ---------------
@@ -48,7 +48,6 @@ node_modules
 !/storage/cache/.gitkeep
 /site/plugins/*
 !/site/plugins/project-*
-!/site/plugins/baukasten-*
 /storage/retour.json
 
 # files of Composer dependencies that are not needed for the plugin
