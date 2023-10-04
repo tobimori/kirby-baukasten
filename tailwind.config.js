@@ -3,10 +3,28 @@ const plugin = require('tailwindcss/plugin')
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: {
+    files: ["./site/**/*.php", "./site/**/*.yml", "./public/assets/**/*.svg", "./src/index.ts"],
+    // transformer for mod() function
+    transform: (code) => {
+      const variantGroupsRegex = /mod\(.([^,"']+)[^\[]+["'](.+)["']\)/g
+      const variantGroupMatches = [...code.matchAll(variantGroupsRegex)]
+
+      variantGroupMatches.forEach(([matchStr, variants, classes]) => {
+        const parsedClasses = classes
+          .split(" ")
+          .map((cls) => `${variants}:${cls}`)
+          .join(" ")
+
+        code = code.replaceAll(matchStr, parsedClasses)
+      })
+
+      return code
+    }
+  },
   theme: {
     fontFamily: {
-      sans: ['Inter', ...defaultTheme.fontFamily.sans]
+      sans: ['Inter', ...defaultTheme.fontFamily.sans],
     },
     screens: {
       '2xl': { max: '96rem' },
