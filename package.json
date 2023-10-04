@@ -3,32 +3,38 @@
   "type": "module",
   "scripts": {
     "kirby": "env-cmd --use-shell \"php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public kirby/router.php\"",
-    "dev": "shx touch src/.lock && concurrently -n \"php,vite\" \"pnpm:kirby\" \"vite\"",
-    "build": "shx rm -f src/.lock && vite build"
+    "dev": "concurrently -n \"php,vite\" \"pnpm:kirby\" \"vite\"",
+    "build": "vite build"
   },
   "devDependencies": {
-    "@types/node": "^20.2.1",
-    "@typescript-eslint/eslint-plugin": "^5.59.6",
-    "@typescript-eslint/parser": "^5.59.6",
-    "autoprefixer": "^10.4.14",
-    "concurrently": "^8.0.1",
-    "dotenv": "^16.0.3",
+    "@total-typescript/ts-reset": "^0.5.1",
+    "@types/node": "^20.8.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.1",
+    "dotenv": "^16.3.1",
     "env-cmd": "^10.1.0",
-    "eslint": "^8.40.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "laravel-vite-plugin": "^0.7.7",
-    "postcss": "^8.4.23",
-    "postcss-logical": "^6.1.0",
-    "prettier": "2.8.8",
-    "sass": "^1.62.1",
-    "shx": "^0.3.4",
-    "stylelint": "^15.6.2",
-    "stylelint-config-standard-scss": "^9.0.0",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.8"
+    "eslint": "^8.50.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "laravel-vite-plugin": "^0.8.1",
+    "postcss": "^8.4.31",
+    "prettier": "3.0.3",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.10"
   },
   "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
     "tachyonjs": "^2.0.1",
-    "unlazy": "^0.8.9"
-  }
+    "unlazy": "^0.10.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    ">= 0.4%",
+    "not dead",
+    "Firefox ESR",
+    "not op_mini all",
+    "not and_uc > 0"
+  ]
 }

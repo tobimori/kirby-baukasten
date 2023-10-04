@@ -3,8 +3,8 @@ title:
   en: Layout page
 image:
   icon: grid
-  color: '#FFF'
-  back: '#0557FA'
+  back: 'var(--theme-accent)'
+  color: 'var(--theme-bg)'
 
 tabs:
   content:

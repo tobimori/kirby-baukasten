@@ -1,0 +1,26 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  svg {
+    @apply w-full h-full;
+  }
+
+  /* Fix Safari issue related to <summary> / <details> arrow */
+  details > summary.list-none::-webkit-details-marker,
+  details > summary.list-none::marker {
+    display: none;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  .balanced {
+    text-wrap: balance;
+  }
+}

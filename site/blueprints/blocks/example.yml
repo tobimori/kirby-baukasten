@@ -17,5 +17,4 @@ tabs:
         inline: true
         marks: false
         width: 1/3
-
-  advanced: composables/blocks-advanced
+  advanced: fields/blocks-advanced

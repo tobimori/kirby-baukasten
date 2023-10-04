@@ -1,30 +1,32 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
-import autoprefixer from 'autoprefixer'
 import 'dotenv/config'
-import postcssLogical from 'postcss-logical'
 import laravel from 'laravel-vite-plugin'
 
 export default defineConfig(({ mode }) => ({
+  base: mode === 'development' ? '/' : '/dist/',
+
   build: {
     outDir: resolve(__dirname, 'public/dist'),
     emptyOutDir: true
   },
   plugins: [
     laravel({
-      input: ['src/index.ts', 'src/styles/index.scss', 'src/styles/panel.scss'],
-      refresh: ['storage/content/**/*', 'site/{layouts,snippets,templates}/**/*']
+      input: ['src/index.ts', 'src/styles/index.css', 'src/styles/panel.css'],
+      refresh: ['site/{layouts,snippets,templates}/**/*'],
+      transformOnServe: (code) =>
+        code.replaceAll(
+          `/assets`,
+          `http://${process.env.KIRBY_DEV_HOSTNAME ?? '127.0.0.1'}:${
+            process.env.KIRBY_DEV_PORT ?? '3000'
+          }/assets`
+        )
     })
   ],
   resolve: {
     alias: {
       '@styles': resolve(__dirname, 'src/styles/'),
       '@': resolve(__dirname, 'src/')
-    }
-  },
-  css: {
-    postcss: {
-      plugins: [autoprefixer(), postcssLogical()]
     }
   }
 }))

@@ -3,9 +3,3 @@
 /node_modules
 /media
 /content
-
-# Ignore all stylesheet files as formatting is done by stylelint
-**/*.scss
-**/*.css
-**/*.less
-**/*.sass

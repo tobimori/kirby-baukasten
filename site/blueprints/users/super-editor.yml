@@ -1,0 +1,14 @@
+title: Super Editor
+description:
+  de: Hat vollständige Bearbeitungsrechte für alle Inhalte, aber keinen Zugriff auf administrative Tools.
+  en: Has full editing rights for all content, but no access to administrative tools.
+
+permissions:
+  access:
+    system: false
+    languages: false
+
+# Hidden element to hide notice in user management
+# Remove if you want to implement fields for your users
+fields:
+  hidden: true
