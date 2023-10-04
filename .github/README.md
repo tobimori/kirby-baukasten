@@ -1,3 +1,5 @@
+![Kirby 4 Baukasten Banner by Johann Schopplich](/.github/banner.png)
+
 # Kirby Baukasten
 
 An opinionated, supercharged version of the Kirby Plainkit used internally at
@@ -159,3 +161,5 @@ out-of-the-box.
 ## License
 
 [MIT License](.github/LICENSE) © 2021-2023 [Tobias Möritz](https://github.com/tobimori)
+
+Thanks to [Johann](https://github.com/johannschopplich) for the cute banner gecko!
