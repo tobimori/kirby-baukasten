@@ -50,6 +50,7 @@ node_modules
 /site/plugins/*
 !/site/plugins/project-*
 /storage/retour.json
+/storage/retour.yml
 
 # files of Composer dependencies that are not needed for the plugin
 /site/plugins/project-*/vendor/**/.*

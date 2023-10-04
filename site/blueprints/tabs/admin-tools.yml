@@ -21,7 +21,7 @@ columns:
         type: janitor
   - width: 1
     fields:
-      line1: &line
+      adminLine1: &line
         type: line
   - width: 1/4
     fields:
@@ -36,6 +36,6 @@ columns:
         type: janitor
         command: 'download-content'
         label:
-          de: /content herunterladen (.zip)
-          en: Download /content (.zip)
+          de: Inhalte herunterladen (.zip)
+          en: Download content (.zip)
         icon: archive

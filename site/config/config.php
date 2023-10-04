@@ -62,6 +62,7 @@ return [
 	/** Build Env / Vite / etc. */
 	'bnomei.dotenv.dir' => fn () => realpath(kirby()->roots()->base()),
 	'lukaskleinschmidt.kirby-laravel-vite.buildDirectory' => 'dist',
+	'distantnative.retour.config' => 'storage/retour.yml',
 	/** Panel */
 	'ready' => fn () => [
 		'panel' => [
