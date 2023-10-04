@@ -5,7 +5,7 @@ import { Application, ControllerConstructor } from '@hotwired/stimulus'
 declare global {
   interface Window {
     Stimulus: Application
-    taxi: Core
+    Taxi: Core
   }
 }
 
@@ -27,7 +27,7 @@ if (import.meta.env.DEV) {
 }
 
 // Install Taxi (remove this if you don't want to use Taxi)
-window.taxi = new Core({
+window.Taxi = new Core({
   renderers: Object.entries(import.meta.glob('./renderers/*.ts', { eager: true })).reduce(
     (acc, [key, transition]) => {
       acc[key.slice(12, -3)] = (transition as { default: typeof Renderer }).default
