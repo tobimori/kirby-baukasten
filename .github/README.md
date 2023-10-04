@@ -66,6 +66,17 @@ Most of our pages are build in a page-builder-like fashion utilizing the Kirby B
 
 This function is part of the [`tobimori/kirby-spielzeug`](https://github.com/tobimori/kirby-spielzeug) plugin, which contains a encapsulated set of helpers & tools I use for my projects and serves as the independent foundation for Baukasten.
 
+### View Transitions ([Taxi.js](https://taxi.js.org/))
+
+When working on fancy sites that use a lot of animations, I use [Taxi.js](https://taxi.js.org/) to go the extra-mile & handle view transitions. It's a very lightweight library that has a nice API and is easy to use.
+
+If you don't want to use Taxi:
+
+- remove the `@unseenco/taxi` JS dependency
+- delete the `src/transitions` & `src/renderers` folder
+- remove the `data-taxi` & `data-taxi-view` attributes from `layout.php`
+- remove the related code from `src/index.ts`
+
 ### Code Typing
 
 This template tries to make Kirby development more accessible by adding PHP code

@@ -8,6 +8,9 @@ dependencies:
   '@hotwired/stimulus':
     specifier: ^3.2.2
     version: 3.2.2
+  '@unseenco/taxi':
+    specifier: ^1.5.1
+    version: 1.5.1
   tachyonjs:
     specifier: ^2.0.1
     version: 2.0.1
@@ -555,6 +558,18 @@ packages:
 
   /@unlazy/core@0.10.1:
     resolution: {integrity: sha512-zsnuU6MKpuFv/0J1ktKLdoq1iRP1+FwaoIYyxDEVNxPPOWzGue5wUlgJSKyYOu/5aJ1reAEND0qKYyzuEn0Ylw==}
+    dev: false
+
+  /@unseenco/e@2.3.0:
+    resolution: {integrity: sha512-CAhlhyQ690oa67JnbXg8uFaRXGkZB6vtAclyBcwI8WwliNDCaRpY22k2sFX1ehcro0HMa6197K2rFYLkkdNqmA==}
+    dependencies:
+      selector-set: 1.1.5
+    dev: false
+
+  /@unseenco/taxi@1.5.1:
+    resolution: {integrity: sha512-76twO4VMf5NUEcf5aJw0q+7ObRJzO2WmEnMfI8WCx+DUzuuVWtDbA+ouIG/6CmwLYQixsJ9mSUQHcLtWCMiCDg==}
+    dependencies:
+      '@unseenco/e': 2.3.0
     dev: false
 
   /acorn-jsx@5.3.2(acorn@8.10.0):
@@ -1793,6 +1808,10 @@ packages:
     dependencies:
       tslib: 2.6.2
     dev: true
+
+  /selector-set@1.1.5:
+    resolution: {integrity: sha512-6SQw6yMew5iOZ8/cDHDEnJWRM4ot2mxP6szZyF5ptrBogw4AcS4EXRj/8BUfgAMwVfdL84qpModlBMOl2NVrsQ==}
+    dev: false
 
   /semver@7.5.4:
     resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==}

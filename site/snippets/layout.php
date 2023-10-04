@@ -29,13 +29,15 @@ if (json_decode(env('REQUIRES_LOGIN')) && !$kirby->user()) {
 </head>
 
 <body class="text-base antialiased bg-white">
-	<div class="flex flex-col min-h-screen antialiased bg-white text-body overflow-clip">
-		<?php snippet('nav') ?>
-		<main class="container flex-grow">
-			<div id="main"></div>
-			<?= $slot ?>
-		</main>
-		<?php snippet('footer') ?>
+	<div data-taxi>
+		<div class="flex flex-col min-h-screen antialiased bg-white text-body overflow-clip" data-taxi-view>
+			<?php snippet('nav') ?>
+			<main class="container flex-grow">
+				<div id="main"></div>
+				<?= $slot ?>
+			</main>
+			<?php snippet('footer') ?>
+		</div>
 	</div>
 	<?php snippet('seo/schemas') ?>
 	<script>

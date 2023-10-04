@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
+    "@unseenco/taxi": "^1.5.1",
     "tachyonjs": "^2.0.1",
     "unlazy": "^0.10.1"
   },
