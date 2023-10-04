@@ -1,19 +1,20 @@
 {
   "editor.formatOnSave": true,
   "intelephense.telemetry.enabled": false,
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
-  "[javascript]": {
+  "css.validate": true,
+  "[javascript,yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true
   },
   "yaml.schemas": {
-    "https://json.schemastore.org/yamllint.json": "file:///Users/tobimori/Developer/kirby-baukasten/site/blueprints/site.yml"
+    "https://json.schemastore.org/yamllint.json": "**/*.yml"
+  },
+  "tailwindCSS.experimental.classRegex": ["([a-zA-Z0-9\\-:]+)"],
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.php$",
+        "cmd": "rustywind --write '${file}'"
+      }
+    ]
   }
 }

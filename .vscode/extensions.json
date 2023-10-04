@@ -8,6 +8,9 @@
     "github.vscode-pull-request-github",
     "bmewburn.vscode-intelephense-client",
     "editorconfig.editorconfig",
-    "stylelint.vscode-stylelint"
+    "bradlc.vscode-tailwindcss",
+    "emeraldwalk.runonsave",
+    "yoavbls.pretty-ts-errors",
+    "junstyle.php-cs-fixer"
   ]
 }
