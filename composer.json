@@ -30,7 +30,8 @@
     "distantnative/retour-for-kirby": "^5.0",
     "getkirby/staticache": "^1.0",
     "getkirby/cli": "^1.1",
-    "bnomei/kirby3-janitor": "^3.11"
+    "bnomei/kirby3-janitor": "^3.11",
+    "tobimori/kirby-tailwind-merge": "^2.0"
   },
   "config": {
     "optimize-autoloader": true,
