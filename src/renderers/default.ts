@@ -8,5 +8,6 @@ export default class extends Renderer {
 
   onEnterCompleted() {
     this.remove()
+    lazyLoad()
   }
 }
