@@ -39,14 +39,14 @@ if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) : 
       <?php foreach ($formats as $format) :
         $widths = option("thumbs.srcsets.{$preset}");
         $srcset = [];
-        $median = $ratio ? $image->crop(median($widths), $ratio * median($widths)) : $image->resize(median($widths)); ?>
+        $median = $ratio ? $image->crop(median($widths), floor($ratio * median($widths))) : $image->resize(median($widths)); ?>
 
         <?php
         // Generate srcset array
         foreach ($widths as $width) {
           $srcset[$width . 'w'] = [
             'width' => $width,
-            'height' => $ratio ? $ratio * $width : null,
+            'height' => $ratio ? floor($ratio * $width) : null,
             'crop' => $ratio ? true : false,
             'format' => $format
           ];
@@ -72,12 +72,12 @@ if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) : 
               'src' => $clientBlur ? $median->url() : $image->thUri(),
               'data-src' => $median->url(),
               'width' => $image->width(),
-              'height' => $image->height(),
+              'height' => $ratio ? floor($image->width() * $ratio) : $image->height(),
               'alt' => $alt ?? is_a($image, 'Kirby\Cms\File') ? $image->alt() : null,
               'loading' => $lazy ? "lazy" : null,
               'data-sizes' => $sizes ?? 'auto',
               'class' => cls(['w-full h-full object-cover', $imgClass ?? ' ']),
-              'style' => 'aspect-ratio: ' . $image->ratio() . '; object-position: '  . ($image->focus()->isNotEmpty() ? $image->focus() : '50% 50%'),
+              'style' => 'aspect-ratio: ' . $ratio ?? $image->ratio() . '; object-position: '  . ($image->focus()->isNotEmpty() ? $image->focus() : '50% 50%'),
             ]) ?>>
 
     <?php endif ?>
