@@ -1,38 +1,58 @@
 <?php
 
 /**
- * @var array $formats
- * @var array @widths
- * @var string|array $class
- * @var Kirby\Cms\File|Kirby\Filesystem\Asset $image
- * @var string $sizes
- * @var bool|null $lazy
- * @var bool|null $clientBlur
- * @var string $alt
+ * @var Kirby\Cms\File|Kirby\Filesystem\Asset $image The image to display
+ * @var string|null $alt An optional alt text, defaults to the file's alt text
+ * @var int|null $ratio Specify a ratio for the image crop
+ * 
+ * @var array|null $formats Which formats to render (avif, jpeg, etc.)
+ * @var string|null $preset Which srcset preset to use
+ * @var string|null $sizes The sizes attribute for the <img> element
+ * 
+ * @var string|array|null $class Additional classes for the <picture> element
+ * @var string|array|null $imgClass Additional classes for the <img> element
+ * @var array|null $attr Additional attributes for the <picture> element
+ * 
+ * @var bool|null $clientBlur Whether to use client-side blurhash/thumbhash, defaults to true
+ * @var bool|null $lazy Whether to use lazy loading, defaults to true
  * */
 
+$ratio ??= null;
+$preset ??= 'default';
 $clientBlur ??= true;
 $attr ??= [];
-$defaultWidths = [400, 800, 1000, 1200];
+$formats ??= ['webp', $image->extension()];
+$lazy ??= true;
 
-if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) :
-  $hasLazy = $lazy ?? true;
-  $isSvg = $image->extension() == 'svg'; ?>
+if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) : ?>
 
   <picture <?= attr([
-              'class' => isset($class) ? (is_array($class) ? implode(' ', $class) : $class) : null,
-              'style' => '--ratio: ' . $image->ratio() . ';',
+              'class' => ['block', $class ?? ''],
+              'style' => '--ratio: ' . $ratio ?? $image->ratio() . ';',
+              ...$attr
             ]) ?>>
-    <?php if ($isSvg) : ?>
+
+    <?php if ($image->extension() == 'svg') : ?>
       <?= svg($image) ?>
-      <?php else :
-      foreach ($formats ?? ['webp', $image->extension()] as $format) :
+    <?php else : ?>
+
+      <?php foreach ($formats as $format) :
+        $widths = option("thumbs.srcsets.{$preset}");
         $srcset = [];
-        $median = $image->resize(median($widths ?? $defaultWidths));
-        foreach ($widths ?? $defaultWidths as $width) :
-          $srcset[$width . 'w'] = ['width' => $width, 'format' => $format];
-        endforeach; ?>
-        <?php if ($hasLazy) : ?>
+        $median = $ratio ? $image->crop(median($widths), $ratio * median($widths)) : $image->resize(median($widths)); ?>
+
+        <?php
+        // Generate srcset array
+        foreach ($widths as $width) {
+          $srcset[$width . 'w'] = [
+            'width' => $width,
+            'height' => $ratio ? $ratio * $width : null,
+            'crop' => $ratio ? true : false,
+            'format' => $format
+          ];
+        } ?>
+
+        <?php if ($lazy) : ?>
           <source <?= attr([
                     'type' => "image/{$format}",
                     'data-srcset' => $image->srcset($srcset),
@@ -44,21 +64,27 @@ if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) :
                     'srcset' => $image->srcset($srcset),
                     'sizes' => $sizes ?? '100vw'
                   ]) ?>>
-      <?php endif;
-      endforeach; ?>
+        <?php endif; ?>
+      <?php endforeach; ?>
+
       <img <?= attr([
               'data-thumbhash' => $clientBlur ? $image->th() : null,
-              'src' => $clientBlur ? "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" : $image->thUri(),
+              'src' => $clientBlur ? $median->url() : $image->thUri(),
               'data-src' => $median->url(),
               'width' => $image->width(),
               'height' => $image->height(),
               'alt' => $alt ?? is_a($image, 'Kirby\Cms\File') ? $image->alt() : null,
-              'loading' => $hasLazy ? "lazy" : null,
+              'loading' => $lazy ? "lazy" : null,
               'data-sizes' => $sizes ?? 'auto',
-              // 'style' => 'background-color: ' . $image->bhColor() . ';', // to be replaced and togglable
+              'class' => cls(['w-full h-full object-cover', $imgClass ?? ' ']),
+              'style' => 'aspect-ratio: ' . $image->ratio() . '; object-position: '  . ($image->focus()->isNotEmpty() ? $image->focus() : '50% 50%'),
             ]) ?>>
+
     <?php endif ?>
   </picture>
-<?php else : ?>
-  <picture <?= attr(['class' => isset($class) ? (is_array($class) ? implode(' ', $class) : $class) : null]) ?>></picture>
+
+<?php
+// Dummy element that will be rendered when specified image is not an image
+else : ?>
+  <picture <?= attr(['class' => ['block', $class ?? ''], ...$attr]) ?>></picture>
 <?php endif ?>
