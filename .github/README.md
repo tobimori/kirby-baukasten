@@ -10,6 +10,7 @@ and plugins.
 
 - PHP 8.2+ with composer
 - Node.js 20+ with pnpm
+- WSL2 (if using windows)
 
 ## Usage
 
@@ -30,6 +31,13 @@ cp .env.example .env
 ```
 pnpm run dev
 ```
+
+## Creating your first page
+
+1. login to the panel and create a page called "home".
+2. Rename the 'default.de.txt' in the 'storage/content/1_home' folder to 'home.de.txt'
+
+_Happy editing!_
 
 ## Best Practices/Features
 
