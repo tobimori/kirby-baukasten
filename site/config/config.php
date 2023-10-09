@@ -10,7 +10,7 @@ loadenv([
 ]);
 
 return [
-	'debug' => true,
+	'debug' => json_decode(env('KIRBY_DEBUG')),
 	'routes' => require_once __DIR__ . '/routes.php',
 	'yaml.handler' => 'symfony',
 	'date.handler' => 'intl',
@@ -66,9 +66,10 @@ return [
 	/** Panel */
 	'ready' => fn () => [
 		'panel' => [
+			'favicon' => option('debug') ? 'assets/panel/favicon-dev.svg' : 'assets/panel/favicon-live.svg',
 			'css' => vite('src/styles/panel.css'),
 			'menu' => [
-				'site' => Menu::site('overview'),
+				'site' => Menu::site(),
 				'-',
 				'images' => Menu::page('images', 'images', 'pages/images'),
 				'-',

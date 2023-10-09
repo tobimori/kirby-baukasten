@@ -14,7 +14,6 @@ return [
         'previous' => 'Vorheriges',
         'next' => 'Nächstes',
         'close' => 'Schließen',
-        'overview' => 'Übersicht',
         'images' => 'Bilder',
         'home' => 'Startseite'
     ],
