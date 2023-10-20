@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "kirby": "env-cmd --use-shell \"php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public kirby/router.php\"",
+    "kirby": "env-cmd --use-shell \"PHP_CLI_SERVER_WORKERS=10 php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public kirby/router.php\"",
     "dev": "concurrently -n \"php,vite\" \"pnpm:kirby\" \"vite\"",
     "build": "vite build"
   },
