@@ -13,7 +13,7 @@ declare global {
 window.Stimulus = Application.start()
 
 // Register all eager controllers in the controllers folder
-Object.entries(import.meta.glob('./controllers/*[!.lazy].ts', { eager: true })).forEach(
+Object.entries(import.meta.glob('./controllers/*!(.lazy).ts', { eager: true })).forEach(
 	([key, controller]) => {
 		window.Stimulus.register(
 			key.slice(14, -3),
