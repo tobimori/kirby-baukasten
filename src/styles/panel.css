@@ -49,7 +49,7 @@
 }
 
 /** Custom Blocks Styling **/
-.k-blocks {
+.k-blocks:not([data-disabled='true']) {
   background: transparent;
   box-shadow: none;
   border-radius: none;
