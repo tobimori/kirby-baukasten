@@ -14,7 +14,6 @@ return [
 	'routes' => require_once __DIR__ . '/routes.php',
 	'yaml.handler' => 'symfony',
 	'date.handler' => 'intl',
-	'languages' => true,
 	/** Image presets */
 	'thumbs' => [
 		'srcsets' => [
@@ -72,19 +71,18 @@ return [
 	'lukaskleinschmidt.kirby-laravel-vite.buildDirectory' => 'dist',
 	'distantnative.retour.config' => 'storage/retour.yml',
 	/** Panel */
+	'panel.menu' => fn () => [
+		'site' => Menu::site(),
+		'-',
+		'images' => Menu::page(null, 'images', page('page://images')),
+		'-',
+		'users',
+		'retour'
+	],
 	'ready' => fn () => [
 		'panel' => [
 			'favicon' => option('debug') ? 'assets/panel/favicon-dev.svg' : 'assets/panel/favicon-live.svg',
 			'css' => vite('src/styles/panel.css'),
-			'menu' => [
-				'site' => Menu::site(),
-				'-',
-				'images' => Menu::page('images', 'images', 'pages/images'),
-				'-',
-				'users',
-				'languages',
-				'retour'
-			],
 		],
 	]
 ];

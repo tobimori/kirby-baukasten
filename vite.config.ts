@@ -8,7 +8,8 @@ export default defineConfig(({ mode }) => ({
 
   build: {
     outDir: resolve(__dirname, 'public/dist'),
-    emptyOutDir: true
+    emptyOutDir: true,
+    manifest: 'manifest.json',
   },
   plugins: [
     laravel({
