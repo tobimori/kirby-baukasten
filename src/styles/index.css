@@ -14,6 +14,12 @@
   details > summary.list-none::marker {
     display: none;
   }
+
+  // https://defensivecss.dev/tip/flexbox-min-content-size/
+  * {
+    min-height: 0;
+    min-width: 0;
+  }
 }
 
 @layer components {

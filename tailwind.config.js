@@ -4,7 +4,7 @@ const plugin = require('tailwindcss/plugin')
 /** @type {import('tailwindcss').Config} */
 export default {
   content: {
-    files: ["./site/**/*.php", "./site/**/*.yml", "./public/assets/**/*.svg", "./src/index.ts"],
+    files: ['./site/**/*.php', './site/**/*.yml', './public/assets/**/*.svg', './src/**/*.ts'],
     // transformer for mod() function
     transform: (code) => {
       const variantGroupsRegex = /mod\(.([^,"']+)[^\[]+["'](.+)["']\)/g
@@ -12,9 +12,9 @@ export default {
 
       variantGroupMatches.forEach(([matchStr, variants, classes]) => {
         const parsedClasses = classes
-          .split(" ")
+          .split(' ')
           .map((cls) => `${variants}:${cls}`)
-          .join(" ")
+          .join(' ')
 
         code = code.replaceAll(matchStr, parsedClasses)
       })
@@ -24,7 +24,7 @@ export default {
   },
   theme: {
     fontFamily: {
-      sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      sans: ['Inter', ...defaultTheme.fontFamily.sans]
     },
     screens: {
       '2xl': { max: '96rem' },
