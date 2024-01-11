@@ -9,4 +9,12 @@ The naming conventions are different from the Stimulus default. Please do not ap
 
 → `hello-world.ts`, not `hello_world_controller.ts`
 
-TODO: add automatic lazyloading with `.lazy.ts`.
+## Lazy loading
+
+When importing large libraries, it is recommended to lazy load them. This can be done by appending `.lazy` to the filename. Thanks to ES Modules, the file will then be loaded only when the controller is used for the first time.
+
+→ `hello-world.lazy.ts`
+
+## TypeScript
+
+We use [stimulus-typescript](https://github.com/ajaishankar/stimulus-typescript) for strongly typed Stimulus controllers.

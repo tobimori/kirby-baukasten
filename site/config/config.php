@@ -24,10 +24,8 @@ return [
 	],
 	/** SEO */
 	'tobimori.seo' => [
-		'robots' => [
-			'pageSettings' => false,
-			'sitemap' => 'https://' . $_SERVER['HTTP_HOST'] . '/sitemap.xml'
-		],
+		'robots.pageSettings' => false,
+		'canonicalBase' => env("APP_URL"),
 		'files' => [
 			'parent' => 'site.find("page://images")',
 			'template' => 'image'

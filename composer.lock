@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d682f8921dc3306f86f4160a5eeab8a",
+    "content-hash": "e45c10f067b6bcf28567361421b1ab00",
     "packages": [
         {
             "name": "bnomei/autoloader-for-kirby",
@@ -181,88 +181,6 @@
                 }
             ],
             "time": "2023-02-23T11:39:03+00:00"
-        },
-        {
-            "name": "bnomei/kirby3-feed",
-            "version": "1.5.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bnomei/kirby3-feed.git",
-                "reference": "e6ffb5947b58459cf848a1a3f0ee3c344fa46917"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bnomei/kirby3-feed/zipball/e6ffb5947b58459cf848a1a3f0ee3c344fa46917",
-                "reference": "e6ffb5947b58459cf848a1a3f0ee3c344fa46917",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/composer-installer": "^1.2",
-                "php": ">=8.0"
-            },
-            "require-dev": {
-                "getkirby/cms": "^3.5",
-                "php-coveralls/php-coveralls": "^2.4",
-                "phpunit/phpunit": "^9.5"
-            },
-            "suggest": {
-                "bnomei/kirby3-htmlhead": "Best-practice HTML Head Element extendable with snippets.",
-                "bnomei/kirby3-robots-txt": "Automatic robots.txt. Detects xmlsitemap.",
-                "bnomei/kirby3-security-headers": "CPS headers to make the the web a saver place. Sensible defaults with zero configuration."
-            },
-            "type": "kirby-plugin",
-            "extra": {
-                "kirby-cms-path": "tests/kirby"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Bnomei\\": "classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bruno Meilick",
-                    "email": "b@bnomei.com"
-                }
-            ],
-            "description": "Generate a RSS/JSON/Sitemap-Feed from a Pages-Collection",
-            "keywords": [
-                "Sitemap",
-                "feed",
-                "json",
-                "kirby3",
-                "kirby3-cms",
-                "kirby3-plugin",
-                "rss",
-                "rss-feed"
-            ],
-            "support": {
-                "issues": "https://github.com/bnomei/kirby3-feed/issues",
-                "source": "https://github.com/bnomei/kirby3-feed/tree/v1.5.8"
-            },
-            "funding": [
-                {
-                    "url": "https://buymeacoff.ee/bnomei",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://paypal.me/bnomei",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/bnomei",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/bnomei",
-                    "type": "patreon"
-                }
-            ],
-            "time": "2023-03-02T10:55:31+00:00"
         },
         {
             "name": "bnomei/kirby3-janitor",
@@ -831,24 +749,24 @@
         },
         {
             "name": "getkirby/cli",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/cli.git",
-                "reference": "0e8074b0e6081c9e1a9f31090733b058db15be06"
+                "reference": "1d6d72fb1d29cad3fb7ebe351959b85bd8c843c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/cli/zipball/0e8074b0e6081c9e1a9f31090733b058db15be06",
-                "reference": "0e8074b0e6081c9e1a9f31090733b058db15be06",
+                "url": "https://api.github.com/repos/getkirby/cli/zipball/1d6d72fb1d29cad3fb7ebe351959b85bd8c843c1",
+                "reference": "1d6d72fb1d29cad3fb7ebe351959b85bd8c843c1",
                 "shasum": ""
             },
             "require": {
                 "composer-runtime-api": "^2.2",
                 "ext-zip": "*",
-                "guzzlehttp/guzzle": "^7.5",
-                "league/climate": "^3.8",
-                "php": ">=8.0.0 <8.3.0"
+                "guzzlehttp/guzzle": "^7.8",
+                "league/climate": "^3.8.2",
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0"
             },
             "bin": [
                 "bin/kirby"
@@ -893,7 +811,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2023-02-10T12:27:30+00:00"
+            "time": "2023-12-21T11:50:41+00:00"
         },
         {
             "name": "getkirby/cms",
@@ -1162,16 +1080,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.8.0",
+            "version": "7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "1110f66a6530a40fe7aea0378fe608ee2b2248f9"
+                "reference": "41042bc7ab002487b876a0683fc8dce04ddce104"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/1110f66a6530a40fe7aea0378fe608ee2b2248f9",
-                "reference": "1110f66a6530a40fe7aea0378fe608ee2b2248f9",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/41042bc7ab002487b876a0683fc8dce04ddce104",
+                "reference": "41042bc7ab002487b876a0683fc8dce04ddce104",
                 "shasum": ""
             },
             "require": {
@@ -1186,11 +1104,11 @@
                 "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.1",
+                "bamarni/composer-bin-plugin": "^1.8.2",
                 "ext-curl": "*",
                 "php-http/client-integration-tests": "dev-master#2c025848417c1135031fdf9c728ee53d0a7ceaee as 3.0.999",
                 "php-http/message-factory": "^1.1",
-                "phpunit/phpunit": "^8.5.29 || ^9.5.23",
+                "phpunit/phpunit": "^8.5.36 || ^9.6.15",
                 "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
             "suggest": {
@@ -1268,7 +1186,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.8.0"
+                "source": "https://github.com/guzzle/guzzle/tree/7.8.1"
             },
             "funding": [
                 {
@@ -1284,28 +1202,28 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-27T10:20:53+00:00"
+            "time": "2023-12-03T20:35:24+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "111166291a0f8130081195ac4556a5587d7f1b5d"
+                "reference": "bbff78d96034045e58e13dedd6ad91b5d1253223"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/111166291a0f8130081195ac4556a5587d7f1b5d",
-                "reference": "111166291a0f8130081195ac4556a5587d7f1b5d",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/bbff78d96034045e58e13dedd6ad91b5d1253223",
+                "reference": "bbff78d96034045e58e13dedd6ad91b5d1253223",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.1",
-                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
+                "bamarni/composer-bin-plugin": "^1.8.2",
+                "phpunit/phpunit": "^8.5.36 || ^9.6.15"
             },
             "type": "library",
             "extra": {
@@ -1351,7 +1269,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/2.0.1"
+                "source": "https://github.com/guzzle/promises/tree/2.0.2"
             },
             "funding": [
                 {
@@ -1367,20 +1285,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-03T15:11:55+00:00"
+            "time": "2023-12-03T20:19:20+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.6.1",
+            "version": "2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "be45764272e8873c72dbe3d2edcfdfcc3bc9f727"
+                "reference": "45b30f99ac27b5ca93cb4831afe16285f57b8221"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/be45764272e8873c72dbe3d2edcfdfcc3bc9f727",
-                "reference": "be45764272e8873c72dbe3d2edcfdfcc3bc9f727",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/45b30f99ac27b5ca93cb4831afe16285f57b8221",
+                "reference": "45b30f99ac27b5ca93cb4831afe16285f57b8221",
                 "shasum": ""
             },
             "require": {
@@ -1394,9 +1312,9 @@
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.1",
+                "bamarni/composer-bin-plugin": "^1.8.2",
                 "http-interop/http-factory-tests": "^0.9",
-                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
+                "phpunit/phpunit": "^8.5.36 || ^9.6.15"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
@@ -1467,7 +1385,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.6.1"
+                "source": "https://github.com/guzzle/psr7/tree/2.6.2"
             },
             "funding": [
                 {
@@ -1483,7 +1401,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-27T10:13:57+00:00"
+            "time": "2023-12-03T20:05:35+00:00"
         },
         {
             "name": "junohamburg/kirby-language-selector",
@@ -1522,16 +1440,16 @@
         },
         {
             "name": "junohamburg/kirby-visual-block-selector",
-            "version": "dev-v4-beta",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/junohamburg/kirby-visual-block-selector.git",
-                "reference": "6ac3c17fa06ace1432987b09547fbf7fb17da00d"
+                "reference": "9979c1ef720ac520be52299c5bf09408b19f61d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/junohamburg/kirby-visual-block-selector/zipball/6ac3c17fa06ace1432987b09547fbf7fb17da00d",
-                "reference": "6ac3c17fa06ace1432987b09547fbf7fb17da00d",
+                "url": "https://api.github.com/repos/junohamburg/kirby-visual-block-selector/zipball/9979c1ef720ac520be52299c5bf09408b19f61d8",
+                "reference": "9979c1ef720ac520be52299c5bf09408b19f61d8",
                 "shasum": ""
             },
             "require": {
@@ -1551,9 +1469,9 @@
             "description": "Kirby Visual Block Selector",
             "support": {
                 "issues": "https://github.com/junohamburg/kirby-visual-block-selector/issues",
-                "source": "https://github.com/junohamburg/kirby-visual-block-selector/tree/v4-beta"
+                "source": "https://github.com/junohamburg/kirby-visual-block-selector/tree/2.0.0"
             },
-            "time": "2023-11-14T08:41:41+00:00"
+            "time": "2023-12-01T15:11:24+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
@@ -3798,16 +3716,16 @@
         },
         {
             "name": "tobimori/kirby-seo",
-            "version": "0.4.0",
+            "version": "1.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "0966d4a627f037b38a5e79dbfe6448d433ea6650"
+                "reference": "99213bfd10273401378ee7bc3794df85efe3402c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/0966d4a627f037b38a5e79dbfe6448d433ea6650",
-                "reference": "0966d4a627f037b38a5e79dbfe6448d433ea6650",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/99213bfd10273401378ee7bc3794df85efe3402c",
+                "reference": "99213bfd10273401378ee7bc3794df85efe3402c",
                 "shasum": ""
             },
             "require": {
@@ -3816,8 +3734,8 @@
                 "spatie/schema-org": "^3.14"
             },
             "require-dev": {
-                "getkirby/cli": "^1.1",
-                "getkirby/cms": "^4.0-beta.1"
+                "getkirby/cli": "^1.2",
+                "getkirby/cms": "^4.0"
             },
             "type": "kirby-plugin",
             "extra": {
@@ -3842,7 +3760,7 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/0.4.0"
+                "source": "https://github.com/tobimori/kirby-seo/tree/1.0.0-beta.2"
             },
             "funding": [
                 {
@@ -3850,7 +3768,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-08T20:56:41+00:00"
+            "time": "2024-01-02T16:49:16+00:00"
         },
         {
             "name": "tobimori/kirby-spielzeug",
@@ -4113,9 +4031,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "beta",
-    "stability-flags": {
-        "junohamburg/kirby-visual-block-selector": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
