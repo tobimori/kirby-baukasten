@@ -4,9 +4,9 @@
     "paths": {
       "@/*": ["*"]
     },
-    "target": "esnext",
-    "lib": ["esnext", "dom", "dom.iterable"],
-    "module": "esnext",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
