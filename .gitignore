@@ -36,21 +36,24 @@ node_modules
 
 # Kirby
 # ---------------
-/storage/accounts/*
-!/storage/accounts/.gitkeep
-/storage/sessions/*
-!/storage/sessions/.gitkeep
-/storage/logs/*
-!/storage/logs/.gitkeep
-/site/config/.license
-/storage/content/*
-!/storage/content/.gitkeep
-/storage/cache/*
-!/storage/cache/.gitkeep
+# Runtime data
+/data/runtime/sessions/*
+!/data/runtime/sessions/.gitkeep
+/data/runtime/logs/*
+!/data/runtime/logs/.gitkeep
+/data/runtime/cache/*
+!/data/runtime/cache/.gitkeep
+
+# Storage
+/data/storage/accounts/*
+!/data/storage/accounts/.gitkeep
+/data/storage/content/*
+!/data/storage/content/.gitkeep
+/data/storage/.license
+/data/storage/retour.yml
+
 /site/plugins/*
 !/site/plugins/project-*
-/storage/retour.json
-/storage/retour.yml
 
 # files of Composer dependencies that are not needed for the plugin
 /site/plugins/project-*/vendor/**/.*
