@@ -2,6 +2,7 @@
 
 use Kirby\CLI\CLI;
 use Kirby\Cms\Page;
+use Kirby\Filesystem\Dir;
 use Kirby\Filesystem\F;
 
 return [
@@ -39,14 +40,22 @@ return [
 			$page->changeStatus('unlisted');
 		}
 
-		$input = $cli->input('Do you want to use Taxi.js for page transitions?');
-		$input->accept(['y', 'N'], true);
-		$input->defaultTo('n');
-
-		$response = $input->prompt();
-		if ($response === 'y') {
-			F::remove($root . '/src/index.ts');
-			F::move($root . '/src/index.with-taxi.ts', $root . '/src/index.ts');
+		if (F::exists($root . '/src/index.with-taxi.ts')) {
+			$input = $cli->input('Do you want to use Taxi.js for page transitions?');
+			$input->accept(['y', 'N'], true);
+			$input->defaultTo('n');
+			$response = $input->prompt();
+			if ($response === 'y') {
+				F::remove($root . '/src/index.ts');
+				F::move($root . '/src/index.with-taxi.ts', $root . '/src/index.ts');
+			} else {
+				F::remove($root . '/src/index.with-taxi.ts');
+				Dir::remove($root . '/src/renderers');
+				Dir::remove($root . '/src/transition');
+				shell_exec('pnpm remove @unseenco/taxi');
+			}
 		}
+
+		$cli->info('Scaffolding done!');
 	}
 ];

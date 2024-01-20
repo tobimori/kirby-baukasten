@@ -19,11 +19,13 @@ and plugins.
 composer install && pnpm install
 ```
 
-##### Copy the example `env` file.
+##### Running the scaffold command with Kirby CLI
 
 ```
-cp .env.example .env
+kirby baukasten:scaffold
 ```
+
+> NOTE: If you don't have the Kirby CLI installed, you will need to run `composer global require getkirby/cli` first.
 
 ##### Start the dev server.
 
