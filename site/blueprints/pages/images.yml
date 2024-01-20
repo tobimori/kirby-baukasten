@@ -3,7 +3,7 @@ title:
   en: Files
 image:
   icon: folder
-  back: 'var(--theme-bg)'
+  back: 'var(--theme-primary)'
   color: 'var(--theme-accent)'
 
 options:

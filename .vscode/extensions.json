@@ -10,7 +10,6 @@
     "editorconfig.editorconfig",
     "bradlc.vscode-tailwindcss",
     "emeraldwalk.runonsave",
-    "yoavbls.pretty-ts-errors",
-    "junstyle.php-cs-fixer"
+    "yoavbls.pretty-ts-errors"
   ]
 }

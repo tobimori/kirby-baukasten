@@ -23,6 +23,7 @@ return [
 		]
 	],
 	/** SEO */
+	'url' => env("APP_URL"),
 	'tobimori.seo' => [
 		'robots.pageSettings' => false,
 		'canonicalBase' => env("APP_URL"),

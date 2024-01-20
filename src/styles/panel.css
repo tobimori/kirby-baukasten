@@ -2,7 +2,7 @@
 
 :root {
   --theme-accent: #f3f3f3;
-  --theme-bg: #000;
+  --theme-primary: #000;
 }
 
 /** Hide empty admin tab **/
@@ -66,4 +66,33 @@
       margin-bottom: 0.5rem;
     }
   }
+}
+
+/* Custom Tab Styles */
+.k-tabs {
+  margin-top: 12px;
+  margin-inline: 0;
+  gap: var(--spacing-2);
+}
+
+.k-tabs .k-tab-button {
+  --button-color-icon: var(--button-color-dimmed-off);
+  --button-text-color: var(--button-color-dimmed-off);
+  padding-right: var(--spacing-3);
+  color: #000;
+}
+.k-tabs .k-tab-button:hover {
+  --button-color-icon: var(--button-color-dimmed-off);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.k-tabs .k-tab-button[aria-current] {
+  --button-color-text: #000;
+  --button-color-icon: #000;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.k-tabs .k-tab-button[aria-current]:after {
+  display: none;
 }
