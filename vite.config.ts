@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
-import 'dotenv/config'
 import laravel from 'laravel-vite-plugin'
+import 'dotenv/config'
 
 export default defineConfig(({ mode }) => ({
   base: mode === 'development' ? '/' : '/dist/',
@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: resolve(__dirname, 'public/dist'),
     emptyOutDir: true,
-    manifest: 'manifest.json',
+    manifest: 'manifest.json'
   },
   plugins: [
     laravel({
