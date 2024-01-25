@@ -1,7 +1,5 @@
-title: Super Editor
-description:
-  de: Hat vollständige Bearbeitungsrechte für alle Inhalte, aber keinen Zugriff auf administrative Tools.
-  en: Has full editing rights for all content, but no access to administrative tools.
+title: super-editor
+description: super-editor-description
 
 permissions:
   access:

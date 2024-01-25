@@ -1,41 +1,31 @@
 icon: bolt
-label:
-  de: Admin-Tools
-  en: Admin tools
+label: admin-tools
 columns:
   - width: 1/4
     fields:
-      cachingHeadline:
-        label:
-          de: Caching
-          en: Caching
+      _caching:
+        label: caching
         type: headline
   - width: 3/4
     fields:
       flushCache:
-        label:
-          de: Cache leeren
-          en: Flush cache
+        label: "{{ t('flush-cache') }}"
+        type: janitor
         icon: trash
         command: 'janitor:flush'
-        type: janitor
   - width: 1
     fields:
-      adminLine1: &line
+      _admin:
         type: line
   - width: 1/4
     fields:
-      otherHeadline:
-        label:
-          de: Andere
-          en: Other
+      _other:
+        label: other
         type: headline
   - width: 3/4
     fields:
       downloadContent:
+        label: "{{ t('download-content') }}"
         type: janitor
-        command: 'download-content'
-        label:
-          de: Inhalte herunterladen (.zip)
-          en: Download content (.zip)
         icon: archive
+        command: 'download-content'

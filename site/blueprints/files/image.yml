@@ -1,27 +1,17 @@
-title:
-  de: Bild
-  en: Image
+title: image
 accept:
   extension: jpg, jpeg, png, svg
   type: image
 
 fields:
   alt:
-    label:
-      de: Alternativer Text/Bildbeschreibung
-      en: Alternative text/image description
+    label: image-alt
     type: text
-    help:
-      de: Der alternative Text soll Nutzern mit Seheinschränkung & Suchmaschinen-Crawlern helfen, den Inhalt des Bildes zu verstehen.
-      en: The alternative text should help users with visual impairments & search engine crawlers to understand the content of the image.
+    help: image-alt-help
     width: 2/3
   tags:
-    label:
-      de: Interne Schlagworte
-      en: Internal tags
+    label: internal-tags
     type: tags
     query: file.siblings.pluck("tags", ",", true)
     width: 1/3
-    help:
-      de: Schlagworte werden für die interne Suche verwendet und können dir helfen, deine Bilder zu organisieren.
-      en: Tags are used for the internal search and can help you organize your images.
+    help: internal-tags-help

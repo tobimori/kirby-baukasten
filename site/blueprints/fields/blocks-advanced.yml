@@ -1,10 +1,6 @@
-label:
-  de: Erweitert
-  en: Advanced
+label: advanced
 fields:
   blockId:
-    label:
-      de: Eindeutige ID (Anker)
-      en: Unique ID (Anchor)
+    label: block-id
     type: text
     width: 1/3

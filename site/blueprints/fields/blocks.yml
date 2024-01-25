@@ -1,6 +1,4 @@
-label:
-  de: Inhalt
-  en: Content
+label: content
 type: blocks
 fieldsets:
   - example

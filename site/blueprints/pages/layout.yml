@@ -1,0 +1,26 @@
+title: layout-page
+image:
+  icon: grid
+  back: 'var(--theme-accent)'
+  color: 'var(--theme-primary)'
+
+tabs:
+  pages: false
+  model: false
+  content:
+    label: content
+    icon: text
+    columns:
+      main:
+        width: 3/4
+        type: fields
+        fields:
+          blocks: fields/blocks
+      sidebar:
+        width: 1/4
+        sections:
+          children:
+            label: children
+            type: pages
+            template: layout
+  seo: seo/page

@@ -1,6 +1,4 @@
-title:
-  de: Dateien
-  en: Files
+title: images
 image:
   icon: folder
   back: 'var(--theme-primary)'
@@ -21,15 +19,11 @@ status:
 
 tabs:
   list:
-    label:
-      de: Listenansicht
-      en: List view
+    label: list-view
     icon: list-bullet
     sections:
-      listFiles:
-        headline:
-          de: Bilder
-          en: Images
+      list:
+        headline: images
         type: files
         template: image
         layout: table
@@ -51,15 +45,11 @@ tabs:
             type: tags
         sortBy: filename desc
   grid:
-    label:
-      de: Rasteransicht
-      en: Grid view
+    label: grid-view
     icon: grid
     sections:
-      gridFiles:
-        headline:
-          de: Bilder
-          en: Images
+      grid:
+        label: images
         type: files
         template: image
         layout: cardlets

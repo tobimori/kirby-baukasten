@@ -1,31 +1,25 @@
 icon: cog
-label:
-  de: Globale Einstellungen
-  en: Global settings
+label: global-settings
 columns:
   - width: 1/4
     fields:
-      navHeadline:
-        label: Navigation
+      _navigation:
+        label: navigation
         type: headline
   - width: 3/4
     sections:
       placeholder: &placeholder
-        headline:
-          de: Platzhalter
-          en: Placeholder
+        headline: Placeholder
         type: info
-        text:
-          de: Keine Einstellungen vorhanden.
-          en: No settings available yet.
+        text: ' '
   - width: 1
     fields:
-      line1: &line
+      _line1: &line
         type: line
   - width: 1/4
     fields:
-      footerHeadline:
-        label: Footer
+      _footer:
+        label: footer
         type: headline
   - width: 3/4
     sections:

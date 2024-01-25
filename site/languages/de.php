@@ -11,6 +11,6 @@ return [
 		'LC_ALL' => 'de_DE'
 	],
 	'name' => 'Deutsch',
-	'translations' => Yaml::decode(F::read(dirname(__DIR__) . '/translations/de.yml')),
+	'translations' => [],
 	'url' => '/'
 ];

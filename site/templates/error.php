@@ -1,0 +1,1 @@
+<?php snippet('../templates/layout');

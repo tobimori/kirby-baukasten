@@ -1,39 +1,23 @@
-title:
-  de: Übersicht
-  en: Overview
+title: overview
 
 tabs:
   main:
     icon: page
-    label:
-      de: Navigation
-      en: Navigation
+    label: navigation
     columns:
       - width: 2/3
         sections:
           pages:
-            label:
-              de: Seiten
-              en: Pages
+            label: pages
             type: pages
-            info: '{{ page.url }}'
+            info: '/{{ page.slug }}'
             create:
-              - default
+              - layout
             templates:
-              - default
+              - home
+              - error
+              - layout
             image: icon
-      - width: 1
-        sections:
-          info:
-            label: ' '
-            theme: none
-            text:
-              de: |
-                **Ein Projekt von** [Tobias Möritz](https://moeritz.io)
-                Fragen oder Probleme? (email: tobias@moeritz.io)
-              en: |
-                **A project by** [Tobias Möritz](https://moeritz.io)
-                Questions or problems? (email: tobias@moeritz.io)
   global: tabs/global-settings
   seo: seo/site
-  admin: programmable/admin-tools
+  admin: programmatic/admin-tools

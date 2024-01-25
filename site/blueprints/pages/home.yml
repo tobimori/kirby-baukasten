@@ -1,0 +1,10 @@
+extends: pages/layout
+
+title: home
+image:
+  icon: home
+
+tabs:
+  content:
+    columns:
+      sidebar: false

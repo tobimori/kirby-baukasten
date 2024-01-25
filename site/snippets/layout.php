@@ -30,7 +30,7 @@ if (json_decode(env('REQUIRES_LOGIN')) && !$kirby->user()) {
 
 <body class="text-base antialiased bg-white">
 	<div data-taxi>
-		<div class="flex flex-col min-h-screen antialiased bg-white text-body overflow-clip" data-taxi-view>
+		<div class="flex flex-col min-h-screen overflow-clip" data-taxi-view>
 			<?php snippet('nav') ?>
 			<main class="container flex-grow">
 				<div id="main"></div>

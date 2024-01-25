@@ -1,2 +1,33 @@
 # ARIA
 skip-navigation: Navigation überspringen
+
+# Panel
+admin: Administrator
+admin-description: Hat Zugriff auf alle Inhalte und administrative Tools.
+admin-tools: Administrations-Tools
+advanced: Erweitert
+block-id: Eindeutige ID (Anker)
+caching: Caching
+content: Inhalt
+download-content: Inhalte herunterladen (.zip)
+error: Fehlerseite
+flush-cache: Cache leeren
+footer: Footer
+global-settings: Globale Einstellungen
+grid-view: Rasteransicht
+home: Startseite
+image: Bild
+image-alt-help: Der alternative Text soll Nutzern mit Seheinschränkung & Suchmaschinen-Crawlern helfen, den Inhalt des Bildes zu verstehen.
+image-alt: Alternativer Text/Bildbeschreibung
+images: Bilder
+internal-tags: Interne Schlagworte
+internal-tags-help: Schlagworte werden für die interne Suche verwendet und können dir helfen, deine Bilder zu organisieren.
+layout-page: Layout-Seite
+list-view: Listenansicht
+navigation: Navigation
+other: Andere
+overview: Übersicht
+pages: Seiten
+super-editor: Super-Editor
+super-editor-description: Hat Zugriff auf alle Inhalte, aber keine administrativen Tools.
+text: Text

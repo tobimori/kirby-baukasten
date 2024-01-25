@@ -1,6 +1,4 @@
-label:
-  de: Bild
-  en: Image
+label: image
 type: files
 uploads:
   parent: site.find('page://images')

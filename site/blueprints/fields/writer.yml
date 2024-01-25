@@ -1,5 +1,5 @@
+label: text
 type: writer
-label: Text
 marks:
   - bold
   - link
