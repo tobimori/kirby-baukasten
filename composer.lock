@@ -3718,16 +3718,16 @@
         },
         {
             "name": "tobimori/kirby-seo",
-            "version": "1.0.0-beta.3",
+            "version": "1.0.0-rc.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "fdf55291c7517dfe231897ab897b0392474add5c"
+                "reference": "c01af517c05e5305b2d43d7910f015d35498d16c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/fdf55291c7517dfe231897ab897b0392474add5c",
-                "reference": "fdf55291c7517dfe231897ab897b0392474add5c",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/c01af517c05e5305b2d43d7910f015d35498d16c",
+                "reference": "c01af517c05e5305b2d43d7910f015d35498d16c",
                 "shasum": ""
             },
             "require": {
@@ -3736,6 +3736,7 @@
                 "spatie/schema-org": "^3.14"
             },
             "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.48",
                 "getkirby/cli": "^1.2",
                 "getkirby/cms": "^4.0"
             },
@@ -3762,7 +3763,7 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/1.0.0-beta.3"
+                "source": "https://github.com/tobimori/kirby-seo/tree/1.0.0-rc.1"
             },
             "funding": [
                 {
@@ -3770,7 +3771,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-18T16:56:28+00:00"
+            "time": "2024-01-26T01:03:11+00:00"
         },
         {
             "name": "tobimori/kirby-spielzeug",
