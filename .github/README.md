@@ -2,9 +2,7 @@
 
 # Kirby Baukasten
 
-An opinionated, supercharged version of the Kirby Plainkit used internally at
-[coralic](https://coralic.com) for our clients' sites, with preconfigured tooling
-and plugins.
+An opinionated, supercharged version of the Kirby Plainkit used internally at Love & Kindness for our clients' sites, with preconfigured tooling and plugins.
 
 ## Requirements
 
