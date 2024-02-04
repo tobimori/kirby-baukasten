@@ -522,19 +522,20 @@
         },
         {
             "name": "distantnative/retour-for-kirby",
-            "version": "5.0.0",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/distantnative/retour-for-kirby.git",
-                "reference": "7c1946cc4aab8de56ee6f2e1adfc60dd18ba99ea"
+                "reference": "492a590fd2f5c7974b0d33c89520a52b95ec1dc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/7c1946cc4aab8de56ee6f2e1adfc60dd18ba99ea",
-                "reference": "7c1946cc4aab8de56ee6f2e1adfc60dd18ba99ea",
+                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/492a590fd2f5c7974b0d33c89520a52b95ec1dc1",
+                "reference": "492a590fd2f5c7974b0d33c89520a52b95ec1dc1",
                 "shasum": ""
             },
             "require": {
+                "getkirby/cms": "^4.1",
                 "getkirby/composer-installer": "^1.1",
                 "php": ">=8.1.0 <8.4.0"
             },
@@ -554,9 +555,10 @@
                 }
             ],
             "description": "Redirects and 404 tracking for Kirby",
+            "homepage": "https://github.com/distantnative/retour-for-kirby",
             "support": {
                 "issues": "https://github.com/distantnative/retour-for-kirby/issues",
-                "source": "https://github.com/distantnative/retour-for-kirby/tree/5.0.0"
+                "source": "https://github.com/distantnative/retour-for-kirby/tree/5.1.0"
             },
             "funding": [
                 {
@@ -564,7 +566,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2023-11-04T22:32:05+00:00"
+            "time": "2024-01-31T16:23:39+00:00"
         },
         {
             "name": "filp/whoops",
@@ -815,16 +817,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "4.1.0-rc.2",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "f980bd9d79a707626ed8b395db55f4105fc81977"
+                "reference": "2965c3124e3b141072a2d46c798a327dda710060"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/f980bd9d79a707626ed8b395db55f4105fc81977",
-                "reference": "f980bd9d79a707626ed8b395db55f4105fc81977",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/2965c3124e3b141072a2d46c798a327dda710060",
+                "reference": "2965c3124e3b141072a2d46c798a327dda710060",
                 "shasum": ""
             },
             "require": {
@@ -914,7 +916,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2024-01-24T14:56:02+00:00"
+            "time": "2024-01-30T15:39:12+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -1440,16 +1442,16 @@
         },
         {
             "name": "junohamburg/kirby-visual-block-selector",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/junohamburg/kirby-visual-block-selector.git",
-                "reference": "9979c1ef720ac520be52299c5bf09408b19f61d8"
+                "reference": "e34b904ea14b3cc3437adc21a4933268b84ee295"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/junohamburg/kirby-visual-block-selector/zipball/9979c1ef720ac520be52299c5bf09408b19f61d8",
-                "reference": "9979c1ef720ac520be52299c5bf09408b19f61d8",
+                "url": "https://api.github.com/repos/junohamburg/kirby-visual-block-selector/zipball/e34b904ea14b3cc3437adc21a4933268b84ee295",
+                "reference": "e34b904ea14b3cc3437adc21a4933268b84ee295",
                 "shasum": ""
             },
             "require": {
@@ -1469,9 +1471,9 @@
             "description": "Kirby Visual Block Selector",
             "support": {
                 "issues": "https://github.com/junohamburg/kirby-visual-block-selector/issues",
-                "source": "https://github.com/junohamburg/kirby-visual-block-selector/tree/2.0.0"
+                "source": "https://github.com/junohamburg/kirby-visual-block-selector/tree/2.1.0"
             },
-            "time": "2023-12-01T15:11:24+00:00"
+            "time": "2024-01-31T11:21:56+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
@@ -3501,16 +3503,16 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v7.0.0",
+            "version": "v7.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "7bbfa3dd564a0ce12eb4acaaa46823c740f9cb7a"
+                "reference": "983900d6fddf2b0cbaacacbbad07610854bd8112"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/7bbfa3dd564a0ce12eb4acaaa46823c740f9cb7a",
-                "reference": "7bbfa3dd564a0ce12eb4acaaa46823c740f9cb7a",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/983900d6fddf2b0cbaacacbbad07610854bd8112",
+                "reference": "983900d6fddf2b0cbaacacbbad07610854bd8112",
                 "shasum": ""
             },
             "require": {
@@ -3543,7 +3545,7 @@
             "description": "Provides a way to profile code",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/stopwatch/tree/v7.0.0"
+                "source": "https://github.com/symfony/stopwatch/tree/v7.0.3"
             },
             "funding": [
                 {
@@ -3559,20 +3561,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-07-05T13:06:06+00:00"
+            "time": "2024-01-23T15:02:46+00:00"
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v7.0.2",
+            "version": "v7.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "5f6f1a527002068f6d40fda068399220eabebf71"
+                "reference": "a7a061abbf6fe3d4a79032cbc5149a4d65a10234"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/5f6f1a527002068f6d40fda068399220eabebf71",
-                "reference": "5f6f1a527002068f6d40fda068399220eabebf71",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a7a061abbf6fe3d4a79032cbc5149a4d65a10234",
+                "reference": "a7a061abbf6fe3d4a79032cbc5149a4d65a10234",
                 "shasum": ""
             },
             "require": {
@@ -3626,7 +3628,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v7.0.2"
+                "source": "https://github.com/symfony/var-dumper/tree/v7.0.3"
             },
             "funding": [
                 {
@@ -3642,7 +3644,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-28T19:18:20+00:00"
+            "time": "2024-01-23T15:02:46+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -3718,16 +3720,16 @@
         },
         {
             "name": "tobimori/kirby-seo",
-            "version": "1.0.0-rc.1",
+            "version": "1.0.0-rc.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "c01af517c05e5305b2d43d7910f015d35498d16c"
+                "reference": "d714246177d8c2a490b8aa5d30eafc2e6800f8d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/c01af517c05e5305b2d43d7910f015d35498d16c",
-                "reference": "c01af517c05e5305b2d43d7910f015d35498d16c",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/d714246177d8c2a490b8aa5d30eafc2e6800f8d4",
+                "reference": "d714246177d8c2a490b8aa5d30eafc2e6800f8d4",
                 "shasum": ""
             },
             "require": {
@@ -3763,7 +3765,7 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/1.0.0-rc.1"
+                "source": "https://github.com/tobimori/kirby-seo/tree/1.0.0-rc.2"
             },
             "funding": [
                 {
@@ -3771,7 +3773,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-26T01:03:11+00:00"
+            "time": "2024-01-30T15:04:00+00:00"
         },
         {
             "name": "tobimori/kirby-spielzeug",
