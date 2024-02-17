@@ -69,7 +69,7 @@ if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) : 
 
 			<img <?= attr([
 							'data-thumbhash' => $clientBlur ? $image->th() : null,
-							'src' => $clientBlur ? $median->url() : $image->thUri(),
+							'src' => !$clientBlur ? $image->thUri() : null,
 							'data-src' => $median->url(),
 							'width' => $image->width(),
 							'height' => $ratio ? floor($image->width() / $ratio) : $image->height(),
@@ -77,7 +77,7 @@ if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) : 
 							'loading' => $lazy ? "lazy" : null,
 							'data-sizes' => $sizes ?? 'auto',
 							'class' => cls(['w-full h-full object-cover', $imgClass ?? ' ']),
-							'style' => 'aspect-ratio: ' . $ratio ?? $image->ratio() . '; object-position: '  . ($image->focus()->isNotEmpty() ? $image->focus() : '50% 50%'),
+							'style' => 'aspect-ratio: ' . ($ratio ?? $image->ratio()) . '; object-position: '  . ($image->focus()->isNotEmpty() ? $image->focus() : '50% 50%'),
 						]) ?>>
 
 		<?php endif ?>
