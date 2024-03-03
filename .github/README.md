@@ -4,6 +4,9 @@
 
 An opinionated, supercharged version of the Kirby Plainkit used internally at Love & Kindness for our clients' sites, with preconfigured tooling and plugins.
 
+> [!NOTE]
+> While Kirby Baukasten is open source & used in production as base for my own projects, it's not properly versioned, and I'm not offering support for it. Instead, it should serve as a reference or guide for implementing certain best practices in your own starterkit.
+
 ## Requirements
 
 - PHP 8.2+ with composer
@@ -160,6 +163,6 @@ out-of-the-box.
 
 ## License
 
-[MIT License](.github/LICENSE) © 2021-2023 [Tobias Möritz](https://github.com/tobimori)
+[MIT License](.github/LICENSE) © 2021-2024 [Tobias Möritz](https://github.com/tobimori)
 
 Thanks to [Johann](https://github.com/johannschopplich) for the cute banner gecko!
