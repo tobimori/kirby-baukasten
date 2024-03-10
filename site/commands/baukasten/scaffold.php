@@ -40,16 +40,19 @@ return [
 			$page->changeStatus('unlisted');
 		}
 
-		if (F::exists($root . '/src/index.with-taxi.ts')) {
+		if (F::exists($root . '/src/index.with-taxi.ts') || F::exists($root . '/site/snippets/layout.with-taxi.php')) {
 			$input = $cli->input('Do you want to use Taxi.js for page transitions?');
 			$input->accept(['y', 'N'], true);
 			$input->defaultTo('n');
 			$response = $input->prompt();
 			if ($response === 'y') {
 				F::remove($root . '/src/index.ts');
+				F::remove($root . '/site/snippets/layout.php');
 				F::move($root . '/src/index.with-taxi.ts', $root . '/src/index.ts');
+				F::move($root . '/site/snippets/layout.with-taxi.php', $root . '/site/snippets/layout.php');
 			} else {
 				F::remove($root . '/src/index.with-taxi.ts');
+				F::remove($root . '/site/snippets/layout.with-taxi.php');
 				Dir::remove($root . '/src/renderers');
 				Dir::remove($root . '/src/transition');
 				shell_exec('pnpm remove @unseenco/taxi');

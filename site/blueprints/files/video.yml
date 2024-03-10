@@ -1,0 +1,11 @@
+title: video
+accept:
+  extension: webm, mp4
+  type: video
+image:
+  query: file.thumbnail.toFile
+
+fields:
+  thumbnail:
+    label: thumbnail
+    extends: fields/image

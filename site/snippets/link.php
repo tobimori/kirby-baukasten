@@ -1,7 +1,18 @@
 <?php
 
 /**
- * @var Kirby\Content\Field $link
+ * @var Kirby\Cms\StructureObject|Kirby\Content\Content $link
  */ ?>
 
-href="<?= $link->toUrl() ?>" <?php e($link->linkType() == 'url', 'target="_blank" rel="noopener noreferer me"') ?> <?php e(isset($title) && $title->isNotEmpty(), 'title="' . ($title ?? '') . '"') ?>
+<?php if ($link->link()->isNotEmpty()) : ?>
+	<a <?= attr([
+				'class' => $class ?? '',
+				'href' => $link->link()->toUrl(),
+				'target' => $link->newTab()->toBool() ? '_blank' : null,
+				'rel' => $link->newTab()->toBool() ? 'noopener' : null,
+				'aria-current' => $link->link()->linkType() === 'page' && $link->link()->toPage()?->isActive() ? 'page' : null,
+				...($attr ?? [])
+			]) ?>>
+		<?= $slot ?? $link->label()->or($link->link()->linkTitle()) ?>
+	</a>
+<?php endif ?>

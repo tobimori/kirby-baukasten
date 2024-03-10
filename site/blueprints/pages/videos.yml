@@ -1,0 +1,30 @@
+title: videos
+image:
+  icon: folder
+  back: 'var(--theme-primary)'
+  color: 'var(--theme-accent)'
+
+options:
+  preview: false
+  delete: false
+  changeSlug: false
+  changeStatus: false
+  duplicate: false
+  changeTitle: false
+
+status:
+  draft: false
+  unlisted: true
+  listed: false
+
+sections:
+  list:
+    headline: videos
+    type: files
+    template: video
+    layout: list
+    limit: 60
+    uploads:
+      template: video
+    search: true
+    sortBy: filename desc

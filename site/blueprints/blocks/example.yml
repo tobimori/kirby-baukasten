@@ -17,4 +17,4 @@ tabs:
         inline: true
         marks: false
         width: 1/3
-  advanced: fields/blocks-advanced
+  advanced: tabs/blocks-advanced

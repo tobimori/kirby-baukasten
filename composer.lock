@@ -708,16 +708,16 @@
         },
         {
             "name": "genxbe/kirby3-ray",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/genxbe/kirby3-ray.git",
-                "reference": "1743ac5f9ac1ac7ad303819ed4aae19d14bb729e"
+                "reference": "81d7bb7aab6aa0fa20e3fee0f07c64f2c1536bd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/genxbe/kirby3-ray/zipball/1743ac5f9ac1ac7ad303819ed4aae19d14bb729e",
-                "reference": "1743ac5f9ac1ac7ad303819ed4aae19d14bb729e",
+                "url": "https://api.github.com/repos/genxbe/kirby3-ray/zipball/81d7bb7aab6aa0fa20e3fee0f07c64f2c1536bd5",
+                "reference": "81d7bb7aab6aa0fa20e3fee0f07c64f2c1536bd5",
                 "shasum": ""
             },
             "require": {
@@ -745,22 +745,22 @@
             "description": "Helper tool that enables ray on all the extendable methods.",
             "support": {
                 "issues": "https://github.com/genxbe/kirby3-ray/issues",
-                "source": "https://github.com/genxbe/kirby3-ray/tree/2.0.1"
+                "source": "https://github.com/genxbe/kirby3-ray/tree/2.0.2"
             },
-            "time": "2023-03-25T16:10:14+00:00"
+            "time": "2024-02-27T18:41:08+00:00"
         },
         {
             "name": "getkirby/cli",
-            "version": "1.2.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/cli.git",
-                "reference": "1d6d72fb1d29cad3fb7ebe351959b85bd8c843c1"
+                "reference": "8cb347764de108f257c1a6f9ded456c8dd13c6f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/cli/zipball/1d6d72fb1d29cad3fb7ebe351959b85bd8c843c1",
-                "reference": "1d6d72fb1d29cad3fb7ebe351959b85bd8c843c1",
+                "url": "https://api.github.com/repos/getkirby/cli/zipball/8cb347764de108f257c1a6f9ded456c8dd13c6f7",
+                "reference": "8cb347764de108f257c1a6f9ded456c8dd13c6f7",
                 "shasum": ""
             },
             "require": {
@@ -813,20 +813,20 @@
                     "type": "custom"
                 }
             ],
-            "time": "2023-12-21T11:50:41+00:00"
+            "time": "2024-02-29T15:18:04+00:00"
         },
         {
             "name": "getkirby/cms",
-            "version": "4.1.0",
+            "version": "4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "2965c3124e3b141072a2d46c798a327dda710060"
+                "reference": "6b7ac66c55ecac20d6b580ef01a667d1806d5c72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/2965c3124e3b141072a2d46c798a327dda710060",
-                "reference": "2965c3124e3b141072a2d46c798a327dda710060",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/6b7ac66c55ecac20d6b580ef01a667d1806d5c72",
+                "reference": "6b7ac66c55ecac20d6b580ef01a667d1806d5c72",
                 "shasum": ""
             },
             "require": {
@@ -916,7 +916,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2024-01-30T15:39:12+00:00"
+            "time": "2024-03-06T11:38:42+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -1665,16 +1665,16 @@
         },
         {
             "name": "lukaskleinschmidt/kirby-laravel-vite",
-            "version": "2.1.2",
+            "version": "2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lukaskleinschmidt/kirby-laravel-vite.git",
-                "reference": "5e27d7d7f67949686ca540e3ea4eb556a7e38809"
+                "reference": "e6102c9ea6e79d7f72e2103ccfdeb1c17f8fbb55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lukaskleinschmidt/kirby-laravel-vite/zipball/5e27d7d7f67949686ca540e3ea4eb556a7e38809",
-                "reference": "5e27d7d7f67949686ca540e3ea4eb556a7e38809",
+                "url": "https://api.github.com/repos/lukaskleinschmidt/kirby-laravel-vite/zipball/e6102c9ea6e79d7f72e2103ccfdeb1c17f8fbb55",
+                "reference": "e6102c9ea6e79d7f72e2103ccfdeb1c17f8fbb55",
                 "shasum": ""
             },
             "require": {
@@ -1698,9 +1698,9 @@
             "description": "Kirby Laravel Vite",
             "support": {
                 "issues": "https://github.com/lukaskleinschmidt/kirby-laravel-vite/issues",
-                "source": "https://github.com/lukaskleinschmidt/kirby-laravel-vite/tree/2.1.2"
+                "source": "https://github.com/lukaskleinschmidt/kirby-laravel-vite/tree/2.1.3"
             },
-            "time": "2023-11-10T18:13:51+00:00"
+            "time": "2024-03-05T07:51:33+00:00"
         },
         {
             "name": "michelf/php-smartypants",
@@ -1761,7 +1761,7 @@
             "version": "0.6.3",
             "source": {
                 "type": "git",
-                "url": "git@github.com:mustangostang/spyc.git",
+                "url": "https://github.com/mustangostang/spyc.git",
                 "reference": "4627c838b16550b666d15aeae1e5289dd5b77da0"
             },
             "dist": {
@@ -1804,6 +1804,10 @@
                 "yaml",
                 "yml"
             ],
+            "support": {
+                "issues": "https://github.com/mustangostang/spyc/issues",
+                "source": "https://github.com/mustangostang/spyc/tree/0.6.3"
+            },
             "time": "2019-09-10T13:16:29+00:00"
         },
         {
@@ -2823,16 +2827,16 @@
         },
         {
             "name": "srwiez/thumbhash",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SRWieZ/thumbhash.git",
-                "reference": "70a4c48e3fa055ce7010641634ab1ea1b8d7ce81"
+                "reference": "2d5c6237fb16b79e9bd5d0d2a1571f9d6d3f1f66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SRWieZ/thumbhash/zipball/70a4c48e3fa055ce7010641634ab1ea1b8d7ce81",
-                "reference": "70a4c48e3fa055ce7010641634ab1ea1b8d7ce81",
+                "url": "https://api.github.com/repos/SRWieZ/thumbhash/zipball/2d5c6237fb16b79e9bd5d0d2a1571f9d6d3f1f66",
+                "reference": "2d5c6237fb16b79e9bd5d0d2a1571f9d6d3f1f66",
                 "shasum": ""
             },
             "require": {
@@ -2865,9 +2869,9 @@
             "description": "A brief description of your package",
             "support": {
                 "issues": "https://github.com/SRWieZ/thumbhash/issues",
-                "source": "https://github.com/SRWieZ/thumbhash/tree/v1.2.0"
+                "source": "https://github.com/SRWieZ/thumbhash/tree/v1.2.1"
             },
-            "time": "2023-05-10T15:02:57+00:00"
+            "time": "2024-02-11T11:22:22+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -3002,16 +3006,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.28.0",
+            "version": "v1.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb"
+                "reference": "ef4d7e442ca910c4764bce785146269b30cb5fc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb",
-                "reference": "ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/ef4d7e442ca910c4764bce785146269b30cb5fc4",
+                "reference": "ef4d7e442ca910c4764bce785146269b30cb5fc4",
                 "shasum": ""
             },
             "require": {
@@ -3025,9 +3029,6 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.28-dev"
-                },
                 "thanks": {
                     "name": "symfony/polyfill",
                     "url": "https://github.com/symfony/polyfill"
@@ -3064,7 +3065,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.28.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.29.0"
             },
             "funding": [
                 {
@@ -3080,7 +3081,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-26T09:26:14+00:00"
+            "time": "2024-01-29T20:11:03+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -3171,16 +3172,16 @@
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.28.0",
+            "version": "v1.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-                "reference": "8c4ad05dd0120b6a53c1ca374dca2ad0a1c4ed92"
+                "reference": "bc45c394692b948b4d383a08d7753968bed9a83d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/8c4ad05dd0120b6a53c1ca374dca2ad0a1c4ed92",
-                "reference": "8c4ad05dd0120b6a53c1ca374dca2ad0a1c4ed92",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/bc45c394692b948b4d383a08d7753968bed9a83d",
+                "reference": "bc45c394692b948b4d383a08d7753968bed9a83d",
                 "shasum": ""
             },
             "require": {
@@ -3191,9 +3192,6 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.28-dev"
-                },
                 "thanks": {
                     "name": "symfony/polyfill",
                     "url": "https://github.com/symfony/polyfill"
@@ -3235,7 +3233,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.28.0"
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.29.0"
             },
             "funding": [
                 {
@@ -3251,7 +3249,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-26T09:26:14+00:00"
+            "time": "2024-01-29T20:11:03+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -3338,16 +3336,16 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.28.0",
+            "version": "v1.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5"
+                "reference": "87b68208d5c1188808dd7839ee1e6c8ec3b02f1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
-                "reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
+                "reference": "87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
                 "shasum": ""
             },
             "require": {
@@ -3355,9 +3353,6 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.28-dev"
-                },
                 "thanks": {
                     "name": "symfony/polyfill",
                     "url": "https://github.com/symfony/polyfill"
@@ -3401,7 +3396,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.28.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.29.0"
             },
             "funding": [
                 {
@@ -3417,7 +3412,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-26T09:26:14+00:00"
+            "time": "2024-01-29T20:11:03+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -3565,16 +3560,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v7.0.3",
+            "version": "v7.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "a7a061abbf6fe3d4a79032cbc5149a4d65a10234"
+                "reference": "e03ad7c1535e623edbb94c22cc42353e488c6670"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a7a061abbf6fe3d4a79032cbc5149a4d65a10234",
-                "reference": "a7a061abbf6fe3d4a79032cbc5149a4d65a10234",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/e03ad7c1535e623edbb94c22cc42353e488c6670",
+                "reference": "e03ad7c1535e623edbb94c22cc42353e488c6670",
                 "shasum": ""
             },
             "require": {
@@ -3628,7 +3623,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v7.0.3"
+                "source": "https://github.com/symfony/var-dumper/tree/v7.0.4"
             },
             "funding": [
                 {
@@ -3644,7 +3639,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-23T15:02:46+00:00"
+            "time": "2024-02-15T11:33:06+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -3720,16 +3715,16 @@
         },
         {
             "name": "tobimori/kirby-seo",
-            "version": "1.0.0-rc.2",
+            "version": "1.0.0-rc.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "d714246177d8c2a490b8aa5d30eafc2e6800f8d4"
+                "reference": "ac086001898bbd8fe325da5c6b170865782b9732"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/d714246177d8c2a490b8aa5d30eafc2e6800f8d4",
-                "reference": "d714246177d8c2a490b8aa5d30eafc2e6800f8d4",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/ac086001898bbd8fe325da5c6b170865782b9732",
+                "reference": "ac086001898bbd8fe325da5c6b170865782b9732",
                 "shasum": ""
             },
             "require": {
@@ -3765,7 +3760,7 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/1.0.0-rc.2"
+                "source": "https://github.com/tobimori/kirby-seo/tree/1.0.0-rc.5"
             },
             "funding": [
                 {
@@ -3773,7 +3768,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-30T15:04:00+00:00"
+            "time": "2024-03-07T13:56:06+00:00"
         },
         {
             "name": "tobimori/kirby-spielzeug",

@@ -31,3 +31,7 @@ pages: Pages
 super-editor: Super Editor
 super-editor-description: Has access to all content, but no administrative tools.
 text: Text
+link: Link
+videos: Videos
+video: Video
+thumbnail: Thumbnail

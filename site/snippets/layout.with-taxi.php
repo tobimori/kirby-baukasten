@@ -28,14 +28,18 @@ if (json_decode(env('REQUIRES_LOGIN')) && !$kirby->user()) {
 	]) ?>
 </head>
 
-<body class="flex flex-col min-h-screen antialiased overflow-x-clip">
-	<?php snippet('core/skip-nav') ?>
-	<?php snippet('core/nav') ?>
-	<main class="container flex-grow">
-		<div id="main"></div>
-		<?= $slot ?>
-	</main>
-	<?php snippet('core/footer') ?>
+<body class="min-h-screen antialiased overflow-x-clip">
+	<div data-taxi>
+		<div class="flex flex-col" data-taxi-view>
+			<?php snippet('core/skip-nav') ?>
+			<?php snippet('core/nav') ?>
+			<main class="container flex-grow">
+				<div id="main"></div>
+				<?= $slot ?>
+			</main>
+			<?php snippet('core/footer') ?>
+		</div>
+	</div>
 	<?php snippet('seo/schemas') ?>
 	<script>
 		console.log('%ctobimori/kirby-baukasten<?= F::exists($kirby->roots()->base() . '/.git/refs/heads/main') ? '#' . substr(file_get_contents($kirby->roots()->base() . '/.git/refs/heads/main'), 0, 7) : '' ?>', 'font-size: 12px; font-weight: bold; color: #F9E7FF; background-color: #7D3BA8; padding: 10px 16px; margin: 20px 0; border-radius: 4px;')

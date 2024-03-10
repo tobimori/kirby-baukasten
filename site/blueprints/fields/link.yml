@@ -1,0 +1,16 @@
+label: link
+type: object
+empty: no-link-yet
+fields:
+  label:
+    label: label
+    type: text
+    width: 1/3
+  link:
+    label: link
+    type: link
+    width: 2/3
+  newTab:
+    label: new-tab
+    type: toggle
+    default: false
