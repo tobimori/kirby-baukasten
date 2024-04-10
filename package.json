@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm run \"/dev:/\"",
-    "dev:kirby": "env-cmd --use-shell \"PHP_CLI_SERVER_WORKERS=10 php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public kirby/router.php\"",
+    "dev:kirby": "env-cmd --use-shell \"PHP_CLI_SERVER_WORKERS=4 php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public kirby/router.php\"",
     "dev:vite": "vite",
     "build": "vite build"
   },

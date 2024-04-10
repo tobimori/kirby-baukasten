@@ -5,6 +5,8 @@ import { Config } from 'tailwindcss'
 const variants = plugin(({ addVariant }) => {
   addVariant('not-last', '&:not(:last-child)')
   addVariant('not-first', '&:not(:first-child)')
+  addVariant('hocus', ['&:hover', '&:focus-visible'])
+  addVariant('group-hocus', ['.group:hover &', '.group:focus-visible &'])
 })
 
 export default {
