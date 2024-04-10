@@ -1,8 +1,5 @@
 <?php
 
-use Kirby\Data\Yaml;
-use Kirby\Filesystem\F;
-
 return [
 	'code' => 'de',
 	'default' => true,
