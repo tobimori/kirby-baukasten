@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6026a01666a662f214eb4e8015f216f0",
+    "content-hash": "2fd3b18ec13ec9e52fcb22653cfa8e46",
     "packages": [
         {
             "name": "bnomei/autoloader-for-kirby",
@@ -3810,6 +3810,52 @@
                 }
             ],
             "time": "2024-04-18T09:52:16+00:00"
+        },
+        {
+            "name": "tobimori/kirby-role-blueprints",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tobimori/kirby-role-blueprints.git",
+                "reference": "ec6efd6eed96a38c4eb86fd49be79b9f1b3dde7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tobimori/kirby-role-blueprints/zipball/ec6efd6eed96a38c4eb86fd49be79b9f1b3dde7f",
+                "reference": "ec6efd6eed96a38c4eb86fd49be79b9f1b3dde7f",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2.1",
+                "php": ">=8.2.0"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": false
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Möritz",
+                    "email": "tobias@moeritz.io"
+                }
+            ],
+            "description": "Load different blueprints based on user roles in Kirby CMS",
+            "homepage": "https://plugins.andkindness.com/role-blueprints",
+            "support": {
+                "issues": "https://github.com/tobimori/kirby-role-blueprints/issues",
+                "source": "https://github.com/tobimori/kirby-role-blueprints/tree/1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/tobimori",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-04-23T12:36:26+00:00"
         },
         {
             "name": "tobimori/kirby-seo",

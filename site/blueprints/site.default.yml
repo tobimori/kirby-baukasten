@@ -20,4 +20,3 @@ tabs:
             image: icon
   global: tabs/global-settings
   seo: seo/site
-  admin: programmatic/admin-tools
