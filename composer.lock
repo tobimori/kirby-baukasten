@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2fd3b18ec13ec9e52fcb22653cfa8e46",
+    "content-hash": "2d7e6c37747ecf88b0fec1b3950d4204",
     "packages": [
         {
             "name": "bnomei/autoloader-for-kirby",
@@ -184,29 +184,32 @@
         },
         {
             "name": "bnomei/kirby3-janitor",
-            "version": "3.12.0",
+            "version": "4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bnomei/kirby3-janitor.git",
-                "reference": "6fdc3d8f560ed126336c059c49e6d895961a6169"
+                "reference": "86325a8706378cc12a9ac03a34dfa22704bd25af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bnomei/kirby3-janitor/zipball/6fdc3d8f560ed126336c059c49e6d895961a6169",
-                "reference": "6fdc3d8f560ed126336c059c49e6d895961a6169",
+                "url": "https://api.github.com/repos/bnomei/kirby3-janitor/zipball/86325a8706378cc12a9ac03a34dfa22704bd25af",
+                "reference": "86325a8706378cc12a9ac03a34dfa22704bd25af",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.2",
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "symfony/deprecation-contracts": "^3.0.1",
                 "symfony/finder": "^6.0"
             },
             "require-dev": {
                 "getkirby/cli": "dev-develop",
-                "getkirby/cms": "^3.8.2",
-                "php-coveralls/php-coveralls": "^2.4",
-                "phpunit/phpunit": "^9.5"
+                "getkirby/cms": "^4.0.0-beta.3",
+                "laravel/pint": "^1.13",
+                "nunomaduro/larastan": "^2.6",
+                "pestphp/pest": "^2.24",
+                "pestphp/pest-plugin-type-coverage": "^2.4",
+                "spatie/ray": "^1.39"
             },
             "type": "kirby-plugin",
             "extra": {
@@ -241,16 +244,16 @@
                 "janitor",
                 "job",
                 "job-runner",
-                "kirby3",
-                "kirby3-cms",
-                "kirby3-plugin",
+                "kirby",
+                "kirby-cms",
+                "kirby-plugin",
                 "maintenance",
                 "panel",
                 "render"
             ],
             "support": {
                 "issues": "https://github.com/bnomei/kirby3-janitor/issues",
-                "source": "https://github.com/bnomei/kirby3-janitor/tree/v3.12.0"
+                "source": "https://github.com/bnomei/kirby3-janitor/tree/v4.0.2"
             },
             "funding": [
                 {
@@ -270,7 +273,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-10-25T15:58:22+00:00"
+            "time": "2024-02-28T09:45:51+00:00"
         },
         {
             "name": "brick/math",
@@ -1457,16 +1460,16 @@
         },
         {
             "name": "junohamburg/kirby-language-selector",
-            "version": "1.1.0",
+            "version": "1.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/junohamburg/kirby-language-selector.git",
-                "reference": "d0bd17f8d0107079e58a5c309c445912bc31d9ca"
+                "reference": "5285cc4eebac0be281d2329a01c3bbd50f419250"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/junohamburg/kirby-language-selector/zipball/d0bd17f8d0107079e58a5c309c445912bc31d9ca",
-                "reference": "d0bd17f8d0107079e58a5c309c445912bc31d9ca",
+                "url": "https://api.github.com/repos/junohamburg/kirby-language-selector/zipball/5285cc4eebac0be281d2329a01c3bbd50f419250",
+                "reference": "5285cc4eebac0be281d2329a01c3bbd50f419250",
                 "shasum": ""
             },
             "require": {
@@ -1486,9 +1489,9 @@
             "description": "Kirby Language Selector",
             "support": {
                 "issues": "https://github.com/junohamburg/kirby-language-selector/issues",
-                "source": "https://github.com/junohamburg/kirby-language-selector/tree/1.1.0"
+                "source": "https://github.com/junohamburg/kirby-language-selector/tree/1.1.9"
             },
-            "time": "2023-11-15T16:10:51+00:00"
+            "time": "2024-02-12T09:19:04+00:00"
         },
         {
             "name": "junohamburg/kirby-visual-block-selector",
