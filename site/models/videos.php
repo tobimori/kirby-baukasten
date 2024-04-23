@@ -1,5 +1,5 @@
 <?php
 
-class VideosPage extends ImagesPage
+class VideosPage extends FilesPage
 {
 }

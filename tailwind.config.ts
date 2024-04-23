@@ -1,6 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import { Config } from 'tailwindcss'
+import formsPlugin from '@tailwindcss/forms'
 
 const variants = plugin(({ addVariant }) => {
   addVariant('not-last', '&:not(:last-child)')
@@ -31,5 +32,5 @@ export default {
     },
     extend: {}
   },
-  plugins: [variants]
+  plugins: [variants, formsPlugin]
 } satisfies Config

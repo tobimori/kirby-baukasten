@@ -97,3 +97,14 @@
     }
   }
 }
+
+/** Custom styles for plausible embed */
+@media (min-width: 60rem) {
+  .k-panel-main:has(iframe[plausible-embed]) {
+    max-width: 104rem;
+  }
+}
+
+.k-header:has(+ iframe[plausible-embed]) {
+	display: none;
+}

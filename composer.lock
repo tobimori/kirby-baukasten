@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e45c10f067b6bcf28567361421b1ab00",
+    "content-hash": "6026a01666a662f214eb4e8015f216f0",
     "packages": [
         {
             "name": "bnomei/autoloader-for-kirby",
@@ -1404,6 +1404,56 @@
                 }
             ],
             "time": "2023-12-03T20:05:35+00:00"
+        },
+        {
+            "name": "johannschopplich/kirby-plausible",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johannschopplich/kirby-plausible.git",
+                "reference": "cad06a39e4ca5cf3823882cb51e3b0bc2ee4ff1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-plausible/zipball/cad06a39e4ca5cf3823882cb51e3b0bc2ee4ff1d",
+                "reference": "cad06a39e4ca5cf3823882cb51e3b0bc2ee4ff1d",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "@stable",
+                "getkirby/cms": "^4"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": false
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johann Schopplich",
+                    "email": "pkg@johannschopplich.com",
+                    "homepage": "https://johannschopplich.com"
+                }
+            ],
+            "description": "Plausible integration for Kirby CMS",
+            "homepage": "https://github.com/johannschopplich/kirby-plausible#readme",
+            "keywords": [
+                "analytics",
+                "getkirby",
+                "kirby",
+                "kirby-cms",
+                "plausible"
+            ],
+            "support": {
+                "source": "https://github.com/johannschopplich/kirby-plausible/tree/v0.5.0"
+            },
+            "time": "2024-02-05T12:29:44+00:00"
         },
         {
             "name": "junohamburg/kirby-language-selector",
@@ -3708,6 +3758,60 @@
             "time": "2024-01-23T14:51:35+00:00"
         },
         {
+            "name": "tobimori/kirby-dreamform",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tobimori/kirby-dreamform.git",
+                "reference": "0fc2c8c0b2aa632f9102be7d9f23492e0aa3b50a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tobimori/kirby-dreamform/zipball/0fc2c8c0b2aa632f9102be7d9f23492e0aa3b50a",
+                "reference": "0fc2c8c0b2aa632f9102be7d9f23492e0aa3b50a",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2.1",
+                "php": ">=8.2.0"
+            },
+            "require-dev": {
+                "getkirby/cli": "^1.4"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": false
+            },
+            "autoload": {
+                "psr-4": {
+                    "tobimori\\DreamForm\\": "classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Möritz",
+                    "email": "tobias@moeritz.io"
+                }
+            ],
+            "description": "Kirby DreamForm is an opiniated form builder plugin for Kirby CMS 4+ that makes forms work like magic",
+            "homepage": "https://plugins.andkindness.com/dreamform",
+            "support": {
+                "issues": "https://github.com/tobimori/kirby-dreamform/issues",
+                "source": "https://github.com/tobimori/kirby-dreamform/tree/1.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://plugins.andkindness.com/dreamform/pricing",
+                    "type": "custom"
+                }
+            ],
+            "time": "2024-04-18T09:52:16+00:00"
+        },
+        {
             "name": "tobimori/kirby-seo",
             "version": "1.1.2",
             "source": {
@@ -3884,16 +3988,16 @@
         },
         {
             "name": "tobimori/kirby-thumbhash",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-thumbhash.git",
-                "reference": "7eee10b73472fe4e1f85e928e73cf657f8330ec3"
+                "reference": "9cd6c2d93f171a8cd484a686d267ff8adbb2b9fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-thumbhash/zipball/7eee10b73472fe4e1f85e928e73cf657f8330ec3",
-                "reference": "7eee10b73472fe4e1f85e928e73cf657f8330ec3",
+                "url": "https://api.github.com/repos/tobimori/kirby-thumbhash/zipball/9cd6c2d93f171a8cd484a686d267ff8adbb2b9fe",
+                "reference": "9cd6c2d93f171a8cd484a686d267ff8adbb2b9fe",
                 "shasum": ""
             },
             "require": {
@@ -3927,7 +4031,7 @@
             "homepage": "https://github.com/tobimori/kirby-thumbhash#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-thumbhash/issues",
-                "source": "https://github.com/tobimori/kirby-thumbhash/tree/1.1.0"
+                "source": "https://github.com/tobimori/kirby-thumbhash/tree/1.1.1"
             },
             "funding": [
                 {
@@ -3935,7 +4039,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-18T13:22:30+00:00"
+            "time": "2024-04-12T16:48:19+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
