@@ -1,13 +1,13 @@
-import { Renderer } from '@unseenco/taxi'
-import { lazyLoad } from 'unlazy'
+import { Renderer } from "@unseenco/taxi"
+import { lazyLoad } from "unlazy"
 
 export default class extends Renderer {
-  initialLoad(): void {
-    lazyLoad()
-  }
+	initialLoad() {
+		lazyLoad()
+	}
 
-  onEnterCompleted() {
-    this.remove()
-    lazyLoad()
-  }
+	onEnterCompleted() {
+		this.remove()
+		lazyLoad()
+	}
 }

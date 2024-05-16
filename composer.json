@@ -1,47 +1,47 @@
 {
-  "@schema": "https://getcomposer.org/schema.json",
-  "name": "tobimori/kirby-baukasten",
-  "description": "An opinionated, supercharged version of the Kirby CMS Plainkit",
-  "type": "project",
-  "keywords": [
-    "kirby",
-    "cms",
-    "starterkit"
-  ],
-  "homepage": "https://moeritz.io",
-  "authors": [
-    {
-      "name": "Tobias Möritz",
-      "email": "tobias@moeritz.io",
-      "homepage": "https://moeritz.io"
-    }
-  ],
-  "minimum-stability": "beta",
-  "require": {
-    "php": ">=8.2.0",
-    "getkirby/cms": "^4.0",
-    "bnomei/kirby3-dotenv": "^2.0",
-    "genxbe/kirby3-ray": "^2.0.1",
-    "tobimori/kirby-seo": "^1.0",
-    "lukaskleinschmidt/kirby-laravel-vite": "^2.1.1",
-    "junohamburg/kirby-visual-block-selector": "^2.0",
-    "tobimori/kirby-spielzeug": "^2.1.0",
-    "distantnative/retour-for-kirby": "^5.0",
-    "getkirby/staticache": "^1.0",
-    "getkirby/cli": "^1.2",
-    "bnomei/kirby3-janitor": "^4.0",
-    "tobimori/kirby-tailwind-merge": "^3.0",
-    "tobimori/kirby-thumbhash": "^1.1",
-    "junohamburg/kirby-language-selector": "^1.1",
-    "tobimori/kirby-dreamform": "^1.1",
-    "johannschopplich/kirby-plausible": "^0.5.0",
-    "tobimori/kirby-role-blueprints": "^1.0"
-  },
-  "config": {
-    "optimize-autoloader": true,
-    "allow-plugins": {
-      "getkirby/composer-installer": true,
-      "php-http/discovery": true
-    }
-  }
+	"@schema": "https://getcomposer.org/schema.json",
+	"name": "tobimori/kirby-baukasten",
+	"description": "An opinionated, supercharged version of the Kirby CMS Plainkit",
+	"type": "project",
+	"keywords": [
+		"kirby",
+		"cms",
+		"starterkit"
+	],
+	"homepage": "https://moeritz.io",
+	"authors": [
+		{
+			"name": "Tobias Möritz",
+			"email": "tobias@moeritz.io",
+			"homepage": "https://moeritz.io"
+		}
+	],
+	"minimum-stability": "beta",
+	"require": {
+		"php": ">=8.2.0",
+		"getkirby/cms": "^4.0",
+		"bnomei/kirby3-dotenv": "^2.0",
+		"genxbe/kirby3-ray": "^2.0.1",
+		"tobimori/kirby-seo": "^1.0",
+		"lukaskleinschmidt/kirby-laravel-vite": "^2.1.1",
+		"junohamburg/kirby-visual-block-selector": "^2.0",
+		"tobimori/kirby-spielzeug": "^2.1.0",
+		"distantnative/retour-for-kirby": "^5.0",
+		"getkirby/staticache": "^1.0",
+		"getkirby/cli": "^1.2",
+		"bnomei/kirby3-janitor": "^4.0",
+		"tobimori/kirby-tailwind-merge": "^3.0",
+		"tobimori/kirby-thumbhash": "^1.1",
+		"junohamburg/kirby-language-selector": "^1.1",
+		"tobimori/kirby-dreamform": "^1.1",
+		"johannschopplich/kirby-plausible": "^0.5.0",
+		"tobimori/kirby-role-blueprints": "^1.0"
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"allow-plugins": {
+			"getkirby/composer-installer": true,
+			"php-http/discovery": true
+		}
+	}
 }

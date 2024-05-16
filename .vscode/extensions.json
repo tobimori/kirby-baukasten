@@ -1,8 +1,6 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "wix.vscode-import-cost",
     "eamodio.gitlens",
     "kisstkondoros.vscode-gutter-preview",
     "github.vscode-pull-request-github",
@@ -10,6 +8,7 @@
     "editorconfig.editorconfig",
     "bradlc.vscode-tailwindcss",
     "emeraldwalk.runonsave",
-    "yoavbls.pretty-ts-errors"
+		"yoavbls.pretty-ts-errors",
+		"biomejs.biome"
   ]
 }

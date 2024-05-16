@@ -1,9 +1,14 @@
 {
   "editor.formatOnSave": true,
   "intelephense.telemetry.enabled": false,
-  "css.validate": true,
-  "[javascript,yaml]": {
+	"[javascript,typescript,css,json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+  "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "yaml.schemas": {
     "https://json.schemastore.org/yamllint.json": "**/*.yml"
@@ -13,8 +18,8 @@
     "commands": [
       {
         "match": "\\.php$",
-        "cmd": "rustywind --write '${file}'"
+        "cmd": "pnpm env-cmd --use-shell \"rustywind --write '${file}' --vite-css \\$APP_URL/src/styles/index.css \""
       }
     ]
-  }
+	},
 }
