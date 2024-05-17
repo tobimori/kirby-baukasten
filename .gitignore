@@ -33,6 +33,7 @@ node_modules
 /public/media
 /public/assets/dev
 /public/dist
+/assets/sprite.svg
 
 # Kirby
 # ---------------

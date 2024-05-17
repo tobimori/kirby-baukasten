@@ -14,7 +14,7 @@ return [
 
 		// create zip
 		$path = '/backups/' . Uuid::generate() . '.zip';
-		janitor()->command('janitor:backupzip --quiet --output public' . $path);
+		janitor()->command('janitor:backupzip --quiet --output ' . kirby()->roots()->index() . $path);
 		$backup = janitor()->data('janitor:backupzip');
 
 		if (F::exists($backup['path'])) {
