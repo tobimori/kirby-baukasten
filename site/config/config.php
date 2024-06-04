@@ -45,6 +45,9 @@ return [
 			'prefix' => null
 		]
 	],
+	'sylvainjule.backups' => [
+		'publicFolder' => 'backups',
+	],
 	/** Build Env / Vite / etc. */
 	'bnomei.dotenv.dir' => fn () => realpath(kirby()->roots()->base()),
 	'lukaskleinschmidt.kirby-laravel-vite.buildDirectory' => 'dist',
@@ -60,7 +63,7 @@ return [
 			'forms' => Menu::page(null, 'survey', page('page://forms')),
 			'users',
 			'plausible',
-			'retour'
+			'retour',
 		]
 	],
 	'ready' => fn () => [

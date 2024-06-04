@@ -1,6 +1,0 @@
-label: advanced
-fields:
-  blockId:
-    label: block-id
-    type: text
-    width: 1/3

@@ -1,20 +1,11 @@
-title: Example
-icon: text-left
-preview: fields
-wysiwyg: true
+extends: blocks/_base
+title: example
+icon: title
+label: "{{ text }}"
 
 tabs:
   content:
-    label:
-      de: Inhalt
-      en: Content
     fields:
-      headline:
-        label:
-          de: Überschrift
-          en: Headline
-        type: writer
-        inline: true
-        marks: false
-        width: 1/3
-  advanced: tabs/blocks-advanced
+      text:
+        label: text
+        type: text

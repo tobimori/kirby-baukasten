@@ -1,4 +1,0 @@
-extends: site.default
-
-tabs:
-  admin: tabs/admin-tools

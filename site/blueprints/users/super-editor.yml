@@ -5,6 +5,7 @@ permissions:
   access:
     system: false
     languages: false
+    backups: false
 
 # Hidden element to hide notice in user management
 # Remove if you want to implement fields for your users
