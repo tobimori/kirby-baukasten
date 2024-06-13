@@ -1,25 +1,11 @@
-title: videos
+extends: files/images
+title: page.videos.title
 image:
-  icon: folder
-  back: 'var(--theme-primary)'
-  color: 'var(--theme-accent)'
-
-options:
-  preview: false
-  delete: false
-  changeSlug: false
-  changeStatus: false
-  duplicate: false
-  changeTitle: false
-
-status:
-  draft: false
-  unlisted: true
-  listed: false
+  icon: file-video
 
 sections:
   list:
-    headline: videos
+    label: section.videos.label
     type: files
     template: video
     layout: list

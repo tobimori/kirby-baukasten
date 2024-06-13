@@ -4,31 +4,39 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb70a42c805d9d5de80ec6365ef7d3ed",
+    "content-hash": "e9080f6a3ed6ebb77a6363e43e5ef5f5",
     "packages": [
         {
             "name": "bnomei/autoloader-for-kirby",
-            "version": "1.11.0",
+            "version": "4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bnomei/autoloader-for-kirby.git",
-                "reference": "10e8a625b2cf02bfe4248b11d3bf0467e4ee0b7d"
+                "reference": "e7cc02ab966b98f09609dd382785bd497899682c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bnomei/autoloader-for-kirby/zipball/10e8a625b2cf02bfe4248b11d3bf0467e4ee0b7d",
-                "reference": "10e8a625b2cf02bfe4248b11d3bf0467e4ee0b7d",
+                "url": "https://api.github.com/repos/bnomei/autoloader-for-kirby/zipball/e7cc02ab966b98f09609dd382785bd497899682c",
+                "reference": "e7cc02ab966b98f09609dd382785bd497899682c",
                 "shasum": ""
             },
             "require": {
                 "mustangostang/spyc": "^0.6.3",
-                "php": ">=8.1.0",
-                "symfony/finder": "^6.0"
+                "php": ">=8.2.0",
+                "symfony/finder": "^7.0",
+                "symfony/yaml": "^6.0"
+            },
+            "conflict": {
+                "getkirby/cms": "<4.0"
             },
             "require-dev": {
-                "getkirby/cms": "^3.5",
-                "php-coveralls/php-coveralls": "^2.4",
-                "phpunit/phpunit": "^9.5"
+                "getkirby/cms": "^4.0.0-beta.2",
+                "larastan/larastan": "^2.9",
+                "laravel/pint": "^1.13",
+                "pestphp/pest": "^2.24",
+                "pestphp/pest-plugin-drift": "^2.5",
+                "pestphp/pest-plugin-type-coverage": "^2.4",
+                "spatie/ray": "^1.41"
             },
             "type": "project",
             "extra": {
@@ -64,8 +72,8 @@
                 "controllers",
                 "extension",
                 "extensions",
-                "kirby3",
-                "kirby3-cms",
+                "kirby",
+                "kirby-cms",
                 "languages",
                 "pagemodels",
                 "register",
@@ -78,7 +86,7 @@
             ],
             "support": {
                 "issues": "https://github.com/bnomei/autoloader-for-kirby/issues",
-                "source": "https://github.com/bnomei/autoloader-for-kirby/tree/v1.11.0"
+                "source": "https://github.com/bnomei/autoloader-for-kirby/tree/v4.3.1"
             },
             "funding": [
                 {
@@ -98,7 +106,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-10-12T20:20:05+00:00"
+            "time": "2024-06-03T16:40:48+00:00"
         },
         {
             "name": "bnomei/kirby3-dotenv",
@@ -184,29 +192,29 @@
         },
         {
             "name": "bnomei/kirby3-janitor",
-            "version": "4.0.2",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bnomei/kirby3-janitor.git",
-                "reference": "86325a8706378cc12a9ac03a34dfa22704bd25af"
+                "reference": "befc1589b81b4104e3a4cea0409f253aa50cf4c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bnomei/kirby3-janitor/zipball/86325a8706378cc12a9ac03a34dfa22704bd25af",
-                "reference": "86325a8706378cc12a9ac03a34dfa22704bd25af",
+                "url": "https://api.github.com/repos/bnomei/kirby3-janitor/zipball/befc1589b81b4104e3a4cea0409f253aa50cf4c8",
+                "reference": "befc1589b81b4104e3a4cea0409f253aa50cf4c8",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.2",
                 "php": ">=8.1",
                 "symfony/deprecation-contracts": "^3.0.1",
-                "symfony/finder": "^6.0"
+                "symfony/finder": "^7.0"
             },
             "require-dev": {
                 "getkirby/cli": "dev-develop",
                 "getkirby/cms": "^4.0.0-beta.3",
+                "larastan/larastan": "^2.9",
                 "laravel/pint": "^1.13",
-                "nunomaduro/larastan": "^2.6",
                 "pestphp/pest": "^2.24",
                 "pestphp/pest-plugin-type-coverage": "^2.4",
                 "spatie/ray": "^1.39"
@@ -230,7 +238,7 @@
                     "email": "b@bnomei.com"
                 }
             ],
-            "description": "Kirby 3 Plugin for running commands like cleaning the cache from within the Panel, PHP code or a cronjob",
+            "description": "Kirby Plugin for running commands like cleaning the cache from within the Panel, PHP code or a cronjob",
             "homepage": "https://github.com/bnomei/kirby3-janitor",
             "keywords": [
                 "Tinker",
@@ -253,7 +261,7 @@
             ],
             "support": {
                 "issues": "https://github.com/bnomei/kirby3-janitor/issues",
-                "source": "https://github.com/bnomei/kirby3-janitor/tree/v4.0.2"
+                "source": "https://github.com/bnomei/kirby3-janitor/tree/v4.1.0"
             },
             "funding": [
                 {
@@ -273,7 +281,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2024-02-28T09:45:51+00:00"
+            "time": "2024-05-24T11:53:07+00:00"
         },
         {
             "name": "brick/math",
@@ -575,6 +583,53 @@
                 }
             ],
             "time": "2024-05-01T13:22:12+00:00"
+        },
+        {
+            "name": "evenement/evenement",
+            "version": "v3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/igorw/evenement.git",
+                "reference": "0a16b0d71ab13284339abb99d9d2bd813640efbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/igorw/evenement/zipball/0a16b0d71ab13284339abb99d9d2bd813640efbc",
+                "reference": "0a16b0d71ab13284339abb99d9d2bd813640efbc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9 || ^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Evenement\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                }
+            ],
+            "description": "Événement is a very simple event dispatching library for PHP",
+            "keywords": [
+                "event-dispatcher",
+                "event-emitter"
+            ],
+            "support": {
+                "issues": "https://github.com/igorw/evenement/issues",
+                "source": "https://github.com/igorw/evenement/tree/v3.0.2"
+            },
+            "time": "2023-08-08T05:53:35+00:00"
         },
         {
             "name": "filp/whoops",
@@ -972,59 +1027,6 @@
                 }
             ],
             "time": "2020-12-28T12:54:39+00:00"
-        },
-        {
-            "name": "getkirby/staticache",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/getkirby/staticache.git",
-                "reference": "ce577e449f19547359860b0739b46523aad6140f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/staticache/zipball/ce577e449f19547359860b0739b46523aad6140f",
-                "reference": "ce577e449f19547359860b0739b46523aad6140f",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/cms": "^3.8 || ^4.0",
-                "getkirby/composer-installer": "^1.2"
-            },
-            "type": "kirby-plugin",
-            "extra": {
-                "installer-name": "staticache",
-                "kirby-cms-path": false
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bastian Allgeier",
-                    "email": "bastian@getkirby.com",
-                    "homepage": "https://getkirby.com/plugins/getkirby"
-                },
-                {
-                    "name": "Lukas Bestle",
-                    "email": "lukas@getkirby.com",
-                    "homepage": "https://getkirby.com/plugins/getkirby"
-                }
-            ],
-            "description": "Static site performance on demand",
-            "homepage": "https://getkirby.com/plugins/getkirby/staticache",
-            "support": {
-                "issues": "https://github.com/getkirby/staticache/issues",
-                "source": "https://github.com/getkirby/staticache/tree/1.0.2"
-            },
-            "funding": [
-                {
-                    "url": "https://getkirby.com/buy",
-                    "type": "custom"
-                }
-            ],
-            "time": "2023-06-03T19:36:26+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -1869,6 +1871,95 @@
             "time": "2019-09-10T13:16:29+00:00"
         },
         {
+            "name": "php-ffmpeg/php-ffmpeg",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHP-FFMpeg/PHP-FFMpeg.git",
+                "reference": "785a5ba05dd88b3b8146f85f18476b259b23917c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHP-FFMpeg/PHP-FFMpeg/zipball/785a5ba05dd88b3b8146f85f18476b259b23917c",
+                "reference": "785a5ba05dd88b3b8146f85f18476b259b23917c",
+                "shasum": ""
+            },
+            "require": {
+                "evenement/evenement": "^3.0",
+                "php": "^8.0 || ^8.1 || ^8.2 || ^8.3",
+                "psr/log": "^1.0 || ^2.0 || ^3.0",
+                "spatie/temporary-directory": "^2.0",
+                "symfony/cache": "^5.4 || ^6.0 || ^7.0",
+                "symfony/process": "^5.4 || ^6.0 || ^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "phpunit/phpunit": "^9.5.10"
+            },
+            "suggest": {
+                "php-ffmpeg/extras": "A compilation of common audio & video drivers for PHP-FFMpeg"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FFMpeg\\": "src/FFMpeg",
+                    "Alchemy\\BinaryDriver\\": "src/Alchemy/BinaryDriver"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Romain Neutron",
+                    "email": "imprec@gmail.com",
+                    "homepage": "http://www.lickmychip.com/"
+                },
+                {
+                    "name": "Phraseanet Team",
+                    "email": "info@alchemy.fr",
+                    "homepage": "http://www.phraseanet.com/"
+                },
+                {
+                    "name": "Patrik Karisch",
+                    "email": "patrik@karisch.guru",
+                    "homepage": "http://www.karisch.guru"
+                },
+                {
+                    "name": "Romain Biard",
+                    "email": "romain.biard@gmail.com",
+                    "homepage": "https://www.strime.io/"
+                },
+                {
+                    "name": "Jens Hausdorf",
+                    "email": "hello@jens-hausdorf.de",
+                    "homepage": "https://jens-hausdorf.de"
+                },
+                {
+                    "name": "Pascal Baljet",
+                    "email": "pascal@protone.media",
+                    "homepage": "https://protone.media"
+                }
+            ],
+            "description": "FFMpeg PHP, an Object Oriented library to communicate with AVconv / ffmpeg",
+            "keywords": [
+                "audio",
+                "audio processing",
+                "avconv",
+                "avprobe",
+                "ffmpeg",
+                "ffprobe",
+                "video",
+                "video processing"
+            ],
+            "support": {
+                "issues": "https://github.com/PHP-FFMpeg/PHP-FFMpeg/issues",
+                "source": "https://github.com/PHP-FFMpeg/PHP-FFMpeg/tree/v1.2.0"
+            },
+            "time": "2024-01-02T10:37:01+00:00"
+        },
+        {
             "name": "phpmailer/phpmailer",
             "version": "v6.9.1",
             "source": {
@@ -2023,6 +2114,55 @@
                 }
             ],
             "time": "2023-11-12T21:59:55+00:00"
+        },
+        {
+            "name": "psr/cache",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/cache/tree/3.0.0"
+            },
+            "time": "2021-02-03T23:26:27+00:00"
         },
         {
             "name": "psr/container",
@@ -2890,6 +3030,67 @@
             "time": "2024-01-11T14:58:44+00:00"
         },
         {
+            "name": "spatie/temporary-directory",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/temporary-directory.git",
+                "reference": "76949fa18f8e1a7f663fd2eaa1d00e0bcea0752a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/temporary-directory/zipball/76949fa18f8e1a7f663fd2eaa1d00e0bcea0752a",
+                "reference": "76949fa18f8e1a7f663fd2eaa1d00e0bcea0752a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\TemporaryDirectory\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Vanderbist",
+                    "email": "alex@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily create, use and destroy temporary directories",
+            "homepage": "https://github.com/spatie/temporary-directory",
+            "keywords": [
+                "php",
+                "spatie",
+                "temporary-directory"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/temporary-directory/issues",
+                "source": "https://github.com/spatie/temporary-directory/tree/2.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-12-25T11:46:58+00:00"
+        },
+        {
             "name": "srwiez/thumbhash",
             "version": "v1.2.1",
             "source": {
@@ -2936,6 +3137,179 @@
                 "source": "https://github.com/SRWieZ/thumbhash/tree/v1.2.1"
             },
             "time": "2024-02-11T11:22:22+00:00"
+        },
+        {
+            "name": "symfony/cache",
+            "version": "v7.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/cache.git",
+                "reference": "760294dc7158372699dccd077965c16c328f8719"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/760294dc7158372699dccd077965c16c328f8719",
+                "reference": "760294dc7158372699dccd077965c16c328f8719",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "psr/cache": "^2.0|^3.0",
+                "psr/log": "^1.1|^2|^3",
+                "symfony/cache-contracts": "^2.5|^3",
+                "symfony/deprecation-contracts": "^2.5|^3.0",
+                "symfony/service-contracts": "^2.5|^3",
+                "symfony/var-exporter": "^6.4|^7.0"
+            },
+            "conflict": {
+                "doctrine/dbal": "<3.6",
+                "symfony/dependency-injection": "<6.4",
+                "symfony/http-kernel": "<6.4",
+                "symfony/var-dumper": "<6.4"
+            },
+            "provide": {
+                "psr/cache-implementation": "2.0|3.0",
+                "psr/simple-cache-implementation": "1.0|2.0|3.0",
+                "symfony/cache-implementation": "1.1|2.0|3.0"
+            },
+            "require-dev": {
+                "cache/integration-tests": "dev-master",
+                "doctrine/dbal": "^3.6|^4",
+                "predis/predis": "^1.1|^2.0",
+                "psr/simple-cache": "^1.0|^2.0|^3.0",
+                "symfony/config": "^6.4|^7.0",
+                "symfony/dependency-injection": "^6.4|^7.0",
+                "symfony/filesystem": "^6.4|^7.0",
+                "symfony/http-kernel": "^6.4|^7.0",
+                "symfony/messenger": "^6.4|^7.0",
+                "symfony/var-dumper": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Cache\\": ""
+                },
+                "classmap": [
+                    "Traits/ValueWrapper.php"
+                ],
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides extended PSR-6, PSR-16 (and tags) implementations",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "caching",
+                "psr6"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/cache/tree/v7.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-05-31T14:57:53+00:00"
+        },
+        {
+            "name": "symfony/cache-contracts",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/cache-contracts.git",
+                "reference": "df6a1a44c890faded49a5fca33c2d5c5fd3c2197"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/df6a1a44c890faded49a5fca33c2d5c5fd3c2197",
+                "reference": "df6a1a44c890faded49a5fca33c2d5c5fd3c2197",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/cache": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.5-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\Cache\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to caching",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/cache-contracts/tree/v3.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -3006,23 +3380,23 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v6.4.8",
+            "version": "v7.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "3ef977a43883215d560a2cecb82ec8e62131471c"
+                "reference": "fbb0ba67688b780efbc886c1a0a0948dcf7205d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/3ef977a43883215d560a2cecb82ec8e62131471c",
-                "reference": "3ef977a43883215d560a2cecb82ec8e62131471c",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/fbb0ba67688b780efbc886c1a0a0948dcf7205d6",
+                "reference": "fbb0ba67688b780efbc886c1a0a0948dcf7205d6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1"
+                "php": ">=8.2"
             },
             "require-dev": {
-                "symfony/filesystem": "^6.0|^7.0"
+                "symfony/filesystem": "^6.4|^7.0"
             },
             "type": "library",
             "autoload": {
@@ -3050,7 +3424,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v6.4.8"
+                "source": "https://github.com/symfony/finder/tree/v7.1.1"
             },
             "funding": [
                 {
@@ -3066,7 +3440,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:49:08+00:00"
+            "time": "2024-05-31T14:57:53+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -3473,6 +3847,67 @@
             "time": "2024-01-29T20:11:03+00:00"
         },
         {
+            "name": "symfony/process",
+            "version": "v7.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "febf90124323a093c7ee06fdb30e765ca3c20028"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/febf90124323a093c7ee06fdb30e765ca3c20028",
+                "reference": "febf90124323a093c7ee06fdb30e765ca3c20028",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Executes commands in sub-processes",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/process/tree/v7.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-05-31T14:57:53+00:00"
+        },
+        {
             "name": "symfony/service-contracts",
             "version": "v3.5.0",
             "source": {
@@ -3701,6 +4136,82 @@
             "time": "2024-05-31T14:57:53+00:00"
         },
         {
+            "name": "symfony/var-exporter",
+            "version": "v7.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-exporter.git",
+                "reference": "db82c2b73b88734557cfc30e3270d83fa651b712"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/db82c2b73b88734557cfc30e3270d83fa651b712",
+                "reference": "db82c2b73b88734557cfc30e3270d83fa651b712",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "symfony/property-access": "^6.4|^7.0",
+                "symfony/serializer": "^6.4|^7.0",
+                "symfony/var-dumper": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\VarExporter\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Allows exporting any serializable PHP data structure to plain PHP code",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "clone",
+                "construct",
+                "export",
+                "hydrate",
+                "instantiate",
+                "lazy-loading",
+                "proxy",
+                "serialize"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/var-exporter/tree/v7.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-05-31T14:57:53+00:00"
+        },
+        {
             "name": "symfony/yaml",
             "version": "v6.4.3",
             "source": {
@@ -3882,20 +4393,20 @@
         },
         {
             "name": "tobimori/kirby-spielzeug",
-            "version": "2.1.3",
+            "version": "2.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-spielzeug.git",
-                "reference": "6d9ebb6cc7de4826ac47c66e525123b2de20a670"
+                "reference": "1e93593aa98cb1b85d7ce01de67cc4161d228f36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-spielzeug/zipball/6d9ebb6cc7de4826ac47c66e525123b2de20a670",
-                "reference": "6d9ebb6cc7de4826ac47c66e525123b2de20a670",
+                "url": "https://api.github.com/repos/tobimori/kirby-spielzeug/zipball/1e93593aa98cb1b85d7ce01de67cc4161d228f36",
+                "reference": "1e93593aa98cb1b85d7ce01de67cc4161d228f36",
                 "shasum": ""
             },
             "require": {
-                "bnomei/autoloader-for-kirby": "^1.9",
+                "bnomei/autoloader-for-kirby": "^4.0",
                 "getkirby/composer-installer": "^1.2",
                 "php": ">=8.2.0"
             },
@@ -3929,7 +4440,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tobimori/kirby-spielzeug/issues",
-                "source": "https://github.com/tobimori/kirby-spielzeug/tree/v2.1.3"
+                "source": "https://github.com/tobimori/kirby-spielzeug/tree/v2.1.4"
             },
             "funding": [
                 {
@@ -3937,7 +4448,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-17T22:38:04+00:00"
+            "time": "2024-06-04T21:01:47+00:00"
         },
         {
             "name": "tobimori/kirby-tailwind-merge",
@@ -4054,6 +4565,55 @@
             "time": "2024-04-12T16:48:19+00:00"
         },
         {
+            "name": "tobimori/kirby-video-utils",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tobimori/kirby-video-utils.git",
+                "reference": "36a73f029620376362fb9d79984572e300766866"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tobimori/kirby-video-utils/zipball/36a73f029620376362fb9d79984572e300766866",
+                "reference": "36a73f029620376362fb9d79984572e300766866",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2.1",
+                "php": ">=8.2.0",
+                "php-ffmpeg/php-ffmpeg": "^1.2"
+            },
+            "require-dev": {
+                "getkirby/cli": "^1.4"
+            },
+            "default-branch": true,
+            "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": false
+            },
+            "autoload": {
+                "psr-4": {
+                    "tobimori\\VideoUtils\\": "classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Möritz",
+                    "email": "tobias@moeritz.io"
+                }
+            ],
+            "description": "An experimental plugin for interacting with videos in Kirby.",
+            "support": {
+                "issues": "https://github.com/tobimori/kirby-video-utils/issues",
+                "source": "https://github.com/tobimori/kirby-video-utils/tree/main"
+            },
+            "time": "2024-05-15T09:32:18+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.6.0",
             "source": {
@@ -4141,7 +4701,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "beta",
-    "stability-flags": [],
+    "stability-flags": {
+        "tobimori/kirby-video-utils": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -27,14 +27,14 @@
 		"junohamburg/kirby-visual-block-selector": "^2.0",
 		"tobimori/kirby-spielzeug": "^2.1.0",
 		"distantnative/retour-for-kirby": "^5.0",
-		"getkirby/staticache": "^1.0",
 		"getkirby/cli": "^1.2",
 		"bnomei/kirby3-janitor": "^4.0",
 		"tobimori/kirby-tailwind-merge": "^3.0",
 		"tobimori/kirby-thumbhash": "^1.1",
 		"junohamburg/kirby-language-selector": "^1.1",
 		"tobimori/kirby-dreamform": "^1.1",
-		"johannschopplich/kirby-plausible": "^0.5.0"
+		"johannschopplich/kirby-plausible": "^0.5.0",
+		"tobimori/kirby-video-utils": "dev-main"
 	},
 	"config": {
 		"optimize-autoloader": true,

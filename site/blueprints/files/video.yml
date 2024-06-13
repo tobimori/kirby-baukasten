@@ -1,11 +1,11 @@
-title: video
+title: file.video.title
 accept:
-  extension: webm, mp4
+  extension: webm
   type: video
 image:
-  query: file.thumbnail.toFile
+  query: file.toVideo.thumbnail # uses kirby-video-utils
+
+focus: true
 
 fields:
-  thumbnail:
-    label: thumbnail
-    extends: fields/image
+  hidden: true

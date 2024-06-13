@@ -1,4 +1,4 @@
-label: content
+label: field.blocks.label
 type: blocks
 fieldsets:
   - example

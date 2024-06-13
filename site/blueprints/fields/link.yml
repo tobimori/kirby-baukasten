@@ -1,16 +1,16 @@
-label: link
+label: field.link.label
 type: object
 empty: no-link-yet
 fields:
   label:
-    label: label
+    label: field.link.label.label
     type: text
     width: 1/3
   link:
-    label: link
+    label: field.link.link.label
     type: link
     width: 2/3
   newTab:
-    label: new-tab
+    label: field.link.newTab.label
     type: toggle
     default: false

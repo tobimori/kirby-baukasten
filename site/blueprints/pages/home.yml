@@ -1,8 +1,23 @@
 extends: pages/layout
 
-title: home
+title: page.home.title
 image:
   icon: home
+
+options:
+  # access
+  # changeSlug
+  # changeStatus
+  # changeTemplate
+  # changeTitle
+  # create
+  delete: false
+  duplicate: false
+  # list
+  move: false
+  # preview
+  # sort
+  # update
 
 tabs:
   content:

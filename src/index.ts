@@ -1,5 +1,8 @@
+import 'htmx.org'
 import { Application, AttributeObserver } from "@hotwired/stimulus"
 import type { ControllerConstructor } from "@hotwired/stimulus"
+
+import.meta.glob(["../assets/**"]) // Import all assets for copying them to dist
 
 declare global {
 	interface Window {

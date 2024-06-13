@@ -1,37 +1,62 @@
 # ARIA
-skip-navigation: Navigation überspringen
+aria.skipNavigation: Navigation überspringen
 
-# Panel
-admin: Administrator
-admin-description: Hat Zugriff auf alle Inhalte und administrative Tools.
-admin-tools: Administrations-Tools
-advanced: Erweitert
-block-id: Eindeutige ID (Anker)
-caching: Caching
-content: Inhalt
-download-content: Inhalte herunterladen (.zip)
-error: Fehlerseite
-flush-cache: Cache leeren
-footer: Footer
-global-settings: Globale Einstellungen
-grid-view: Rasteransicht
-home: Startseite
-image: Bild
-image-alt-help: Der alternative Text soll Nutzern mit Seheinschränkung & Suchmaschinen-Crawlern helfen, den Inhalt des Bildes zu verstehen.
-image-alt: Alternativer Text/Bildbeschreibung
-images: Bilder
-internal-tags: Interne Schlagworte
-internal-tags-help: Schlagworte werden für die interne Suche verwendet und können dir helfen, deine Bilder zu organisieren.
-layout-page: Layout-Seite
-list-view: Listenansicht
-navigation: Navigation
-other: Andere
-overview: Übersicht
-pages: Seiten
-super-editor: Super-Editor
-super-editor-description: Hat Zugriff auf alle Inhalte, aber keine administrativen Tools.
-text: Text
-link: Link
-videos: Videos
-video: Video
-thumbnail: Vorschaubild
+# Social Media
+twitter: Twitter
+facebook: Facebook
+instagram: Instagram
+linkedin: LinkedIn
+youtube: YouTube
+vimeo: Vimeo
+
+# Roles
+role.admin.title: Administrator
+role.admin.description: Hat Zugriff auf alle Inhalte und administrative Tools.
+role.superEditor.title: Super-Editor
+role.superEditor.description: Hat Zugriff auf alle Inhalte, aber keine administrativen Tools.
+
+# Tabs
+tab.content.label: Inhalt
+tab.advanced.label: Erweitert
+tab.grid.label: Rasteransicht
+tab.list.label: Listenansicht
+tab.pages.label: Seiten
+tab.navigation.label: Navigation & Footer
+
+# Files
+file.image.title: Bild
+file.image.alt.label: Alternativer Text/Bildbeschreibung
+file.image.alt.help: Der alternative Text soll Nutzern mit Seheinschränkung & Suchmaschinen-Crawlern helfen, den Inhalt des Bildes zu verstehen.
+file.video.title: Video
+
+# Pages
+page.layout.title: Layout-Seite
+page.error.title: Fehlerseite
+page.home.title: Startseite
+page.images.title: Bilddateien
+page.videos.title: Videodateien
+
+# Fields
+field.blocks.label: Inhalt
+field.image.label: Bild
+
+field.link.label: Link
+field.link.label.label: Beschriftung
+field.link.link.label: Link
+field.link.newTab.label: In neuem Tab öffnen?
+
+field.blockId.label: Eindeutige ID (Anker)
+
+field.pages.label: Seiten
+field.text.label: Text
+
+field.navigation.label: Navigation
+field.footer.label: Footer
+
+# Sections
+section.images.label: Alle Bilder
+section.videos.label: Alle Videos
+section.children.label: Unterseiten
+
+# Other
+site.title: Dashboard

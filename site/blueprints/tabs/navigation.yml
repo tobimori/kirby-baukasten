@@ -1,17 +1,17 @@
-icon: cog
-label: global-settings
+icon: bars
+label: tab.navigation.label
 columns:
   - width: 1/4
     fields:
       _navigation:
-        label: navigation
+        label: field.navigation.label
         type: headline
   - width: 3/4
     sections:
       placeholder: &placeholder
         headline: Placeholder
         type: info
-        text: ' '
+        text: " "
   - width: 1
     fields:
       _line1: &line
@@ -19,7 +19,7 @@ columns:
   - width: 1/4
     fields:
       _footer:
-        label: footer
+        label: field.footer.label
         type: headline
   - width: 3/4
     sections:

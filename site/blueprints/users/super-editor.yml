@@ -1,5 +1,5 @@
-title: super-editor
-description: super-editor-description
+title: role.superEditor.title
+description: role.superEditor.description
 
 permissions:
   access:

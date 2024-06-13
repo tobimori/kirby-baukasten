@@ -1,16 +1,23 @@
-title: images
+title: page.images.title
 image:
-  icon: folder
-  back: 'var(--theme-primary)'
-  color: 'var(--theme-accent)'
+  icon: images
+  back: "var(--theme-primary)"
+  color: "var(--theme-accent)"
 
 options:
-  preview: false
-  delete: false
+  # access
   changeSlug: false
   changeStatus: false
-  duplicate: false
+  # changeTemplate
   changeTitle: false
+  # create
+  delete: false
+  duplicate: false
+  # list
+  move: false
+  preview: false
+  # sort
+  update: false
 
 status:
   draft: false
@@ -19,11 +26,11 @@ status:
 
 tabs:
   list:
-    label: list-view
+    label: tab.list.label
     icon: list-bullet
     sections:
       list:
-        headline: images
+        label: section.images.label
         type: files
         template: image
         layout: table
@@ -37,7 +44,7 @@ tabs:
             label:
               de: Alt-Text
               en: Alt text
-            value: '{{ file.alt }}'
+            value: "{{ file.alt }}"
           tags:
             label:
               de: Schlagwörter
@@ -45,11 +52,11 @@ tabs:
             type: tags
         sortBy: filename desc
   grid:
-    label: grid-view
+    label: tab.grid.label
     icon: grid
     sections:
       grid:
-        label: images
+        label: section.images.label
         type: files
         template: image
         layout: cardlets
@@ -57,5 +64,5 @@ tabs:
         uploads:
           template: image
         info: '{{ file.alt.isNotEmpty ? file.filename : "" }}'
-        text: '{{ file.alt.or(file.filename) }}'
+        text: "{{ file.alt.or(file.filename) }}"
         sortBy: filename desc

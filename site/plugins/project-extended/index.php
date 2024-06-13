@@ -15,3 +15,11 @@ App::plugin('project/extended', [
 		fn ($file) => A::merge(['lang' => F::name($file)], Yaml::decode(F::read($dir . '/' . $file)))
 	), 'lang')
 ]);
+
+// helpers
+if (!function_exists('icon')) {
+	function icon(string $type, array|string $class = null, array $attr = null): string
+	{
+		return snippet('icon', compact('type', 'class', 'attr'), true);
+	}
+}

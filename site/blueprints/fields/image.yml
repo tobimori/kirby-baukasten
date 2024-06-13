@@ -1,4 +1,4 @@
-label: image
+label: field.image.label
 type: files
 uploads:
   parent: site.find('page://images')
@@ -6,5 +6,5 @@ uploads:
 multiple: false
 image:
   cover: false
-info: '{{ file.alt }}'
+info: "{{ file.alt }}"
 query: site.find('page://images').images.filterBy('template', 'image')

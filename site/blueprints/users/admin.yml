@@ -1,5 +1,5 @@
-title: admin
-description: admin-description
+title: role.admin.title
+description: role.admin.description
 
 # Hidden element to hide notice in user management
 # Remove if you want to implement fields for your users

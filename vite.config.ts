@@ -38,7 +38,8 @@ export default defineConfig(({ mode }) => {
 			tsconfigPaths()
 		],
 		server: {
-			port: Number(new URL(env.APP_URL).port || 3000),
+			origin: env.APP_URL,
+			port: Number(env.VITE_DEV_PORT || 3000),
 			proxy: {
 				// we proxy anything except the folders our vite dev assets are in
 				"^(?!/src|/node_modules|/@vite|/@react-refresh|/assets).*$": `http://${env.KIRBY_DEV_HOSTNAME}:${env.KIRBY_DEV_PORT}`

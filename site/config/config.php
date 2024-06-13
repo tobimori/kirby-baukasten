@@ -40,13 +40,7 @@ return [
 	'cache' => [
 		'pages' => [
 			'active' => json_decode(env('KIRBY_CACHE')),
-			'type' => 'static',
-			'root'   =>  __DIR__ . '/../../public/__staticache/',
-			'prefix' => null
 		]
-	],
-	'sylvainjule.backups' => [
-		'publicFolder' => 'backups',
 	],
 	/** Build Env / Vite / etc. */
 	'bnomei.dotenv.dir' => fn () => realpath(kirby()->roots()->base()),

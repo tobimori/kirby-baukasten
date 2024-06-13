@@ -1,16 +1,16 @@
-title: overview
+title: site.title
 
 tabs:
-  main:
+  pages:
+    label: tab.pages.label
     icon: page
-    label: navigation
     columns:
       - width: 2/3
         sections:
           pages:
-            label: pages
+            label: field.pages.label
             type: pages
-            info: '/{{ page.slug }}'
+            info: "/{{ page.slug }}"
             create:
               - layout
             templates:
@@ -18,5 +18,5 @@ tabs:
               - error
               - layout
             image: icon
-  global: tabs/global-settings
+  navigation: tabs/navigation
   seo: seo/site

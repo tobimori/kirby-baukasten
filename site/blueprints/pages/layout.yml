@@ -1,14 +1,27 @@
-title: layout-page
+title: page.layout.title
 image:
   icon: grid
-  back: 'var(--theme-accent)'
-  color: 'var(--theme-primary)'
+  back: "var(--theme-accent)"
+  color: "var(--theme-primary)"
+
+options:
+  # access
+  # changeSlug
+  # changeStatus
+  # changeTemplate
+  # changeTitle
+  # create
+  # delete
+  # duplicate
+  # list
+  # move
+  # preview
+  # sort
+  # update
 
 tabs:
-  pages: false
-  model: false
   content:
-    label: content
+    label: tab.content.label
     icon: text
     columns:
       main:

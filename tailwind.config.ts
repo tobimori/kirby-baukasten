@@ -1,7 +1,8 @@
 import plugin from 'tailwindcss/plugin'
 import defaultTheme from 'tailwindcss/defaultTheme'
-import { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss'
 import formsPlugin from '@tailwindcss/forms'
+import { breakpointsString as breakpoints } from "./src/utils/breakpoints"
 
 const variants = plugin(({ addVariant }) => {
   addVariant('not-last', '&:not(:last-child)')
@@ -13,24 +14,32 @@ const variants = plugin(({ addVariant }) => {
 export default {
   content: ['./site/**/*.php', './site/**/*.yml', './public/assets/**/*.svg', './src/**/*.ts'],
   future: {
-    hoverOnlyWhenSupported: true
+    hoverOnlyWhenSupported: true,
+		disableColorOpacityUtilitiesByDefault: true
   },
   theme: {
     fontFamily: {
       sans: ['Inter', ...defaultTheme.fontFamily.sans]
     },
-    screens: {
-      '2xl': { max: '96rem' },
-      xl: { max: '80rem' },
-      lg: { max: '62rem' },
-      md: { max: '44rem' },
-      sm: { max: '29.5rem' },
-      xs: { max: '22rem' }
-    },
-    container: {
-      center: true
-    },
-    extend: {}
+		// convert breakpoints to tailwindcss-object
+		screens: Object.entries(breakpoints).reduce((prev, [key, value]) => {
+			prev[key] = { max: value }
+			prev[`>${key}`] = { min: value }
+
+			return prev
+		}, {}),
+		container: {
+			center: true,
+			padding: "2rem",
+			screens: {
+				_: "96rem"
+			}
+		},
+    extend: {
+			spacing: {
+				container: "2rem"
+			}
+		}
   },
   plugins: [variants, formsPlugin]
 } satisfies Config
