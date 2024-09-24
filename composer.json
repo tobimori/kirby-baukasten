@@ -33,8 +33,7 @@
 		"tobimori/kirby-thumbhash": "^1.1",
 		"junohamburg/kirby-language-selector": "^1.1",
 		"tobimori/kirby-dreamform": "^1.1",
-		"johannschopplich/kirby-plausible": "^0.5.0",
-		"tobimori/kirby-video-utils": "dev-main"
+		"johannschopplich/kirby-plausible": "^0.5.0"
 	},
 	"config": {
 		"optimize-autoloader": true,
