@@ -17,6 +17,9 @@
  * @var bool|null $lazy Whether to use lazy loading, defaults to true
  * */
 
+use Kirby\Toolkit\A;
+
+$focus ??= is_a($image, 'Kirby\Cms\File') ? $image?->focus() ?? 'center' : 'center';
 $ratio ??= null;
 $preset ??= 'default';
 $clientBlur ??= true;
@@ -28,7 +31,7 @@ if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) : 
 
 	<picture <?= attr([
 							'class' => ['block', $class ?? ''],
-							'style' => '--ratio: ' . ($ratio ?? $image->ratio()) . ';',
+							'style' => '--ratio: ' . ($ratio ?? round($image->ratio(), 2)) . ';',
 							...$attr
 						]) ?>>
 
@@ -76,9 +79,13 @@ if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) : 
 							'alt' => $alt ?? is_a($image, 'Kirby\Cms\File') ? $image->alt() : null,
 							'loading' => $lazy ? "lazy" : null,
 							'data-sizes' => $sizes ?? 'auto',
-							'class' => cls(['w-full h-full object-cover', $imgClass ?? ' ']),
-							'style' => 'aspect-ratio: ' . ($ratio ?? $image->ratio()) . '; object-position: '  . ($image->focus()->isNotEmpty() ? $image->focus() : '50% 50%'),
+							'class' => cls(['size-full object-cover', $imgClass ?? ' ']),
+							'style' => A::join([
+								"aspect-ratio: " . ($ratio ?? $image->ratio()),
+								"object-position: {$focus}"
+							], '; '),
 						]) ?>>
+
 
 		<?php endif ?>
 	</picture>
