@@ -1,7 +1,5 @@
 import plugin from "tailwindcss/plugin"
-import defaultTheme from "tailwindcss/defaultTheme"
 import type { Config } from "tailwindcss"
-import formsPlugin from "@tailwindcss/forms"
 import { breakpointsString as breakpoints } from "./src/utils/breakpoints"
 
 const variants = plugin(({ addVariant }) => {
@@ -13,14 +11,7 @@ const variants = plugin(({ addVariant }) => {
 
 export default {
 	content: ["./site/**/*.php", "./site/**/*.yml", "./public/assets/**/*.svg", "./src/**/*.ts"],
-	future: {
-		hoverOnlyWhenSupported: true,
-		disableColorOpacityUtilitiesByDefault: true
-	},
 	theme: {
-		fontFamily: {
-			sans: ["Inter", ...defaultTheme.fontFamily.sans]
-		},
 		// convert breakpoints to tailwindcss-object
 		screens: Object.entries(breakpoints).reduce((prev, [key, value]) => {
 			prev[key] = { max: value }
@@ -41,5 +32,5 @@ export default {
 			}
 		}
 	},
-	plugins: [variants, formsPlugin]
+	plugins: [variants]
 } satisfies Config

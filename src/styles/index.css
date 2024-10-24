@@ -1,8 +1,17 @@
 @import './fonts.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "@tailwindcss/forms";
+@config "../../tailwind.config.ts";
+
+@theme {
+	--font-family-*: initial;
+	--font-family-sans: 'Inter', 'sans-serif';
+
+	--color-*: initial;
+	--color-black: #000;
+	--color-white: #fff;
+}
 
 @layer base {
   svg {
@@ -20,10 +29,4 @@
     min-height: 0;
     min-width: 0;
   }
-}
-
-@layer components {
-}
-
-@layer utilities {
 }
