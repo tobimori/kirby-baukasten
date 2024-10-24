@@ -3,6 +3,7 @@ import { defineConfig, loadEnv } from "vite"
 import laravel from "laravel-vite-plugin"
 import tsconfigPaths from "vite-tsconfig-paths"
 import svgSprite from "vite-svg-sprite-wrapper"
+import tailwind from "@tailwindcss/vite"
 
 export default defineConfig(({ mode }) => {
 	const env = loadEnv(mode, process.cwd(), "")
@@ -35,7 +36,8 @@ export default defineConfig(({ mode }) => {
 				input: ["src/index.ts", "src/styles/index.css", "src/styles/panel.css"],
 				refresh: ["site/{layouts,snippets,templates}/**/*"]
 			}),
-			tsconfigPaths()
+			tsconfigPaths(),
+			tailwind()
 		],
 		server: {
 			origin: env.APP_URL,
