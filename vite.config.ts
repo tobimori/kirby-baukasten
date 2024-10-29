@@ -4,6 +4,10 @@ import laravel from "laravel-vite-plugin"
 import tsconfigPaths from "vite-tsconfig-paths"
 import svgSprite from "vite-svg-sprite-wrapper"
 import tailwind from "@tailwindcss/vite"
+import inject from "@rollup/plugin-inject"
+import browserslist from "browserslist"
+import { browserslistToTargets } from "lightningcss"
+import { browserslist as browserslistConfig } from "./package.json"
 
 export default defineConfig(({ mode }) => {
 	const env = loadEnv(mode, process.cwd(), "")
@@ -18,6 +22,10 @@ export default defineConfig(({ mode }) => {
 			cssMinify: "lightningcss"
 		},
 		plugins: [
+			// this plugin is necessary for our HTMX extensions to correctly register
+			inject({
+				htmx: "htmx.org"
+			}),
 			svgSprite({
 				sprite: {
 					shape: {
@@ -40,6 +48,12 @@ export default defineConfig(({ mode }) => {
 			tsconfigPaths(),
 			tailwind()
 		],
+		css: {
+			transformer: "lightningcss",
+			lightningcss: {
+				targets: browserslistToTargets(browserslist(browserslistConfig))
+			}
+		},
 		server: {
 			origin: env.APP_URL,
 			port: Number(env.VITE_DEV_PORT || 3000),

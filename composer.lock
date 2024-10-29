@@ -2961,16 +2961,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v7.1.4",
+            "version": "v7.2.0-BETA1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "d95bbf319f7d052082fb7af147e0f835a695e823"
+                "reference": "6de263e5868b9a137602dd1e33e4d48bfae99c49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/d95bbf319f7d052082fb7af147e0f835a695e823",
-                "reference": "d95bbf319f7d052082fb7af147e0f835a695e823",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/6de263e5868b9a137602dd1e33e4d48bfae99c49",
+                "reference": "6de263e5868b9a137602dd1e33e4d48bfae99c49",
                 "shasum": ""
             },
             "require": {
@@ -3005,7 +3005,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v7.1.4"
+                "source": "https://github.com/symfony/finder/tree/v7.2.0-BETA1"
             },
             "funding": [
                 {
@@ -3021,7 +3021,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-08-13T14:28:19+00:00"
+            "time": "2024-10-23T06:56:12+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -3512,16 +3512,16 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v7.1.1",
+            "version": "v7.2.0-BETA1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "5b75bb1ac2ba1b9d05c47fc4b3046a625377d23d"
+                "reference": "696f418b0d722a4225e1c3d95489d262971ca924"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/5b75bb1ac2ba1b9d05c47fc4b3046a625377d23d",
-                "reference": "5b75bb1ac2ba1b9d05c47fc4b3046a625377d23d",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/696f418b0d722a4225e1c3d95489d262971ca924",
+                "reference": "696f418b0d722a4225e1c3d95489d262971ca924",
                 "shasum": ""
             },
             "require": {
@@ -3554,7 +3554,7 @@
             "description": "Provides a way to profile code",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/stopwatch/tree/v7.1.1"
+                "source": "https://github.com/symfony/stopwatch/tree/v7.2.0-BETA1"
             },
             "funding": [
                 {
@@ -3570,20 +3570,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:57:53+00:00"
+            "time": "2024-09-25T14:21:43+00:00"
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v7.1.5",
+            "version": "v7.2.0-BETA1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "e20e03889539fd4e4211e14d2179226c513c010d"
+                "reference": "b86ce1b5bb196cfb3796856979167271d3989c7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/e20e03889539fd4e4211e14d2179226c513c010d",
-                "reference": "e20e03889539fd4e4211e14d2179226c513c010d",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/b86ce1b5bb196cfb3796856979167271d3989c7c",
+                "reference": "b86ce1b5bb196cfb3796856979167271d3989c7c",
                 "shasum": ""
             },
             "require": {
@@ -3599,7 +3599,7 @@
                 "symfony/http-kernel": "^6.4|^7.0",
                 "symfony/process": "^6.4|^7.0",
                 "symfony/uid": "^6.4|^7.0",
-                "twig/twig": "^3.0.4"
+                "twig/twig": "^3.12"
             },
             "bin": [
                 "Resources/bin/var-dump-server"
@@ -3637,7 +3637,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v7.1.5"
+                "source": "https://github.com/symfony/var-dumper/tree/v7.2.0-BETA1"
             },
             "funding": [
                 {
@@ -3653,7 +3653,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-16T10:07:02+00:00"
+            "time": "2024-10-23T08:11:15+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -3729,16 +3729,16 @@
         },
         {
             "name": "tobimori/kirby-dreamform",
-            "version": "1.5.0-rc.2",
+            "version": "1.5.0-rc.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-dreamform.git",
-                "reference": "466fec56a13bf8f3eca7af4ad7abc5435a516c21"
+                "reference": "a93038f6792def5805ee1dcdd022d40169debbf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-dreamform/zipball/466fec56a13bf8f3eca7af4ad7abc5435a516c21",
-                "reference": "466fec56a13bf8f3eca7af4ad7abc5435a516c21",
+                "url": "https://api.github.com/repos/tobimori/kirby-dreamform/zipball/a93038f6792def5805ee1dcdd022d40169debbf9",
+                "reference": "a93038f6792def5805ee1dcdd022d40169debbf9",
                 "shasum": ""
             },
             "require": {
@@ -3768,7 +3768,7 @@
             "homepage": "https://plugins.andkindness.com/dreamform",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-dreamform/issues",
-                "source": "https://github.com/tobimori/kirby-dreamform/tree/1.5.0-rc.2"
+                "source": "https://github.com/tobimori/kirby-dreamform/tree/1.5.0-rc.3"
             },
             "funding": [
                 {
@@ -3776,7 +3776,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2024-10-17T21:52:03+00:00"
+            "time": "2024-10-26T17:14:33+00:00"
         },
         {
             "name": "tobimori/kirby-seo",
@@ -3896,16 +3896,16 @@
         },
         {
             "name": "tobimori/kirby-tailwind-merge",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-tailwind-merge.git",
-                "reference": "e8063f62300dc8fc67e12272aaf8aef97b867781"
+                "reference": "e55f68e771c02f2f97ccff1cbee43f98c1012510"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-tailwind-merge/zipball/e8063f62300dc8fc67e12272aaf8aef97b867781",
-                "reference": "e8063f62300dc8fc67e12272aaf8aef97b867781",
+                "url": "https://api.github.com/repos/tobimori/kirby-tailwind-merge/zipball/e55f68e771c02f2f97ccff1cbee43f98c1012510",
+                "reference": "e55f68e771c02f2f97ccff1cbee43f98c1012510",
                 "shasum": ""
             },
             "require": {
@@ -3943,7 +3943,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tobimori/kirby-tailwind-merge/issues",
-                "source": "https://github.com/tobimori/kirby-tailwind-merge/tree/v3.0.0"
+                "source": "https://github.com/tobimori/kirby-tailwind-merge/tree/3.1.0"
             },
             "funding": [
                 {
@@ -3951,7 +3951,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-18T10:30:03+00:00"
+            "time": "2024-10-28T19:20:57+00:00"
         },
         {
             "name": "tobimori/kirby-thumbhash",
