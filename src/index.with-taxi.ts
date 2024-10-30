@@ -1,4 +1,6 @@
-import 'htmx.org'
+import "htmx.org"
+import "idiomorph/dist/idiomorph-ext.js"
+
 import { Core } from "@unseenco/taxi"
 import { Application, AttributeObserver } from "@hotwired/stimulus"
 import type { ControllerConstructor } from "@hotwired/stimulus"

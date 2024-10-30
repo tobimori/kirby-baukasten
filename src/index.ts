@@ -1,8 +1,16 @@
-import 'htmx.org'
+import "htmx.org"
+import "idiomorph/dist/idiomorph-ext.js"
+
 import { Application, AttributeObserver } from "@hotwired/stimulus"
 import type { ControllerConstructor } from "@hotwired/stimulus"
+import { lazyLoad } from "unlazy"
 
 import.meta.glob(["../assets/**"]) // Import all assets for copying them to dist
+
+console.log(
+	"%cMade with Kirby and ❤️ by Love & Kindness GmbH",
+	"font-size: 12px; font-weight: bold; color: #fff; background-color: #000; padding: 8px 12px; margin: 4px 0; border-radius: 4px;"
+)
 
 declare global {
 	interface Window {
@@ -54,3 +62,5 @@ controllerObserver.start()
 if (import.meta.env.DEV) {
 	window.Stimulus.debug = true
 }
+
+lazyLoad()

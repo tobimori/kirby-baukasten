@@ -12,7 +12,7 @@ loadenv([
 
 return [
 	'debug' => json_decode(env('KIRBY_DEBUG')),
-	'routes' => require_once __DIR__ . '/routes.php',
+	'routes' => require __DIR__ . '/routes.php',
 	'thumbs' => require __DIR__ . '/thumbs.php',
 	'yaml.handler' => 'symfony',
 	'date.handler' => 'intl',
@@ -23,7 +23,7 @@ return [
 		// use generated sprite, requires pnpm run build
 		// to generate (dev sprite doesn't work since it's not in the public folder)
 		'folder' => '',
-		'sprite' => fn () => Url::path(vite()->useHotFile('.never')->asset('assets/sprite.svg'))
+		'sprite' => fn() => Url::path(vite()->useHotFile('.never')->asset('assets/sprite.svg'))
 	],
 	/** Email */
 	'email' => require __DIR__ . '/email.php',
@@ -43,13 +43,13 @@ return [
 		]
 	],
 	/** Build Env / Vite / etc. */
-	'bnomei.dotenv.dir' => fn () => realpath(kirby()->roots()->base()),
+	'bnomei.dotenv.dir' => fn() => realpath(kirby()->roots()->base()),
 	'lukaskleinschmidt.kirby-laravel-vite.buildDirectory' => 'dist',
 	'distantnative.retour.config' => 'data/storage/retour.yml',
 	/** Panel */
 	'johannschopplich.plausible.sharedLink' => env('PLAUSIBLE_SHARED_LINK'),
 	'panel' => [
-		'menu' => fn () => [
+		'menu' => fn() => [
 			'site' => Menu::site(),
 			'-',
 			'images' => Menu::page(null, 'images', page('page://images')),
@@ -60,7 +60,7 @@ return [
 			'retour',
 		]
 	],
-	'ready' => fn () => [
+	'ready' => fn() => [
 		'panel' => [
 			'favicon' => option('debug') ? 'static/panel/favicon-dev.svg' : 'static/panel/favicon-live.svg',
 			'css' => vite('src/styles/panel.css'),

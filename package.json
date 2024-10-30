@@ -1,47 +1,49 @@
 {
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "pnpm run \"/dev:/\"",
-    "dev:kirby": "env-cmd --use-shell \"PHP_CLI_SERVER_WORKERS=4 php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public kirby/router.php\"",
-    "dev:vite": "vite",
-    "build": "vite build"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@rollup/plugin-inject": "^5.0.5",
-    "@tailwindcss/forms": "^0.5.9",
-    "@tailwindcss/vite": "4.0.0-alpha.29",
-    "@total-typescript/ts-reset": "^0.6.1",
-    "@types/node": "^22.8.2",
-    "autoprefixer": "^10.4.20",
-    "browserslist": "^4.24.2",
-    "env-cmd": "^10.1.0",
-    "laravel-vite-plugin": "^1.0.5",
-    "lightningcss": "^1.27.0",
-    "postcss": "^8.4.47",
-    "prettier": "3.3.3",
-    "tailwindcss": "4.0.0-alpha.29",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.10",
-    "vite-svg-sprite-wrapper": "^1.3.3",
-    "vite-tsconfig-paths": "^5.0.1"
-  },
-  "dependencies": {
-    "@hotwired/stimulus": "^3.2.2",
-    "@unseenco/taxi": "^1.7.0",
-    "htmx.org": "^1.9.12",
-    "stimulus-typescript": "^0.1.3",
-    "stimulus-use": "^0.52.2",
-    "unlazy": "^0.11.3"
-  },
-  "browserslist": [
-    "last 2 versions",
-    ">= 0.4%",
-    "not dead",
-    "Firefox ESR",
-    "not op_mini all",
-    "not and_uc > 0"
-  ],
-  "packageManager": "pnpm@9.9.0+sha256.7a4261e50d9a44d9240baf6c9d6e10089dcf0a79d0007f2a26985a6927324177"
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "pnpm run \"/dev:/\"",
+		"dev:kirby": "env-cmd --use-shell \"PHP_CLI_SERVER_WORKERS=4 php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public kirby/router.php\"",
+		"dev:vite": "vite",
+		"build": "vite build"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@rollup/plugin-inject": "^5.0.5",
+		"@tailwindcss/forms": "^0.5.9",
+		"@tailwindcss/vite": "4.0.0-alpha.29",
+		"@total-typescript/ts-reset": "^0.6.1",
+		"@types/node": "^22.8.4",
+		"autoprefixer": "^10.4.20",
+		"browserslist": "^4.24.2",
+		"env-cmd": "^10.1.0",
+		"laravel-vite-plugin": "^1.0.5",
+		"lightningcss": "^1.27.0",
+		"postcss": "^8.4.47",
+		"prettier": "3.3.3",
+		"tailwindcss": "4.0.0-alpha.29",
+		"typescript": "^5.6.3",
+		"vite": "^5.4.10",
+		"vite-svg-sprite-wrapper": "^1.3.3",
+		"vite-tsconfig-paths": "^5.0.1"
+	},
+	"dependencies": {
+		"@hotwired/stimulus": "^3.2.2",
+		"@unseenco/taxi": "^1.7.0",
+		"css-clamper": "^0.2.0",
+		"htmx.org": "^1.9.12",
+		"idiomorph": "^0.3.0",
+		"stimulus-typescript": "^0.1.3",
+		"stimulus-use": "^0.52.2",
+		"unlazy": "^0.11.3"
+	},
+	"browserslist": [
+		"last 2 versions",
+		">= 0.4%",
+		"not dead",
+		"Firefox ESR",
+		"not op_mini all",
+		"not and_uc > 0"
+	],
+	"packageManager": "pnpm@9.9.0+sha256.7a4261e50d9a44d9240baf6c9d6e10089dcf0a79d0007f2a26985a6927324177"
 }

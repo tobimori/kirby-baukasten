@@ -4,11 +4,16 @@
 @plugin "@tailwindcss/forms";
 @config "../../tailwind.config.ts";
 
-@theme {
-	--font-family-*: initial;
-	--font-family-sans: 'Inter', 'sans-serif';
+@source "../../site/**/*.php";
 
+@theme {
+  /* Fonts */
+	--font-family-*: initial;
+	--font-family-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  /* Colors */
 	--color-*: initial;
+	/* neutrals */
 	--color-black: #000;
 	--color-white: #fff;
 }
