@@ -5,7 +5,10 @@
 		"dev": "pnpm run \"/dev:/\"",
 		"dev:kirby": "env-cmd --use-shell \"PHP_CLI_SERVER_WORKERS=4 php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public kirby/router.php\"",
 		"dev:vite": "vite",
-		"build": "vite build"
+		"dev:plugin": "cd site/plugins/extended && kirbyup serve src/index.js",
+		"build": "pnpm run \"/build:/\"",
+		"build:site": "vite build",
+		"build:plugin": "cd site/plugins/extended && kirbyup src/index.js"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
@@ -17,6 +20,7 @@
 		"autoprefixer": "^10.4.20",
 		"browserslist": "^4.24.2",
 		"env-cmd": "^10.1.0",
+		"kirbyup": "^3.1.13",
 		"laravel-vite-plugin": "^1.0.5",
 		"lightningcss": "^1.27.0",
 		"postcss": "^8.4.47",

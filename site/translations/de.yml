@@ -12,8 +12,8 @@ vimeo: Vimeo
 # Roles
 role.admin.title: Administrator
 role.admin.description: Hat Zugriff auf alle Inhalte und administrative Tools.
-role.superEditor.title: Super-Editor
-role.superEditor.description: Hat Zugriff auf alle Inhalte, aber keine administrativen Tools.
+role.editor.title: Editor
+role.editor.description: Kann alle Inhalte bearbeiten, aber keine administrativen Tools nutzen. (z.B. Nutzerverwaltung)
 
 # Tabs
 tab.content.label: Inhalt

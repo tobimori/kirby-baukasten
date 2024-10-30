@@ -1,5 +1,6 @@
 <?php
 
+use Kirby\Cms\Pages;
 use Kirby\Http\Url;
 use tobimori\Spielzeug\Menu;
 
@@ -49,16 +50,22 @@ return [
 	/** Panel */
 	'johannschopplich.plausible.sharedLink' => env('PLAUSIBLE_SHARED_LINK'),
 	'panel' => [
-		'menu' => fn() => [
-			'site' => Menu::site(),
-			'-',
-			'images' => Menu::page(null, 'images', page('page://images')),
-			'-',
-			'forms' => Menu::page(null, 'survey', page('page://forms')),
-			'users',
-			'plausible',
-			'retour',
-		]
+		'menu' => fn() => array_merge(
+			[
+				'site' => Menu::site(),
+			],
+			Menu::favorites(kirby()->user()?->favorites()->toPages() ?? new Pages([])),
+			[
+				'-',
+				'images' => Menu::page(null, 'file-image', page('page://images')),
+				'files' => Menu::page(null, 'file-word', page('page://files')),
+				'-',
+				'forms' => Menu::page(null, 'survey', page('page://forms')),
+				'users',
+				'plausible',
+				'retour',
+			]
+		)
 	],
 	'ready' => fn() => [
 		'panel' => [

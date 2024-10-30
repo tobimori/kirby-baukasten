@@ -1,0 +1,10 @@
+extends: users/admin
+title: user.editor.title
+description: user.editor.description
+
+permissions:
+  access:
+    system: false
+    languages: false
+    backups: false
+    users: false

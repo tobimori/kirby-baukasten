@@ -54,30 +54,10 @@ node_modules
 /data/storage/retour.yml
 
 /site/plugins/*
-!/site/plugins/project-*
+!/site/plugins/extended
+site/plugins/extended/index.dev.mjs
 
-# files of Composer dependencies that are not needed for the plugin
-/site/plugins/project-*/vendor/**/.*
-/site/plugins/project-*/vendor/**/*.json
-/site/plugins/project-*/vendor/**/*.txt
-/site/plugins/project-*/vendor/**/*.md
-/site/plugins/project-*/vendor/**/*.yml
-/site/plugins/project-*/vendor/**/*.yaml
-/site/plugins/project-*/vendor/**/*.xml
-/site/plugins/project-*/vendor/**/*.dist
-/site/plugins/project-*/vendor/**/readme.php
-/site/plugins/project-*/vendor/**/LICENSE
-/site/plugins/project-*/vendor/**/COPYING
-/site/plugins/project-*/vendor/**/VERSION
-/site/plugins/project-*/vendor/**/docs/*
-/site/plugins/project-*/vendor/**/example/*
-/site/plugins/project-*/vendor/**/examples/*
-/site/plugins/project-*/vendor/**/test/*
-/site/plugins/project-*/vendor/**/tests/*
-/site/plugins/project-*/vendor/**/php4/*
-/site/plugins/project-*/vendor/getkirby/composer-installer
 
 # Env
 # ---------------
 .env
-

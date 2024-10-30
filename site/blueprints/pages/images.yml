@@ -1,8 +1,9 @@
 title: page.images.title
 image:
-  icon: images
-  back: "var(--theme-primary)"
-  color: "var(--theme-accent)"
+  icon: file-image
+  back: "transparent"
+  color: "var(--color-gray-600)"
+  query: false
 
 options:
   # access
@@ -24,45 +25,16 @@ status:
   unlisted: true
   listed: false
 
-tabs:
-  list:
-    label: tab.list.label
-    icon: list-bullet
-    sections:
-      list:
-        label: section.images.label
-        type: files
-        template: image
-        layout: table
-        size: tiny
-        limit: 60
-        uploads:
-          template: image
-        search: true
-        columns:
-          alt:
-            label:
-              de: Alt-Text
-              en: Alt text
-            value: "{{ file.alt }}"
-          tags:
-            label:
-              de: Schlagwörter
-              en: Tags
-            type: tags
-        sortBy: filename desc
-  grid:
-    label: tab.grid.label
-    icon: grid
-    sections:
-      grid:
-        label: section.images.label
-        type: files
-        template: image
-        layout: cardlets
-        limit: 60
-        uploads:
-          template: image
-        info: '{{ file.alt.isNotEmpty ? file.filename : "" }}'
-        text: "{{ file.alt.or(file.filename) }}"
-        sortBy: filename desc
+sections:
+  files:
+    label: section.images.label
+    type: files
+    layout: cardlets
+    template: image
+    uploads:
+      template: image
+    search: true
+    sortBy: filename desc
+    info: '{{ file.alt.isNotEmpty ? file.filename : "" }}'
+    text: "{{ file.alt.or(file.filename) }}"
+    limit: 100

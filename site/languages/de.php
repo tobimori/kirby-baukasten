@@ -1,5 +1,7 @@
 <?php
 
+use Kirby\Data\Yaml;
+
 return [
 	'code' => 'de',
 	'default' => true,
@@ -8,6 +10,6 @@ return [
 		'LC_ALL' => 'de_DE'
 	],
 	'name' => 'Deutsch',
-	'translations' => [],
+	'translations' => Yaml::read(__DIR__ . '/../translations/de.yml'),
 	'url' => ''
 ];

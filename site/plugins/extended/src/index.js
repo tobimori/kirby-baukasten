@@ -1,0 +1,1 @@
+panel.plugin("project/extended", {})

@@ -1,0 +1,16 @@
+extends: pages/images
+title: page.files.titles
+image:
+  icon: file-word
+
+sections:
+  files:
+    label: section.files.label
+    type: files
+    template: file
+    layout: table
+    limit: 60
+    uploads:
+      template: file
+    search: true
+    sortBy: filename desc
