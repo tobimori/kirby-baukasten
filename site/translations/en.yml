@@ -10,30 +10,31 @@ youtube: YouTube
 vimeo: Vimeo
 
 # Roles
-role.admin.title: Admin
-role.admin.description: Has access to all content and administrative tools.
-role.superEditor.title: Super Editor
-role.superEditor.description: Has access to all content, but no administrative tools.
+user.admin.title: Administrator
+user.admin.description: Has access to all content and administrative tools.
+user.editor.title: Editor
+user.editor.description: Can edit all content but cannot use administrative tools (e.g., user management).
 
 # Tabs
 tab.content.label: Content
 tab.advanced.label: Advanced
-tab.grid.label: Grid view
-tab.list.label: List view
 tab.pages.label: Pages
 tab.navigation.label: Navigation & Footer
 
 # Files
 file.image.title: Image
-file.image.alt.label: Alternative text
-file.image.alt.help: The alternative text is intended to help users with visual impairments & search engine crawlers to understand the content of the image.
+file.image.alt.label: Alternative Text/Image Description
+file.image.alt.help: The alternative text helps visually impaired users & search engine crawlers understand the content of the image.
 file.video.title: Video
+file.file.title: Document
 
 # Pages
-page.layout.title: Layout page
+page.layout.title: Layout Page
+page.error.title: Error Page
+page.home.title: Home Page
+page.images.title: Images
 page.videos.title: Videos
-page.error.title: Error page
-page.home.title: Home page
+page.files.title: Documents
 
 # Fields
 field.blocks.label: Content
@@ -43,8 +44,11 @@ field.link.label: Link
 field.link.label.label: Label
 field.link.link.label: Link
 field.link.newTab.label: Open in new tab?
+field.link.empty: No link provided
+field.link.anchor.label: Anchor (Block ID)
+field.button.label: Button
 
-field.blockId.label: Unique ID (anchor)
+field.blockId.label: Unique ID (Anchor)
 
 field.pages.label: Pages
 field.text.label: Text
@@ -52,10 +56,14 @@ field.text.label: Text
 field.navigation.label: Navigation
 field.footer.label: Footer
 
+# Blocks
+block.example.title: Block
+
 # Sections
-section.images.label: All images
-section.videos.label: All videos
+section.images.label: All Images
+section.videos.label: All Videos
+section.files.label: All Documents
 section.children.label: Subpages
 
 # Other
-site.title: Site
+site.title: Dashboard

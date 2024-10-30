@@ -10,16 +10,14 @@ youtube: YouTube
 vimeo: Vimeo
 
 # Roles
-role.admin.title: Administrator
-role.admin.description: Hat Zugriff auf alle Inhalte und administrative Tools.
-role.editor.title: Editor
-role.editor.description: Kann alle Inhalte bearbeiten, aber keine administrativen Tools nutzen. (z.B. Nutzerverwaltung)
+user.admin.title: Administrator
+user.admin.description: Hat Zugriff auf alle Inhalte und administrative Tools.
+user.editor.title: Editor
+user.editor.description: Kann alle Inhalte bearbeiten, aber keine administrativen Tools nutzen. (z.B. Nutzerverwaltung)
 
 # Tabs
 tab.content.label: Inhalt
 tab.advanced.label: Erweitert
-tab.grid.label: Rasteransicht
-tab.list.label: Listenansicht
 tab.pages.label: Seiten
 tab.navigation.label: Navigation & Footer
 
@@ -28,13 +26,15 @@ file.image.title: Bild
 file.image.alt.label: Alternativer Text/Bildbeschreibung
 file.image.alt.help: Der alternative Text soll Nutzern mit Seheinschränkung & Suchmaschinen-Crawlern helfen, den Inhalt des Bildes zu verstehen.
 file.video.title: Video
+file.file.title: Dokument
 
 # Pages
 page.layout.title: Layout-Seite
 page.error.title: Fehlerseite
 page.home.title: Startseite
-page.images.title: Bilddateien
-page.videos.title: Videodateien
+page.images.title: Bilder
+page.videos.title: Videos
+page.files.title: Dokumente
 
 # Fields
 field.blocks.label: Inhalt
@@ -44,6 +44,9 @@ field.link.label: Link
 field.link.label.label: Beschriftung
 field.link.link.label: Link
 field.link.newTab.label: In neuem Tab öffnen?
+field.link.empty: Kein Link angegeben
+field.link.anchor.label: Anker (Block-ID)
+field.button.label: Button
 
 field.blockId.label: Eindeutige ID (Anker)
 
@@ -53,9 +56,13 @@ field.text.label: Text
 field.navigation.label: Navigation
 field.footer.label: Footer
 
+# Blocks
+block.example.title: Block
+
 # Sections
 section.images.label: Alle Bilder
 section.videos.label: Alle Videos
+section.files.label: Alle Dokumente
 section.children.label: Unterseiten
 
 # Other

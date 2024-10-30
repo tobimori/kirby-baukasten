@@ -33,7 +33,7 @@ tabs:
         width: 1/4
         sections:
           children:
-            label: children
+            label: section.children.label
             type: pages
             template: layout
   seo: seo/page

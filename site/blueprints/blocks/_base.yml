@@ -11,5 +11,5 @@ tabs:
       blockId:
         label: field.blockId.label
         type: slug
+        before: "#"
         icon: false
-        width: 1/3

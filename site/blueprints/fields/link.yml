@@ -1,6 +1,11 @@
 label: field.link.label
 type: object
-empty: no-link-yet
+empty: field.link.empty
+columns:
+  label:
+    width: 1/2
+  link:
+    width: 1/2
 fields:
   label:
     label: field.link.label.label
@@ -10,7 +15,20 @@ fields:
     label: field.link.link.label
     type: link
     width: 2/3
+    options:
+      - url
+      - page
+      - file
+      - email
+      - tel
   newTab:
     label: field.link.newTab.label
     type: toggle
+    width: 1/3
     default: false
+  anchor:
+    label: field.link.anchor.label
+    type: slug
+    icon: false
+    width: 2/3
+    before: "#"
