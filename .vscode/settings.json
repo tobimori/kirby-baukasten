@@ -1,25 +1,25 @@
 {
-  "editor.formatOnSave": true,
-  "intelephense.telemetry.enabled": false,
+	"editor.formatOnSave": true,
+	"intelephense.telemetry.enabled": false,
 	"[javascript,typescript,css,json]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  },
-  "yaml.schemas": {
-    "https://json.schemastore.org/yamllint.json": "**/*.yml"
-  },
-  "tailwindCSS.experimental.classRegex": ["([a-zA-Z0-9\\-:]+)"],
-  "emeraldwalk.runonsave": {
-    "commands": [
-      {
-        "match": "\\.php$",
-        "cmd": "pnpm env-cmd --use-shell \"rustywind --write '${file}' --vite-css \\$APP_URL/src/styles/index.css \""
-      }
-    ]
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
+	"[php]": {
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+	},
+	"yaml.schemas": {
+		"https://json.schemastore.org/yamllint.json": "**/*.yml"
+	},
+	"tailwindCSS.experimental.classRegex": ["([a-zA-Z0-9\\-:]+)"],
+	"emeraldwalk.runonsave": {
+		"commands": [
+			{
+				"match": "\\.php$",
+				"cmd": "pnpm env-cmd --use-shell \"rustywind --write '${file}' --vite-css \\$APP_URL/src/styles/index.css \""
+			}
+		]
+	}
 }

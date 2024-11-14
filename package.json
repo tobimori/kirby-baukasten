@@ -16,20 +16,20 @@
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/vite": "4.0.0-alpha.29",
 		"@total-typescript/ts-reset": "^0.6.1",
-		"@types/node": "^22.8.4",
+		"@types/node": "^22.9.0",
 		"autoprefixer": "^10.4.20",
 		"browserslist": "^4.24.2",
 		"env-cmd": "^10.1.0",
-		"kirbyup": "^3.1.13",
-		"laravel-vite-plugin": "^1.0.5",
-		"lightningcss": "^1.27.0",
-		"postcss": "^8.4.47",
+		"kirbyup": "^3.2.0",
+		"laravel-vite-plugin": "^1.0.6",
+		"lightningcss": "^1.28.1",
+		"postcss": "^8.4.49",
 		"prettier": "3.3.3",
 		"tailwindcss": "4.0.0-alpha.29",
 		"typescript": "^5.6.3",
-		"vite": "^5.4.10",
+		"vite": "^5.4.11",
 		"vite-svg-sprite-wrapper": "^1.3.3",
-		"vite-tsconfig-paths": "^5.0.1"
+		"vite-tsconfig-paths": "^5.1.2"
 	},
 	"dependencies": {
 		"@hotwired/stimulus": "^3.2.2",
@@ -39,7 +39,7 @@
 		"idiomorph": "^0.3.0",
 		"stimulus-typescript": "^0.1.3",
 		"stimulus-use": "^0.52.2",
-		"unlazy": "^0.11.3"
+		"unlazy": "^0.12.0"
 	},
 	"browserslist": [
 		"last 2 versions",
