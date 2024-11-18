@@ -1,19 +1,38 @@
 {
 	"editor.formatOnSave": true,
 	"intelephense.telemetry.enabled": false,
-	"[javascript,typescript,css,json]": {
+
+	// Default formatters for each language
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	"[javascript]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-	"[yaml]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[tailwindcss]": {
+		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"[php]": {
 		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
 	},
+
+	// YAML schema association
 	"yaml.schemas": {
 		"https://json.schemastore.org/yamllint.json": "**/*.yml"
 	},
+
+	// Tailwind CSS experimental settings for custom class detection
 	"tailwindCSS.experimental.classRegex": ["([a-zA-Z0-9\\-:]+)"],
+
+	// Run specific command on save for PHP files
 	"emeraldwalk.runonsave": {
 		"commands": [
 			{
