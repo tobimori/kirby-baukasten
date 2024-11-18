@@ -46,9 +46,14 @@ return [
 	/** Build Env / Vite / etc. */
 	'bnomei.dotenv.dir' => fn() => realpath(kirby()->roots()->base()),
 	'lukaskleinschmidt.kirby-laravel-vite.buildDirectory' => 'dist',
-	'distantnative.retour.config' => 'data/storage/retour.yml',
 	/** Panel */
 	'johannschopplich.plausible.sharedLink' => env('PLAUSIBLE_SHARED_LINK'),
+	'distantnative' => [
+		'retour' => [
+			'config' =>  __DIR__ . './../../data/storage/retour/config.yml',
+			'database' =>  __DIR__  . './../../data/storage/retour/log.sqlite'
+		]
+	],
 	'panel' => [
 		'menu' => fn() => array_merge(
 			[
