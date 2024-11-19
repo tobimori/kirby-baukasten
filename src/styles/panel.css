@@ -1,13 +1,7 @@
 @import './fonts.css';
 
 :root {
-  --theme-accent: #f3f3f3;
-  --theme-primary: #000;
-}
-
-/** Hide empty admin tab **/
-:not([data-role='admin']) .k-tab-button[title='Admin'] {
-  display: none;
+	@apply antialiased;
 }
 
 /* Panel Max Width */
@@ -27,15 +21,18 @@
     overflow: visible;
 
     &::before {
-      bottom: calc(100% + 4rem);
+			--height: 1.8rem;
+			--width: 2.7rem;
+
+      bottom: calc(100% + 2rem);
       display: block;
-      height: 7.705rem;
+      height: var(--height);
+			width: var(--width);
       margin: 0 auto;
-      left: calc(50% - 4.375rem);
-      content: url('');
-      position: absolute;
-      width: 8.75rem;
-    }
+			left: 0.25rem;
+			position: absolute;
+			content: var(--logo);
+		}
   }
 
   &::before {
@@ -45,26 +42,6 @@
     bottom: 2.5rem;
     height: 1.125rem;
     width: 8.95rem;
-  }
-}
-
-/** Custom Blocks Styling **/
-.k-blocks:not([data-disabled='true']) {
-  background: transparent;
-  box-shadow: none;
-  border-radius: none;
-
-  & > .k-blocks-list > .k-block-container {
-    border-radius: var(--rounded);
-
-    &:not([data-selected='true']) {
-      box-shadow: var(--shadow);
-    }
-
-    &:not(:last-of-type) {
-      border-bottom: none;
-      margin-bottom: 0.5rem;
-    }
   }
 }
 
@@ -107,4 +84,23 @@
 
 .k-header:has(+ iframe[plausible-embed]) {
 	display: none;
+}
+
+/** No page header for files */
+:where([data-template="images"], [data-template="files"]) .k-page-view-header {
+	display: none;
+}
+
+/* Hide pages in Link field that we don't want to link to */
+.k-page-browser .k-page-tree li:has(.k-icon-frame > .k-icon:is([data-type="survey"], [data-type="file-image"], [data-type="file-word"])) {
+	display: none;
+}
+
+.k-file-browser-tree ul li ul li:has(.k-icon-frame > .k-icon:not([data-type="file-image"], [data-type="file-word"])) {
+	display: none;
+}
+
+/* No padding in Block selector plugin */
+.k-block-selector-button-preview {
+	padding: 0;
 }
