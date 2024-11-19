@@ -1552,16 +1552,16 @@
         },
         {
             "name": "league/climate",
-            "version": "3.9.0",
+            "version": "3.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/climate.git",
-                "reference": "2bb5ad23cab8cddab0576ee5eebe4fb7f99515d6"
+                "reference": "237f70e1032b16d32ff3f65dcda68706911e1c74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/climate/zipball/2bb5ad23cab8cddab0576ee5eebe4fb7f99515d6",
-                "reference": "2bb5ad23cab8cddab0576ee5eebe4fb7f99515d6",
+                "url": "https://api.github.com/repos/thephpleague/climate/zipball/237f70e1032b16d32ff3f65dcda68706911e1c74",
+                "reference": "237f70e1032b16d32ff3f65dcda68706911e1c74",
                 "shasum": ""
             },
             "require": {
@@ -1612,9 +1612,9 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/climate/issues",
-                "source": "https://github.com/thephpleague/climate/tree/3.9.0"
+                "source": "https://github.com/thephpleague/climate/tree/3.10.0"
             },
-            "time": "2024-10-30T14:23:56+00:00"
+            "time": "2024-11-18T09:09:55+00:00"
         },
         {
             "name": "league/color-extractor",
@@ -2576,16 +2576,16 @@
         },
         {
             "name": "spatie/backtrace",
-            "version": "1.6.2",
+            "version": "1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/backtrace.git",
-                "reference": "1a9a145b044677ae3424693f7b06479fc8c137a9"
+                "reference": "7c18db2bc667ac84e5d7c18e33f16c38ff2d8838"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/backtrace/zipball/1a9a145b044677ae3424693f7b06479fc8c137a9",
-                "reference": "1a9a145b044677ae3424693f7b06479fc8c137a9",
+                "url": "https://api.github.com/repos/spatie/backtrace/zipball/7c18db2bc667ac84e5d7c18e33f16c38ff2d8838",
+                "reference": "7c18db2bc667ac84e5d7c18e33f16c38ff2d8838",
                 "shasum": ""
             },
             "require": {
@@ -2623,7 +2623,7 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/backtrace/tree/1.6.2"
+                "source": "https://github.com/spatie/backtrace/tree/1.6.3"
             },
             "funding": [
                 {
@@ -2635,7 +2635,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-07-22T08:21:24+00:00"
+            "time": "2024-11-18T14:58:58+00:00"
         },
         {
             "name": "spatie/macroable",
@@ -3729,16 +3729,16 @@
         },
         {
             "name": "tobimori/kirby-dreamform",
-            "version": "1.5.0-rc.3",
+            "version": "1.5.0-rc.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-dreamform.git",
-                "reference": "a93038f6792def5805ee1dcdd022d40169debbf9"
+                "reference": "67bc0d5615dd2e139102ac76091ad15dbf00b1f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-dreamform/zipball/a93038f6792def5805ee1dcdd022d40169debbf9",
-                "reference": "a93038f6792def5805ee1dcdd022d40169debbf9",
+                "url": "https://api.github.com/repos/tobimori/kirby-dreamform/zipball/67bc0d5615dd2e139102ac76091ad15dbf00b1f0",
+                "reference": "67bc0d5615dd2e139102ac76091ad15dbf00b1f0",
                 "shasum": ""
             },
             "require": {
@@ -3768,7 +3768,7 @@
             "homepage": "https://plugins.andkindness.com/dreamform",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-dreamform/issues",
-                "source": "https://github.com/tobimori/kirby-dreamform/tree/1.5.0-rc.3"
+                "source": "https://github.com/tobimori/kirby-dreamform/tree/1.5.0-rc.4"
             },
             "funding": [
                 {
@@ -3776,7 +3776,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2024-10-26T17:14:33+00:00"
+            "time": "2024-11-19T00:45:00+00:00"
         },
         {
             "name": "tobimori/kirby-seo",
