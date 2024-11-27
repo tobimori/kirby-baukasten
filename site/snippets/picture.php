@@ -76,7 +76,7 @@ if (is_a($image, 'Kirby\Cms\File') || is_a($image, 'Kirby\Filesystem\Asset')) : 
 							'data-src' => $median->url(),
 							'width' => $image->width(),
 							'height' => $ratio ? floor($image->width() / $ratio) : $image->height(),
-							'alt' => $alt ?? is_a($image, 'Kirby\Cms\File') ? $image->alt() : null,
+							'alt' => $alt ?? (is_a($image, 'Kirby\Cms\File') ? $image->alt() : null),
 							'loading' => $lazy ? "lazy" : null,
 							'data-sizes' => $sizes ?? 'auto',
 							'class' => cls(['size-full object-cover', $imgClass ?? ' ']),
