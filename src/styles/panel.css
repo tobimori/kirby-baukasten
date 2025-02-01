@@ -45,36 +45,6 @@
   }
 }
 
-/* Custom Tab Styles */
-.k-tabs {
-  margin-top: 12px;
-  margin-inline: 0;
-  gap: var(--spacing-2);
-
-  .k-tab-button {
-    --button-color-icon: var(--button-color-dimmed-off);
-    --button-text-color: var(--button-color-dimmed-off);
-    padding-right: var(--spacing-3);
-    color: #000;
-
-    &:hover {
-      --button-color-icon: var(--button-color-dimmed-off);
-      background: rgba(0, 0, 0, 0.05);
-    }
-
-    &[aria-current] {
-      --button-color-text: #000;
-      --button-color-icon: #000;
-      background: #fff;
-      box-shadow: var(--shadow);
-
-      &::after {
-        display: none;
-      }
-    }
-  }
-}
-
 /** Custom styles for plausible embed */
 @media (min-width: 60rem) {
   .k-panel-main:has(iframe[plausible-embed]) {

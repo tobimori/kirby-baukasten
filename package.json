@@ -13,33 +13,33 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@rollup/plugin-inject": "^5.0.5",
-		"@tailwindcss/forms": "^0.5.9",
-		"@tailwindcss/vite": "4.0.0-alpha.29",
+		"@tailwindcss/forms": "^0.5.10",
+		"@tailwindcss/vite": "4.0.3",
 		"@total-typescript/ts-reset": "^0.6.1",
-		"@types/node": "^22.9.0",
+		"@types/node": "^22.13.0",
 		"autoprefixer": "^10.4.20",
-		"browserslist": "^4.24.2",
+		"browserslist": "^4.24.4",
 		"env-cmd": "^10.1.0",
 		"kirbyup": "^3.2.0",
-		"laravel-vite-plugin": "^1.0.6",
-		"lightningcss": "^1.28.1",
-		"postcss": "^8.4.49",
-		"prettier": "3.3.3",
-		"tailwindcss": "4.0.0-alpha.29",
-		"typescript": "^5.6.3",
-		"vite": "^5.4.11",
-		"vite-svg-sprite-wrapper": "^1.3.3",
-		"vite-tsconfig-paths": "^5.1.2"
+		"laravel-vite-plugin": "^1.2.0",
+		"lightningcss": "^1.29.1",
+		"postcss": "^8.5.1",
+		"prettier": "^3.4.2",
+		"tailwindcss": "^4.0.3",
+		"typescript": "^5.7.3",
+		"vite": "^6.0.11",
+		"vite-svg-sprite-wrapper": "^1.4.1",
+		"vite-tsconfig-paths": "^5.1.4"
 	},
 	"dependencies": {
 		"@hotwired/stimulus": "^3.2.2",
-		"@unseenco/taxi": "^1.7.0",
+		"@unseenco/taxi": "^1.8.0",
 		"css-clamper": "^0.2.0",
 		"htmx.org": "^1.9.12",
-		"idiomorph": "^0.3.0",
+		"idiomorph": "^0.4.0",
 		"stimulus-typescript": "^0.1.3",
-		"stimulus-use": "^0.52.2",
-		"unlazy": "^0.12.0"
+		"stimulus-use": "^0.52.3",
+		"unlazy": "^0.12.1"
 	},
 	"browserslist": [
 		"last 2 versions",
@@ -49,5 +49,5 @@
 		"not op_mini all",
 		"not and_uc > 0"
 	],
-	"packageManager": "pnpm@9.13.2+sha512.88c9c3864450350e65a33587ab801acf946d7c814ed1134da4a924f6df5a2120fd36b46aab68f7cd1d413149112d53c7db3a4136624cfd00ff1846a0c6cef48a"
+	"packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }

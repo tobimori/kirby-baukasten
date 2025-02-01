@@ -2,7 +2,6 @@
 
 @import 'tailwindcss';
 @plugin "@tailwindcss/forms";
-@config "../../tailwind.config.ts";
 
 @source "../../site/**/*.php";
 

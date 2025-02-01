@@ -51,7 +51,7 @@ node_modules
 /data/storage/content/*
 !/data/storage/content/.gitkeep
 /data/storage/.license
-/data/storage/retour.yml
+/data/storage/retour/*
 
 /site/plugins/*
 !/site/plugins/extended

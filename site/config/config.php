@@ -65,7 +65,6 @@ return [
 				'images' => Menu::page(null, 'file-image', page('page://images')),
 				'files' => Menu::page(null, 'file-word', page('page://files')),
 				'-',
-				'forms' => Menu::page(null, 'survey', page('page://forms')),
 				'users',
 				'plausible',
 				'retour',
