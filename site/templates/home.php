@@ -1,1 +1,3 @@
-<?php snippet('../templates/layout');
+<?php
+
+require __DIR__ . '/layout.php';
