@@ -8,27 +8,21 @@ importers:
 
   .:
     dependencies:
-      '@hotwired/stimulus':
-        specifier: ^3.2.2
-        version: 3.2.2
-      '@unseenco/taxi':
-        specifier: ^1.9.0
-        version: 1.9.0
-      css-clamper:
-        specifier: ^0.2.0
-        version: 0.2.0
+      '@alpinejs/focus':
+        specifier: ^3.14.9
+        version: 3.14.9
+      '@types/alpinejs__focus':
+        specifier: ^3.13.4
+        version: 3.13.4
+      alpinejs:
+        specifier: ^3.14.9
+        version: 3.14.9
       htmx.org:
         specifier: ^1.9.12
         version: 1.9.12
       idiomorph:
         specifier: ^0.7.3
         version: 0.7.3
-      stimulus-typescript:
-        specifier: ^0.1.3
-        version: 0.1.3(@hotwired/stimulus@3.2.2)
-      stimulus-use:
-        specifier: ^0.52.3
-        version: 0.52.3(@hotwired/stimulus@3.2.2)(hotkeys-js@3.13.7)
       unlazy:
         specifier: ^0.12.4
         version: 0.12.4
@@ -48,6 +42,9 @@ importers:
       '@total-typescript/ts-reset':
         specifier: ^0.6.1
         version: 0.6.1
+      '@types/alpinejs':
+        specifier: ^3.13.11
+        version: 3.13.11
       '@types/node':
         specifier: ^22.15.27
         version: 22.15.27
@@ -66,9 +63,9 @@ importers:
       lightningcss:
         specifier: ^1.30.1
         version: 1.30.1
-      postcss:
-        specifier: ^8.5.4
-        version: 8.5.4
+      mprocs:
+        specifier: ^0.7.3
+        version: 0.7.3
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -92,6 +89,9 @@ importers:
         version: 5.1.4(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.27)(jiti@2.4.2)(lightningcss@1.30.1)(sass@1.89.0))
 
 packages:
+
+  '@alpinejs/focus@3.14.9':
+    resolution: {integrity: sha512-+OMOcdkyEUr3gYWD0ZVqojLotI9D67F5BxGesDfZcPaGtNifXMoq0vt0UVDivGnXQXosOfNpO++GF4NzGrWE9Q==}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -563,9 +563,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@hotwired/stimulus@3.2.2':
-    resolution: {integrity: sha512-eGeIqNOQpXoPAIP7tC1+1Yc1yl1xnwYqg+3mzqxyrbE5pg5YFBZcA6YoTiByJB6DKAEsiWtl6tjTJS4IYtbB7A==}
-
   '@isaacs/fs-minipass@4.0.1':
     resolution: {integrity: sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w==}
     engines: {node: '>=18.0.0'}
@@ -978,6 +975,12 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
 
+  '@types/alpinejs@3.13.11':
+    resolution: {integrity: sha512-3KhGkDixCPiLdL3Z/ok1GxHwLxEWqQOKJccgaQL01wc0EVM2tCTaqlC3NIedmxAXkVzt/V6VTM8qPgnOHKJ1MA==}
+
+  '@types/alpinejs__focus@3.13.4':
+    resolution: {integrity: sha512-g7pQNxST7palODhfg6DJoKWS59pD8EK1wNjkJydBP2u8LntlO8oD4f2uj6Ywh2CL/olM/bPSyYxwr+WQQPlphg==}
+
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
 
@@ -989,12 +992,6 @@ packages:
 
   '@unlazy/core@0.12.4':
     resolution: {integrity: sha512-0hmw+g06Xmr33bSGnPPlc8Mt4Q1dOHe0IE+bF7KcPbiyTEX4GlsFmAm29uXr/Nv3L3HaB1Wq7Js0ik9mEAJhJA==}
-
-  '@unseenco/e@2.4.0':
-    resolution: {integrity: sha512-HfvX/GCyKHKo193aULxUKawjFhq+0srB80+o7/DVm2npGHOx9tykPykSDRrR/lhjQYSvgEY/zI9CSd2feD/CMg==}
-
-  '@unseenco/taxi@1.9.0':
-    resolution: {integrity: sha512-Nkawr7WoLqyjDBRXHPbf3GoGK1N83jD2potQTWG6OQuGiUlmHyfG/NaIADH4JH92grYdRgnIpDiUjhNj2ct28A==}
 
   '@vitejs/plugin-vue2-jsx@1.1.0':
     resolution: {integrity: sha512-Mxg24oJVGXlu33p4fx1nHgG7jW+beK7cK1Xb6IP6tAPXrZ9N/mldFPKKhftBsITgOIKXzHeldKY6iOGEttzjEQ==}
@@ -1060,9 +1057,18 @@ packages:
   '@vue/compiler-sfc@2.7.16':
     resolution: {integrity: sha512-KWhJ9k5nXuNtygPU7+t1rX6baZeqOYLEforUPjgNDBnLicfHCoi48H87Q8XyLZOrNNsmhuwKqtpDQWjEFe6Ekg==}
 
+  '@vue/reactivity@3.1.5':
+    resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
+
+  '@vue/shared@3.1.5':
+    resolution: {integrity: sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==}
+
   '@xmldom/xmldom@0.8.10':
     resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
     engines: {node: '>=10.0.0'}
+
+  alpinejs@3.14.9:
+    resolution: {integrity: sha512-gqSOhTEyryU9FhviNqiHBHzgjkvtukq9tevew29fTj+ofZtfsYriw4zPirHHOAy9bw8QoL3WGhyk7QqCh5AYlw==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -1206,10 +1212,6 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
-  css-clamper@0.2.0:
-    resolution: {integrity: sha512-Z+8oHPkstG7MdH5FlAiP7NAc5N+OhUHkqQcbsMeWUfDh0n5NE+FqOusjeec6bj+dUHDfIh4x6tQliE4XjFFENg==}
-    engines: {node: '>=16.6.0'}
-
   css-select@4.3.0:
     resolution: {integrity: sha512-wPpOYtnsVontu2mODhA19JrqWxNsfdatRKd64kmpRbQgh1KtItko5sTnEpPdpSaJszTOhEMlF/RPz28qj4HqhQ==}
 
@@ -1344,6 +1346,9 @@ packages:
   fn.name@1.1.0:
     resolution: {integrity: sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==}
 
+  focus-trap@6.9.4:
+    resolution: {integrity: sha512-v2NTsZe2FF59Y+sDykKY+XjqZ0cPfhq/hikWVL88BqLivnNiEffAsac6rP6H45ff9wG9LL5ToiDqrLEP9GX9mw==}
+
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
@@ -1381,9 +1386,6 @@ packages:
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
-
-  hotkeys-js@3.13.7:
-    resolution: {integrity: sha512-ygFIdTqqwG4fFP7kkiYlvayZppeIQX2aPpirsngkv1xM1lP0piDY5QEh68nQnIKvz64hfocxhBaD/uK3sSK1yQ==}
 
   html-tags@2.0.0:
     resolution: {integrity: sha512-+Il6N8cCo2wB/Vd3gqy/8TZhTD3QvcVeQLCnZiGkGCH3JP28IgGAY41giccp2W4R3jfyJPAP318FQTa1yU7K7g==}
@@ -1595,6 +1597,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  mprocs@0.7.3:
+    resolution: {integrity: sha512-I1Ptja/UnNVVSV5QEnBdiiwW70HMWJlmnMq6nvw4J7fwZ3s8UZGuf/FG+FTAUr6CLfat8kriHj+mWLx7xsLKSw==}
+    engines: {node: '>=0.10.0'}
+    hasBin: true
+
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
@@ -1767,9 +1774,6 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  selector-set@1.1.5:
-    resolution: {integrity: sha512-6SQw6yMew5iOZ8/cDHDEnJWRM4ot2mxP6szZyF5ptrBogw4AcS4EXRj/8BUfgAMwVfdL84qpModlBMOl2NVrsQ==}
-
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
@@ -1800,17 +1804,6 @@ packages:
   stack-trace@0.0.10:
     resolution: {integrity: sha512-KGzahc7puUKkzyMt+IqAep+TVNbKP+k2Lmwhub39m1AsTSkaDutx56aDCo+HLDzf/D26BIHTJWNiTG1KAJiQCg==}
 
-  stimulus-typescript@0.1.3:
-    resolution: {integrity: sha512-dK10LQw1X+dTjxZGgYxidfq1G8egcw9Zua/swA6wPX9T7saSudKlg2nwTotFULs8qXqO8j4B/4ppR+gEnl92QA==}
-    peerDependencies:
-      '@hotwired/stimulus': ^3.0.0
-
-  stimulus-use@0.52.3:
-    resolution: {integrity: sha512-stZ5dID6FUrGCR/ChWUa0FT5Z8iqkzT6lputOAb50eF+Ayg7RzJj4U/HoRlp2NV333QfvoRidru9HLbom4hZVw==}
-    peerDependencies:
-      '@hotwired/stimulus': '>= 3'
-      hotkeys-js: '>= 3'
-
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
@@ -1837,6 +1830,9 @@ packages:
     resolution: {integrity: sha512-+N/Q9kV1+F+UeWYoSiULYo4xYSDQlTgb+ayMobAXPwMnLvop7oxKMo9OzIrX5x3eS4L4f2UHhc9axXwY8DpChg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
+
+  tabbable@5.3.3:
+    resolution: {integrity: sha512-QD9qKY3StfbZqWOPLp0++pOrAVb/HbUi5xCc8cUo4XjP19808oaMiDzn0leBY5mCespIBM0CIZePzZjgzR83kA==}
 
   tailwindcss@4.1.8:
     resolution: {integrity: sha512-kjeW8gjdxasbmFKpVGrGd5T4i40mV5J2Rasw48QARfYeQ8YS9x02ON9SFWax3Qf616rt4Cp3nVNIj6Hd1mP3og==}
@@ -2045,6 +2041,11 @@ packages:
     engines: {node: '>=12'}
 
 snapshots:
+
+  '@alpinejs/focus@3.14.9':
+    dependencies:
+      focus-trap: 6.9.4
+      tabbable: 5.3.3
 
   '@ampproject/remapping@2.3.0':
     dependencies:
@@ -2408,8 +2409,6 @@ snapshots:
   '@esbuild/win32-x64@0.25.5':
     optional: true
 
-  '@hotwired/stimulus@3.2.2': {}
-
   '@isaacs/fs-minipass@4.0.1':
     dependencies:
       minipass: 7.1.2
@@ -2711,6 +2710,12 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
+  '@types/alpinejs@3.13.11': {}
+
+  '@types/alpinejs__focus@3.13.4':
+    dependencies:
+      '@types/alpinejs': 3.13.11
+
   '@types/estree@1.0.7': {}
 
   '@types/node@22.15.27':
@@ -2720,14 +2725,6 @@ snapshots:
   '@types/triple-beam@1.3.5': {}
 
   '@unlazy/core@0.12.4': {}
-
-  '@unseenco/e@2.4.0':
-    dependencies:
-      selector-set: 1.1.5
-
-  '@unseenco/taxi@1.9.0':
-    dependencies:
-      '@unseenco/e': 2.4.0
 
   '@vitejs/plugin-vue2-jsx@1.1.0(rollup@4.41.1)(vite@5.4.19(@types/node@22.15.27)(lightningcss@1.30.1)(sass@1.89.0))(vue@2.7.16)':
     dependencies:
@@ -2826,7 +2823,17 @@ snapshots:
     optionalDependencies:
       prettier: 2.8.8
 
+  '@vue/reactivity@3.1.5':
+    dependencies:
+      '@vue/shared': 3.1.5
+
+  '@vue/shared@3.1.5': {}
+
   '@xmldom/xmldom@0.8.10': {}
+
+  alpinejs@3.14.9:
+    dependencies:
+      '@vue/reactivity': 3.1.5
 
   ansi-regex@5.0.1: {}
 
@@ -2972,8 +2979,6 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
-
-  css-clamper@0.2.0: {}
 
   css-select@4.3.0:
     dependencies:
@@ -3139,6 +3144,10 @@ snapshots:
 
   fn.name@1.1.0: {}
 
+  focus-trap@6.9.4:
+    dependencies:
+      tabbable: 5.3.3
+
   fs.realpath@1.0.0: {}
 
   fsevents@2.3.3:
@@ -3175,8 +3184,6 @@ snapshots:
   globrex@0.1.2: {}
 
   graceful-fs@4.2.11: {}
-
-  hotkeys-js@3.13.7: {}
 
   html-tags@2.0.0: {}
 
@@ -3366,6 +3373,8 @@ snapshots:
 
   mkdirp@3.0.1: {}
 
+  mprocs@0.7.3: {}
+
   ms@2.1.3: {}
 
   mustache@4.2.0: {}
@@ -3534,8 +3543,6 @@ snapshots:
     optionalDependencies:
       '@parcel/watcher': 2.5.1
 
-  selector-set@1.1.5: {}
-
   semver@6.3.1: {}
 
   shebang-command@2.0.0:
@@ -3555,15 +3562,6 @@ snapshots:
   stable@0.1.8: {}
 
   stack-trace@0.0.10: {}
-
-  stimulus-typescript@0.1.3(@hotwired/stimulus@3.2.2):
-    dependencies:
-      '@hotwired/stimulus': 3.2.2
-
-  stimulus-use@0.52.3(@hotwired/stimulus@3.2.2)(hotkeys-js@3.13.7):
-    dependencies:
-      '@hotwired/stimulus': 3.2.2
-      hotkeys-js: 3.13.7
 
   string-width@4.2.3:
     dependencies:
@@ -3614,6 +3612,8 @@ snapshots:
       csso: 4.2.0
       picocolors: 1.1.1
       stable: 0.1.8
+
+  tabbable@5.3.3: {}
 
   tailwindcss@4.1.8: {}
 

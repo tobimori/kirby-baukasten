@@ -7,6 +7,6 @@ if (isset($type)) : ?>
 					'aria-hidden' => true,
 					'class' => cls($class ?? 'icon')
 				])) ?>>
-		<use xlink:href="<?= vite()->asset('assets/sprite.svg') ?>#<?= $type ?>"></use>
+		<use href="<?= vite()->asset('assets/sprite.svg') ?><?php e(vite()->isRunningHot(), "?t={$type}") ?>#<?= $type ?>"></use>
 	</svg>
 <?php endif ?>

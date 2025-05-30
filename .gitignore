@@ -1,63 +1,69 @@
 # System files
 # ------------
+
 Icon
 .DS_Store
 
 # Temporary files
 # ---------------
-/media/*
-!/media/.gitkeep
-/public/backups
+
+/public/media/*
+!/public/media/.gitkeep
+mprocs.log
 
 # Lock files
 # ---------------
-hot
+
+.lock
 
 # Editors
-# ---------------
-*.sublime-project
+# (sensitive workspace files)
+# ---------------------------
+
 *.sublime-workspace
+/.vscode
 /.idea
-/.vscode/*
-!/.vscode/extensions.json
-!/.vscode/settings.json
 
-# Vendor files
-# ---------------
+# Dependencies
+# ---------------------
+
 /vendor
-/kirby
-node_modules
-
-# Build assets
-# ---------------
-/public/media
-/public/assets/dev
-/public/dist
-/assets/sprite.svg
-
-# Kirby
-# ---------------
-# Runtime data
-/data/runtime/sessions/*
-!/data/runtime/sessions/.gitkeep
-/data/runtime/logs/*
-!/data/runtime/logs/.gitkeep
-/data/runtime/cache/*
-!/data/runtime/cache/.gitkeep
-
-# Storage
-/data/storage/accounts/*
-!/data/storage/accounts/.gitkeep
-/data/storage/content/*
-!/data/storage/content/.gitkeep
-/data/storage/.license
-/data/storage/retour/*
-
+/node_modules
 /site/plugins/*
 !/site/plugins/extended
-site/plugins/extended/index.dev.mjs
+/site/plugins/extended/index.dev.mjs
 
+# Build files
+# ---------------------
 
-# Env
+/assets/sprite.svg
+/public/dist
+/site/plugins/extended/index.js
+/site/plugins/extended/index.css
+
+# -------------SECURITY-------------
+# NEVER publish these files via Git!
+# -------------SECURITY-------------
+
+# Environmment
 # ---------------
+
 .env
+
+# Accounts
+# ---------------
+
+/data/storage/accounts/*
+!/data/storage/accounts/.gitkeep
+
+# Runtime Files
+# ---------------
+
+/data/runtime/*
+!/data/runtime/README.md
+!.gitkeep
+
+# License
+# ---------------
+
+/data/storage/.license

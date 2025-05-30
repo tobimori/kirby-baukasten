@@ -32,6 +32,9 @@
 		"johannschopplich/kirby-plausible": "^0.5.0",
 		"genxbe/kirby-ray": "^2.0"
 	},
+	"extra": {
+		"kirby-cms-path": false
+	},
 	"config": {
 		"optimize-autoloader": true,
 		"allow-plugins": {

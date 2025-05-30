@@ -1,14 +1,14 @@
 import { resolve } from "node:path"
-import { defineConfig, loadEnv } from "vite"
-import laravel from "laravel-vite-plugin"
-import tsconfigPaths from "vite-tsconfig-paths"
-import svgSprite from "vite-svg-sprite-wrapper"
-import tailwind from "@tailwindcss/vite"
 import inject from "@rollup/plugin-inject"
+import tailwind from "@tailwindcss/vite"
 import browserslist from "browserslist"
+import laravel from "laravel-vite-plugin"
 import { browserslistToTargets } from "lightningcss"
+import { defineConfig, loadEnv } from "vite"
+import devtoolsJson from "vite-plugin-devtools-json"
+import svgSprite from "vite-svg-sprite-wrapper"
+import tsconfigPaths from "vite-tsconfig-paths"
 import { browserslist as browserslistConfig } from "./package.json"
-import devtoolsJson from 'vite-plugin-devtools-json';
 
 export default defineConfig(({ mode }) => {
 	const env = loadEnv(mode, process.cwd(), "")
@@ -48,7 +48,7 @@ export default defineConfig(({ mode }) => {
 			}),
 			tsconfigPaths(),
 			tailwind(),
-		  devtoolsJson(),
+			devtoolsJson()
 		],
 		css: {
 			transformer: "lightningcss",

@@ -4,13 +4,15 @@
 
 An opinionated, supercharged version of the Kirby Plainkit used internally at Love & Kindness for our clients' sites, with preconfigured tooling and plugins.
 
+If you're not interested in all of my frontend opinions, you can use [composerkit](https://github.com/getkirby/composerkit/tree/main), which is essentially a simpler version with *only* Composer and the public & data folder setup.
+
 > [!NOTE]
 > While Kirby Baukasten is open source & used in production as base for my own projects, it's not properly versioned, and I'm not offering support for it. Instead, it should serve as a reference or guide for implementing certain best practices in your own starterkit.
 
 ## Requirements
 
-- PHP 8.2+ with composer
-- Node.js 20+ with pnpm
+- PHP 8.4+ with composer
+- Node.js 24+ with pnpm
 
 ## Usage
 
@@ -19,14 +21,6 @@ An opinionated, supercharged version of the Kirby Plainkit used internally at Lo
 ```
 composer install && pnpm install
 ```
-
-##### Running the scaffold command with Kirby CLI
-
-```
-kirby baukasten:scaffold
-```
-
-> NOTE: If you don't have the Kirby CLI installed, you will need to run `composer global require getkirby/cli` first.
 
 ##### Start the dev server.
 
@@ -154,15 +148,12 @@ class ArticlePage extends Kirby\Cms\Page {
 For classes reference, check out the
 [Kirby reference](https://getkirby.com/docs/reference/objects).
 
-#### Auto completion in VS Code
+#### IDE SUpport
 
-For excellent PHP support in VS Code, we use
-[PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client).
-Follow the Quick Start instructions. Other IDEs like PhpStorm may support this
-out-of-the-box.
+I primarily use 
 
 ## License
 
-[MIT License](.github/LICENSE) © 2021-2024 [Tobias Möritz](https://github.com/tobimori)
+[MIT License](.github/LICENSE) © 2021-2025 [Tobias Möritz](https://github.com/tobimori)
 
 Thanks to [Johann](https://github.com/johannschopplich) for the cute banner gecko!

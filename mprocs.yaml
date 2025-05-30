@@ -1,0 +1,15 @@
+procs:
+  kirby:
+    cmd: ["pnpm", "run", "dev:kirby"]
+    autostart: true
+    autorestart: false
+
+  vite:
+    cmd: ["pnpm", "run", "dev:vite"]
+    autostart: true
+    autorestart: false
+
+  plugin:
+    cmd: ["pnpm", "run", "dev:plugin"]
+    autostart: false
+    autorestart: false
