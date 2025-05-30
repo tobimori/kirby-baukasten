@@ -8,6 +8,7 @@ import inject from "@rollup/plugin-inject"
 import browserslist from "browserslist"
 import { browserslistToTargets } from "lightningcss"
 import { browserslist as browserslistConfig } from "./package.json"
+import devtoolsJson from 'vite-plugin-devtools-json';
 
 export default defineConfig(({ mode }) => {
 	const env = loadEnv(mode, process.cwd(), "")
@@ -46,7 +47,8 @@ export default defineConfig(({ mode }) => {
 				refresh: ["site/{layouts,snippets,templates}/**/*"]
 			}),
 			tsconfigPaths(),
-			tailwind()
+			tailwind(),
+		  devtoolsJson(),
 		],
 		css: {
 			transformer: "lightningcss",
