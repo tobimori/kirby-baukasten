@@ -3,7 +3,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "mprocs",
-		"dev:kirby": "env-cmd --use-shell \"PHP_CLI_SERVER_WORKERS=4 php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public kirby/router.php\"",
+		"dev:kirby": "env-cmd --use-shell \"PHP_CLI_SERVER_WORKERS=4 php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public vendor/getkirby/cms/router.php\"",
 		"dev:vite": "vite",
 		"dev:plugin": "cd site/plugins/extended && kirbyup serve src/index.js",
 		"build": "pnpm run \"/build:/\"",

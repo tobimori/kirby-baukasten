@@ -1,39 +1,144 @@
-@import './fonts.css';
+@import "./fonts.css";
 
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "@tailwindcss/forms";
 
 @source "../../site/**/*.php";
 
+@variant hocus (&:hover, &:focus-visible);
+
+@variant xxl (@media (width <= 96rem));
+@variant xl (@media (width <= 72rem));
+@variant lg (@media (width <= 62rem));
+@variant md (@media (width <= 44rem));
+@variant sm (@media (width <= 29.5rem));
+@variant xs (@media (width <= 22rem));
+
+@variant min-xxl (@media (width > 96rem));
+@variant min-xl (@media (width > 72rem));
+@variant min-lg (@media (width > 62rem));
+@variant min-md (@media (width > 44rem));
+@variant min-sm (@media (width > 29.5rem));
+@variant min-xs (@media (width > 20rem));
+
+@utility no-scrollbar {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
 @theme {
-  /* Fonts */
+	--default-transition-duration: 100ms;
+	--min-viewport: 29.5;
+	--max-viewport: 96;
+
+	/* Fonts */
 	--font-family-*: initial;
-	--font-family-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-family-sans:
+		"Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+	/* Colors */
+	--color-*: initial;
+	--color-black: #000;
+	--color-white: #fff;
 
 	/* Reset Breakpoints to fix sorting */
 	--breakpoint-*: initial;
 
-  /* Colors */
-	--color-*: initial;
-	/* neutrals */
-	--color-black: #000;
-	--color-white: #fff;
+	/* Font Sizes */
+	--text-*: initial;
+
+	/* you can define fluid font sizes */
+	--text-body--min: 1;
+	--text-body--max: 1.125;
+	--text-body: clamp(
+		var(--text-body--min) * 1rem,
+		var(--text-body--min) * 1rem +
+			(var(--text-body--max) - var(--text-body--min)) *
+			(
+				(100vw - var(--min-viewport) * 1rem) /
+					(var(--max-viewport) - var(--min-viewport))
+			),
+		var(--text-body--max) * 1rem
+	);
+	--text-body--line-height: 1.33;
+
+	/* or static font sizes */
+	--text-small: 0.875rem;
+
+	/* Font Weights */
+	/*--font-weight-*: initial;
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;*/
+
+	/* Container */
+	--spacing-container--min: 1.5;
+	--spacing-container--max: 7;
+	--spacing-container: clamp(
+		var(--spacing-container--min) * 1rem,
+		var(--spacing-container--min) * 1rem +
+			(var(--spacing-container--max) - var(--spacing-container--min)) *
+			(
+				(100vw - var(--min-viewport) * 1rem) /
+					(var(--max-viewport) - var(--min-viewport))
+			),
+		var(--spacing-container--max) * 1rem
+	);
+
+	/* Total Reset - opt-in each method */
+	--radius-*: initial;
+	--tracking-*: initial;
+	--leading-*: initial;
+	--shadow-*: initial;
+	--inset-shadow-*: initial;
+	--drop-shadow-*: initial;
+	--animate-*: initial;
+	--blur-*: initial;
+	--perspective-*: initial;
 }
 
 @layer base {
-  svg {
-    @apply w-full h-full;
-  }
+	svg {
+		@apply w-full h-full;
+	}
 
-  /* Fix Safari issue related to <summary> / <details> arrow */
-  details > summary.list-none::-webkit-details-marker,
-  details > summary.list-none::marker {
-    display: none;
-  }
+	/* Fix Safari issue related to <summary> / <details> arrow */
+	details > summary.list-none::-webkit-details-marker,
+	details > summary.list-none::marker {
+		display: none;
+	}
 
-  /* https://defensivecss.dev/tip/flexbox-min-content-size/ */
-  * {
-    min-height: 0;
-    min-width: 0;
-  }
+	/* https://defensivecss.dev/tip/flexbox-min-content-size/ */
+	* {
+		min-height: 0;
+		min-width: 0;
+	}
+
+	:root {
+		scrollbar-gutter: stable;
+
+		/**
+		 * Uses a pseudo element to set the background-color of the page for "overscrolling" (Chrome/Firefox on macOS)
+		 * If you're design has a different background-color at top and footer of page, you should use a gradient
+		 */
+		&::after {
+			content: "";
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			z-index: -10;
+			inset: 0;
+			background: var(--color-white);
+		}
+	}
+
+	.container {
+		margin-inline: auto;
+		max-width: 96rem;
+		padding-inline: var(--spacing-container);
+	}
 }

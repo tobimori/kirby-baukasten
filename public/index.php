@@ -7,7 +7,7 @@ define("KIRBY_HELPER_DUMP", false); // dump is set by ray
 
 $base = dirname(__DIR__);
 
-require $base . '/kirby/bootstrap.php';
+require $base . '/vendor/getkirby/cms/bootstrap.php';
 require $base . '/vendor/autoload.php';
 
 $kirby = new App([

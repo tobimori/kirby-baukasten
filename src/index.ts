@@ -22,4 +22,7 @@ window.Alpine = Alpine
 
 Alpine.plugin(focus)
 Alpine.start()
-lazyLoad()
+
+document.addEventListener("alpine:init", () => {
+	lazyLoad()
+})
