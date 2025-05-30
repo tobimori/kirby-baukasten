@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7907820a50fcfc28d0e3207c142caded",
+    "content-hash": "deb4e577843213f391e900ee4284779f",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -1324,6 +1324,41 @@
                 "source": "https://github.com/johannschopplich/kirby-plausible/tree/v0.5.0"
             },
             "time": "2024-02-05T12:29:44+00:00"
+        },
+        {
+            "name": "junohamburg/kirby-language-selector",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/junohamburg/kirby-language-selector.git",
+                "reference": "d5e82ced2b7ae93c60f0f241054fc902da3e4784"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/junohamburg/kirby-language-selector/zipball/d5e82ced2b7ae93c60f0f241054fc902da3e4784",
+                "reference": "d5e82ced2b7ae93c60f0f241054fc902da3e4784",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JUNO",
+                    "email": "github@juno-hamburg.com"
+                }
+            ],
+            "description": "Kirby Language Selector",
+            "support": {
+                "issues": "https://github.com/junohamburg/kirby-language-selector/issues",
+                "source": "https://github.com/junohamburg/kirby-language-selector/tree/2.0.0"
+            },
+            "time": "2025-05-28T12:20:58+00:00"
         },
         {
             "name": "laminas/laminas-escaper",

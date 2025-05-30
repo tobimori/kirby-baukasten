@@ -64,6 +64,13 @@ hot
 !/data/runtime/README.md
 !.gitkeep
 
+# Content Files
+# ---------------
+
+/data/storage/content/*
+!/data/storage/content/.gitkeep
+/data/storage/retour/*
+
 # License
 # ---------------
 
