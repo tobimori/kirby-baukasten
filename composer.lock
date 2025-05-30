@@ -4,43 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "deb4e577843213f391e900ee4284779f",
+    "content-hash": "754c274a74705aeb59a03e61a369aef3",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
-            "version": "2.2.0",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bnomei/kirby3-dotenv.git",
-                "reference": "4cc9baefe5faebcdafa5d7dc3eff986f241d1244"
+                "reference": "fe5d63d9e1537a5d7f4668db0585ccd3d56596c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bnomei/kirby3-dotenv/zipball/4cc9baefe5faebcdafa5d7dc3eff986f241d1244",
-                "reference": "4cc9baefe5faebcdafa5d7dc3eff986f241d1244",
+                "url": "https://api.github.com/repos/bnomei/kirby3-dotenv/zipball/fe5d63d9e1537a5d7f4668db0585ccd3d56596c9",
+                "reference": "fe5d63d9e1537a5d7f4668db0585ccd3d56596c9",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.1",
-                "php": ">=8.0",
+                "php": ">=8.2",
                 "vlucas/phpdotenv": "^5.3"
             },
             "require-dev": {
-                "getkirby/cms": "^3.5",
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "^9.5"
+                "getkirby/cli": "^1.5",
+                "getkirby/cms": "^5.0.0-alpha.4",
+                "larastan/larastan": "^v3.0.0",
+                "laravel/pint": "^1.13",
+                "pestphp/pest": "^v3.5.1",
+                "spatie/ray": "^1.39"
             },
             "suggest": {
                 "bnomei/kirby3-janitor": "Use a Panel Button or PHP code to clear the cache",
                 "bnomei/kirby3-lapse": "For faster and automatic caching based on modification of Kirby Objects",
-                "bnomei/kirby3-security-headers": "CPS headers to make the the web a saver place. Sensible defaults with zero configuration.",
-                "robinscholz/better-rest": "Allows you to send authenticated GET requests querying the Kirby API"
+                "bnomei/kirby3-security-headers": "CPS headers to make the the web a saver place. Sensible defaults with zero configuration."
             },
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": "tests/kirby"
             },
             "autoload": {
+                "files": [
+                    "global.php"
+                ],
                 "psr-4": {
                     "Bnomei\\": "classes/"
                 }
@@ -55,51 +60,36 @@
                     "email": "b@bnomei.com"
                 }
             ],
-            "description": "Kirby 3 Plugin for environment variables from .env",
+            "description": "Kirby Plugin for environment variables from .env",
             "keywords": [
+                ".env",
                 "dotenv",
                 "dotenv-loader",
+                "env",
+                "enviroment",
                 "enviroment-variables",
-                "kirby3",
-                "kirby3-cms",
-                "kirby3-plugin"
+                "kirby",
+                "kirby-cms",
+                "kirby-plugin"
             ],
             "support": {
                 "issues": "https://github.com/bnomei/kirby3-dotenv/issues",
-                "source": "https://github.com/bnomei/kirby3-dotenv/tree/v2.2.0"
+                "source": "https://github.com/bnomei/kirby3-dotenv/tree/v5.0.0"
             },
-            "funding": [
-                {
-                    "url": "https://buymeacoff.ee/bnomei",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://paypal.me/bnomei",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/bnomei",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/bnomei",
-                    "type": "patreon"
-                }
-            ],
-            "time": "2023-02-23T11:39:03+00:00"
+            "time": "2024-11-27T15:09:28+00:00"
         },
         {
             "name": "bnomei/kirby3-janitor",
-            "version": "4.4.2",
+            "version": "5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bnomei/kirby3-janitor.git",
-                "reference": "c48d5b1fd2e5974f48d9ba08476c62b070aa830e"
+                "reference": "5e2eec128e5e95430622a436e3a9d9af7563e90e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bnomei/kirby3-janitor/zipball/c48d5b1fd2e5974f48d9ba08476c62b070aa830e",
-                "reference": "c48d5b1fd2e5974f48d9ba08476c62b070aa830e",
+                "url": "https://api.github.com/repos/bnomei/kirby3-janitor/zipball/5e2eec128e5e95430622a436e3a9d9af7563e90e",
+                "reference": "5e2eec128e5e95430622a436e3a9d9af7563e90e",
                 "shasum": ""
             },
             "require": {
@@ -109,12 +99,11 @@
                 "symfony/finder": "^7.0"
             },
             "require-dev": {
-                "getkirby/cli": "dev-develop",
-                "getkirby/cms": "^4.3.0",
-                "larastan/larastan": "^2.9",
+                "getkirby/cli": "^1.5.0",
+                "getkirby/cms": "5.0.0-beta.4",
+                "larastan/larastan": "^v3.0.0",
                 "laravel/pint": "^1.13",
-                "pestphp/pest": "^2.24",
-                "pestphp/pest-plugin-type-coverage": "^2.4",
+                "pestphp/pest": "^v3.5.1",
                 "spatie/ray": "^1.39"
             },
             "type": "kirby-plugin",
@@ -159,27 +148,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bnomei/kirby3-janitor/issues",
-                "source": "https://github.com/bnomei/kirby3-janitor/tree/v4.4.2"
+                "source": "https://github.com/bnomei/kirby3-janitor/tree/v5.2.0"
             },
-            "funding": [
-                {
-                    "url": "https://buymeacoff.ee/bnomei",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://paypal.me/bnomei",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/bnomei",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/bnomei",
-                    "type": "patreon"
-                }
-            ],
-            "time": "2024-09-12T12:55:01+00:00"
+            "time": "2025-04-02T14:40:18+00:00"
         },
         {
             "name": "brick/math",

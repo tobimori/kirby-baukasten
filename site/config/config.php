@@ -55,6 +55,9 @@ return [
 		]
 	],
 	'panel' => [
+		'vue' => [
+			'compiler' => false
+		],
 		'menu' => fn() => array_merge(
 			[
 				'site' => Menu::site(),
