@@ -37,6 +37,7 @@ hot
 # Build files
 # ---------------------
 
+/types.php
 /assets/sprite.svg
 /public/dist
 /site/plugins/extended/index.js

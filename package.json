@@ -8,7 +8,8 @@
 		"dev:plugin": "cd site/plugins/extended && kirbyup serve src/index.js",
 		"build": "pnpm run \"/build:/\"",
 		"build:site": "vite build",
-		"build:plugin": "cd site/plugins/extended && kirbyup src/index.js"
+		"build:plugin": "cd site/plugins/extended && kirbyup src/index.js",
+		"types": "kirby types:create --force && tsc --noEmit"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.0.0-beta.5",
