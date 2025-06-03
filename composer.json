@@ -32,7 +32,8 @@
 		"johannschopplich/kirby-plausible": "^0.5.0",
 		"genxbe/kirby-ray": "^2.0",
 		"junohamburg/kirby-language-selector": "^2.0",
-		"lukaskleinschmidt/kirby-types": "^2.0"
+		"lukaskleinschmidt/kirby-types": "^2.0",
+		"tobimori/kirby-trawl": "^1.0"
 	},
 	"extra": {
 		"kirby-cms-path": false

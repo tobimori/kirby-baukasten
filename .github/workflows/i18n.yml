@@ -31,7 +31,7 @@ jobs:
       - name: extract translations
         run: |
           export PATH="$HOME/.composer/vendor/bin:$PATH"
-          kirby i18n:extract --clean
+          kirby trawl:extract --clean
 
       - uses: lingodotdev/lingo.dev@main
         with:
