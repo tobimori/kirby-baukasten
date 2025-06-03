@@ -1,4 +1,4 @@
-label: field.text.label
+label: Text
 type: writer
 marks:
   - bold

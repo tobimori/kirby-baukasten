@@ -1,4 +1,4 @@
-label: field.image.label
+label: Image
 type: files
 uploads:
   parent: site.find('page://images')

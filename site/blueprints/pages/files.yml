@@ -1,11 +1,11 @@
 extends: pages/images
-title: page.files.titles
+title: Files
 image:
   icon: file-word
 
 sections:
   files:
-    label: section.files.label
+    label: All Documents
     type: files
     template: file
     layout: table

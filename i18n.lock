@@ -1,0 +1,38 @@
+version: 1
+checksums:
+  bbb6e26f75e39e47137b36f58662e965:
+    Administrator: 8c249cb4ea7b1fbeeb8f1ae7b8659448
+    Advanced: 16e9b03eda6f6c1324cce54b96bbccd6
+    All%20Documents: 47e83fdb74af0b70c626eb6914693cb0
+    All%20Images: 17823c45efb791a883547a9e2608ac06
+    Alternative%20Text%2FImage%20Description: 2cd612a063b4f84c38156f90afdc7195
+    Anchor%20(Block%20ID): f423e8678523631dba8d7b26d7b9e49b
+    Button: c18d641c4d53381e61330584334ad656
+    Can%20edit%20all%20content%20but%20cannot%20use%20administrative%20tools%20(e.g.%2C%20user%20management).: 524fc10f9419e6de687429fd1b435a84
+    Content: 669b337031ef165af577f04f2b7fd54f
+    Dashboard: c9380ea68c8c76ea451bd9613329a07c
+    Document: 5ecdc0287221f041681ed05eecde53f4
+    Editor: 15d1c1521efc08cd482f7ac9e1df0acf
+    Error%20Page: b2772593c0c8414ed3fdf46166dd7a99
+    Example%20Block: 1e155cca50811869871fadf81af2ad78
+    Favorites: 1a09dc482348ee2d1f41766f865fd97c
+    Files: aee803d2f576ac1200c73b691191a916
+    Footer: 42e6d40460f979cecee52dabcff307f8
+    Has%20access%20to%20all%20content%20and%20administrative%20tools.: 653cfcdf3a43af5df5641f8bbf0974b3
+    Home%20Page: 7e31d447ecb318f86f368d9e22b2a297
+    Image: 048ba7a239de0fbd883ade8558415830
+    Images: 9305827c28694866f49db42b4c51831f
+    Label: a5c71bf158481233f8215dbd38cc196b
+    Layout%20Page: 7de5584f89fa051c81f86e1050bb3b40
+    Link: 60f0aa33e70ca6df3b6659802b16f433
+    Navigation: 0373afd8238db1c49f4be4fa6cdf5cd3
+    Navigation%20%26%20Footer: 5f55ed3c484503cbd48b155e6ba05846
+    No%20link%20provided: 92e5a6e23b663213775de6d037e7dbd4
+    Open%20in%20new%20tab%3F: e466e2dd02fe712d63ecc9406766168c
+    Pages: 75088c94fb3c374efd452624d4b74be8
+    Skip%20navigation: c2a1c97642633f056ae78d1952776298
+    Subpages: 72a6745d2d3ba9379d294b4049f22228
+    Text: 4ddccc1974775ed7357f9beaf9361cec
+    The%20alternative%20text%20helps%20visually%20impaired%20users%20%26%20search%20engine%20crawlers%20understand%20the%20content%20of%20the%20image.: 8632a4787e759d6ea6b453e0ad7e8bab
+    Unique%20ID%20(Anchor): c360d5e85ff1bb24331dfc4e4aa64642
+    Videos: 0869588526ebe2a180384f70b21f0ba5

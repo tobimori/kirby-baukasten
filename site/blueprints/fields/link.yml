@@ -1,6 +1,6 @@
-label: field.link.label
+label: Link
 type: object
-empty: field.link.empty
+empty: No link provided
 columns:
   label:
     width: 1/2
@@ -8,11 +8,11 @@ columns:
     width: 1/2
 fields:
   label:
-    label: field.link.label.label
+    label: Label
     type: text
     width: 1/3
   link:
-    label: field.link.link.label
+    label: Link
     type: link
     width: 2/3
     options:
@@ -22,12 +22,12 @@ fields:
       - email
       - tel
   newTab:
-    label: field.link.newTab.label
+    label: Open in new tab?
     type: toggle
     width: 1/3
     default: false
   anchor:
-    label: field.link.anchor.label
+    label: Anchor (Block ID)
     type: slug
     icon: false
     width: 2/3

@@ -1,7 +1,7 @@
-title: user.admin.title
-description: user.admin.description
+title: Administrator
+description: Has access to all content and administrative tools.
 
 fields:
   favorites:
-    label: user.favorites.label
+    label: Favorites
     type: pages

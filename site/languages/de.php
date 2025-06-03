@@ -1,6 +1,6 @@
 <?php
 
-use Kirby\Data\Yaml;
+use Kirby\Data\Json;
 
 return [
 	'code' => 'de',
@@ -10,6 +10,6 @@ return [
 		'LC_ALL' => 'de_DE'
 	],
 	'name' => 'Deutsch',
-	'translations' => Yaml::read(__DIR__ . '/../translations/de.yml'),
+	'translations' => Json::read(__DIR__ . '/../translations/de.json'),
 	'url' => ''
 ];

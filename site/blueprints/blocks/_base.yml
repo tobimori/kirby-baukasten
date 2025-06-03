@@ -3,13 +3,13 @@ wysiwyg: true
 
 tabs:
   content:
-    label: tab.content.label
+    label: Content
     fields:
   advanced:
-    label: tab.advanced.label
+    label: Advanced
     fields:
       blockId:
-        label: field.blockId.label
+        label: Unique ID (Anchor)
         type: slug
         before: "#"
         icon: false

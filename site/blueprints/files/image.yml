@@ -1,10 +1,10 @@
-title: file.image.title
+title: Image
 accept:
   extension: jpg, jpeg, png, svg
   type: image
 
 fields:
   alt:
-    label: file.image.alt.label
+    label: Alternative Text/Image Description
     type: text
-    help: file.image.alt.help
+    help: The alternative text helps visually impaired users & search engine crawlers understand the content of the image.

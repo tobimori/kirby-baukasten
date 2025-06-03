@@ -1,4 +1,4 @@
 extends: pages/home
-title: page.error.title
+title: Error Page
 image:
   icon: cancel

@@ -1,4 +1,4 @@
-title: page.layout.title
+title: Layout Page
 image:
   icon: grid
   back: "var(--theme-accent)"
@@ -21,7 +21,7 @@ options:
 
 tabs:
   content:
-    label: tab.content.label
+    label: Content
     icon: text
     columns:
       main:
@@ -33,7 +33,7 @@ tabs:
         width: 1/4
         sections:
           children:
-            label: section.children.label
+            label: Subpages
             type: pages
             template: layout
   seo: seo/page

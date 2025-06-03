@@ -1,6 +1,6 @@
 extends: users/admin
-title: user.editor.title
-description: user.editor.description
+title: Editor
+description: Can edit all content but cannot use administrative tools (e.g., user management).
 
 permissions:
   access:

@@ -1,5 +1,5 @@
 extends: blocks/_base
-title: example
+title: Example Block
 icon: title
 label: "{{ text }}"
 
@@ -7,5 +7,5 @@ tabs:
   content:
     fields:
       text:
-        label: text
+        label: Text
         type: text

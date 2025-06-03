@@ -1,6 +1,6 @@
 extends: pages/layout
 
-title: page.home.title
+title: Home Page
 image:
   icon: home
 

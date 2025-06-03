@@ -1,4 +1,4 @@
-title: page.images.title
+title: Images
 image:
   icon: file-image
   back: "transparent"
@@ -27,7 +27,7 @@ status:
 
 sections:
   files:
-    label: section.images.label
+    label: All Images
     type: files
     layout: cardlets
     template: image

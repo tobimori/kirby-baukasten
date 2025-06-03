@@ -18,6 +18,10 @@ return [
 	'yaml.handler' => 'symfony',
 	'date.handler' => 'intl',
 	'url' => env("APP_URL"),
+	'tobimori.trawl' => [
+		'sourceLanguage' => 'en',
+		'languages' => ['de', 'en']
+	],
 	'tobimori.seo' => require __DIR__ . '/seo.php',
 	'tobimori.dreamform' => require __DIR__ . '/dreamform.php',
 	'tobimori.icon-field' => [

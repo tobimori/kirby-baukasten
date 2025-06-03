@@ -1,14 +1,14 @@
-title: site.title
+title: Dashboard
 
 tabs:
   pages:
-    label: tab.pages.label
+    label: Pages
     icon: page
     columns:
       - width: 2/3
         sections:
           pages:
-            label: field.pages.label
+            label: Pages
             type: pages
             info: "/{{ page.slug }}"
             create:

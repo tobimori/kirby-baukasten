@@ -1,10 +1,10 @@
 icon: bars
-label: tab.navigation.label
+label: Navigation & Footer
 columns:
   - width: 1/4
     fields:
       _navigation:
-        label: field.navigation.label
+        label: Navigation
         type: headline
   - width: 3/4
     sections:
@@ -19,7 +19,7 @@ columns:
   - width: 1/4
     fields:
       _footer:
-        label: field.footer.label
+        label: Footer
         type: headline
   - width: 3/4
     sections:
