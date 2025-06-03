@@ -1,0 +1,38 @@
+name: i18n
+
+on: push
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  i18n:
+    name: update translations
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup php
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+          extensions: mbstring, xml, ctype, iconv, intl, pdo_sqlite, dom
+          coverage: none
+          tools: composer:v2
+
+      - name: install composer dependencies
+        run: composer install --no-interaction --no-progress
+
+      - name: install kirby cli globally
+        run: composer global require getkirby/cli
+
+      - name: extract translations
+        run: |
+          export PATH="$HOME/.composer/vendor/bin:$PATH"
+          kirby i18n:extract --clean
+
+      - uses: lingodotdev/lingo.dev@main
+        with:
+          api-key: ${{ secrets.LINGODOTDEV_API_KEY }}
