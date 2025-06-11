@@ -2,3 +2,7 @@ extends: pages/home
 title: Error Page
 image:
   icon: cancel
+
+buttons:
+  - open
+  - preview

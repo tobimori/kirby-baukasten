@@ -4,6 +4,13 @@ image:
   back: "var(--theme-accent)"
   color: "var(--theme-primary)"
 
+buttons:
+  - open
+  - preview
+  - settings
+  - status
+  - robots
+
 options:
   # access
   # changeSlug

@@ -75,6 +75,7 @@ return [
 				'users',
 				'plausible',
 				'retour',
+				'queues',
 			]
 		)
 	],

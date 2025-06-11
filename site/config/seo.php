@@ -4,7 +4,9 @@ return [
 	'robots' => [
 		'pageSettings' => false
 	],
-	'canonicalBase' => env("APP_URL"),
+	'canonical' => [
+		'base' => env("APP_URL")
+	],
 	'files' => [
 		'parent' => 'site.find("page://images")',
 		'template' => 'image'
