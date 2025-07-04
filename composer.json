@@ -21,7 +21,7 @@
 		"php": ">=8.4.0",
 		"getkirby/cms": "^5",
 		"bnomei/kirby3-dotenv": "^5.0",
-		"tobimori/kirby-seo": "dev-main",
+		"tobimori/kirby-seo": "^2.0.0-alpha.3",
 		"lukaskleinschmidt/kirby-laravel-vite": "^2.1.1",
 		"tobimori/kirby-spielzeug": "^2.1.0",
 		"distantnative/retour-for-kirby": "^5.0",
@@ -33,7 +33,9 @@
 		"genxbe/kirby-ray": "^2.0",
 		"junohamburg/kirby-language-selector": "^2.0",
 		"lukaskleinschmidt/kirby-types": "^2.0",
-		"tobimori/kirby-trawl": "^1.0"
+		"tobimori/kirby-trawl": "^1.0",
+		"tobimori/kirby-queues": "^1.0@beta",
+		"spatie/schema-org": "^3.23"
 	},
 	"extra": {
 		"kirby-cms-path": false

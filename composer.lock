@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7994af73e9a19d12afb47d00066bb345",
+    "content-hash": "9c258e712d447baa028abf5b39a35b3c",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -80,16 +80,16 @@
         },
         {
             "name": "bnomei/kirby3-janitor",
-            "version": "5.2.0",
+            "version": "5.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bnomei/kirby3-janitor.git",
-                "reference": "5e2eec128e5e95430622a436e3a9d9af7563e90e"
+                "url": "https://github.com/bnomei/kirby-janitor.git",
+                "reference": "7f57717b1b376023ac036ea669f0066e98fe3696"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bnomei/kirby3-janitor/zipball/5e2eec128e5e95430622a436e3a9d9af7563e90e",
-                "reference": "5e2eec128e5e95430622a436e3a9d9af7563e90e",
+                "url": "https://api.github.com/repos/bnomei/kirby-janitor/zipball/7f57717b1b376023ac036ea669f0066e98fe3696",
+                "reference": "7f57717b1b376023ac036ea669f0066e98fe3696",
                 "shasum": ""
             },
             "require": {
@@ -100,7 +100,7 @@
             },
             "require-dev": {
                 "getkirby/cli": "^1.5.0",
-                "getkirby/cms": "5.0.0-beta.4",
+                "getkirby/cms": "5.0.0",
                 "larastan/larastan": "^v3.0.0",
                 "laravel/pint": "^1.13",
                 "pestphp/pest": "^v3.5.1",
@@ -126,7 +126,7 @@
                 }
             ],
             "description": "Kirby Plugin for running commands like cleaning the cache from within the Panel, PHP code or a cronjob",
-            "homepage": "https://github.com/bnomei/kirby3-janitor",
+            "homepage": "https://github.com/bnomei/kirby-janitor",
             "keywords": [
                 "Tinker",
                 "backup",
@@ -147,10 +147,10 @@
                 "render"
             ],
             "support": {
-                "issues": "https://github.com/bnomei/kirby3-janitor/issues",
-                "source": "https://github.com/bnomei/kirby3-janitor/tree/v5.2.0"
+                "issues": "https://github.com/bnomei/kirby-janitor/issues",
+                "source": "https://github.com/bnomei/kirby-janitor/tree/v5.3.0"
             },
-            "time": "2025-04-02T14:40:18+00:00"
+            "time": "2025-07-03T10:07:21+00:00"
         },
         {
             "name": "brick/math",
@@ -503,16 +503,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.18.0",
+            "version": "2.18.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "a7de6c3c6c3c022f5cfc337f8ede6a14460cf77e"
+                "reference": "59a123a3d459c5a23055802237cb317f609867e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/a7de6c3c6c3c022f5cfc337f8ede6a14460cf77e",
-                "reference": "a7de6c3c6c3c022f5cfc337f8ede6a14460cf77e",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/59a123a3d459c5a23055802237cb317f609867e5",
+                "reference": "59a123a3d459c5a23055802237cb317f609867e5",
                 "shasum": ""
             },
             "require": {
@@ -562,7 +562,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.18.0"
+                "source": "https://github.com/filp/whoops/tree/2.18.3"
             },
             "funding": [
                 {
@@ -570,7 +570,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-15T12:00:00+00:00"
+            "time": "2025-06-16T00:02:10+00:00"
         },
         {
             "name": "gehrisandro/tailwind-merge-php",
@@ -758,16 +758,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "5.0.0-rc.3",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "6dac5cd0e1d579685509d4306b2561962e06f013"
+                "reference": "ddd11f9b4a23e0b5d306b146ca5d6b7a1c1909a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/6dac5cd0e1d579685509d4306b2561962e06f013",
-                "reference": "6dac5cd0e1d579685509d4306b2561962e06f013",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/ddd11f9b4a23e0b5d306b146ca5d6b7a1c1909a9",
+                "reference": "ddd11f9b4a23e0b5d306b146ca5d6b7a1c1909a9",
                 "shasum": ""
             },
             "require": {
@@ -785,7 +785,7 @@
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
                 "ext-simplexml": "*",
-                "filp/whoops": "2.18.0",
+                "filp/whoops": "2.18.3",
                 "getkirby/composer-installer": "^1.2.1",
                 "laminas/laminas-escaper": "2.17.0",
                 "michelf/php-smartypants": "1.8.1",
@@ -793,7 +793,7 @@
                 "phpmailer/phpmailer": "6.10.0",
                 "symfony/polyfill-intl-idn": "1.32.0",
                 "symfony/polyfill-mbstring": "1.32.0",
-                "symfony/yaml": "7.3.0"
+                "symfony/yaml": "7.3.1"
             },
             "replace": {
                 "symfony/polyfill-php72": "*"
@@ -858,7 +858,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2025-06-03T11:50:31+00:00"
+            "time": "2025-07-03T11:23:56+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -2578,21 +2578,20 @@
         },
         {
             "name": "ramsey/uuid",
-            "version": "4.8.1",
+            "version": "4.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "fdf4dd4e2ff1813111bd0ad58d7a1ddbb5b56c28"
+                "reference": "4e0e23cc785f0724a0e838279a9eb03f28b092a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/fdf4dd4e2ff1813111bd0ad58d7a1ddbb5b56c28",
-                "reference": "fdf4dd4e2ff1813111bd0ad58d7a1ddbb5b56c28",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/4e0e23cc785f0724a0e838279a9eb03f28b092a0",
+                "reference": "4e0e23cc785f0724a0e838279a9eb03f28b092a0",
                 "shasum": ""
             },
             "require": {
                 "brick/math": "^0.8.8 || ^0.9 || ^0.10 || ^0.11 || ^0.12 || ^0.13",
-                "ext-json": "*",
                 "php": "^8.0",
                 "ramsey/collection": "^1.2 || ^2.0"
             },
@@ -2651,9 +2650,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
-                "source": "https://github.com/ramsey/uuid/tree/4.8.1"
+                "source": "https://github.com/ramsey/uuid/tree/4.9.0"
             },
-            "time": "2025-06-01T06:28:46+00:00"
+            "time": "2025-06-25T14:20:11+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -2907,6 +2906,79 @@
                 }
             ],
             "time": "2025-04-18T08:17:40+00:00"
+        },
+        {
+            "name": "spatie/schema-org",
+            "version": "3.23.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/schema-org.git",
+                "reference": "a8dc1b6fcdd06afc1ab084c3ead9b7a4c3d7a35d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/schema-org/zipball/a8dc1b6fcdd06afc1ab084c3ead9b7a4c3d7a35d",
+                "reference": "a8dc1b6fcdd06afc1ab084c3ead9b7a4c3d7a35d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.6",
+                "graham-campbell/analyzer": "^4.2",
+                "illuminate/collections": "^8.62.0",
+                "league/flysystem": "^2.3.0 || ^3.0",
+                "pestphp/pest": "^1.21",
+                "symfony/console": "^5.3.7 || 6.0",
+                "twig/twig": "^3.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\SchemaOrg\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Tom Witkowski",
+                    "email": "dev.gummibeer@gmail.com",
+                    "homepage": "https://gummibeer.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fluent builder Schema.org types and ld+json generator",
+            "homepage": "https://github.com/spatie/schema-org",
+            "keywords": [
+                "schema-org",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/schema-org/issues",
+                "source": "https://github.com/spatie/schema-org/tree/3.23.1"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-01-31T14:54:12+00:00"
         },
         {
             "name": "srwiez/thumbhash",
@@ -3644,16 +3716,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v7.3.0",
+            "version": "v7.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "548f6760c54197b1084e1e5c71f6d9d523f2f78e"
+                "reference": "6e209fbe5f5a7b6043baba46fe5735a4b85d0d42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/548f6760c54197b1084e1e5c71f6d9d523f2f78e",
-                "reference": "548f6760c54197b1084e1e5c71f6d9d523f2f78e",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/6e209fbe5f5a7b6043baba46fe5735a4b85d0d42",
+                "reference": "6e209fbe5f5a7b6043baba46fe5735a4b85d0d42",
                 "shasum": ""
             },
             "require": {
@@ -3708,7 +3780,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v7.3.0"
+                "source": "https://github.com/symfony/var-dumper/tree/v7.3.1"
             },
             "funding": [
                 {
@@ -3724,20 +3796,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-04-27T18:39:23+00:00"
+            "time": "2025-06-27T19:55:54+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v7.3.0",
+            "version": "v7.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "cea40a48279d58dc3efee8112634cb90141156c2"
+                "reference": "0c3555045a46ab3cd4cc5a69d161225195230edb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/cea40a48279d58dc3efee8112634cb90141156c2",
-                "reference": "cea40a48279d58dc3efee8112634cb90141156c2",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/0c3555045a46ab3cd4cc5a69d161225195230edb",
+                "reference": "0c3555045a46ab3cd4cc5a69d161225195230edb",
                 "shasum": ""
             },
             "require": {
@@ -3780,7 +3852,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v7.3.0"
+                "source": "https://github.com/symfony/yaml/tree/v7.3.1"
             },
             "funding": [
                 {
@@ -3796,20 +3868,83 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-04-04T10:10:33+00:00"
+            "time": "2025-06-03T06:57:57+00:00"
         },
         {
-            "name": "tobimori/kirby-seo",
-            "version": "dev-main",
+            "name": "tobimori/kirby-queues",
+            "version": "1.0.0-beta.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "e84782f79c19b0a81e61833542b31da13f19c32e"
+                "url": "https://github.com/tobimori/kirby-queues.git",
+                "reference": "c3d06c97d34ac73ba14c43a554a6fe19ae811095"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/e84782f79c19b0a81e61833542b31da13f19c32e",
-                "reference": "e84782f79c19b0a81e61833542b31da13f19c32e",
+                "url": "https://api.github.com/repos/tobimori/kirby-queues/zipball/c3d06c97d34ac73ba14c43a554a6fe19ae811095",
+                "reference": "c3d06c97d34ac73ba14c43a554a6fe19ae811095",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "getkirby/cli": "^1.0",
+                "getkirby/cms": "^5.0",
+                "pestphp/pest": "^2.0",
+                "phpstan/phpstan": "^1.0"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": false
+            },
+            "autoload": {
+                "files": [
+                    "helpers.php"
+                ],
+                "psr-4": {
+                    "tobimori\\Queues\\": "classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Möritz",
+                    "email": "tobias@moeritz.io"
+                }
+            ],
+            "description": "A comprehensive background job queue system for Kirby CMS with scheduled task support and panel monitoring interface",
+            "keywords": [
+                "background-tasks",
+                "jobs",
+                "kirby",
+                "kirby-cms",
+                "kirby-plugin",
+                "queues",
+                "scheduler"
+            ],
+            "support": {
+                "issues": "https://github.com/tobimori/kirby-queues/issues",
+                "source": "https://github.com/tobimori/kirby-queues/tree/1.0.0-beta.1"
+            },
+            "time": "2025-06-12T15:01:25+00:00"
+        },
+        {
+            "name": "tobimori/kirby-seo",
+            "version": "2.0.0-alpha.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tobimori/kirby-seo.git",
+                "reference": "3c43837e1c39693d9f22ba34cf7d0cae263e84f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/3c43837e1c39693d9f22ba34cf7d0cae263e84f6",
+                "reference": "3c43837e1c39693d9f22ba34cf7d0cae263e84f6",
                 "shasum": ""
             },
             "require": {
@@ -3818,12 +3953,12 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.48",
+                "getkirby/cms": "^5.0.0",
                 "spatie/schema-org": "^3.23"
             },
             "suggest": {
                 "spatie/schema-org": "Enable the Schema.org support"
             },
-            "default-branch": true,
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": false
@@ -3847,7 +3982,7 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/main"
+                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-alpha.3"
             },
             "funding": [
                 {
@@ -3855,7 +3990,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-13T14:26:57+00:00"
+            "time": "2025-06-24T14:33:28+00:00"
         },
         {
             "name": "tobimori/kirby-spielzeug",
@@ -4028,16 +4163,16 @@
         },
         {
             "name": "tobimori/kirby-trawl",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-trawl.git",
-                "reference": "a2beef52a82043292a9304daf85d860a17b8fa2b"
+                "reference": "ff62a036030f91a338991c0ce8d0922dff403949"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-trawl/zipball/a2beef52a82043292a9304daf85d860a17b8fa2b",
-                "reference": "a2beef52a82043292a9304daf85d860a17b8fa2b",
+                "url": "https://api.github.com/repos/tobimori/kirby-trawl/zipball/ff62a036030f91a338991c0ce8d0922dff403949",
+                "reference": "ff62a036030f91a338991c0ce8d0922dff403949",
                 "shasum": ""
             },
             "require": {
@@ -4046,8 +4181,8 @@
                 "php": ">=8.0"
             },
             "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.75",
                 "getkirby/cms": "^5.0",
-                "laravel/pint": "^1.13",
                 "pestphp/pest": "^2.0",
                 "pestphp/pest-plugin-type-coverage": "^2.0",
                 "phpstan/phpstan": "^1.10"
@@ -4074,9 +4209,9 @@
             "description": "Automatic translation extraction for Kirby CMS",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-trawl/issues",
-                "source": "https://github.com/tobimori/kirby-trawl/tree/1.0.0"
+                "source": "https://github.com/tobimori/kirby-trawl/tree/1.0.1"
             },
-            "time": "2025-06-03T16:47:50+00:00"
+            "time": "2025-06-03T19:52:43+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -4225,7 +4360,8 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "tobimori/kirby-seo": 20
+        "tobimori/kirby-queues": 10,
+        "tobimori/kirby-seo": 15
     },
     "prefer-stable": false,
     "prefer-lowest": false,
