@@ -12,34 +12,34 @@
 		"types": "kirby types:create --force && tsc --noEmit"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.0.0-beta.5",
+		"@biomejs/biome": "2.2.7",
 		"@rollup/plugin-inject": "^5.0.5",
 		"@tailwindcss/forms": "^0.5.10",
-		"@tailwindcss/vite": "4.1.8",
+		"@tailwindcss/vite": "4.1.16",
 		"@total-typescript/ts-reset": "^0.6.1",
 		"@types/alpinejs": "^3.13.11",
-		"@types/node": "^22.15.27",
-		"browserslist": "^4.25.0",
-		"env-cmd": "^10.1.0",
-		"kirbyup": "^3.3.0",
-		"laravel-vite-plugin": "^1.2.0",
-		"lightningcss": "^1.30.1",
+		"@types/node": "^24.9.1",
+		"browserslist": "^4.27.0",
+		"env-cmd": "^11.0.0",
+		"kirbyup": "^3.4.1",
+		"laravel-vite-plugin": "^2.0.1",
+		"lightningcss": "^1.30.2",
 		"mprocs": "^0.7.3",
-		"prettier": "^3.5.3",
-		"tailwindcss": "^4.1.8",
-		"typescript": "^5.8.3",
+		"prettier": "^3.6.2",
+		"tailwindcss": "^4.1.16",
+		"typescript": "^5.9.3",
 		"vite": "^6.3.5",
-		"vite-plugin-devtools-json": "^0.1.0",
-		"vite-svg-sprite-wrapper": "^1.4.1",
+		"vite-plugin-devtools-json": "^1.0.0",
+		"vite-svg-sprite-wrapper": "^1.5.0",
 		"vite-tsconfig-paths": "^5.1.4"
 	},
 	"dependencies": {
-		"@alpinejs/focus": "^3.14.9",
+		"@alpinejs/focus": "^3.15.0",
 		"@types/alpinejs__focus": "^3.13.4",
-		"alpinejs": "^3.14.9",
-		"htmx.org": "^1.9.12",
-		"idiomorph": "^0.7.3",
-		"unlazy": "^0.12.4"
+		"alpinejs": "^3.15.0",
+		"htmx.org": "^2.0.7",
+		"idiomorph": "^0.7.4",
+		"unlazy": "^1.0.0"
 	},
 	"browserslist": [
 		"last 2 versions",
@@ -52,7 +52,11 @@
 	"pnpm": {
 		"overrides": {
 			"vite": "npm:rolldown-vite@latest"
-		}
+		},
+		"onlyBuiltDependencies": [
+			"@parcel/watcher",
+			"esbuild"
+		]
 	},
 	"packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac"
 }

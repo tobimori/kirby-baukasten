@@ -21,7 +21,7 @@
 		"php": ">=8.4.0",
 		"getkirby/cms": "^5",
 		"bnomei/kirby3-dotenv": "^5.0",
-		"tobimori/kirby-seo": "^2.0.0-alpha.3",
+		"tobimori/kirby-seo": "^2.0.0-alpha.5",
 		"lukaskleinschmidt/kirby-laravel-vite": "^2.1.1",
 		"tobimori/kirby-spielzeug": "^2.1.0",
 		"distantnative/retour-for-kirby": "^5.0",
