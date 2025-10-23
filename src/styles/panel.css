@@ -80,6 +80,7 @@
 		.k-icon-frame
 			> .k-icon:is(
 				[data-type="survey"],
+				[data-type="file-video"],
 				[data-type="file-image"],
 				[data-type="file-word"]
 			)
@@ -93,7 +94,11 @@
 	ul
 	li:has(
 		.k-icon-frame
-			> .k-icon:not([data-type="file-image"], [data-type="file-word"])
+			> .k-icon:not(
+				[data-type="file-image"],
+				[data-type="file-video"],
+				[data-type="file-word"]
+			)
 	) {
 	display: none;
 }

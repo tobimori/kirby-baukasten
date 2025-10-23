@@ -1,5 +1,7 @@
 <?php
 
+use Kirby\Content\Field;
+
 class VideosPage extends FilesPage
 {
 	/**
