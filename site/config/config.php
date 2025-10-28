@@ -70,7 +70,8 @@ return [
 			[
 				'-',
 				'images' => Menu::page(null, 'file-image', page('page://images')),
-				'files' => Menu::page(null, 'file-word', page('page://files')),
+				// 'videos' => Menu::page(null, 'file-video', page('page://videos')),
+				// 'files' => Menu::page(null, 'file-word', page('page://files')),
 				'-',
 				'users',
 				'plausible',
