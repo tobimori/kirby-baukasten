@@ -10,6 +10,6 @@ return [
 		'LC_ALL' => 'en_US'
 	],
 	'name' => 'English',
-	'translations' => Json::read(__DIR__ . '/../translations/de.json'),
+	'translations' => Json::read(__DIR__ . '/../translations/en.json'),
 	'url' => '/en'
 ];
