@@ -16,7 +16,6 @@
 			"homepage": "https://moeritz.io"
 		}
 	],
-	"minimum-stability": "beta",
 	"require": {
 		"php": ">=8.4.0",
 		"getkirby/cms": "^5",

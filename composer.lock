@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "814d434503971a039290a01dcff5d0db",
+    "content-hash": "2b8d09c51aedb1fcc2816e37ab50b485",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -4399,7 +4399,7 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "beta",
+    "minimum-stability": "stable",
     "stability-flags": {
         "tobimori/kirby-queues": 10,
         "tobimori/kirby-seo": 15

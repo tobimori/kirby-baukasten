@@ -1,0 +1,37 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "enabledManagers": ["composer"],
+  "dependencyDashboard": true,
+  "timezone": "Europe/Berlin",
+  "lockFileMaintenance": {
+    "enabled": false
+  },
+  "ignoreUnstable": true,
+  "packageRules": [
+	  {
+	    "matchUpdateTypes": ["minor", "patch", "digest"],
+	    "schedule": ["before 4am on monday"],
+	    "groupName": "Weekly Updates"
+	  },
+    {
+      "matchUpdateTypes": ["patch", "minor", "major"],
+      "matchConfidence": "high",
+      "vulnerabilityAlerts": true,
+      "schedule": [],
+      "groupName": null
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true,
+      "groupName": null
+    },
+    {
+      "matchPackageNames": ["php"],
+      "dependencyDashboardApproval": true,
+      "groupName": "PHP Version"
+    }
+  ]
+}
