@@ -7,6 +7,9 @@
   "lockFileMaintenance": {
     "enabled": false
   },
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
   "ignoreUnstable": true,
   "packageRules": [
     {
@@ -15,22 +18,17 @@
       "groupName": "Weekly Updates"
     },
     {
-      "matchUpdateTypes": ["patch", "minor", "major"],
-      "vulnerabilityAlerts": {
-        "enabled": true
-      },
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true,
       "schedule": [],
       "groupName": null
     },
     {
-      "matchUpdateTypes": ["major"],
-      "dependencyDashboardApproval": true,
-      "groupName": null
-    },
-    {
       "matchPackageNames": ["php"],
+      "matchUpdateTypes": ["minor", "major"],
       "dependencyDashboardApproval": true,
-      "groupName": "PHP Version"
+      "schedule": [],
+      "groupName": null
     }
   ]
 }
