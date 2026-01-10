@@ -18,7 +18,6 @@
 	  },
     {
       "matchUpdateTypes": ["patch", "minor", "major"],
-      "matchConfidence": "high",
       "vulnerabilityAlerts": true,
       "schedule": [],
       "groupName": null
