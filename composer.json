@@ -17,7 +17,7 @@
 		}
 	],
 	"require": {
-		"php": ">=8.4.0",
+		"php": "~8.4.0",
 		"getkirby/cms": "^5",
 		"bnomei/kirby3-dotenv": "^5.0",
 		"tobimori/kirby-seo": "^2.0.0-alpha.5",

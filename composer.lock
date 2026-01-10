@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2b8d09c51aedb1fcc2816e37ab50b485",
+    "content-hash": "28eea5ecb75137bf7066a32e646cf65d",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -4407,7 +4407,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.4.0"
+        "php": "~8.4.0"
     },
     "platform-dev": {},
     "plugin-api-version": "2.9.0"
