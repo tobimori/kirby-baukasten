@@ -21,8 +21,13 @@ declare global {
 window.Alpine = Alpine
 
 Alpine.plugin(focus)
-Alpine.start()
 
-document.addEventListener("alpine:init", () => {
-	lazyLoad()
-})
+for (const [path, module] of Object.entries(import.meta.glob("./components/*.ts", { eager: true }))) {
+	const name = path.slice(13, -3)
+	// convert kebab-case to camelCase
+	const camelName = name.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
+	Alpine.data(camelName, (module as { default: any }).default)
+}
+
+Alpine.start()
+lazyLoad('[loading="lazy"][data-src]')
