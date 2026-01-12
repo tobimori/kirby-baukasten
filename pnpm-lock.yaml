@@ -87,9 +87,6 @@ importers:
       vite-svg-sprite-wrapper:
         specifier: ^1.5.0
         version: 1.5.0(rolldown-vite@7.3.1(@types/node@24.10.6)(jiti@2.6.1)(sass@1.97.2))
-      vite-tsconfig-paths:
-        specifier: ^6.0.4
-        version: 6.0.4(rolldown-vite@7.3.1(@types/node@24.10.6)(jiti@2.6.1)(sass@1.97.2))(typescript@5.9.3)
 
 packages:
 
@@ -1179,9 +1176,6 @@ packages:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
     deprecated: Glob versions prior to v9 are no longer supported
 
-  globrex@0.1.2:
-    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
-
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
@@ -1681,16 +1675,6 @@ packages:
     resolution: {integrity: sha512-aZbgViZrg1QNcG+LULa7nhZpJTZSLm/mXnHXnbAbjmN5aSa0y7V+wvv6+4WaBtpISJzThKy+PIPxc1Nq1EJ9mg==}
     engines: {node: '>= 14.0.0'}
 
-  tsconfck@3.1.6:
-    resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
-    engines: {node: ^18 || >=20}
-    hasBin: true
-    peerDependencies:
-      typescript: ^5.0.0
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
@@ -1734,14 +1718,6 @@ packages:
     resolution: {integrity: sha512-IedO8KQYgW69C2wDAAWfRgNpPq3rq3n2vV5/326g3kwACyJM6+SVII61Zl89rVExTa1GcAO1LmKIsv93Wvi2yg==}
     peerDependencies:
       vite: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
-
-  vite-tsconfig-paths@6.0.4:
-    resolution: {integrity: sha512-iIsEJ+ek5KqRTK17pmxtgIxXtqr3qDdE6OxrP9mVeGhVDNXRJTKN/l9oMbujTQNzMLe6XZ8qmpztfbkPu2TiFQ==}
-    peerDependencies:
-      vite: '*'
-    peerDependenciesMeta:
-      vite:
-        optional: true
 
   vue@2.7.16:
     resolution: {integrity: sha512-4gCtFXaAA3zYZdTp5s4Hl2sozuySsgz4jy1EnpBHNfpMa9dK1ZCG7viqBPCwXtmgc8nHqUsAu3G4gtmXkkY3Sw==}
@@ -2782,8 +2758,6 @@ snapshots:
       once: 1.4.0
       path-is-absolute: 1.0.1
 
-  globrex@0.1.2: {}
-
   graceful-fs@4.2.11: {}
 
   html-tags@2.0.0: {}
@@ -3252,10 +3226,6 @@ snapshots:
 
   triple-beam@1.4.1: {}
 
-  tsconfck@3.1.6(typescript@5.9.3):
-    optionalDependencies:
-      typescript: 5.9.3
-
   tslib@2.8.1:
     optional: true
 
@@ -3303,17 +3273,6 @@ snapshots:
       picomatch: 4.0.3
       svg-sprite: 2.0.4
       vite: rolldown-vite@7.3.1(@types/node@24.10.6)(jiti@2.6.1)(sass@1.97.2)
-
-  vite-tsconfig-paths@6.0.4(rolldown-vite@7.3.1(@types/node@24.10.6)(jiti@2.6.1)(sass@1.97.2))(typescript@5.9.3):
-    dependencies:
-      debug: 4.4.3
-      globrex: 0.1.2
-      tsconfck: 3.1.6(typescript@5.9.3)
-    optionalDependencies:
-      vite: rolldown-vite@7.3.1(@types/node@24.10.6)(jiti@2.6.1)(sass@1.97.2)
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
 
   vue@2.7.16:
     dependencies:

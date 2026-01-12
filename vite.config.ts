@@ -9,7 +9,6 @@ import { browserslistToTargets } from "lightningcss"
 import { defineConfig, loadEnv, type Plugin } from "vite"
 import devtoolsJson from "vite-plugin-devtools-json"
 import svgSprite from "vite-svg-sprite-wrapper"
-import tsconfigPaths from "vite-tsconfig-paths"
 import { browserslist as browserslistConfig } from "./package.json"
 
 const execAsync = promisify(exec)
@@ -44,7 +43,11 @@ export default defineConfig(({ mode }) => {
 
 	return {
 		base: mode === "development" ? "/" : "/dist/",
-
+		resolve: {
+      alias: {
+        "@": resolve(__dirname, "src")
+      }
+    },
 		build: {
 			outDir: resolve(__dirname, "public/dist"),
 			emptyOutDir: true,
@@ -75,7 +78,6 @@ export default defineConfig(({ mode }) => {
 				input: ["src/index.ts", "src/styles/index.css", "src/styles/panel.css"],
 				refresh: ["site/{layouts,snippets,templates}/**/*"]
 			}),
-			tsconfigPaths(),
 			tailwind(),
 			devtoolsJson(),
 			kirbyTypes()
