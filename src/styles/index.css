@@ -102,6 +102,10 @@
 }
 
 @layer base {
+	[x-cloak] {
+		display: none !important;
+	}
+
 	svg {
 		@apply w-full h-full;
 	}
