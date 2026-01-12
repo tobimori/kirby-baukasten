@@ -15,6 +15,7 @@
     {
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "schedule": ["before 4am on monday"],
+      "matchPackageNames": ["!php"],
       "groupName": "Weekly Updates"
     },
     {
