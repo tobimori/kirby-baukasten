@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28eea5ecb75137bf7066a32e646cf65d",
+    "content-hash": "986f98fbd9e5fe4c8eb8190335948d66",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -1288,24 +1288,23 @@
         },
         {
             "name": "johannschopplich/kirby-plausible",
-            "version": "0.5.0",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-plausible.git",
-                "reference": "cad06a39e4ca5cf3823882cb51e3b0bc2ee4ff1d"
+                "reference": "bfd8738efd1b0d6302916ee559324b9805d580a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-plausible/zipball/cad06a39e4ca5cf3823882cb51e3b0bc2ee4ff1d",
-                "reference": "cad06a39e4ca5cf3823882cb51e3b0bc2ee4ff1d",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-plausible/zipball/bfd8738efd1b0d6302916ee559324b9805d580a9",
+                "reference": "bfd8738efd1b0d6302916ee559324b9805d580a9",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.2"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "@stable",
-                "getkirby/cms": "^4"
+                "getkirby/cms": "^5"
             },
             "type": "kirby-plugin",
             "extra": {
@@ -1318,7 +1317,7 @@
             "authors": [
                 {
                     "name": "Johann Schopplich",
-                    "email": "pkg@johannschopplich.com",
+                    "email": "hello@johannschopplich.com",
                     "homepage": "https://johannschopplich.com"
                 }
             ],
@@ -1332,9 +1331,9 @@
                 "plausible"
             ],
             "support": {
-                "source": "https://github.com/johannschopplich/kirby-plausible/tree/v0.5.0"
+                "source": "https://github.com/johannschopplich/kirby-plausible/tree/v1.0.3"
             },
-            "time": "2024-02-05T12:29:44+00:00"
+            "time": "2025-07-04T11:41:15+00:00"
         },
         {
             "name": "junohamburg/kirby-language-selector",
@@ -2090,16 +2089,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "1e0cd5370df5dd2e556a36b9c62f62e555870495"
+                "reference": "16dbf9937da8d4528ceb2145c9c7c0bd29e26374"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/1e0cd5370df5dd2e556a36b9c62f62e555870495",
-                "reference": "1e0cd5370df5dd2e556a36b9c62f62e555870495",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/16dbf9937da8d4528ceb2145c9c7c0bd29e26374",
+                "reference": "16dbf9937da8d4528ceb2145c9c7c0bd29e26374",
                 "shasum": ""
             },
             "require": {
@@ -2131,9 +2130,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.3.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.3.1"
             },
-            "time": "2025-08-30T15:50:23+00:00"
+            "time": "2026-01-12T11:33:04+00:00"
         },
         {
             "name": "psr/container",
@@ -3968,16 +3967,16 @@
         },
         {
             "name": "tobimori/kirby-seo",
-            "version": "2.0.0-alpha.8",
+            "version": "2.0.0-alpha.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "70205675438fe094d3b43e80731dee6f6b993dcc"
+                "reference": "fd70cb56c5cd919ddff92f95ee69f3da5eb76dcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/70205675438fe094d3b43e80731dee6f6b993dcc",
-                "reference": "70205675438fe094d3b43e80731dee6f6b993dcc",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/fd70cb56c5cd919ddff92f95ee69f3da5eb76dcf",
+                "reference": "fd70cb56c5cd919ddff92f95ee69f3da5eb76dcf",
                 "shasum": ""
             },
             "require": {
@@ -4019,15 +4018,19 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-alpha.8"
+                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-alpha.9"
             },
             "funding": [
+                {
+                    "url": "https://plugins.andkindness.com/seo/preorder",
+                    "type": "custom"
+                },
                 {
                     "url": "https://github.com/tobimori",
                     "type": "github"
                 }
             ],
-            "time": "2025-10-28T11:41:58+00:00"
+            "time": "2026-01-11T23:45:28+00:00"
         },
         {
             "name": "tobimori/kirby-spielzeug",
@@ -4145,25 +4148,29 @@
         },
         {
             "name": "tobimori/kirby-thumbhash",
-            "version": "1.1.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-thumbhash.git",
-                "reference": "9cd6c2d93f171a8cd484a686d267ff8adbb2b9fe"
+                "reference": "f33ecf31033691b054d2e991b6e414adbf6584e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-thumbhash/zipball/9cd6c2d93f171a8cd484a686d267ff8adbb2b9fe",
-                "reference": "9cd6c2d93f171a8cd484a686d267ff8adbb2b9fe",
+                "url": "https://api.github.com/repos/tobimori/kirby-thumbhash/zipball/f33ecf31033691b054d2e991b6e414adbf6584e7",
+                "reference": "f33ecf31033691b054d2e991b6e414adbf6584e7",
                 "shasum": ""
             },
             "require": {
+                "ext-gd": "*",
                 "getkirby/composer-installer": "^1.2",
-                "php": ">=8.0.0",
+                "php": ">=8.3.0",
                 "srwiez/thumbhash": "^1.1"
             },
             "require-dev": {
-                "getkirby/cms": "^3.8"
+                "getkirby/cms": "^5.0"
+            },
+            "suggest": {
+                "ext-imagick": "For better performance and quality with Imagick driver"
             },
             "type": "kirby-plugin",
             "extra": {
@@ -4188,7 +4195,7 @@
             "homepage": "https://github.com/tobimori/kirby-thumbhash#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-thumbhash/issues",
-                "source": "https://github.com/tobimori/kirby-thumbhash/tree/1.1.1"
+                "source": "https://github.com/tobimori/kirby-thumbhash/tree/2.0.0"
             },
             "funding": [
                 {
@@ -4196,7 +4203,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-12T16:48:19+00:00"
+            "time": "2025-11-16T12:37:44+00:00"
         },
         {
             "name": "tobimori/kirby-trawl",

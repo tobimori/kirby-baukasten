@@ -79,7 +79,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       vite:
-        specifier: npm:rolldown-vite@^7.3.1
+        specifier: npm:rolldown-vite@latest
         version: rolldown-vite@7.3.1(@types/node@24.10.6)(jiti@2.6.1)(sass@1.97.2)
       vite-plugin-devtools-json:
         specifier: ^1.0.0
