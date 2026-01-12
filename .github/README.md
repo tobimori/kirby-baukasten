@@ -33,6 +33,7 @@ cp .env.example .env
 ```sh
 mkdir -p data/storage/content/0_home && printf 'Title: Home\n\n----\n\nUuid: home\n' > data/storage/content/0_home/home.de.txt
 mkdir -p data/storage/content/images && printf 'Uuid: images\n' > data/storage/content/images/images.de.txt
+mkdir -p data/storage/content/error && printf 'Title: Seite nicht gefunden\n\n----\n\nUuid: error\n' > data/storage/content/error/error.de.txt
 
 # optional
 mkdir -p data/storage/content/files && printf 'Uuid: files\n' > data/storage/content/files/files.de.txt
