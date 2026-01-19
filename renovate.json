@@ -14,7 +14,7 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "digest"],
-      "schedule": ["before 4am on monday"],
+      "schedule": ["before 12:00 on monday"],
       "matchPackageNames": ["!php"],
       "groupName": "Weekly Updates"
     },
