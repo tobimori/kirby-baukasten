@@ -15,12 +15,20 @@ return [
 	'debug' => json_decode(env('KIRBY_DEBUG')),
 	'routes' => require __DIR__ . '/routes.php',
 	'thumbs' => require __DIR__ . '/thumbs.php',
+	'hooks' => require __DIR__ . '/hooks.php',
 	'yaml.handler' => 'symfony',
 	'date.handler' => 'intl',
 	'url' => env("APP_URL"),
 	'tobimori.trawl' => [
 		'sourceLanguage' => 'en',
-		'languages' => ['de', 'en']
+		'languages' => ['de', 'en'],
+		'include' => [
+			'site/templates/**/*.php',
+			'site/snippets/**/*.php',
+			'site/models/**/*.php',
+			'site/blueprints/**/*.yml',
+			'site/config/**/*.php',
+		]
 	],
 	'tobimori.seo' => require __DIR__ . '/seo.php',
 	'tobimori.dreamform' => require __DIR__ . '/dreamform.php',

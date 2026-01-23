@@ -31,6 +31,10 @@ checksums:
     No%20link%20provided: 92e5a6e23b663213775de6d037e7dbd4
     Open%20in%20new%20tab%3F: e466e2dd02fe712d63ecc9406766168c
     Pages: 75088c94fb3c374efd452624d4b74be8
+    SVG%20files%20must%20be%20smaller%20than%2050KB.%20Please%20upload%20a%20PNG%20instead%2C%20or%20optimize%20the%20SVG%20with%20SVGO.: ebbc04540ec6eae8c349865364884513
+    SVG%20files%20with%20embedded%20bitmap%20data%20are%20not%20allowed.%20Please%20upload%20a%20PNG%20instead.: 0a8b3432f8612515ae824e58f4a0211f
+    SVG%20files%20with%20embedded%20images%20are%20not%20allowed.%20Please%20upload%20a%20PNG%20instead.: a16a39a3f18578c745c817853bbed8e9
+    SVG%20files%20with%20text%20elements%20are%20not%20allowed.%20Please%20convert%20text%20to%20paths%2C%20or%20upload%20a%20PNG%20instead.: 8f8520406438e758dc17f7744ca6b12f
     Skip%20navigation: c2a1c97642633f056ae78d1952776298
     Subpages: 72a6745d2d3ba9379d294b4049f22228
     Text: 4ddccc1974775ed7357f9beaf9361cec
