@@ -9,10 +9,21 @@
 		"build": "pnpm run \"/build:/\"",
 		"build:site": "vite build",
 		"build:plugin": "cd site/plugins/extended && kirbyup src/index.js",
-		"types": "kirby types:create --force && tsc --noEmit"
+		"types": "kirby types:create --force && tsc --noEmit",
+		"lint": "oxlint",
+		"lint:fix": "oxlint --fix",
+		"fmt": "oxfmt .",
+		"fmt:check": "oxfmt --check ."
+	},
+	"dependencies": {
+		"@alpinejs/focus": "^3.15.3",
+		"@types/alpinejs__focus": "^3.13.4",
+		"alpinejs": "^3.15.3",
+		"htmx.org": "^2.0.8",
+		"idiomorph": "^0.7.4",
+		"unlazy": "^1.0.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.3.11",
 		"@rollup/plugin-inject": "^5.0.5",
 		"@tailwindcss/forms": "^0.5.11",
 		"@tailwindcss/vite": "4.1.18",
@@ -25,20 +36,13 @@
 		"laravel-vite-plugin": "^2.0.1",
 		"lightningcss": "^1.30.2",
 		"mprocs": "^0.8.2",
-		"prettier": "^3.7.4",
+		"oxfmt": "^0.28.0",
+		"oxlint": "^1.43.0",
 		"tailwindcss": "^4.1.18",
 		"typescript": "^5.9.3",
 		"vite": "npm:rolldown-vite@^7.3.1",
 		"vite-plugin-devtools-json": "^1.0.0",
 		"vite-svg-sprite-wrapper": "^1.5.0"
-	},
-	"dependencies": {
-		"@alpinejs/focus": "^3.15.3",
-		"@types/alpinejs__focus": "^3.13.4",
-		"alpinejs": "^3.15.3",
-		"htmx.org": "^2.0.8",
-		"idiomorph": "^0.7.4",
-		"unlazy": "^1.0.0"
 	},
 	"browserslist": [
 		"last 2 versions",
@@ -48,6 +52,7 @@
 		"not op_mini all",
 		"not and_uc > 0"
 	],
+	"packageManager": "pnpm@10.28.2",
 	"pnpm": {
 		"overrides": {
 			"vite": "npm:rolldown-vite@latest"
@@ -56,6 +61,5 @@
 			"@parcel/watcher",
 			"esbuild"
 		]
-	},
-	"packageManager": "pnpm@10.28.2"
+	}
 }

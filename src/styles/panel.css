@@ -9,9 +9,7 @@
 	.k-panel-main {
 		max-width: 116rem;
 		margin-inline: auto;
-		padding-inline-start: calc(
-			var(--main-start, 0) + var(--main-padding-inline)
-		);
+		padding-inline-start: calc(var(--main-start, 0) + var(--main-padding-inline));
 	}
 }
 
@@ -64,12 +62,7 @@
 }
 
 /** No page header for files */
-:where(
-		[data-template="images"],
-		[data-template="files"],
-		[data-template="videos"]
-	)
-	.k-page-view-header {
+:where([data-template="images"], [data-template="files"], [data-template="videos"]) .k-page-view-header {
 	display: none;
 }
 
@@ -78,12 +71,7 @@
 	.k-page-tree
 	li:has(
 		.k-icon-frame
-			> .k-icon:is(
-				[data-type="survey"],
-				[data-type="file-video"],
-				[data-type="file-image"],
-				[data-type="file-word"]
-			)
+			> .k-icon:is([data-type="survey"], [data-type="file-video"], [data-type="file-image"], [data-type="file-word"])
 	) {
 	display: none;
 }
@@ -92,14 +80,7 @@
 	ul
 	li
 	ul
-	li:has(
-		.k-icon-frame
-			> .k-icon:not(
-				[data-type="file-image"],
-				[data-type="file-video"],
-				[data-type="file-word"]
-			)
-	) {
+	li:has(.k-icon-frame > .k-icon:not([data-type="file-image"], [data-type="file-video"], [data-type="file-word"])) {
 	display: none;
 }
 

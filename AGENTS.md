@@ -12,14 +12,14 @@ This project uses **desktop-first** breakpoints (opposite of Tailwind's default 
 DO NOT use a prefix like `min-xl` to target larger screens.
 
 ```html
-<div class="p-8 md:p-4">
+<div class="p-8 md:p-4"></div>
 ```
 
 | Viewport | Padding |
-|----------|---------|
+| -------- | ------- |
 | > 44rem  | p-8     |
 | ≤ 44rem  | p-4     |
-  
+
 The config can be found in `src/styles/index.css`.
 
 ### !important
@@ -27,7 +27,7 @@ The config can be found in `src/styles/index.css`.
 If you really need to force `!important`, use the `!` suffix (NOT prefix):
 
 ```html
-<div class="bg-white bg-black!">
+<div class="bg-white bg-black!"></div>
 ```
 
 ### Spacing scale
@@ -61,6 +61,7 @@ Define components with a default export in `src/components/`. These will be auto
 AVOID setting preliminary variables in files. Prefer inline expressions instead UNLESS you'd need to repeat a statement.
 
 BAD: unnecessary variable:
+
 ```php
 <?php
 $image = $block->image()->toFile();
@@ -69,11 +70,13 @@ snippet('picture', ['image' => $image]);
 ```
 
 GOOD: inline when used once:
+
 ```php
 <?php snippet('picture', ['image' => $block->image()->toFile()]) ?>
 ```
 
 GOOD: assign in condition when reused:
+
 ```php
 <?php if ($isLtr = $block->order()->value() === 'ltr') : ?>
 	<?php snippet('picture', ['image' => $block->image()->toFile()]) ?>

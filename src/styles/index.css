@@ -38,8 +38,8 @@
 	/* Fonts */
 	--font-family-*: initial;
 	--font-family-sans:
-		"Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		"Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
 
 	/* Colors */
 	--color-*: initial;
@@ -57,12 +57,8 @@
 	--text-body--max: 1.125;
 	--text-body: clamp(
 		var(--text-body--min) * 1rem,
-		var(--text-body--min) * 1rem +
-			(var(--text-body--max) - var(--text-body--min)) *
-			(
-				(100vw - var(--min-viewport) * 1rem) /
-					(var(--max-viewport) - var(--min-viewport))
-			),
+		var(--text-body--min) * 1rem + (var(--text-body--max) - var(--text-body--min)) *
+			((100vw - var(--min-viewport) * 1rem) / (var(--max-viewport) - var(--min-viewport))),
 		var(--text-body--max) * 1rem
 	);
 	--text-body--line-height: 1.33;
@@ -80,12 +76,8 @@
 	--spacing-container--max: 7;
 	--spacing-container: clamp(
 		var(--spacing-container--min) * 1rem,
-		var(--spacing-container--min) * 1rem +
-			(var(--spacing-container--max) - var(--spacing-container--min)) *
-			(
-				(100vw - var(--min-viewport) * 1rem) /
-					(var(--max-viewport) - var(--min-viewport))
-			),
+		var(--spacing-container--min) * 1rem + (var(--spacing-container--max) - var(--spacing-container--min)) *
+			((100vw - var(--min-viewport) * 1rem) / (var(--max-viewport) - var(--min-viewport))),
 		var(--spacing-container--max) * 1rem
 	);
 

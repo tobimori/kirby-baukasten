@@ -1,35 +1,35 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "enabledManagers": ["composer"],
-  "dependencyDashboard": true,
-  "timezone": "Europe/Berlin",
-  "lockFileMaintenance": {
-    "enabled": false
-  },
-  "vulnerabilityAlerts": {
-    "enabled": true
-  },
-  "ignoreUnstable": true,
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["minor", "patch", "digest"],
-      "schedule": ["before 12:00 on monday"],
-      "matchPackageNames": ["!php"],
-      "groupName": "Weekly Updates"
-    },
-    {
-      "matchUpdateTypes": ["major"],
-      "dependencyDashboardApproval": true,
-      "schedule": [],
-      "groupName": null
-    },
-    {
-      "matchPackageNames": ["php"],
-      "matchUpdateTypes": ["minor", "major"],
-      "dependencyDashboardApproval": true,
-      "schedule": [],
-      "groupName": null
-    }
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["config:recommended"],
+	"enabledManagers": ["composer"],
+	"dependencyDashboard": true,
+	"timezone": "Europe/Berlin",
+	"lockFileMaintenance": {
+		"enabled": false
+	},
+	"vulnerabilityAlerts": {
+		"enabled": true
+	},
+	"ignoreUnstable": true,
+	"packageRules": [
+		{
+			"matchUpdateTypes": ["minor", "patch", "digest"],
+			"schedule": ["before 12:00 on monday"],
+			"matchPackageNames": ["!php"],
+			"groupName": "Weekly Updates"
+		},
+		{
+			"matchUpdateTypes": ["major"],
+			"dependencyDashboardApproval": true,
+			"schedule": [],
+			"groupName": null
+		},
+		{
+			"matchPackageNames": ["php"],
+			"matchUpdateTypes": ["minor", "major"],
+			"dependencyDashboardApproval": true,
+			"schedule": [],
+			"groupName": null
+		}
+	]
 }

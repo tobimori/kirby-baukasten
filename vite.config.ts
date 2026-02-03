@@ -1,14 +1,15 @@
-import { exec } from "node:child_process"
-import { resolve } from "node:path"
-import { promisify } from "node:util"
 import inject from "@rollup/plugin-inject"
 import tailwind from "@tailwindcss/vite"
 import browserslist from "browserslist"
 import laravel from "laravel-vite-plugin"
 import { browserslistToTargets } from "lightningcss"
+import { exec } from "node:child_process"
+import { resolve } from "node:path"
+import { promisify } from "node:util"
 import { defineConfig, loadEnv, type Plugin } from "vite"
 import devtoolsJson from "vite-plugin-devtools-json"
 import svgSprite from "vite-svg-sprite-wrapper"
+
 import { browserslist as browserslistConfig } from "./package.json"
 
 const execAsync = promisify(exec)
@@ -44,10 +45,10 @@ export default defineConfig(({ mode }) => {
 	return {
 		base: mode === "development" ? "/" : "/dist/",
 		resolve: {
-      alias: {
-        "@": resolve(__dirname, "src")
-      }
-    },
+			alias: {
+				"@": resolve(__dirname, "src")
+			}
+		},
 		build: {
 			outDir: resolve(__dirname, "public/dist"),
 			emptyOutDir: true,

@@ -1,6 +1,7 @@
 {
+	"printWidth": 120,
 	"semi": false,
 	"trailingComma": "none",
 	"useTabs": true,
-	"tabWidth": 2
+	"experimentalSortImports": {}
 }

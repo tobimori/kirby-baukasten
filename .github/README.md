@@ -28,7 +28,7 @@ composer install && pnpm install
 cp .env.example .env
 ```
 
-3. Create required pages		
+3. Create required pages
 
 ```sh
 mkdir -p data/storage/content/0_home && printf 'Title: Home\n\n----\n\nUuid: home\n' > data/storage/content/0_home/home.de.txt
