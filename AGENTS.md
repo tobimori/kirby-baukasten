@@ -54,6 +54,8 @@ All support conditional syntax with arrays:
 
 Define components with a default export in `src/components/`. These will be automatically registered and can be used in the frontend with `x-data`.
 
+NEVER use document.querySelector() or similar document-level methods. ALWAYS scope to the component's elements, e.g. using `this.$root.querySelector()`. Generally, prefer Alpine's built-in methods like `x-on`, `x-show`, `x-transition`, to trigger methods, etc. Avoid global event listeners.
+
 ## PHP
 
 ### Code Style
