@@ -754,16 +754,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "5.3.0",
+            "version": "5.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "3e1446322398c5b7705a03a9e8ad14920b9bbfa6"
+                "reference": "0ccfcabfbc86fc84127e876c249a75b7a15f1964"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/3e1446322398c5b7705a03a9e8ad14920b9bbfa6",
-                "reference": "3e1446322398c5b7705a03a9e8ad14920b9bbfa6",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/0ccfcabfbc86fc84127e876c249a75b7a15f1964",
+                "reference": "0ccfcabfbc86fc84127e876c249a75b7a15f1964",
                 "shasum": ""
             },
             "require": {
@@ -850,7 +850,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2026-02-10T12:03:52+00:00"
+            "time": "2026-02-16T19:34:35+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -3968,16 +3968,16 @@
         },
         {
             "name": "tobimori/kirby-seo",
-            "version": "2.0.0-alpha.12",
+            "version": "2.0.0-alpha.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "910024c55540be63b85d59cfb7152e65417ce6ee"
+                "reference": "fac4a38bdc3cffd5deb4f662f0cf244a3ba352dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/910024c55540be63b85d59cfb7152e65417ce6ee",
-                "reference": "910024c55540be63b85d59cfb7152e65417ce6ee",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/fac4a38bdc3cffd5deb4f662f0cf244a3ba352dd",
+                "reference": "fac4a38bdc3cffd5deb4f662f0cf244a3ba352dd",
                 "shasum": ""
             },
             "require": {
@@ -4019,7 +4019,7 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-alpha.12"
+                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-alpha.13"
             },
             "funding": [
                 {
@@ -4031,7 +4031,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-21T11:45:12+00:00"
+            "time": "2026-02-27T10:45:52+00:00"
         },
         {
             "name": "tobimori/kirby-spielzeug",
@@ -4149,16 +4149,16 @@
         },
         {
             "name": "tobimori/kirby-thumbhash",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-thumbhash.git",
-                "reference": "f33ecf31033691b054d2e991b6e414adbf6584e7"
+                "reference": "e1ecdc7dcc251c6f36efd14f9ea2b2324674b04a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-thumbhash/zipball/f33ecf31033691b054d2e991b6e414adbf6584e7",
-                "reference": "f33ecf31033691b054d2e991b6e414adbf6584e7",
+                "url": "https://api.github.com/repos/tobimori/kirby-thumbhash/zipball/e1ecdc7dcc251c6f36efd14f9ea2b2324674b04a",
+                "reference": "e1ecdc7dcc251c6f36efd14f9ea2b2324674b04a",
                 "shasum": ""
             },
             "require": {
@@ -4196,7 +4196,7 @@
             "homepage": "https://github.com/tobimori/kirby-thumbhash#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-thumbhash/issues",
-                "source": "https://github.com/tobimori/kirby-thumbhash/tree/2.0.0"
+                "source": "https://github.com/tobimori/kirby-thumbhash/tree/2.1.0"
             },
             "funding": [
                 {
@@ -4204,20 +4204,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-16T12:37:44+00:00"
+            "time": "2026-02-27T19:13:56+00:00"
         },
         {
             "name": "tobimori/kirby-trawl",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-trawl.git",
-                "reference": "ff62a036030f91a338991c0ce8d0922dff403949"
+                "reference": "b91f7f3d4d6cea3c4d1f1b8935a54a6d9e4b7773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-trawl/zipball/ff62a036030f91a338991c0ce8d0922dff403949",
-                "reference": "ff62a036030f91a338991c0ce8d0922dff403949",
+                "url": "https://api.github.com/repos/tobimori/kirby-trawl/zipball/b91f7f3d4d6cea3c4d1f1b8935a54a6d9e4b7773",
+                "reference": "b91f7f3d4d6cea3c4d1f1b8935a54a6d9e4b7773",
                 "shasum": ""
             },
             "require": {
@@ -4254,9 +4254,9 @@
             "description": "Automatic translation extraction for Kirby CMS",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-trawl/issues",
-                "source": "https://github.com/tobimori/kirby-trawl/tree/1.0.1"
+                "source": "https://github.com/tobimori/kirby-trawl/tree/1.1.0"
             },
-            "time": "2025-06-03T19:52:43+00:00"
+            "time": "2026-02-22T12:10:54+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
