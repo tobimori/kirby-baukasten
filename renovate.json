@@ -15,7 +15,7 @@
 		{
 			"matchUpdateTypes": ["minor", "patch", "digest"],
 			"schedule": ["before 12:00 on monday"],
-			"matchPackageNames": ["!php"],
+			"matchDepNames": ["!php"],
 			"groupName": "Weekly Updates"
 		},
 		{
@@ -25,7 +25,7 @@
 			"groupName": null
 		},
 		{
-			"matchPackageNames": ["php"],
+			"matchDepNames": ["php"],
 			"matchUpdateTypes": ["minor", "major"],
 			"dependencyDashboardApproval": true,
 			"schedule": [],
