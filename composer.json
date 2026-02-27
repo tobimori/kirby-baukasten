@@ -26,7 +26,7 @@
 		"distantnative/retour-for-kirby": "^5.0",
 		"getkirby/cli": "^1.2",
 		"bnomei/kirby3-janitor": "^5.2",
-		"tobimori/kirby-tailwind-merge": "^3.0",
+		"tobimori/kirby-tailwind-merge": "^4.0",
 		"tobimori/kirby-thumbhash": "^2",
 		"johannschopplich/kirby-plausible": "^1",
 		"genxbe/kirby-ray": "^2.0",

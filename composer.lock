@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e88f8b3a50f217c226e2f3c89a6d6c6",
+    "content-hash": "5d035b22f8dc0cee424d9d375a86aa9e",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -567,73 +567,6 @@
                 }
             ],
             "time": "2025-08-08T12:00:00+00:00"
-        },
-        {
-            "name": "gehrisandro/tailwind-merge-php",
-            "version": "v1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gehrisandro/tailwind-merge-php.git",
-                "reference": "dc11b9d4a625dd5be885900e5ef14c3efa260277"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gehrisandro/tailwind-merge-php/zipball/dc11b9d4a625dd5be885900e5ef14c3efa260277",
-                "reference": "dc11b9d4a625dd5be885900e5ef14c3efa260277",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.1.0",
-                "psr/simple-cache": "^3.0"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.13.8",
-                "nunomaduro/collision": "^7.10",
-                "pestphp/pest": "^v2.24.0",
-                "pestphp/pest-plugin-arch": "^2.6",
-                "pestphp/pest-plugin-mock": "^2.0.0",
-                "pestphp/pest-plugin-type-coverage": "^2.8",
-                "phpstan/phpstan": "^1.10.55",
-                "rector/rector": "^1.0.5",
-                "symfony/var-dumper": "^6.4.2"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/TailwindMerge.php"
-                ],
-                "psr-4": {
-                    "TailwindMerge\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sandro Gehri",
-                    "email": "sandrogehri@gmail.com"
-                }
-            ],
-            "description": "TailwindMerge for PHP merges multiple Tailwind CSS classes by automatically resolving conflicts between them",
-            "keywords": [
-                "classes",
-                "merge",
-                "php",
-                "tailwindcss"
-            ],
-            "support": {
-                "issues": "https://github.com/gehrisandro/tailwind-merge-php/issues",
-                "source": "https://github.com/gehrisandro/tailwind-merge-php/tree/v1.1.2"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/gehrisandro",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-05-21T17:32:42+00:00"
         },
         {
             "name": "genxbe/kirby-ray",
@@ -3247,6 +3180,88 @@
             "time": "2024-09-09T11:45:10+00:00"
         },
         {
+            "name": "symfony/polyfill-intl-grapheme",
+            "version": "v1.33.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
+                "reference": "380872130d3a5dd3ace2f4010d95125fde5d5c70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/380872130d3a5dd3ace2f4010d95125fde5d5c70",
+                "reference": "380872130d3a5dd3ace2f4010d95125fde5d5c70",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's grapheme_* functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "grapheme",
+                "intl",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.33.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-06-27T09:58:17+00:00"
+        },
+        {
             "name": "symfony/polyfill-intl-idn",
             "version": "v1.33.0",
             "source": {
@@ -3741,6 +3756,96 @@
             "time": "2025-08-04T07:36:47+00:00"
         },
         {
+            "name": "symfony/string",
+            "version": "v8.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/string.git",
+                "reference": "6c9e1108041b5dce21a9a4984b531c4923aa9ec4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/string/zipball/6c9e1108041b5dce21a9a4984b531c4923aa9ec4",
+                "reference": "6c9e1108041b5dce21a9a4984b531c4923aa9ec4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.4",
+                "symfony/polyfill-ctype": "^1.8",
+                "symfony/polyfill-intl-grapheme": "^1.33",
+                "symfony/polyfill-intl-normalizer": "^1.0",
+                "symfony/polyfill-mbstring": "^1.0"
+            },
+            "conflict": {
+                "symfony/translation-contracts": "<2.5"
+            },
+            "require-dev": {
+                "symfony/emoji": "^7.4|^8.0",
+                "symfony/http-client": "^7.4|^8.0",
+                "symfony/intl": "^7.4|^8.0",
+                "symfony/translation-contracts": "^2.5|^3.0",
+                "symfony/var-exporter": "^7.4|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Resources/functions.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\String\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an object-oriented API to strings and deals with bytes, UTF-8 code points and grapheme clusters in a unified way",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "grapheme",
+                "i18n",
+                "string",
+                "unicode",
+                "utf-8",
+                "utf8"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/string/tree/v8.0.6"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-02-09T10:14:57+00:00"
+        },
+        {
             "name": "symfony/var-dumper",
             "version": "v8.0.4",
             "source": {
@@ -3902,6 +4007,64 @@
                 }
             ],
             "time": "2025-12-04T18:11:45+00:00"
+        },
+        {
+            "name": "tales-from-a-dev/tailwind-merge-php",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tales-from-a-dev/tailwind-merge-php.git",
+                "reference": "0ecc60f2c2a877fe9555779bd289af70163ccc3e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tales-from-a-dev/tailwind-merge-php/zipball/0ecc60f2c2a877fe9555779bd289af70163ccc3e",
+                "reference": "0ecc60f2c2a877fe9555779bd289af70163ccc3e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/simple-cache": "^3.0",
+                "symfony/string": "^6.4 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.89",
+                "phpstan/phpstan": "^2.1",
+                "phpunit/phpunit": "^10.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TalesFromADev\\TailwindMerge\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sandro Gehri",
+                    "email": "sandrogehri@gmail.com"
+                },
+                {
+                    "name": "Romain Monteil",
+                    "email": "monteil.romain@gmail.com"
+                }
+            ],
+            "description": "TailwindMerge for PHP merges multiple Tailwind CSS classes by automatically resolving conflicts between them",
+            "homepage": "https://github.com/tales-from-a-dev/tailwind-merge-php",
+            "keywords": [
+                "classes",
+                "merge",
+                "php",
+                "tailwindcss"
+            ],
+            "support": {
+                "issues": "https://github.com/tales-from-a-dev/tailwind-merge-php/issues",
+                "source": "https://github.com/tales-from-a-dev/tailwind-merge-php/tree/v0.1.1"
+            },
+            "time": "2026-02-16T10:54:42+00:00"
         },
         {
             "name": "tobimori/kirby-queues",
@@ -4090,25 +4253,25 @@
         },
         {
             "name": "tobimori/kirby-tailwind-merge",
-            "version": "3.1.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-tailwind-merge.git",
-                "reference": "e55f68e771c02f2f97ccff1cbee43f98c1012510"
+                "reference": "83af48a8e4f87aa5d0e71c59e5aed56ac31d8972"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-tailwind-merge/zipball/e55f68e771c02f2f97ccff1cbee43f98c1012510",
-                "reference": "e55f68e771c02f2f97ccff1cbee43f98c1012510",
+                "url": "https://api.github.com/repos/tobimori/kirby-tailwind-merge/zipball/83af48a8e4f87aa5d0e71c59e5aed56ac31d8972",
+                "reference": "83af48a8e4f87aa5d0e71c59e5aed56ac31d8972",
                 "shasum": ""
             },
             "require": {
-                "gehrisandro/tailwind-merge-php": "^1.0",
                 "getkirby/composer-installer": "^1.2",
-                "php": ">=8.2.0"
+                "php": ">=8.3.0",
+                "tales-from-a-dev/tailwind-merge-php": "^0.1"
             },
             "require-dev": {
-                "getkirby/cms": "^3.9"
+                "getkirby/cms": "^4.0 || ^5.0"
             },
             "type": "kirby-plugin",
             "autoload": {
@@ -4137,7 +4300,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tobimori/kirby-tailwind-merge/issues",
-                "source": "https://github.com/tobimori/kirby-tailwind-merge/tree/3.1.0"
+                "source": "https://github.com/tobimori/kirby-tailwind-merge/tree/4.0.0"
             },
             "funding": [
                 {
@@ -4145,7 +4308,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-28T19:20:57+00:00"
+            "time": "2026-02-27T15:12:13+00:00"
         },
         {
             "name": "tobimori/kirby-thumbhash",
