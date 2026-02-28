@@ -62,8 +62,8 @@ return [
 	'johannschopplich.plausible.sharedLink' => env('PLAUSIBLE_SHARED_LINK'),
 	'distantnative' => [
 		'retour' => [
-			'config' =>  __DIR__ . './../../data/storage/retour/config.yml',
-			'database' =>  __DIR__  . './../../data/storage/retour/log.sqlite'
+			'config' =>  dirname(__DIR__, 2) . '/data/storage/retour/config.yml',
+			'database' =>  dirname(__DIR__, 2) . '/data/storage/retour/log.sqlite'
 		]
 	],
 	'panel' => [
