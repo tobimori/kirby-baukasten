@@ -6,7 +6,7 @@ return [
 		'host' => env("KIRBY_MAIL_HOST"),
 		'port' => json_decode(env("KIRBY_MAIL_PORT")),
 		'security' => true,
-		'auth' => 'tls',
+		'auth' => true,
 		'username' => env("KIRBY_MAIL_USER"),
 		'password' => env("KIRBY_MAIL_PASS")
 	]
