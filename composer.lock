@@ -403,22 +403,22 @@
         },
         {
             "name": "distantnative/retour-for-kirby",
-            "version": "5.5.0",
+            "version": "5.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/distantnative/retour-for-kirby.git",
-                "reference": "42364a5271732f571dab93be788a9e5b99919448"
+                "reference": "a959f468e9f7608b7d372aca8be35f2d8d6adb14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/42364a5271732f571dab93be788a9e5b99919448",
-                "reference": "42364a5271732f571dab93be788a9e5b99919448",
+                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/a959f468e9f7608b7d372aca8be35f2d8d6adb14",
+                "reference": "a959f468e9f7608b7d372aca8be35f2d8d6adb14",
                 "shasum": ""
             },
             "require": {
                 "getkirby/cms": "^4.3.1 || ^5.0",
                 "getkirby/composer-installer": "^1.1",
-                "php": ">=8.1.0 <8.5.0"
+                "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
             },
             "type": "kirby-plugin",
             "extra": {
@@ -439,7 +439,7 @@
             "homepage": "https://distantnative.com/retour-for-kirby/",
             "support": {
                 "issues": "https://github.com/distantnative/retour-for-kirby/issues",
-                "source": "https://github.com/distantnative/retour-for-kirby/tree/5.5.0"
+                "source": "https://github.com/distantnative/retour-for-kirby/tree/5.6.0"
             },
             "funding": [
                 {
@@ -447,7 +447,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2025-04-03T19:59:37+00:00"
+            "time": "2026-02-28T21:35:54+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -754,16 +754,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "5.3.1",
+            "version": "5.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "0ccfcabfbc86fc84127e876c249a75b7a15f1964"
+                "reference": "bbb64db1516140fe43f54667af10a011a67cb3b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/0ccfcabfbc86fc84127e876c249a75b7a15f1964",
-                "reference": "0ccfcabfbc86fc84127e876c249a75b7a15f1964",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/bbb64db1516140fe43f54667af10a011a67cb3b5",
+                "reference": "bbb64db1516140fe43f54667af10a011a67cb3b5",
                 "shasum": ""
             },
             "require": {
@@ -789,7 +789,7 @@
                 "phpmailer/phpmailer": "7.0.2",
                 "symfony/polyfill-intl-idn": "1.33.0",
                 "symfony/polyfill-mbstring": "1.33.0",
-                "symfony/yaml": "7.4.1"
+                "symfony/yaml": "7.4.6"
             },
             "replace": {
                 "symfony/polyfill-php72": "*"
@@ -850,7 +850,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2026-02-16T19:34:35+00:00"
+            "time": "2026-03-03T13:05:51+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -3829,16 +3829,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v7.4.1",
+            "version": "v7.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "24dd4de28d2e3988b311751ac49e684d783e2345"
+                "reference": "58751048de17bae71c5aa0d13cb19d79bca26391"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/24dd4de28d2e3988b311751ac49e684d783e2345",
-                "reference": "24dd4de28d2e3988b311751ac49e684d783e2345",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/58751048de17bae71c5aa0d13cb19d79bca26391",
+                "reference": "58751048de17bae71c5aa0d13cb19d79bca26391",
                 "shasum": ""
             },
             "require": {
@@ -3881,7 +3881,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v7.4.1"
+                "source": "https://github.com/symfony/yaml/tree/v7.4.6"
             },
             "funding": [
                 {
@@ -3901,7 +3901,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-04T18:11:45+00:00"
+            "time": "2026-02-09T09:33:46+00:00"
         },
         {
             "name": "tobimori/kirby-queues",
