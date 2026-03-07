@@ -17,12 +17,11 @@
 		}
 	],
 	"require": {
-		"php": "~8.4.0",
+		"php": "~8.5.0",
 		"getkirby/cms": "^5",
 		"bnomei/kirby3-dotenv": "^5.0",
 		"tobimori/kirby-seo": "^2.0.0-alpha.5",
 		"lukaskleinschmidt/kirby-laravel-vite": "^2.1.1",
-		"tobimori/kirby-spielzeug": "^2.1.0",
 		"distantnative/retour-for-kirby": "^5.0",
 		"getkirby/cli": "^1.2",
 		"bnomei/kirby3-janitor": "^5.2",
@@ -35,6 +34,14 @@
 		"tobimori/kirby-trawl": "^1.0",
 		"tobimori/kirby-queues": "^1.0@beta",
 		"spatie/schema-org": "^4.0"
+	},
+	"autoload": {
+		"files": [
+			"site/plugins/extended/helpers.php"
+		],
+		"psr-4": {
+			"Plugin\\": "site/plugins/extended/classes/"
+		}
 	},
 	"extra": {
 		"kirby-cms-path": false

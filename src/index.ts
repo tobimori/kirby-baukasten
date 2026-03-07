@@ -1,10 +1,11 @@
 import focus from "@alpinejs/focus"
+import intersect from "@alpinejs/intersect"
 import Alpine from "alpinejs"
 import "htmx.org" // TODO: figure out if we can replace htmx.org with alpine-ajax
 import "idiomorph/dist/idiomorph-ext.js"
 import { lazyLoad } from "unlazy"
 
-import.meta.glob(["../assets/**"]) // Import all assets for copying them to dist
+import.meta.glob(["../assets/**", "!../assets/icons/**"], { eager: true, query: "?url" })
 
 console.log(
 	"%cMade with Kirby and ❤️ by Love & Kindness GmbH",
@@ -21,6 +22,7 @@ declare global {
 window.Alpine = Alpine
 
 Alpine.plugin(focus)
+Alpine.plugin(intersect)
 
 for (const [path, module] of Object.entries(import.meta.glob("./components/*.ts", { eager: true }))) {
 	const name = path.slice(13, -3)

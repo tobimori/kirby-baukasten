@@ -1,6 +1,8 @@
 <?php
 
 return [
+	'driver' => 'imagick',
+	'formats' => ['avif', 'webp'],
 	'srcsets' => [
 		'small' => [300, 500, 800],
 		'default' => [400, 800, 1000, 1200],

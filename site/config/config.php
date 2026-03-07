@@ -1,8 +1,7 @@
 <?php
 
 use Kirby\Cms\Pages;
-use Kirby\Http\Url;
-use tobimori\Spielzeug\Menu;
+use Plugin\Menu;
 
 require_once dirname(__DIR__) . '/plugins/kirby3-dotenv/global.php';
 
@@ -36,7 +35,7 @@ return [
 		// use generated sprite, requires pnpm run build
 		// to generate (dev sprite doesn't work since it's not in the public folder)
 		'folder' => '',
-		'sprite' => fn() => Url::path(vite()->useHotFile('.never')->asset('assets/sprite.svg'))
+		'sprite' => fn() => spritePath()
 	],
 	/** Email */
 	'email' => require __DIR__ . '/email.php',
@@ -53,6 +52,10 @@ return [
 	'cache' => [
 		'pages' => [
 			'active' => json_decode(env('KIRBY_CACHE')),
+			'type' => 'static',
+			'compression' => ['gzip' => 9],
+			'root' => dirname(__DIR__, 2) . '/public/__staticache',
+			'prefix' => null
 		]
 	],
 	/** Build Env / Vite / etc. */
@@ -70,23 +73,20 @@ return [
 		'vue' => [
 			'compiler' => false
 		],
-		'menu' => fn() => array_merge(
-			[
-				'site' => Menu::site(),
-			],
-			Menu::favorites(kirby()->user()?->favorites()->toPages() ?? new Pages([])),
-			[
-				'-',
-				'images' => Menu::page(null, 'file-image', page('page://images')),
-				// 'videos' => Menu::page(null, 'file-video', page('page://videos')),
-				// 'files' => Menu::page(null, 'file-word', page('page://files')),
-				'-',
-				'users',
-				'plausible',
-				'retour',
-				'queues',
-			]
-		)
+		'menu' => fn() =>
+		[
+			'site' => Menu::site(),
+			...Menu::favorites(kirby()->user()?->favorites()->toPages() ?? new Pages([])),
+			'-',
+			'images' => Menu::page(null, 'file-image', page('page://images')),
+			// 'videos' => Menu::page(null, 'file-video', page('page://videos')),
+			// 'files' => Menu::page(null, 'file-word', page('page://files')),
+			'-',
+			'users',
+			'plausible',
+			'retour',
+			'queues',
+		]
 	],
 	'ready' => fn() => [
 		'panel' => [

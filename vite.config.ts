@@ -1,12 +1,14 @@
-import inject from "@rollup/plugin-inject"
+import { exec } from "node:child_process"
+import { resolve } from "node:path"
+import { promisify } from "node:util"
+import { constants } from "node:zlib"
+
 import tailwind from "@tailwindcss/vite"
 import browserslist from "browserslist"
 import laravel from "laravel-vite-plugin"
 import { browserslistToTargets } from "lightningcss"
-import { exec } from "node:child_process"
-import { resolve } from "node:path"
-import { promisify } from "node:util"
 import { defineConfig, loadEnv, type Plugin } from "vite"
+import { compression, defineAlgorithm } from "vite-plugin-compression2"
 import devtoolsJson from "vite-plugin-devtools-json"
 import svgSprite from "vite-svg-sprite-wrapper"
 
@@ -53,13 +55,16 @@ export default defineConfig(({ mode }) => {
 			outDir: resolve(__dirname, "public/dist"),
 			emptyOutDir: true,
 			manifest: "manifest.json",
-			cssMinify: "lightningcss"
+			cssMinify: "lightningcss",
+			rolldownOptions: {
+				transform: {
+					inject: {
+						htmx: "htmx.org"
+					}
+				}
+			}
 		},
 		plugins: [
-			// this plugin is necessary for our HTMX extensions to correctly register
-			inject({
-				htmx: "htmx.org"
-			}),
 			svgSprite({
 				sprite: {
 					shape: {
@@ -80,6 +85,18 @@ export default defineConfig(({ mode }) => {
 				refresh: ["site/{layouts,snippets,templates}/**/*"]
 			}),
 			tailwind(),
+			compression({
+				algorithms: [
+					defineAlgorithm("gzip", { level: 9 }),
+					defineAlgorithm("brotliCompress", {
+						params: { [constants.BROTLI_PARAM_QUALITY]: constants.BROTLI_MAX_QUALITY }
+					}),
+					defineAlgorithm("zstandard", {
+						params: { [constants.ZSTD_c_compressionLevel]: 19 }
+					})
+				],
+				exclude: [/\.(png|jpe?g|webp|avif|gif|woff2?)$/]
+			}),
 			devtoolsJson(),
 			kirbyTypes()
 		],
