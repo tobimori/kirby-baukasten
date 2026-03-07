@@ -1,0 +1,104 @@
+# Baukasten .htaccess
+
+# treat compressed extensions as content-encoding, not content-type
+# apache then uses the inner extension for MIME (e.g. .html.gz → text/html)
+RemoveType .gz
+AddEncoding gzip .gz
+RemoveType .br
+AddEncoding br .br
+RemoveType .zst
+AddEncoding zstd .zst
+AddDefaultCharset UTF-8
+
+# rewrite rules
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+# serve precompressed static assets (prefer zstd > brotli > gzip)
+RewriteCond %{HTTP:Accept-Encoding} (^|,)\s*zstd(\s*;\s*q=[0-9.]+)?\s*(,|$) [NC]
+RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*zstd\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC]
+RewriteCond %{REQUEST_FILENAME}.zst -s
+RewriteRule ^(.+)\.(css|js|svg)$ $1.$2.zst [QSA,E=no-gzip:1]
+
+RewriteCond %{HTTP:Accept-Encoding} (^|,)\s*br(\s*;\s*q=[0-9.]+)?\s*(,|$) [NC]
+RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*br\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC]
+RewriteCond %{REQUEST_FILENAME}.br -s
+RewriteRule ^(.+)\.(css|js|svg)$ $1.$2.br [QSA,E=no-gzip:1]
+
+RewriteCond %{HTTP:Accept-Encoding} (^|,)\s*gzip(\s*;\s*q=[0-9.]+)?\s*(,|$) [NC]
+RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*gzip\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC]
+RewriteCond %{REQUEST_FILENAME}.gz -s
+RewriteRule ^(.+)\.(css|js|svg)$ $1.$2.gz [QSA,E=no-gzip:1]
+
+# serve staticache pages (precompressed gzip, then plain html)
+RewriteCond %{HTTP:Accept-Encoding} (^|,)\s*gzip(\s*;\s*q=[0-9.]+)?\s*(,|$) [NC]
+RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*gzip\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC]
+RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI}/index.html.gz -f
+RewriteRule ^ __staticache%{REQUEST_URI}/index.html.gz [END,E=no-gzip:1]
+
+RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI}/index.html -f
+RewriteRule ^ __staticache%{REQUEST_URI}/index.html [END]
+
+# serve staticache content representations (json, xml, etc.)
+RewriteCond %{HTTP:Accept-Encoding} (^|,)\s*gzip(\s*;\s*q=[0-9.]+)?\s*(,|$) [NC]
+RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*gzip\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC]
+RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI}.gz -f
+RewriteRule ^ __staticache%{REQUEST_URI}.gz [END,E=no-gzip:1]
+
+RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI} -f
+RewriteRule ^ __staticache%{REQUEST_URI} [END]
+
+# content negotiation for extension-less media URLs
+# preferred formats are served directly by Apache when they exist on disk,
+# everything else (first-time generation, original format fallback) goes through PHP
+RewriteCond %{REQUEST_URI} ^/media/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTP:Accept} image/avif
+RewriteCond %{REQUEST_FILENAME}.avif -f
+RewriteRule ^(.+)$ $1.avif [L,E=img_neg:1]
+
+RewriteCond %{REQUEST_URI} ^/media/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTP:Accept} image/webp
+RewriteCond %{REQUEST_FILENAME}.webp -f
+RewriteRule ^(.+)$ $1.webp [L,E=img_neg:1]
+
+# make site links work
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*) index.php [L]
+
+</IfModule>
+
+# pass the Authorization header to PHP
+SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
+
+# compress dynamic responses only (HTML, JSON)
+# static assets (CSS/JS/SVG) are precompressed by Vite, staticache pages too
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# browser caching — static assets are cache-busted (Vite hashes, Kirby media folder)
+<IfModule mod_headers.c>
+<FilesMatch "\.(css|js|svg|woff2?|png|jpe?g|webp|avif|gif|ico)(\.gz|\.br|\.zst)?$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+Header merge Vary "Accept-Encoding"
+Header merge Vary "Accept" env=REDIRECT_img_neg
+</IfModule>
+
+# set security headers
+<IfModule mod_headers.c>
+Header set Content-Type "text/plain" "expr=-z %{CONTENT_TYPE}"
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on'"
+Header always unset Server
+</IfModule>
