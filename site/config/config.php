@@ -31,6 +31,12 @@ return [
 	],
 	'tobimori.seo' => require __DIR__ . '/seo.php',
 	'tobimori.dreamform' => require __DIR__ . '/dreamform.php',
+	'tobimori.tailwind-merge.config' => [
+		'theme' => [
+			'text' => ['body', 'small'],
+			'spacing' => ['container'],
+		],
+	],
 	'tobimori.icon-field' => [
 		// use generated sprite, requires pnpm run build
 		// to generate (dev sprite doesn't work since it's not in the public folder)
