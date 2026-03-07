@@ -32,6 +32,7 @@ checksums:
     Open%20in%20new%20tab%3F: e466e2dd02fe712d63ecc9406766168c
     Pages: 75088c94fb3c374efd452624d4b74be8
     SVG%20files%20must%20be%20smaller%20than%2050KB.%20Please%20upload%20a%20PNG%20instead%2C%20or%20optimize%20the%20SVG%20with%20SVGO.: ebbc04540ec6eae8c349865364884513
+    SVG%20files%20must%20have%20a%20viewBox%20attribute.%20Please%20add%20a%20viewBox%20to%20the%20SVG%2C%20or%20upload%20a%20PNG%20instead.: b7e1604f3d23754b3ee26a5f560555ed
     SVG%20files%20with%20embedded%20bitmap%20data%20are%20not%20allowed.%20Please%20upload%20a%20PNG%20instead.: 0a8b3432f8612515ae824e58f4a0211f
     SVG%20files%20with%20embedded%20images%20are%20not%20allowed.%20Please%20upload%20a%20PNG%20instead.: a16a39a3f18578c745c817853bbed8e9
     SVG%20files%20with%20text%20elements%20are%20not%20allowed.%20Please%20convert%20text%20to%20paths%2C%20or%20upload%20a%20PNG%20instead.: 8f8520406438e758dc17f7744ca6b12f
