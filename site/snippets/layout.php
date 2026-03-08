@@ -32,7 +32,7 @@ if (json_decode(env('REQUIRES_LOGIN')) && !$kirby->user()) {
 <body class="flex flex-col min-h-screen antialiased overflow-x-clip">
 	<?php snippet('core/skip-nav') ?>
 	<?php snippet('core/nav') ?>
-	<main class="flex-grow">
+	<main class="grow">
 		<div id="main"></div>
 		<?= $slot ?>
 	</main>
