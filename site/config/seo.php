@@ -12,12 +12,11 @@ return [
 		'template' => 'image'
 	],
 	'ai' => [
-		'provider' => 'openrouter',
+		'provider' => 'gemini',
 		'providers' => [
-			'openrouter' => [
+			'gemini' => [
 				'config' => [
-					'apiKey' => env('OPENROUTER_API_KEY'),
-					'model' => 'google/gemini-2.5-flash-preview-09-2025',
+					'apiKey' => env('GEMINI_API_KEY'),
 				]
 			]
 		]

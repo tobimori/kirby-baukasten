@@ -2,9 +2,13 @@ title: Image
 accept:
   extension: jpg, jpeg, png, svg
   type: image
+create:
+  width: 2600
+  quality: 90
 
 fields:
   alt:
     label: Alternative Text/Image Description
-    type: seo-alt-text
+    type: alt-text
+    autogenerate: true
     help: The alternative text helps visually impaired users & search engine crawlers understand the content of the image.

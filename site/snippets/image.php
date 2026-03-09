@@ -41,10 +41,17 @@ if ($isFile || $image instanceof Asset) :
 					$existing = $svg->getAttribute('style');
 					$svg->setAttribute('style', $existing ? "{$existing}; {$attrStyle}" : $attrStyle);
 				}
-				$altText = $alt ?? ($isFile ? $image->alt()->value() : null);
-				if ($altText) {
-					$svg->setAttribute('aria-label', $altText);
+				if (isset($alt)) {
+					$svg->setAttribute('aria-label', $alt);
 					$svg->setAttribute('role', 'img');
+				} elseif ($isFile) {
+					$altText = $image->alt()->toAltText();
+					if ($altText->isDecorative()) {
+						$svg->setAttribute('role', 'presentation');
+					} elseif ($altText->text() !== '') {
+						$svg->setAttribute('aria-label', $altText->text());
+						$svg->setAttribute('role', 'img');
+					}
 				}
 				foreach ($attr as $key => $value) {
 					$svg->setAttribute($key, $value);
@@ -88,13 +95,12 @@ if ($isFile || $image instanceof Asset) :
 		$src = $clientBlur
 			? 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
 			: $image->thUri($ratio);
-	?>
+		$altAttr = isset($alt) ? ['alt' => $alt] : ($isFile ? $image->alt()->toAltText()->toAttr() : []); ?>
 		<?= Html::img($src, [
 			'data-thumbhash' => $clientBlur ? $image->th($ratio) : null,
 			'data-src' => $medianUrl,
 			'width' => $image->width(),
 			'height' => $ratio ? floor($image->width() / $ratio) : $image->height(),
-			'alt' => $alt ?? ($isFile ? $image->alt() : null),
 			'loading' => $lazy ? 'lazy' : null,
 			'draggable' => false,
 			($lazy ? 'data-srcset' : 'srcset') => $srcsetString,
@@ -106,6 +112,7 @@ if ($isFile || $image instanceof Asset) :
 				"object-position: " . ($focus ?? "50% 50%"),
 				$attrStyle ?: null,
 			]), '; '),
+			...$altAttr,
 			...$attr,
 		]) ?>
 	<?php endif ?>
