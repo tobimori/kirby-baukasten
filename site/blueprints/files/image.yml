@@ -6,5 +6,5 @@ accept:
 fields:
   alt:
     label: Alternative Text/Image Description
-    type: text
+    type: seo-alt-text
     help: The alternative text helps visually impaired users & search engine crawlers understand the content of the image.

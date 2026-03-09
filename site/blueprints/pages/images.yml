@@ -35,6 +35,6 @@ sections:
       template: image
     search: true
     sortBy: filename desc
-    info: '{{ file.alt.isNotEmpty ? file.filename : "" }}'
-    text: "{{ file.alt.or(file.filename) }}"
+    info: "{{ file.alt.toAltText.toField.isNotEmpty ? file.filename : '' }}"
+    text: "{{ file.alt.toAltText.toField.or(file.filename) }}"
     limit: 100
