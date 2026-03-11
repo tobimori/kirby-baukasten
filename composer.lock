@@ -4131,16 +4131,16 @@
         },
         {
             "name": "tobimori/kirby-seo",
-            "version": "2.0.0-alpha.13",
+            "version": "2.0.0-beta.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "fac4a38bdc3cffd5deb4f662f0cf244a3ba352dd"
+                "reference": "c16472022f53eba9c58ec73b10926129f889f86d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/fac4a38bdc3cffd5deb4f662f0cf244a3ba352dd",
-                "reference": "fac4a38bdc3cffd5deb4f662f0cf244a3ba352dd",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/c16472022f53eba9c58ec73b10926129f889f86d",
+                "reference": "c16472022f53eba9c58ec73b10926129f889f86d",
                 "shasum": ""
             },
             "require": {
@@ -4155,6 +4155,7 @@
                 "tobimori/kirby-queues": "^1.0.0-beta.1"
             },
             "suggest": {
+                "ext-imagick": "Rasterize non-resizable images (SVG, etc.) for AI alt text generation",
                 "getkirby/cli": "Enable background processing support",
                 "spatie/schema-org": "Enable the Schema.org support",
                 "tobimori/kirby-queues": "Enable background processing support"
@@ -4182,7 +4183,7 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-alpha.13"
+                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-beta.3"
             },
             "funding": [
                 {
@@ -4194,7 +4195,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-27T10:45:52+00:00"
+            "time": "2026-03-10T23:31:27+00:00"
         },
         {
             "name": "tobimori/kirby-tailwind-merge",
@@ -4257,16 +4258,16 @@
         },
         {
             "name": "tobimori/kirby-thumbhash",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-thumbhash.git",
-                "reference": "e1ecdc7dcc251c6f36efd14f9ea2b2324674b04a"
+                "reference": "733857e7b5b0b7993e014d900039ae0f5ab9fe87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-thumbhash/zipball/e1ecdc7dcc251c6f36efd14f9ea2b2324674b04a",
-                "reference": "e1ecdc7dcc251c6f36efd14f9ea2b2324674b04a",
+                "url": "https://api.github.com/repos/tobimori/kirby-thumbhash/zipball/733857e7b5b0b7993e014d900039ae0f5ab9fe87",
+                "reference": "733857e7b5b0b7993e014d900039ae0f5ab9fe87",
                 "shasum": ""
             },
             "require": {
@@ -4304,7 +4305,7 @@
             "homepage": "https://github.com/tobimori/kirby-thumbhash#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-thumbhash/issues",
-                "source": "https://github.com/tobimori/kirby-thumbhash/tree/2.1.0"
+                "source": "https://github.com/tobimori/kirby-thumbhash/tree/2.1.1"
             },
             "funding": [
                 {
@@ -4312,7 +4313,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-27T19:13:56+00:00"
+            "time": "2026-03-08T15:37:18+00:00"
         },
         {
             "name": "tobimori/kirby-trawl",
