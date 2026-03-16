@@ -149,6 +149,10 @@ Icons use `currentcolor` and are `aria-hidden="true"` by default. Size them with
 
 Fields store raw strings and need casting (`->toPage()`, `->toFiles()`, `->toBool()`, etc.). For output, use `->esc()` on text fields and `->permalinksToUrls()` on writer fields.
 
+### Collections
+
+Use `$collection->indexOf($item)` instead of `$i => $item` when you need the index in a loop. Kirby collection keys are content-based, not numeric.
+
 ### Code Style
 
 Avoid setting preliminary variables in files. Prefer inline expressions instead, unless you'd need to repeat a statement.
