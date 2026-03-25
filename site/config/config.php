@@ -1,8 +1,5 @@
 <?php
 
-use Kirby\Cms\Pages;
-use Plugin\Menu;
-
 require_once dirname(__DIR__) . '/plugins/kirby3-dotenv/global.php';
 
 loadenv([
@@ -79,20 +76,27 @@ return [
 		'vue' => [
 			'compiler' => false
 		],
-		'menu' => fn() =>
-		[
-			'site' => Menu::site(),
-			...Menu::favorites(kirby()->user()?->favorites()->toPages() ?? new Pages([])),
-			'-',
-			'images' => Menu::page(null, 'file-image', page('page://images')),
-			// 'videos' => Menu::page(null, 'file-video', page('page://videos')),
-			// 'files' => Menu::page(null, 'file-word', page('page://files')),
-			'-',
-			'users',
-			'plausible',
-			'retour',
-			'queues',
-		]
+		'menu' => function () {
+			$menu = panelMenu()->site();
+
+			foreach (kirby()->user()?->favorites()->toPages() ?? [] as $fav) {
+				$menu->page($fav->title()->value(), $fav, ['icon' => 'star']);
+			}
+
+			$menu->separator();
+
+			if ($images = page('page://images')) {
+				$menu->page($images->title()->value(), $images, ['icon' => 'file-image']);
+			}
+
+			return $menu
+				->separator()
+				->area('users')
+				->area('plausible')
+				->area('retour')
+				->area('queues')
+				->toArray();
+		}
 	],
 	'ready' => fn() => [
 		'panel' => [
