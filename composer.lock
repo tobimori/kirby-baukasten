@@ -687,16 +687,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "5.3.2",
+            "version": "5.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "bbb64db1516140fe43f54667af10a011a67cb3b5"
+                "reference": "90c285c0c479ecbf2724c620e7e50f94008b9da4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/bbb64db1516140fe43f54667af10a011a67cb3b5",
-                "reference": "bbb64db1516140fe43f54667af10a011a67cb3b5",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/90c285c0c479ecbf2724c620e7e50f94008b9da4",
+                "reference": "90c285c0c479ecbf2724c620e7e50f94008b9da4",
                 "shasum": ""
             },
             "require": {
@@ -783,7 +783,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2026-03-03T13:05:51+00:00"
+            "time": "2026-03-26T11:15:44+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -1533,16 +1533,16 @@
         },
         {
             "name": "lukaskleinschmidt/kirby-types",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lukaskleinschmidt/kirby-types.git",
-                "reference": "d5f6bb7230e532db56e9f7db8ed63106d6f0b730"
+                "reference": "a047af35fb45cf18c72fbf1e611e9f39e3184167"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lukaskleinschmidt/kirby-types/zipball/d5f6bb7230e532db56e9f7db8ed63106d6f0b730",
-                "reference": "d5f6bb7230e532db56e9f7db8ed63106d6f0b730",
+                "url": "https://api.github.com/repos/lukaskleinschmidt/kirby-types/zipball/a047af35fb45cf18c72fbf1e611e9f39e3184167",
+                "reference": "a047af35fb45cf18c72fbf1e611e9f39e3184167",
                 "shasum": ""
             },
             "require": {
@@ -1573,9 +1573,9 @@
             "description": "Kirby Types",
             "support": {
                 "issues": "https://github.com/lukaskleinschmidt/kirby-types/issues",
-                "source": "https://github.com/lukaskleinschmidt/kirby-types/tree/2.0.2"
+                "source": "https://github.com/lukaskleinschmidt/kirby-types/tree/2.0.3"
             },
-            "time": "2025-02-12T13:29:21+00:00"
+            "time": "2026-03-30T11:27:06+00:00"
         },
         {
             "name": "michelf/php-smartypants",
