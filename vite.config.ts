@@ -64,6 +64,15 @@ export default defineConfig(({ mode }) => {
 				}
 			}
 		},
+		optimizeDeps: {
+			rolldownOptions: {
+				transform: {
+					inject: {
+						htmx: "htmx.org"
+					}
+				}
+			}
+		},
 		plugins: [
 			svgSprite({
 				sprite: {

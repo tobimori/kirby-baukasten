@@ -20,7 +20,6 @@
 		"noFallthroughCasesInSwitch": true,
 
 		/* Paths */
-		"baseUrl": "./src",
 		"paths": {
 			"@/*": ["./*"]
 		}
