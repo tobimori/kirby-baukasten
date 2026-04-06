@@ -30,10 +30,16 @@ $lazy ??= true;
 if ($isFile || $image instanceof Asset) :
 	if ($image->extension() === 'svg') :
 		$svgString = svg($image);
-		if ($svgString && (($class ?? '') || $attrStyle || $attr)) {
+		if ($svgString) {
 			$doc = Dom\HTMLDocument::createFromString($svgString, LIBXML_NOERROR);
 			$svg = $doc->getElementsByTagName('svg')->item(0);
 			if ($svg) {
+				$viewBox = $svg->getAttribute('viewBox');
+				if ($viewBox && preg_match('/[\d.]+\s+[\d.]+\s+([\d.]+)\s+([\d.]+)/', $viewBox, $m)) {
+					$ratioStyle = "--ratio: {$m[1]} / {$m[2]}";
+					$existing = $svg->getAttribute('style');
+					$svg->setAttribute('style', $existing ? "{$existing}; {$ratioStyle}" : $ratioStyle);
+				}
 				if ($class ?? '') {
 					$svg->setAttribute('class', cls([$svg->getAttribute('class'), $class]));
 				}

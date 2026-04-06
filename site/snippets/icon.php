@@ -8,7 +8,7 @@ if (isset($type)) :
 		: spritePath(); ?>
 	<svg <?= attr(A::merge($attr ?? [], [
 					'aria-hidden' => true,
-					'class' => cls($class ?? 'shrink-0')
+					'class' => cls($class ?? 'shrink-0 text-current')
 				])) ?>>
 		<use href="<?= $spritePath ?><?php e(vite()->isRunningHot(), "?t={$type}") ?>#<?= $type ?>"></use>
 	</svg>
