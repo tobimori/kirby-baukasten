@@ -31,21 +31,50 @@ RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*gzip\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC
 RewriteCond %{REQUEST_FILENAME}.gz -s
 RewriteRule ^(.+)\.(css|js|svg)$ $1.$2.gz [QSA,E=no-gzip:1]
 
-# serve staticache pages (precompressed gzip, then plain html)
+# serve staticache pages (precompressed, then plain html)
+# skip cache for preview/authenticated requests
+RewriteCond %{QUERY_STRING} !(^|&)_token= [NC]
+RewriteCond %{HTTP:Accept-Encoding} (^|,)\s*zstd(\s*;\s*q=[0-9.]+)?\s*(,|$) [NC]
+RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*zstd\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC]
+RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI}/index.html.zst -f
+RewriteRule ^ __staticache%{REQUEST_URI}/index.html.zst [END,E=no-gzip:1]
+
+RewriteCond %{QUERY_STRING} !(^|&)_token= [NC]
+RewriteCond %{HTTP:Accept-Encoding} (^|,)\s*br(\s*;\s*q=[0-9.]+)?\s*(,|$) [NC]
+RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*br\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC]
+RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI}/index.html.br -f
+RewriteRule ^ __staticache%{REQUEST_URI}/index.html.br [END,E=no-gzip:1]
+
+RewriteCond %{QUERY_STRING} !(^|&)_token= [NC]
 RewriteCond %{HTTP:Accept-Encoding} (^|,)\s*gzip(\s*;\s*q=[0-9.]+)?\s*(,|$) [NC]
 RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*gzip\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC]
 RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI}/index.html.gz -f
 RewriteRule ^ __staticache%{REQUEST_URI}/index.html.gz [END,E=no-gzip:1]
 
+RewriteCond %{QUERY_STRING} !(^|&)_token= [NC]
 RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI}/index.html -f
 RewriteRule ^ __staticache%{REQUEST_URI}/index.html [END]
 
 # serve staticache content representations (json, xml, etc.)
+RewriteCond %{QUERY_STRING} !(^|&)_token= [NC]
+RewriteCond %{HTTP:Accept-Encoding} (^|,)\s*zstd(\s*;\s*q=[0-9.]+)?\s*(,|$) [NC]
+RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*zstd\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC]
+RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI}.zst -f
+RewriteRule ^ __staticache%{REQUEST_URI}.zst [END,E=no-gzip:1]
+
+RewriteCond %{QUERY_STRING} !(^|&)_token= [NC]
+RewriteCond %{HTTP:Accept-Encoding} (^|,)\s*br(\s*;\s*q=[0-9.]+)?\s*(,|$) [NC]
+RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*br\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC]
+RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI}.br -f
+RewriteRule ^ __staticache%{REQUEST_URI}.br [END,E=no-gzip:1]
+
+RewriteCond %{QUERY_STRING} !(^|&)_token= [NC]
 RewriteCond %{HTTP:Accept-Encoding} (^|,)\s*gzip(\s*;\s*q=[0-9.]+)?\s*(,|$) [NC]
 RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*gzip\s*;\s*q=0(?:\.0+)?\s*(,|$) [NC]
 RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI}.gz -f
 RewriteRule ^ __staticache%{REQUEST_URI}.gz [END,E=no-gzip:1]
 
+RewriteCond %{QUERY_STRING} !(^|&)_token= [NC]
 RewriteCond %{DOCUMENT_ROOT}/__staticache%{REQUEST_URI} -f
 RewriteRule ^ __staticache%{REQUEST_URI} [END]
 
