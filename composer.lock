@@ -687,16 +687,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "5.3.3",
+            "version": "5.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "90c285c0c479ecbf2724c620e7e50f94008b9da4"
+                "reference": "80061614af90387da8b8ff9d92b390050a5f958f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/90c285c0c479ecbf2724c620e7e50f94008b9da4",
-                "reference": "90c285c0c479ecbf2724c620e7e50f94008b9da4",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/80061614af90387da8b8ff9d92b390050a5f958f",
+                "reference": "80061614af90387da8b8ff9d92b390050a5f958f",
                 "shasum": ""
             },
             "require": {
@@ -720,9 +720,9 @@
                 "michelf/php-smartypants": "1.8.1",
                 "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
                 "phpmailer/phpmailer": "7.0.2",
-                "symfony/polyfill-intl-idn": "1.33.0",
-                "symfony/polyfill-mbstring": "1.33.0",
-                "symfony/yaml": "7.4.6"
+                "symfony/polyfill-intl-idn": "1.36.0",
+                "symfony/polyfill-mbstring": "1.36.0",
+                "symfony/yaml": "7.4.8"
             },
             "replace": {
                 "symfony/polyfill-php72": "*"
@@ -783,7 +783,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2026-03-26T11:15:44+00:00"
+            "time": "2026-04-23T08:01:34+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -2897,16 +2897,16 @@
         },
         {
             "name": "spatie/schema-org",
-            "version": "4.0.0",
+            "version": "4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/schema-org.git",
-                "reference": "f1038b6fa57b976920622477812ff9c39398660b"
+                "reference": "be389b4759214c11cc1364a16e34a929c5af5a88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/schema-org/zipball/f1038b6fa57b976920622477812ff9c39398660b",
-                "reference": "f1038b6fa57b976920622477812ff9c39398660b",
+                "url": "https://api.github.com/repos/spatie/schema-org/zipball/be389b4759214c11cc1364a16e34a929c5af5a88",
+                "reference": "be389b4759214c11cc1364a16e34a929c5af5a88",
                 "shasum": ""
             },
             "require": {
@@ -2954,7 +2954,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/schema-org/issues",
-                "source": "https://github.com/spatie/schema-org/tree/4.0.0"
+                "source": "https://github.com/spatie/schema-org/tree/4.0.2"
             },
             "funding": [
                 {
@@ -2966,7 +2966,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-09T14:54:35+00:00"
+            "time": "2026-04-20T18:44:01+00:00"
         },
         {
             "name": "srwiez/thumbhash",
@@ -3324,7 +3324,7 @@
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.33.0",
+            "version": "v1.36.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
@@ -3387,7 +3387,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.36.0"
             },
             "funding": [
                 {
@@ -3496,16 +3496,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.33.0",
+            "version": "v1.36.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493"
+                "reference": "6a21eb99c6973357967f6ce3708cd55a6bec6315"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6d857f4d76bd4b343eac26d6b539585d2bc56493",
-                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6a21eb99c6973357967f6ce3708cd55a6bec6315",
+                "reference": "6a21eb99c6973357967f6ce3708cd55a6bec6315",
                 "shasum": ""
             },
             "require": {
@@ -3557,7 +3557,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.36.0"
             },
             "funding": [
                 {
@@ -3577,7 +3577,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-23T08:48:59+00:00"
+            "time": "2026-04-10T17:25:58+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -3995,16 +3995,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v7.4.6",
+            "version": "v7.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "58751048de17bae71c5aa0d13cb19d79bca26391"
+                "reference": "c58fdf7b3d6c2995368264c49e4e8b05bcff2883"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/58751048de17bae71c5aa0d13cb19d79bca26391",
-                "reference": "58751048de17bae71c5aa0d13cb19d79bca26391",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/c58fdf7b3d6c2995368264c49e4e8b05bcff2883",
+                "reference": "c58fdf7b3d6c2995368264c49e4e8b05bcff2883",
                 "shasum": ""
             },
             "require": {
@@ -4047,7 +4047,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v7.4.6"
+                "source": "https://github.com/symfony/yaml/tree/v7.4.8"
             },
             "funding": [
                 {
@@ -4067,7 +4067,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-09T09:33:46+00:00"
+            "time": "2026-03-24T13:12:05+00:00"
         },
         {
             "name": "tales-from-a-dev/tailwind-merge-php",
@@ -4129,16 +4129,16 @@
         },
         {
             "name": "tobimori/kirby-queues",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-queues.git",
-                "reference": "b2c71e508a314868221f0f163553cb2d0ab47131"
+                "reference": "d686d783614f430d43797433fe80731236c6220f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-queues/zipball/b2c71e508a314868221f0f163553cb2d0ab47131",
-                "reference": "b2c71e508a314868221f0f163553cb2d0ab47131",
+                "url": "https://api.github.com/repos/tobimori/kirby-queues/zipball/d686d783614f430d43797433fe80731236c6220f",
+                "reference": "d686d783614f430d43797433fe80731236c6220f",
                 "shasum": ""
             },
             "require": {
@@ -4149,7 +4149,7 @@
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "getkirby/cli": "^1.0",
                 "getkirby/cms": "^5.0",
-                "pestphp/pest": "^2.0",
+                "pestphp/pest": "^3.0",
                 "phpstan/phpstan": "^1.0"
             },
             "type": "kirby-plugin",
@@ -4186,22 +4186,22 @@
             ],
             "support": {
                 "issues": "https://github.com/tobimori/kirby-queues/issues",
-                "source": "https://github.com/tobimori/kirby-queues/tree/1.0.0"
+                "source": "https://github.com/tobimori/kirby-queues/tree/1.1.0"
             },
-            "time": "2025-11-25T14:07:28+00:00"
+            "time": "2026-03-12T14:06:20+00:00"
         },
         {
             "name": "tobimori/kirby-seo",
-            "version": "2.0.0-beta.3",
+            "version": "2.0.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "c16472022f53eba9c58ec73b10926129f889f86d"
+                "reference": "7a364eaccefc69cf82a164f8eeefd2fa50869985"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/c16472022f53eba9c58ec73b10926129f889f86d",
-                "reference": "c16472022f53eba9c58ec73b10926129f889f86d",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/7a364eaccefc69cf82a164f8eeefd2fa50869985",
+                "reference": "7a364eaccefc69cf82a164f8eeefd2fa50869985",
                 "shasum": ""
             },
             "require": {
@@ -4244,7 +4244,7 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-beta.3"
+                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-beta.4"
             },
             "funding": [
                 {
@@ -4256,7 +4256,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-03-10T23:31:27+00:00"
+            "time": "2026-04-16T15:38:48+00:00"
         },
         {
             "name": "tobimori/kirby-tailwind-merge",
