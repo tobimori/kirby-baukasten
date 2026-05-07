@@ -71,7 +71,7 @@ If a component combines markup with styling (e.g. a badge with text + icon), cre
 
 ### Focus Styles
 
-Add custom focus styles to interactive elements. Silence browser defaults with `outline-none` and add custom styles with `focus-visible:`:
+Add custom focus styles to interactive elements. Silence browser defaults with `outline-hidden` and add custom styles with `focus-visible:`:
 
 - Prefer `ring` utilities for interactive elements
 - Use `underline` for links unless specified otherwise
