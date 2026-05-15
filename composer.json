@@ -24,7 +24,6 @@
 		"lukaskleinschmidt/kirby-laravel-vite": "^2.1.1",
 		"distantnative/retour-for-kirby": "^5.0",
 		"getkirby/cli": "^1.2",
-		"bnomei/kirby3-janitor": "^5.2",
 		"tobimori/kirby-tailwind-merge": "^4.0",
 		"tobimori/kirby-thumbhash": "^2",
 		"johannschopplich/kirby-plausible": "^1",
