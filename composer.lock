@@ -613,16 +613,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "5.4.3",
+            "version": "5.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "649acf7f2b055238778772bfd2fb19b0121be6d3"
+                "reference": "3f96d3b9ccda22f0d2f901b96376b5d08556ad75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/649acf7f2b055238778772bfd2fb19b0121be6d3",
-                "reference": "649acf7f2b055238778772bfd2fb19b0121be6d3",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/3f96d3b9ccda22f0d2f901b96376b5d08556ad75",
+                "reference": "3f96d3b9ccda22f0d2f901b96376b5d08556ad75",
                 "shasum": ""
             },
             "require": {
@@ -647,7 +647,7 @@
                 "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
                 "phpmailer/phpmailer": "7.1.1",
                 "symfony/polyfill-intl-idn": "1.38.1",
-                "symfony/polyfill-mbstring": "1.38.1",
+                "symfony/polyfill-mbstring": "1.38.2",
                 "symfony/yaml": "7.4.13"
             },
             "replace": {
@@ -709,7 +709,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2026-05-27T11:20:31+00:00"
+            "time": "2026-06-17T10:26:11+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -3363,16 +3363,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.38.1",
+            "version": "v1.38.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "14c5439eec4ccff081ac14eca2dc57feb2a66d92"
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/14c5439eec4ccff081ac14eca2dc57feb2a66d92",
-                "reference": "14c5439eec4ccff081ac14eca2dc57feb2a66d92",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
                 "shasum": ""
             },
             "require": {
@@ -3424,7 +3424,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.1"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.2"
             },
             "funding": [
                 {
@@ -3444,7 +3444,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-26T12:51:13+00:00"
+            "time": "2026-05-27T06:59:30+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
