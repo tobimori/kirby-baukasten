@@ -1682,16 +1682,16 @@
         },
         {
             "name": "moinframe/kirby-panel-menu",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moinframe/kirby-panel-menu.git",
-                "reference": "f3c8661407f947bc2cc2c984d75e7fbbb6f4820a"
+                "reference": "0b7ce5c5879e41e5d41d3ffcf4809fa8880b8130"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moinframe/kirby-panel-menu/zipball/f3c8661407f947bc2cc2c984d75e7fbbb6f4820a",
-                "reference": "f3c8661407f947bc2cc2c984d75e7fbbb6f4820a",
+                "url": "https://api.github.com/repos/moinframe/kirby-panel-menu/zipball/0b7ce5c5879e41e5d41d3ffcf4809fa8880b8130",
+                "reference": "0b7ce5c5879e41e5d41d3ffcf4809fa8880b8130",
                 "shasum": ""
             },
             "require": {
@@ -1738,7 +1738,7 @@
                 "issues": "https://github.com/moinframe/kirby-panel-menu/issues",
                 "source": "https://github.com/moinframe/kirby-panel-menu"
             },
-            "time": "2026-07-21T09:51:46+00:00"
+            "time": "2026-10-02T09:25:11+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -4176,16 +4176,16 @@
         },
         {
             "name": "tobimori/kirby-seo",
-            "version": "2.0.0-beta.5",
+            "version": "2.0.0-rc.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "181c47e2c2215f1e7aca3c1f04c74346423b773d"
+                "reference": "05fbf5f1f9e2bf6636a475703e6456eaf0d3ea5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/181c47e2c2215f1e7aca3c1f04c74346423b773d",
-                "reference": "181c47e2c2215f1e7aca3c1f04c74346423b773d",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/05fbf5f1f9e2bf6636a475703e6456eaf0d3ea5e",
+                "reference": "05fbf5f1f9e2bf6636a475703e6456eaf0d3ea5e",
                 "shasum": ""
             },
             "require": {
@@ -4202,6 +4202,7 @@
             "suggest": {
                 "ext-imagick": "Rasterize non-resizable images (SVG, etc.) for AI alt text generation",
                 "getkirby/cli": "Enable background processing support",
+                "league/html-to-markdown": "Enable automatic conversion for LLM-friendly Markdown responses",
                 "spatie/schema-org": "Enable the Schema.org support",
                 "tobimori/kirby-queues": "Enable background processing support"
             },
@@ -4228,11 +4229,11 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-beta.5"
+                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-rc.1"
             },
             "funding": [
                 {
-                    "url": "https://plugins.andkindness.com/seo/preorder",
+                    "url": "https://www.andkindness.com/buy?plugin=seo",
                     "type": "custom"
                 },
                 {
@@ -4240,7 +4241,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-07T08:42:06+00:00"
+            "time": "2026-10-04T16:12:20+00:00"
         },
         {
             "name": "tobimori/kirby-tailwind-merge",
