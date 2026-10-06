@@ -251,16 +251,16 @@
         },
         {
             "name": "composer/semver",
-            "version": "3.4.4",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "198166618906cb2de69b95d7d47e5fa8aa1b2b95"
+                "reference": "528948210cc46f967a4b98e83b19e76f2b504993"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/198166618906cb2de69b95d7d47e5fa8aa1b2b95",
-                "reference": "198166618906cb2de69b95d7d47e5fa8aa1b2b95",
+                "url": "https://api.github.com/repos/composer/semver/zipball/528948210cc46f967a4b98e83b19e76f2b504993",
+                "reference": "528948210cc46f967a4b98e83b19e76f2b504993",
                 "shasum": ""
             },
             "require": {
@@ -302,7 +302,7 @@
                     "homepage": "http://robbast.nl"
                 }
             ],
-            "description": "Semver library that offers utilities, version constraint parsing and validation.",
+            "description": "Version comparison library that offers utilities, version constraint parsing and validation.",
             "keywords": [
                 "semantic",
                 "semver",
@@ -312,7 +312,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/semver/issues",
-                "source": "https://github.com/composer/semver/tree/3.4.4"
+                "source": "https://github.com/composer/semver/tree/3.5.1"
             },
             "funding": [
                 {
@@ -324,7 +324,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-20T19:15:30+00:00"
+            "time": "2026-10-05T13:12:12+00:00"
         },
         {
             "name": "distantnative/retour-for-kirby",
@@ -541,16 +541,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.18.4",
+            "version": "2.18.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "d2102955e48b9fd9ab24280a7ad12ed552752c4d"
+                "reference": "7d0a2cde892089bb09372f4366e9b960eb3001a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/d2102955e48b9fd9ab24280a7ad12ed552752c4d",
-                "reference": "d2102955e48b9fd9ab24280a7ad12ed552752c4d",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/7d0a2cde892089bb09372f4366e9b960eb3001a9",
+                "reference": "7d0a2cde892089bb09372f4366e9b960eb3001a9",
                 "shasum": ""
             },
             "require": {
@@ -559,8 +559,8 @@
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^7.5.20 || ^8.5.8 || ^9.3.3",
-                "symfony/var-dumper": "^4.0 || ^5.0"
+                "phpunit/phpunit": "^7.5.20 || ^8.5.8 || ^9.3.3 || ^10.5.58",
+                "symfony/var-dumper": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0"
             },
             "suggest": {
                 "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
@@ -600,7 +600,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.18.4"
+                "source": "https://github.com/filp/whoops/tree/2.18.6"
             },
             "funding": [
                 {
@@ -608,7 +608,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-08T12:00:00+00:00"
+            "time": "2026-10-03T17:03:57+00:00"
         },
         {
             "name": "genxbe/kirby-ray",
@@ -729,22 +729,22 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "5.6.0",
+            "version": "5.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "3647b786bfd14b99c64a3fcee8644baf88476533"
+                "reference": "93e40c14c249783fe30268f356b2d24f4a52d2e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/3647b786bfd14b99c64a3fcee8644baf88476533",
-                "reference": "3647b786bfd14b99c64a3fcee8644baf88476533",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/93e40c14c249783fe30268f356b2d24f4a52d2e0",
+                "reference": "93e40c14c249783fe30268f356b2d24f4a52d2e0",
                 "shasum": ""
             },
             "require": {
                 "christian-riesen/base32": "1.6.0",
                 "claviska/simpleimage": "4.4.0",
-                "composer/semver": "3.4.4",
+                "composer/semver": "3.5.1",
                 "erusev/parsedown": "1.8.0",
                 "erusev/parsedown-extra": "0.9.0",
                 "ext-ctype": "*",
@@ -758,15 +758,15 @@
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
                 "ext-simplexml": "*",
-                "filp/whoops": "2.18.4",
+                "filp/whoops": "2.18.6",
                 "getkirby/composer-installer": "^1.2.1",
                 "laminas/laminas-escaper": "2.18.0",
                 "michelf/php-smartypants": "1.8.1",
                 "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
                 "phpmailer/phpmailer": "7.1.1",
-                "symfony/polyfill-intl-idn": "1.42.0",
-                "symfony/polyfill-mbstring": "1.38.2",
-                "symfony/yaml": "7.4.18"
+                "symfony/polyfill-intl-idn": "1.43.0",
+                "symfony/polyfill-mbstring": "1.43.0",
+                "symfony/yaml": "7.4.20"
             },
             "replace": {
                 "symfony/polyfill-php72": "*"
@@ -827,7 +827,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2026-09-16T10:39:26+00:00"
+            "time": "2026-10-06T08:22:59+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -1682,16 +1682,16 @@
         },
         {
             "name": "moinframe/kirby-panel-menu",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moinframe/kirby-panel-menu.git",
-                "reference": "f3c8661407f947bc2cc2c984d75e7fbbb6f4820a"
+                "reference": "0b7ce5c5879e41e5d41d3ffcf4809fa8880b8130"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moinframe/kirby-panel-menu/zipball/f3c8661407f947bc2cc2c984d75e7fbbb6f4820a",
-                "reference": "f3c8661407f947bc2cc2c984d75e7fbbb6f4820a",
+                "url": "https://api.github.com/repos/moinframe/kirby-panel-menu/zipball/0b7ce5c5879e41e5d41d3ffcf4809fa8880b8130",
+                "reference": "0b7ce5c5879e41e5d41d3ffcf4809fa8880b8130",
                 "shasum": ""
             },
             "require": {
@@ -1738,7 +1738,7 @@
                 "issues": "https://github.com/moinframe/kirby-panel-menu/issues",
                 "source": "https://github.com/moinframe/kirby-panel-menu"
             },
-            "time": "2026-07-21T09:51:46+00:00"
+            "time": "2026-10-02T09:25:11+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -3308,16 +3308,16 @@
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.42.0",
+            "version": "v1.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "51b5ff5ba85452b31ec6f55490b08148612339d9"
+                "reference": "533d68cf99c8f8ee2e8893c59ed59192e92cfd74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/51b5ff5ba85452b31ec6f55490b08148612339d9",
-                "reference": "51b5ff5ba85452b31ec6f55490b08148612339d9",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/533d68cf99c8f8ee2e8893c59ed59192e92cfd74",
+                "reference": "533d68cf99c8f8ee2e8893c59ed59192e92cfd74",
                 "shasum": ""
             },
             "require": {
@@ -3371,7 +3371,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.42.0"
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.43.0"
             },
             "funding": [
                 {
@@ -3391,7 +3391,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-08-24T10:51:20+00:00"
+            "time": "2026-09-23T14:40:04+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
@@ -3480,16 +3480,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.38.2",
+            "version": "v1.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6"
+                "reference": "4d5d331bf731e0aedbc6b2f5e61135b7b7996a72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
-                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/4d5d331bf731e0aedbc6b2f5e61135b7b7996a72",
+                "reference": "4d5d331bf731e0aedbc6b2f5e61135b7b7996a72",
                 "shasum": ""
             },
             "require": {
@@ -3541,7 +3541,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.2"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.43.0"
             },
             "funding": [
                 {
@@ -3561,7 +3561,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-27T06:59:30+00:00"
+            "time": "2026-09-24T15:19:04+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -3979,16 +3979,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v7.4.18",
+            "version": "v7.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "4cef939e55b8a21c5780418de0d98ab00d0736e1"
+                "reference": "0222bf4dfaa1e3ceb8fff579635d655f2950d5a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/4cef939e55b8a21c5780418de0d98ab00d0736e1",
-                "reference": "4cef939e55b8a21c5780418de0d98ab00d0736e1",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/0222bf4dfaa1e3ceb8fff579635d655f2950d5a7",
+                "reference": "0222bf4dfaa1e3ceb8fff579635d655f2950d5a7",
                 "shasum": ""
             },
             "require": {
@@ -4031,7 +4031,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v7.4.18"
+                "source": "https://github.com/symfony/yaml/tree/v7.4.20"
             },
             "funding": [
                 {
@@ -4051,7 +4051,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-08-30T00:47:26+00:00"
+            "time": "2026-09-26T06:31:10+00:00"
         },
         {
             "name": "tales-from-a-dev/tailwind-merge-php",
@@ -4176,16 +4176,16 @@
         },
         {
             "name": "tobimori/kirby-seo",
-            "version": "2.0.0-beta.5",
+            "version": "2.0.0-rc.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "181c47e2c2215f1e7aca3c1f04c74346423b773d"
+                "reference": "05fbf5f1f9e2bf6636a475703e6456eaf0d3ea5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/181c47e2c2215f1e7aca3c1f04c74346423b773d",
-                "reference": "181c47e2c2215f1e7aca3c1f04c74346423b773d",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/05fbf5f1f9e2bf6636a475703e6456eaf0d3ea5e",
+                "reference": "05fbf5f1f9e2bf6636a475703e6456eaf0d3ea5e",
                 "shasum": ""
             },
             "require": {
@@ -4202,6 +4202,7 @@
             "suggest": {
                 "ext-imagick": "Rasterize non-resizable images (SVG, etc.) for AI alt text generation",
                 "getkirby/cli": "Enable background processing support",
+                "league/html-to-markdown": "Enable automatic conversion for LLM-friendly Markdown responses",
                 "spatie/schema-org": "Enable the Schema.org support",
                 "tobimori/kirby-queues": "Enable background processing support"
             },
@@ -4228,11 +4229,11 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-beta.5"
+                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-rc.1"
             },
             "funding": [
                 {
-                    "url": "https://plugins.andkindness.com/seo/preorder",
+                    "url": "https://www.andkindness.com/buy?plugin=seo",
                     "type": "custom"
                 },
                 {
@@ -4240,7 +4241,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-07T08:42:06+00:00"
+            "time": "2026-10-04T16:12:20+00:00"
         },
         {
             "name": "tobimori/kirby-tailwind-merge",
