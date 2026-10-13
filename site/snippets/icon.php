@@ -2,14 +2,11 @@
 
 use Kirby\Toolkit\A;
 
-if (isset($type)) :
-	$spritePath = vite()->isRunningHot()
-		? vite()->asset('assets/sprite.svg')
-		: spritePath(); ?>
+if (isset($type)) : ?>
 	<svg <?= attr(A::merge($attr ?? [], [
 					'aria-hidden' => true,
 					'class' => cls($class ?? 'shrink-0 text-current')
 				])) ?>>
-		<use href="<?= $spritePath ?><?php e(vite()->isRunningHot(), "?t={$type}") ?>#<?= $type ?>"></use>
+		<use href="<?= vite()->asset(vite()->isRunningHot() ? '__spritemap' : 'spritemap.svg') ?>#<?= $type ?>"></use>
 	</svg>
 <?php endif ?>

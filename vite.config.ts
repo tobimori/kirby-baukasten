@@ -3,6 +3,7 @@ import { resolve } from "node:path"
 import { promisify } from "node:util"
 import { constants } from "node:zlib"
 
+import svgSpritemap from "@spiriit/vite-plugin-svg-spritemap"
 import tailwind from "@tailwindcss/vite"
 import browserslist from "browserslist"
 import laravel from "laravel-vite-plugin"
@@ -10,7 +11,6 @@ import { browserslistToTargets } from "lightningcss"
 import { defineConfig, loadEnv, type Plugin } from "vite"
 import { compression, defineAlgorithm } from "vite-plugin-compression2"
 import devtoolsJson from "vite-plugin-devtools-json"
-import svgSprite from "vite-svg-sprite-wrapper"
 
 import { browserslist as browserslistConfig } from "./package.json"
 
@@ -74,20 +74,10 @@ export default defineConfig(({ mode }) => {
 			}
 		},
 		plugins: [
-			svgSprite({
-				sprite: {
-					shape: {
-						transform: [
-							{
-								svgo: {
-									plugins: [{ name: "preset-default" }, "removeXMLNS"]
-								}
-							}
-						]
-					}
-				},
-				icons: "assets/icons/*.svg",
-				outputDir: "assets/"
+			svgSpritemap("assets/icons/*.svg", {
+				prefix: "",
+				svgo: { plugins: [{ name: "preset-default" }, "removeXMLNS"] },
+				output: { use: false, view: false, hrefAttribute: "href" }
 			}),
 			laravel({
 				input: ["src/index.ts", "src/styles/index.css", "src/styles/panel.css"],

@@ -38,6 +38,9 @@ if (json_decode(env('REQUIRES_LOGIN')) && !$kirby->user()) {
 	</main>
 	<?php snippet('core/footer') ?>
 	<?php snippet('seo/schemas') ?>
+	<?php if (vite()->isRunningHot()) : ?>
+		<script type="module" src="<?= vite()->asset('@vite-plugin-svg-spritemap/client') ?>"></script>
+	<?php endif ?>
 </body>
 
 </html>

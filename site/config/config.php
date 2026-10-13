@@ -38,8 +38,7 @@ return [
 		],
 	],
 	'tobimori.icon-field' => [
-		// use generated sprite, requires pnpm run build
-		// to generate (dev sprite doesn't work since it's not in the public folder)
+		// reads the built sprite from disk, requires pnpm run build
 		'folder' => '',
 		'sprite' => fn() => spritePath()
 	],
