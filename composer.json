@@ -32,7 +32,7 @@
 		"lukaskleinschmidt/kirby-types": "^2.0",
 		"tobimori/kirby-trawl": "^1.0",
 		"tobimori/kirby-queues": "^1.0@beta",
-		"spatie/schema-org": "^4.0",
+		"spatie/schema-org": "^5.0",
 		"moinframe/kirby-panel-menu": "^1.0"
 	},
 	"autoload": {

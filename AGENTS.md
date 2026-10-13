@@ -22,8 +22,8 @@ When creating cards that have a link, wrap the anchor tag only around the card's
 
 ```html
 <div class="relative">
-    <a href="/page" class="after:absolute after:inset-0"> Card Title </a>
-    <p class="relative z-10">Long-form text that can still be selected and copied.</p>
+	<a href="/page" class="after:absolute after:inset-0"> Card Title </a>
+	<p class="relative z-10">Long-form text that can still be selected and copied.</p>
 </div>
 ```
 

@@ -1,7 +1,7 @@
 [tools]
 node = "24"
-php = "8.5.9"
-pnpm = "11.20.0"
+php = "8.5.11"
+pnpm = "12.11.2"
 
 [tasks.setup]
 description = "Install project dependencies and create the local environment file"

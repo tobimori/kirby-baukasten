@@ -3,5 +3,6 @@
 	"semi": false,
 	"trailingComma": "none",
 	"useTabs": true,
-	"experimentalSortImports": {}
+	"experimentalSortImports": {},
+	"ignorePatterns": ["site/translations/*.json"]
 }
