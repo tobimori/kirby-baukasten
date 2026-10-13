@@ -1,11 +1,14 @@
 <?php
 
-require_once dirname(__DIR__) . '/plugins/kirby3-dotenv/global.php';
+Dotenv\Dotenv::createImmutable(dirname(__DIR__, 2))->safeLoad();
 
-loadenv([
-	'dir' => realpath(dirname(__DIR__, 2)),
-	'file' => '.env',
-]);
+if (!function_exists('env')) {
+	function env(string $key, mixed $default = null): mixed
+	{
+		$value = getenv($key);
+		return $value !== false ? $value : $_ENV[$key] ?? $_SERVER[$key] ?? $default;
+	}
+}
 
 return [
 	'debug' => json_decode(env('KIRBY_DEBUG')),
@@ -62,7 +65,6 @@ return [
 		]
 	],
 	/** Build Env / Vite / etc. */
-	'bnomei.dotenv.dir' => fn() => realpath(kirby()->roots()->base()),
 	'lukaskleinschmidt.kirby-laravel-vite.buildDirectory' => 'dist',
 	/** Panel */
 	'johannschopplich.plausible.sharedLink' => env('PLAUSIBLE_SHARED_LINK'),

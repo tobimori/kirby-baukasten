@@ -4,80 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a94a4a5c60fd3aa0a7bed9b1b4563873",
+    "content-hash": "97732f70874079659b87672a84777cd3",
     "packages": [
-        {
-            "name": "bnomei/kirby3-dotenv",
-            "version": "5.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bnomei/kirby3-dotenv.git",
-                "reference": "4c8a3357e57f2153219a8c98cbc904f34650a593"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bnomei/kirby3-dotenv/zipball/4c8a3357e57f2153219a8c98cbc904f34650a593",
-                "reference": "4c8a3357e57f2153219a8c98cbc904f34650a593",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/composer-installer": "^1.1",
-                "php": ">=8.2",
-                "vlucas/phpdotenv": "^5.3"
-            },
-            "require-dev": {
-                "getkirby/cli": "^1.5",
-                "getkirby/cms": "^5.0.0-alpha.4",
-                "larastan/larastan": "^v3.0.0",
-                "laravel/pint": "^1.13",
-                "pestphp/pest": "^v3.5.1",
-                "spatie/ray": "^1.39"
-            },
-            "suggest": {
-                "bnomei/kirby3-janitor": "Use a Panel Button or PHP code to clear the cache",
-                "bnomei/kirby3-lapse": "For faster and automatic caching based on modification of Kirby Objects",
-                "bnomei/kirby3-security-headers": "CPS headers to make the the web a saver place. Sensible defaults with zero configuration."
-            },
-            "type": "kirby-plugin",
-            "extra": {
-                "kirby-cms-path": "tests/kirby"
-            },
-            "autoload": {
-                "files": [
-                    "global.php"
-                ],
-                "psr-4": {
-                    "Bnomei\\": "classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bruno Meilick",
-                    "email": "b@bnomei.com"
-                }
-            ],
-            "description": "Kirby Plugin for environment variables from .env",
-            "keywords": [
-                ".env",
-                "dotenv",
-                "dotenv-loader",
-                "env",
-                "enviroment",
-                "enviroment-variables",
-                "kirby",
-                "kirby-cms",
-                "kirby-plugin"
-            ],
-            "support": {
-                "issues": "https://github.com/bnomei/kirby3-dotenv/issues",
-                "source": "https://github.com/bnomei/kirby3-dotenv/tree/v5.1.0"
-            },
-            "time": "2026-05-13T09:50:04+00:00"
-        },
         {
             "name": "brick/math",
             "version": "1.0.0",
