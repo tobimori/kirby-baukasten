@@ -2,9 +2,8 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "mprocs",
-		"dev:kirby": "env-cmd --no-override --use-shell \"PHP_CLI_SERVER_WORKERS=4 php -S \\$KIRBY_DEV_HOSTNAME:\\$KIRBY_DEV_PORT -t public vendor/getkirby/cms/router.php\"",
-		"dev:vite": "vite",
+		"dev": "vite",
+		"dev:portless": "portless run --name \"$(basename \"$(dirname \"$(git rev-parse --path-format=absolute --git-common-dir)\")\")\"",
 		"dev:plugin": "cd site/plugins/extended && kirbyup serve src/index.js",
 		"build": "pnpm run \"/build:/\"",
 		"build:site": "vite build",
@@ -13,7 +12,9 @@
 		"lint": "oxlint",
 		"lint:fix": "oxlint --fix",
 		"fmt": "oxfmt .",
-		"fmt:check": "oxfmt --check ."
+		"fmt:check": "oxfmt --check .",
+		"content:pull": "bash scripts/content.sh pull",
+		"content:push": "bash scripts/content.sh push"
 	},
 	"dependencies": {
 		"@alpinejs/focus": "^3.17.4",
@@ -33,13 +34,12 @@
 		"@types/alpinejs__intersect": "^3.13.4",
 		"@types/node": "^26.6.5",
 		"browserslist": "^4.29.3",
-		"env-cmd": "^11.0.0",
 		"kirbyup": "^3.5.0",
 		"laravel-vite-plugin": "^3.2.0",
 		"lightningcss": "^1.33.0",
-		"mprocs": "^0.9.6",
 		"oxfmt": "^0.73.0",
 		"oxlint": "^1.88.0",
+		"portless": "^0.15.7",
 		"svgo": "^4.1.0",
 		"tailwindcss": "^4.3.3",
 		"typescript": "^7.0.2",

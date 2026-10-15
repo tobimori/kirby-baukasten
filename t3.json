@@ -1,0 +1,28 @@
+{
+	"$schema": "https://t3.codes/schema/t3.json",
+	"defaultThreadEnvMode": "worktree",
+	"scripts": [
+		{
+			"name": "Setup",
+			"command": "bash scripts/setup.sh",
+			"icon": "configure",
+			"runOnWorktreeCreate": true,
+			"async": false
+		},
+		{
+			"name": "Dev server",
+			"command": "pnpm dev:portless",
+			"icon": "play"
+		},
+		{
+			"name": "Pull content",
+			"command": "pnpm content:pull",
+			"icon": "configure"
+		},
+		{
+			"name": "Push content",
+			"command": "pnpm content:push",
+			"icon": "configure"
+		}
+	]
+}

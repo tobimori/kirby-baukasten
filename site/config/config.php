@@ -1,6 +1,6 @@
 <?php
 
-Dotenv\Dotenv::createImmutable(dirname(__DIR__, 2))->safeLoad();
+Dotenv\Dotenv::createImmutable(dirname(__DIR__, 2), ['.env', '.env.local'], false)->safeLoad();
 
 if (!function_exists('env')) {
 	function env(string $key, mixed $default = null): mixed
@@ -17,7 +17,8 @@ return [
 	'hooks' => require __DIR__ . '/hooks.php',
 	'yaml.handler' => 'symfony',
 	'date.handler' => 'intl',
-	'url' => env("APP_URL"),
+	'url' => env('KIRBY_DEV_SERVER') ? '*' : env('APP_URL'),
+	'session' => ['cookieName' => env('KIRBY_SESSION_COOKIE', 'kirby_session')],
 	'tobimori.trawl' => [
 		'sourceLanguage' => 'en',
 		'languages' => ['de', 'en'],

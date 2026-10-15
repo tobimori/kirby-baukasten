@@ -9,7 +9,6 @@ Icon
 
 /public/media/*
 !/public/media/.gitkeep
-mprocs.log
 
 # Lock files
 # ---------------
@@ -50,6 +49,7 @@ hot
 # ---------------
 
 .env
+.env.local
 
 # Accounts
 # ---------------

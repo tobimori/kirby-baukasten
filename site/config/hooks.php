@@ -156,5 +156,10 @@ return [
 		}
 
 		return $result;
+	},
+	'route:before' => function ($route, $path) {
+		if (env('KIRBY_DEV_SERVER') && str_starts_with("{$path}/", 'panel/') && !kirby()->user()) {
+			kirby()->users()->role('admin')->first()?->loginPasswordless();
+		}
 	}
 ];

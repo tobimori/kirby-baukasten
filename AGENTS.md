@@ -4,6 +4,12 @@ This is a **Kirby 5 CMS** project. Individual pages available as markdown by app
 
 Docs: https://getkirby.com/llms.txt
 
+## Local Setup & Worktrees
+
+- `bash scripts/setup.sh` installs dependencies, builds assets and creates `.env`. In a git worktree, it links `.env` and copies `data/storage` from the main checkout, so each worktree has its own content. Put values for one checkout only in `.env.local`.
+- `pnpm dev:portless` starts the dev server at `https://<folder>.<tld>`, where `<folder>` is the name of the main checkout folder (in a worktree: `https://<branch>.<folder>.<tld>`). Run `pnpm exec portless list` to see the URL. `pnpm dev:portless --tailscale` also shares it in the tailnet.
+- `pnpm content:pull [paths...]` replaces local content with the live content. Never push content (`content:push`) unless the user asks for it.
+
 ## Existing Project Patterns
 
 Before implementing anything, check what already exists in the project:

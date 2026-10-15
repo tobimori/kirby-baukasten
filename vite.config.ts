@@ -1,4 +1,8 @@
-import { exec } from "node:child_process"
+import { exec, spawn } from "node:child_process"
+import { createHash } from "node:crypto"
+import { once } from "node:events"
+import { writeFileSync } from "node:fs"
+import { createServer, type AddressInfo } from "node:net"
 import { resolve } from "node:path"
 import { promisify } from "node:util"
 import { constants } from "node:zlib"
@@ -41,8 +45,53 @@ const kirbyTypes = (): Plugin => {
 	}
 }
 
-export default defineConfig(({ mode }) => {
+const publicUrls = [process.env.PORTLESS_URL, process.env.PORTLESS_TAILSCALE_URL].filter((url) => url !== undefined)
+
+const kirbyServer = (port: number): Plugin => ({
+	name: "kirby-server",
+	apply: "serve",
+	enforce: "post",
+	configureServer(server) {
+		const httpServer = server.httpServer
+		if (!httpServer) return
+
+		httpServer.once("listening", () => {
+			writeFileSync(resolve(__dirname, "public/hot"), "")
+			const php = spawn("php", ["-S", `127.0.0.1:${port}`, "-t", "public", "vendor/getkirby/cms/router.php"], {
+				cwd: __dirname,
+				stdio: ["ignore", "inherit", "pipe"],
+				env: {
+					...process.env,
+					PHP_CLI_SERVER_WORKERS: "4",
+					KIRBY_DEV_SERVER: "1",
+					KIRBY_SESSION_COOKIE: `kirby_session_${createHash("md5").update(__dirname).digest("hex").slice(0, 8)}`
+				}
+			})
+
+			php.stderr.on("data", (chunk: Buffer) => {
+				const lines = chunk
+					.toString()
+					.split("\n")
+					.filter((line) => line.trim() && !/ (Accepted|Closing)$| \[\d{3}\]: [A-Z]+ /.test(line))
+				if (lines.length) process.stderr.write(lines.join("\n") + "\n")
+			})
+
+			const stop = () => php.kill()
+			process.once("exit", stop)
+			httpServer.once("close", () => {
+				process.off("exit", stop)
+				stop()
+			})
+		})
+	}
+})
+
+export default defineConfig(async ({ mode }) => {
 	const env = loadEnv(mode, process.cwd(), "")
+	const probe = createServer().listen(0, "127.0.0.1")
+	await once(probe, "listening")
+	const kirbyPort = (probe.address() as AddressInfo).port
+	probe.close()
 
 	return {
 		base: mode === "development" ? "/" : "/dist/",
@@ -97,6 +146,7 @@ export default defineConfig(({ mode }) => {
 				exclude: [/\.(png|jpe?g|webp|avif|gif|woff2?)$/]
 			}),
 			devtoolsJson(),
+			kirbyServer(kirbyPort),
 			kirbyTypes()
 		],
 		css: {
@@ -106,11 +156,21 @@ export default defineConfig(({ mode }) => {
 			}
 		},
 		server: {
-			origin: env.APP_URL,
+			host: "localhost",
 			port: Number(env.VITE_DEV_PORT || 3000),
+			strictPort: false,
+			origin: "",
+			allowedHosts: publicUrls.map((url) => new URL(url).hostname),
 			proxy: {
 				// we proxy anything except the folders our vite dev assets are in
-				"^(?!/src|/node_modules|/@vite|/@react-refresh|/assets).*$": `http://${env.KIRBY_DEV_HOSTNAME}:${env.KIRBY_DEV_PORT}`
+				"^(?!/src|/node_modules|/@vite|/@react-refresh|/assets).*$": {
+					target: `http://127.0.0.1:${kirbyPort}`,
+					// kirby uses the php server port unless a proxy header is set
+					configure: (proxy) =>
+						proxy.on("proxyReq", (proxyReq, req) => {
+							if (!req.headers["x-forwarded-host"]) proxyReq.setHeader("x-forwarded-host", req.headers.host ?? "")
+						})
+				}
 			}
 		}
 	}
