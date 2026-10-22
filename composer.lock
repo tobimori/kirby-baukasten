@@ -257,16 +257,16 @@
         },
         {
             "name": "distantnative/retour-for-kirby",
-            "version": "5.6.0",
+            "version": "5.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/distantnative/retour-for-kirby.git",
-                "reference": "a959f468e9f7608b7d372aca8be35f2d8d6adb14"
+                "reference": "17717fcb71a50bcd01998e39197aee3fc1a9e352"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/a959f468e9f7608b7d372aca8be35f2d8d6adb14",
-                "reference": "a959f468e9f7608b7d372aca8be35f2d8d6adb14",
+                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/17717fcb71a50bcd01998e39197aee3fc1a9e352",
+                "reference": "17717fcb71a50bcd01998e39197aee3fc1a9e352",
                 "shasum": ""
             },
             "require": {
@@ -276,6 +276,9 @@
             },
             "type": "kirby-plugin",
             "extra": {
+                "kirby": {
+                    "compatible": "^4.3.1 || ^5.0"
+                },
                 "installer-name": "retour",
                 "kirby-cms-path": false
             },
@@ -293,15 +296,9 @@
             "homepage": "https://distantnative.com/retour-for-kirby/",
             "support": {
                 "issues": "https://github.com/distantnative/retour-for-kirby/issues",
-                "source": "https://github.com/distantnative/retour-for-kirby/tree/5.6.0"
+                "source": "https://github.com/distantnative/retour-for-kirby/tree/5.7.0"
             },
-            "funding": [
-                {
-                    "url": "https://paypal.me/distantnative",
-                    "type": "custom"
-                }
-            ],
-            "time": "2026-02-28T21:35:54+00:00"
+            "time": "2026-10-16T14:16:30+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -1200,26 +1197,31 @@
         },
         {
             "name": "johannschopplich/kirby-plausible",
-            "version": "1.0.3",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-plausible.git",
-                "reference": "bfd8738efd1b0d6302916ee559324b9805d580a9"
+                "reference": "c4003ecbd70d8b49bd09a589dd2eaf73c1268390"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-plausible/zipball/bfd8738efd1b0d6302916ee559324b9805d580a9",
-                "reference": "bfd8738efd1b0d6302916ee559324b9805d580a9",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-plausible/zipball/c4003ecbd70d8b49bd09a589dd2eaf73c1268390",
+                "reference": "c4003ecbd70d8b49bd09a589dd2eaf73c1268390",
                 "shasum": ""
             },
             "require": {
-                "getkirby/composer-installer": "^1.2"
+                "getkirby/composer-installer": "^1",
+                "php": ">=8.2"
             },
             "require-dev": {
-                "getkirby/cms": "^5"
+                "getkirby/cms": "^5",
+                "phpunit/phpunit": "^12"
             },
             "type": "kirby-plugin",
             "extra": {
+                "kirby": {
+                    "compatible": "^4.0 || ^5.0"
+                },
                 "kirby-cms-path": false
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1233,19 +1235,19 @@
                     "homepage": "https://johannschopplich.com"
                 }
             ],
-            "description": "Plausible integration for Kirby CMS",
+            "description": "Plausible Analytics for Kirby CMS",
             "homepage": "https://github.com/johannschopplich/kirby-plausible#readme",
             "keywords": [
                 "analytics",
-                "getkirby",
                 "kirby",
                 "kirby-cms",
+                "kirby-plugin",
                 "plausible"
             ],
             "support": {
-                "source": "https://github.com/johannschopplich/kirby-plausible/tree/v1.0.3"
+                "source": "https://github.com/johannschopplich/kirby-plausible/tree/v1.1.0"
             },
-            "time": "2025-07-04T11:41:15+00:00"
+            "time": "2026-10-20T13:43:15+00:00"
         },
         {
             "name": "junohamburg/kirby-language-selector",
@@ -4110,34 +4112,39 @@
         },
         {
             "name": "tobimori/kirby-seo",
-            "version": "2.0.0-rc.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-seo.git",
-                "reference": "05fbf5f1f9e2bf6636a475703e6456eaf0d3ea5e"
+                "reference": "1a0e8d6558889eb7ef45833b0707e66fec95528d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/05fbf5f1f9e2bf6636a475703e6456eaf0d3ea5e",
-                "reference": "05fbf5f1f9e2bf6636a475703e6456eaf0d3ea5e",
+                "url": "https://api.github.com/repos/tobimori/kirby-seo/zipball/1a0e8d6558889eb7ef45833b0707e66fec95528d",
+                "reference": "1a0e8d6558889eb7ef45833b0707e66fec95528d",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.2.1",
                 "php": ">=8.3.0"
             },
+            "conflict": {
+                "spatie/schema-org": "<5.0"
+            },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.48",
+                "carthage-software/mago": "^1.58.2",
                 "getkirby/cli": "^1.8.0",
                 "getkirby/cms": "^5.0.0",
-                "spatie/schema-org": "^3.23",
-                "tobimori/kirby-queues": "^1.0.0-beta.1"
+                "league/html-to-markdown": "^5.1",
+                "spatie/schema-org": "^5.0",
+                "tobimori/kirby-agents": "^0.1.1",
+                "tobimori/kirby-queues": "^1.1.0"
             },
             "suggest": {
                 "ext-imagick": "Rasterize non-resizable images (SVG, etc.) for AI alt text generation",
                 "getkirby/cli": "Enable background processing support",
                 "league/html-to-markdown": "Enable automatic conversion for LLM-friendly Markdown responses",
-                "spatie/schema-org": "Enable the Schema.org support",
+                "spatie/schema-org": "Enable the Schema.org support (^5.0)",
                 "tobimori/kirby-queues": "Enable background processing support"
             },
             "type": "kirby-plugin",
@@ -4163,7 +4170,7 @@
             "homepage": "https://github.com/tobimori/kirby-seo#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-seo/issues",
-                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0-rc.1"
+                "source": "https://github.com/tobimori/kirby-seo/tree/2.0.0"
             },
             "funding": [
                 {
@@ -4175,7 +4182,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-04T16:12:20+00:00"
+            "time": "2026-10-22T21:39:11+00:00"
         },
         {
             "name": "tobimori/kirby-tailwind-merge",
