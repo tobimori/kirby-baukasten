@@ -24,7 +24,6 @@
 		"distantnative/retour-for-kirby": "^5.0",
 		"getkirby/cli": "^1.2",
 		"tobimori/kirby-tailwind-merge": "^4.0",
-		"tobimori/kirby-thumbhash": "^2",
 		"johannschopplich/kirby-plausible": "^1",
 		"genxbe/kirby-ray": "^2.0",
 		"junohamburg/kirby-language-selector": "^2.0",
@@ -33,15 +32,20 @@
 		"tobimori/kirby-queues": "^1.0@beta",
 		"spatie/schema-org": "^5.0",
 		"moinframe/kirby-panel-menu": "^1.0",
-		"vlucas/phpdotenv": "^5.7"
+		"vlucas/phpdotenv": "^5.7",
+		"tobimori/kirby-thumbhash": "^3"
 	},
 	"autoload": {
+		"psr-4": {
+			"App\\": "site/classes/"
+		},
 		"files": [
-			"site/plugins/extended/helpers.php"
+			"site/helpers.php"
 		]
 	},
 	"extra": {
-		"kirby-cms-path": false
+		"kirby-cms-path": false,
+		"kirby-plugin-path": "vendor/kirby-plugins"
 	},
 	"config": {
 		"optimize-autoloader": true,

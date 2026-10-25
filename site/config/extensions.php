@@ -1,11 +1,19 @@
 <?php
 
-use Kirby\Cms\App;
+use App\Models\FilesPage;
+use App\Models\ImagesPage;
+use App\Models\VideosPage;
 use Kirby\Content\Field;
 use Kirby\Http\Url;
 use Kirby\Toolkit\Str;
 
-App::plugin('project/extended', [
+// https://getkirby.com/docs/reference/plugins/extensions
+return [
+	'pageModels' => [
+		'files' => FilesPage::class,
+		'images' => ImagesPage::class,
+		'videos' => VideosPage::class,
+	],
 	'fieldMethods' => [
 		'linkType' => function (Field $field) {
 			$val = $field->value();
@@ -33,4 +41,4 @@ App::plugin('project/extended', [
 			};
 		},
 	],
-]);
+];

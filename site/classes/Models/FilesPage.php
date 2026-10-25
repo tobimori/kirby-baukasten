@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 use Kirby\Cms\Page;
 use Kirby\Content\Field;
 

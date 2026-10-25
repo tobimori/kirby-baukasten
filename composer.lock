@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "97732f70874079659b87672a84777cd3",
+    "content-hash": "19956dbe5212fafe4382f33a2a1c3739",
     "packages": [
         {
             "name": "brick/math",
@@ -2953,60 +2953,6 @@
             "time": "2026-09-30T06:09:48+00:00"
         },
         {
-            "name": "srwiez/thumbhash",
-            "version": "v1.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SRWieZ/thumbhash.git",
-                "reference": "65aa97704b9d3e242d16bc8115ffbb8fb6ed8177"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SRWieZ/thumbhash/zipball/65aa97704b9d3e242d16bc8115ffbb8fb6ed8177",
-                "reference": "65aa97704b9d3e242d16bc8115ffbb8fb6ed8177",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.3 || ^8.0"
-            },
-            "require-dev": {
-                "ext-gd": "*",
-                "ext-imagick": "*",
-                "pestphp/pest": "^1.0|^2.0|^3.0|^4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Thumbhash\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Eser DENIZ",
-                    "email": "srwiez@gmail.com"
-                }
-            ],
-            "description": "A brief description of your package",
-            "support": {
-                "issues": "https://github.com/SRWieZ/thumbhash/issues",
-                "source": "https://github.com/SRWieZ/thumbhash/tree/v1.5.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/SRWieZ",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-05-19T06:06:49+00:00"
-        },
-        {
             "name": "symfony/deprecation-contracts",
             "version": "v3.7.1",
             "source": {
@@ -4245,29 +4191,30 @@
         },
         {
             "name": "tobimori/kirby-thumbhash",
-            "version": "2.1.1",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-thumbhash.git",
-                "reference": "733857e7b5b0b7993e014d900039ae0f5ab9fe87"
+                "reference": "97af44a6ac17e9be402e77256eae17b43b7afcd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-thumbhash/zipball/733857e7b5b0b7993e014d900039ae0f5ab9fe87",
-                "reference": "733857e7b5b0b7993e014d900039ae0f5ab9fe87",
+                "url": "https://api.github.com/repos/tobimori/kirby-thumbhash/zipball/97af44a6ac17e9be402e77256eae17b43b7afcd5",
+                "reference": "97af44a6ac17e9be402e77256eae17b43b7afcd5",
                 "shasum": ""
             },
             "require": {
                 "ext-gd": "*",
                 "getkirby/composer-installer": "^1.2",
-                "php": ">=8.3.0",
-                "srwiez/thumbhash": "^1.1"
+                "php": ">=8.3.0"
             },
             "require-dev": {
-                "getkirby/cms": "^5.0"
+                "carthage-software/mago": "^1.59.0",
+                "getkirby/cms": "^5.6.1",
+                "phpunit/phpunit": "^12.0"
             },
             "suggest": {
-                "ext-imagick": "For better performance and quality with Imagick driver"
+                "ext-imagick": "Faster sampling of large JPEG files"
             },
             "type": "kirby-plugin",
             "extra": {
@@ -4292,7 +4239,7 @@
             "homepage": "https://github.com/tobimori/kirby-thumbhash#readme",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-thumbhash/issues",
-                "source": "https://github.com/tobimori/kirby-thumbhash/tree/2.1.1"
+                "source": "https://github.com/tobimori/kirby-thumbhash/tree/3.0.0"
             },
             "funding": [
                 {
@@ -4300,7 +4247,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-03-08T15:37:18+00:00"
+            "time": "2026-10-25T22:48:26+00:00"
         },
         {
             "name": "tobimori/kirby-trawl",

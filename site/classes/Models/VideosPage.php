@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 use Kirby\Content\Field;
 
 class VideosPage extends FilesPage

@@ -14,8 +14,11 @@ Docs: https://getkirby.com/llms.txt
 
 Before implementing anything, check what already exists in the project:
 
-- **`site/plugins/`** has installed plugins that may already solve the problem. Also check `composer.json` for dependencies.
-- **`site/snippets/`** has existing snippets to reuse. Use the `image` snippet for all images instead of raw `<img>` tags. It handles responsive images, lazy loading, and SVG inlining.
+- **`composer.json`** lists installed plugins that may already solve the problem. Composer installs them to `vendor/kirby-plugins/`. There is no `site/plugins/` folder.
+- **`site/config/extensions.php`** registers project extensions (methods, page models, fields, etc.) instead of a plugin. Hooks and routes have their own config files.
+- **`site/classes/`** has project classes in the `App\` namespace (Composer PSR-4), including page models in `App\Models` and the `App\App` subclass of `Kirby\Cms\App`.
+- **`src/panel/`** has Panel extensions (Vue SFCs, `panel.plugin('project/panel', …)`). kirbyup builds them to the gitignored `site/panel/`. The PHP side of a custom field or section goes into `site/config/extensions.php`.
+- **`site/snippets/`** has existing snippets to reuse. Use the `image` snippet for all images instead of raw `<img>` tags. It handles responsive images, lazy loading, and SVG inlining. Image quality is a SSIMULACRA 2 score (`quality` in `site/config/thumbs.php`, or the `quality` snippet parameter for single images), not an encoder quality.
 - **Existing blocks/templates** show patterns to follow before writing new ones.
 
 When told to "use X", check if X is an existing package/plugin in the project before doing anything else.

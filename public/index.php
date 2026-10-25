@@ -1,6 +1,6 @@
 <?php
 
-use Kirby\Cms\App;
+use App\App;
 
 define("KIRBY_HELPER_ATTR", false); // attr is set by tailwind-merge
 define("KIRBY_HELPER_DUMP", false); // dump is set by ray
@@ -15,6 +15,7 @@ $kirby = new App([
 		'index' => __DIR__,
 		'base' => $base,
 		'site' => "{$base}/site",
+		'plugins' => "{$base}/vendor/kirby-plugins",
 		'data' => $data = "{$base}/data",
 		'content' => "{$data}/storage/content",
 		'accounts' => "{$data}/storage/accounts",

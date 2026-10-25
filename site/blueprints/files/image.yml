@@ -4,6 +4,7 @@ accept:
   type: image
 create:
   width: 2600
+  height: 2600
   quality: 90
 
 fields:

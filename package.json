@@ -1,13 +1,14 @@
 {
+	"name": "kirby-baukasten",
 	"private": true,
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"dev:portless": "portless run --name \"$(basename \"$(dirname \"$(git rev-parse --path-format=absolute --git-common-dir)\")\")\"",
-		"dev:plugin": "cd site/plugins/extended && kirbyup serve src/index.js",
+		"dev:panel": "cd src/panel && kirbyup serve index.js --out-dir ../../site/panel --watch '../../site/**/*.php'",
 		"build": "pnpm run \"/build:/\"",
 		"build:site": "vite build",
-		"build:plugin": "cd site/plugins/extended && kirbyup src/index.js",
+		"build:panel": "cd src/panel && kirbyup index.js --out-dir ../../site/panel",
 		"types": "kirby types:create --force && tsc --noEmit",
 		"lint": "oxlint",
 		"lint:fix": "oxlint --fix",

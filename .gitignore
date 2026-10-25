@@ -29,17 +29,13 @@ hot
 
 /vendor
 /node_modules
-/site/plugins/*
-!/site/plugins/extended
-/site/plugins/extended/index.dev.mjs
 
 # Build files
 # ---------------------
 
 /types.php
 /public/dist
-/site/plugins/extended/index.js
-/site/plugins/extended/index.css
+/site/panel
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!

@@ -6,6 +6,7 @@
  * @var float|null $ratio
  * @var string|null $preset
  * @var string|null $sizes
+ * @var int|null $quality SSIMULACRA 2 score, see site/config/thumbs.php
  * @var string|array|null $class
  * @var array|null $attr
  * @var bool|null $clientBlur
@@ -67,53 +68,44 @@ if ($isFile || $image instanceof Asset) :
 		} ?>
 		<?= $svgString ?>
 	<?php else :
-		$widths = option("thumbs.srcsets.{$preset}");
-		$formats = array_unique([...option('thumbs.formats', []), $image->extension()]);
-		$srcsetString = null;
+		$presetWidths = option("thumbs.srcsets.{$preset}");
+		$maxWidth = (int) ($ratio ? min($image->width(), $image->height() * $ratio) : $image->width());
+		$widths = array_values(array_filter($presetWidths, fn($width) => $width < $maxWidth));
 
-		// generates srcsets for all formats — only the first string is kept,
-		// but all iterations trigger thumb job creation for content negotiation
-		foreach ($formats as $format) {
-			$srcsetConfig = [];
-			foreach ($widths as $width) {
-				$srcsetConfig["{$width}w"] = [
-					'width' => $width,
-					'height' => $ratio ? floor($width / $ratio) : null,
-					'crop' => (bool) $ratio,
-					'format' => $format
-				];
-			}
-
-			$generated = $image->srcset($srcsetConfig);
-			$srcsetString ??= $generated;
+		// kirby doesn't upscale, so larger widths would be copies of the source with wrong `w` descriptors
+		if (count($widths) < count($presetWidths)) {
+			$widths[] = $maxWidth;
 		}
 
-		$midWidth = $widths[intdiv(count($widths) - 1, 2)];
-		$midThumb = $image->thumb([
-			'width' => $midWidth,
-			'height' => $ratio ? floor($midWidth / $ratio) : null,
-			'crop' => (bool) $ratio,
-			'format' => $formats[0]
-		]);
+		// the URLs have no extension: `App\Image\Negotiation` (site/config/hooks.php)
+		// serves the best format the browser accepts and creates the jobs of the other formats
+		$urls = [];
+		foreach ($widths as $width) {
+			$urls[$width] = preg_replace('/\.[a-z0-9]+$/', '', $image->thumb([
+				'width' => $width,
+				'height' => $ratio ? (int) floor($width / $ratio) : null,
+				'crop' => (bool) $ratio,
+				'format' => option('thumbs.formats')[0] ?? $image->extension(),
+				'quality' => $quality ?? option('thumbs.quality'),
+			])->url());
+		}
 
-		$srcsetString = preg_replace('/\.[a-z0-9]+(\s+\d+w)/', '$1', $srcsetString);
-		$medianUrl = preg_replace('/\.[a-z0-9]+$/', '', $midThumb->url());
 		$src = $clientBlur
 			? 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
-			: $image->thUri($ratio);
+			: $image->thumbhashUri($ratio);
 		$altAttr = isset($alt) ? ['alt' => $alt] : ($isFile ? $image->alt()->toAltText()->toAttr() : []); ?>
 		<?= Html::img($src, [
-			'data-thumbhash' => $clientBlur ? $image->th($ratio) : null,
-			'data-src' => $medianUrl,
+			'data-thumbhash' => $clientBlur ? $image->thumbhash($ratio) : null,
+			'data-src' => $urls[$widths[intdiv(count($widths) - 1, 2)]],
 			'width' => $image->width(),
 			'height' => $ratio ? floor($image->width() / $ratio) : $image->height(),
 			'loading' => $lazy ? 'lazy' : null,
 			'draggable' => false,
-			($lazy ? 'data-srcset' : 'srcset') => $srcsetString,
+			($lazy ? 'data-srcset' : 'srcset') => implode(', ', array_map(fn($width, $url) => "{$url} {$width}w", array_keys($urls), $urls)),
 			($lazy ? 'data-sizes' : 'sizes') => $sizes ?? ($lazy ? 'auto' : '100vw'),
 			'class' => cls(['object-cover pointer-events-none', $class ?? '']),
 			'style' => A::join(array_filter([
-				!$image->hasTransparency($ratio) ? "background-color: " . $image->averageColor(ratio: $ratio) : null,
+				!$image->hasTransparency($ratio) && ($color = $image->averageColor(ratio: $ratio)) ? "background-color: {$color}" : null,
 				"aspect-ratio: " . ($ratio ?? $image->ratio()),
 				"object-position: " . ($focus ?? "50% 50%"),
 				$attrStyle ?: null,
