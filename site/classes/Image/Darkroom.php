@@ -3,6 +3,7 @@
 namespace App\Image;
 
 use Imagick;
+use ImagickException;
 use Kirby\Image\Darkroom\Imagick as ImagickDarkroom;
 
 /**
@@ -89,6 +90,24 @@ class Darkroom extends ImagickDarkroom
 
 		$image->removeImageProfile('icc');
 		return $image;
+	}
+
+	/**
+	 * ImageMagick 6 drops the iptc profile together with 8bim but still lists it, so the loop in Kirby fails on it
+	 */
+	protected function strip(Imagick $image, array $options): Imagick
+	{
+		foreach ($image->getImageProfiles('*', false) as $profile) {
+			if (in_array($profile, $options['profiles'] ?? [], true) === false) {
+				try {
+					$image->removeImageProfile($profile);
+				} catch (ImagickException) {
+				}
+			}
+		}
+
+		$options['profiles'] = $image->getImageProfiles('*', false);
+		return parent::strip($image, $options);
 	}
 
 	protected function save(Imagick $image, string $file, array $options): bool
