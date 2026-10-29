@@ -22,7 +22,7 @@ mise install
 mise run setup
 ```
 
-This installs PHP 8.5.11 with Composer, the Kirby CLI, Node.js 24, pnpm 12.11.2, and the project dependencies. It also creates `.env` from `.env.example` if the file does not exist.
+This installs PHP 8.5.12 with Composer, the Kirby CLI, Node.js 24, pnpm 12.16.1, and the project dependencies. It also creates `.env` from `.env.example` if the file does not exist.
 
 2. Configure the environment file
 

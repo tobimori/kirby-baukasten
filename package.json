@@ -18,9 +18,9 @@
 		"content:push": "bash scripts/content.sh push"
 	},
 	"dependencies": {
-		"@alpinejs/focus": "^3.17.4",
-		"@alpinejs/intersect": "^3.17.4",
-		"alpinejs": "^3.17.4",
+		"@alpinejs/focus": "^3.17.5",
+		"@alpinejs/intersect": "^3.17.5",
+		"alpinejs": "^3.17.5",
 		"htmx.org": "^2.0.11",
 		"idiomorph": "^0.8.0",
 		"unlazy": "^2.0.1"
@@ -33,19 +33,19 @@
 		"@types/alpinejs": "^3.17.0",
 		"@types/alpinejs__focus": "^3.13.4",
 		"@types/alpinejs__intersect": "^3.13.4",
-		"@types/node": "^26.6.5",
-		"browserslist": "^4.29.3",
+		"@types/node": "^26.6.6",
+		"browserslist": "^4.29.5",
 		"kirbyup": "^3.5.0",
 		"laravel-vite-plugin": "^3.2.0",
 		"lightningcss": "^1.33.0",
-		"oxfmt": "^0.73.0",
-		"oxlint": "^1.88.0",
-		"portless": "^0.15.7",
+		"oxfmt": "^0.75.0",
+		"oxlint": "^1.90.0",
+		"portless": "^0.15.12",
 		"svgo": "^4.1.0",
 		"tailwindcss": "^4.3.3",
 		"typescript": "^7.0.2",
-		"vite": "^8.3.4",
-		"vite-plugin-compression2": "^2.5.3",
+		"vite": "^8.3.5",
+		"vite-plugin-compression2": "^2.5.4",
 		"vite-plugin-devtools-json": "^1.1.2"
 	},
 	"browserslist": [
@@ -56,5 +56,5 @@
 		"not op_mini all",
 		"not and_uc > 0"
 	],
-	"packageManager": "pnpm@12.11.2"
+	"packageManager": "pnpm@12.16.1"
 }
