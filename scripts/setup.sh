@@ -17,3 +17,11 @@ if [[ "$main" != "$(pwd -P)" ]]; then
 elif [[ ! -f .env ]]; then
 	cp .env.example .env
 fi
+
+if [[ -f .env ]] && ! grep -q '^CONTENT_SALT=.' .env; then
+	salt="CONTENT_SALT=$(openssl rand -hex 32)"
+	env="$(sed "s/^CONTENT_SALT=\$/$salt/" .env)"
+	grep -q '^CONTENT_SALT=' .env || env+=$'\n'"$salt"
+	# write through the worktree symlink, sed -i would replace it with a copy
+	printf '%s\n' "$env" > .env
+fi

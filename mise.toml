@@ -4,10 +4,5 @@ php = "8.5.12"
 pnpm = "12.16.1"
 
 [tasks.setup]
-description = "Install project dependencies and create the local environment file"
-run = [
-	"composer install",
-	"composer global require getkirby/cli",
-	"pnpm install --frozen-lockfile",
-	"test -f .env || cp .env.example .env"
-]
+description = "Install project dependencies, build assets and create the local environment file"
+run = ["composer global require getkirby/cli", "bash scripts/setup.sh"]

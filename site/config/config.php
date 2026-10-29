@@ -20,6 +20,7 @@ return [
 	'date.handler' => 'intl',
 	'url' => env('KIRBY_DEV_SERVER') ? '*' : env('APP_URL'),
 	'session' => ['cookieName' => env('KIRBY_SESSION_COOKIE', 'kirby_session')],
+	'content' => ['salt' => env('CONTENT_SALT')],
 	'tobimori.trawl' => [
 		'sourceLanguage' => 'en',
 		'languages' => ['de', 'en'],
